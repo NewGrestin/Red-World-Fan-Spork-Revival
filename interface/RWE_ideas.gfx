@@ -1,0 +1,491 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_LIN_Nazbol_Pic"
+		texturefile = "gfx/interface/LIN_Nazbol_Pic.tga"			
+	}
+	SpriteTGFX_idea_ype = {
+		name = "GFX_LIN_Nazbol_Icon"
+		texturefile = "gfx/interface/LIN_Nazbol_Icon.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_fighting_for_america"
+		texturefile = "gfx/interface/ideas/USA_fighting_for_america.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_POL_Comrade_General"
+		texturefile = "gfx/interface/ideas/POL_Comrade_General.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_POL_Mismanagement_Economy"
+		texturefile = "gfx/interface/ideas/POL_Mismanagement_Economy.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_OPEC"
+		texturefile = "gfx/interface/ideas/OPEC.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_JAP_Historical_Revisionism"
+		texturefile = "gfx/interface/ideas/JAP_Historical_Revisionism.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_JAP_Lost_Decades"
+		texturefile = "gfx/interface/ideas/JAP_Lost_Decades.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_JAP_Ghosts"
+		texturefile = "gfx/interface/ideas/JAP_Ghosts.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_JAP_Debt"
+		texturefile = "gfx/interface/ideas/JAP_Debt.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_JAP_Bureaucracy"
+		texturefile = "gfx/interface/ideas/JAP_Bureaucracy.tga"			
+	}
+
+	SpriteType = {
+		name = "GFX_idea_WAF_Post_Coup_Aftermath"
+		texturefile = "gfx/interface/ideas/WAF_Post_Coup_Confusion.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_GRL_French_Expertise"
+		texturefile = "gfx/interface/ideas/GRL_French_Expertise.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_GRL_IWW"
+		texturefile = "gfx/interface/ideas/GRL_IWW.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_GRL_Cech_Act"
+		texturefile = "gfx/interface/ideas/GRL_Cech_Act.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_WAF_Between_Two_Worlds"
+		texturefile = "gfx/interface/ideas/WAF_Between_Two_Worlds.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_FRA_Politicized_Army"
+		texturefile = "gfx/interface/ideas/FRA_Politicized_Army.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_FRA_Factionalism"
+		texturefile = "gfx/interface/ideas/FRA_Factionalism.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_FRA_Under_Moscow"
+		texturefile = "gfx/interface/ideas/FRA_Under_Moscow.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_GRL_Socialist_Dominance"
+		texturefile = "gfx/interface/ideas/GRL_Socialist_Dominance.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_GRL_Corn_Belt"
+		texturefile = "gfx/interface/ideas/GRL_Corn_Belt.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_GRL_Iowa_Republicanism"
+		texturefile = "gfx/interface/ideas/GRL_Iowa_Republicanism.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_GRL_Stability_Threatened"
+		texturefile = "gfx/interface/ideas/GRL_Stability_Threatened.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_GRL_Stability_Questionable"
+		texturefile = "gfx/interface/ideas/GRL_Stability_Questionable.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_GRL_Stability_Okay"
+		texturefile = "gfx/interface/ideas/GRL_Stability_Okay.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_GRL_Stability_Grand"
+		texturefile = "gfx/interface/ideas/GRL_Stability_Grand.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_NAF_Decentralized_Movement"
+		texturefile = "gfx/interface/ideas/NAF_Decentralized_Movement.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_NAF_Volunteers"
+		texturefile = "gfx/interface/ideas/NAF_Volunteers.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_OKL_Future_of_Oklahoma"
+		texturefile = "gfx/interface/ideas/OKL_Future_of_Oklahoma.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_OKL_Rural_Poverty"
+		texturefile = "gfx/interface/ideas/OKL_Rural_Poverty.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_OKL_KKK"
+		texturefile = "gfx/interface/ideas/OKL_KKK.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_LIN_Culture_of_Conspiracy"
+		texturefile = "gfx/interface/ideas/LIN_Culture_of_Conspiracy.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_LIN_Civil_War"
+		texturefile = "gfx/interface/ideas/LIN_Civil_War.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_LIN_Ideological_Enigma"
+		texturefile = "gfx/interface/ideas/LIN_Ideological_Engima.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_LIN_Elusive_Funding"
+		texturefile = "gfx/interface/ideas/LIN_Elusive_Funding.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_LIN_Twisting_Marx"
+		texturefile = "gfx/interface/ideas/LIN_Twisting_Marx.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_LIN_Anti_Academics"
+		texturefile = "gfx/interface/ideas/LIN_Anti_Academics.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_LIN_Anti_Religion"
+		texturefile = "gfx/interface/ideas/LIN_Religion.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_LIN_On_Edge"
+		texturefile = "gfx/interface/ideas/LIN_On_Edge.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_LIN_Determinism"
+		texturefile = "gfx/interface/ideas/LIN_Determinism.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_LIN_White_Socialism"
+		texturefile = "gfx/interface/ideas/LIN_White_Socialism.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_One_Last_Gamble"
+		texturefile = "gfx/interface/ideas/USA_One_Last_Gamble.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Corporate_Influence"
+		texturefile = "gfx/interface/ideas/USA_Corporate_Influence.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_MOT_Militia_Army"
+		texturefile = "gfx/interface/ideas/RWE_MOT_Militia_Army.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_MOT_Memories_of_the_Civil_War"
+		texturefile = "gfx/interface/ideas/RWE_MOT_Memories_of_the_Civil_War.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_MOT_Imperative_Heirs"
+		texturefile = "gfx/interface/ideas/RWE_MOT_Imperative_Heirs.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_America_Shattered_Ambition"
+		texturefile = "gfx/interface/ideas/RWE_America_Shattered_Ambition.tga"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_IRQ_Kurdish_Unrest_Low"
+		texturefile = "gfx/interface/ideas/RWE_IRQ_Kurdish_Unrest_Low.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_IRQ_Kurdish_Unrest_Moderate"
+		texturefile = "gfx/interface/ideas/RWE_IRQ_Kurdish_Unrest_Moderate.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_IRQ_Kurdish_Unrest_High"
+		texturefile = "gfx/interface/ideas/RWE_IRQ_Kurdish_Unrest_High.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_IRQ_Iraqi_Army"
+		texturefile = "gfx/interface/ideas/RWE_IRQ_Iraqi_Army.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_IRQ_Soviet_Partnership"
+		texturefile = "gfx/interface/ideas/RWE_IRQ_Soviet_Partnership.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_IRQ_Kuwaiti_Occupation"
+		texturefile = "gfx/interface/ideas/RWE_IRQ_Kuwaiti_Occupation.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_PAL_Pluralist_Beacon"
+		texturefile = "gfx/interface/ideas/RWE_PAL_Pluralist_Beacon.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_PAL_Only_Sane_Man"
+		texturefile = "gfx/interface/ideas/RWE_PAL_Only_Sane_Man.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_PAL_IDF_Legacy"
+		texturefile = "gfx/interface/ideas/RWE_PAL_IDF_Legacy.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_Refugee_Crisis"
+		texturefile = "gfx/interface/ideas/RWE_Refugee_Crisis.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_GER_Westalgie"
+		texturefile = "gfx/interface/ideas/GER_Westalgie.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_GER_Burden_of_History"
+		texturefile = "gfx/interface/ideas/GER_Burden_of_History.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_GER_Southern_Separatism"
+		texturefile = "gfx/interface/ideas/GER_Southern_Separatism.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_TEX_Mutilated_Rose"
+		texturefile = "gfx/interface/ideas/RWE_TEX_Mutilated_Rose.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_TEX_American_Ashes"
+		texturefile = "gfx/interface/ideas/RWE_TEX_American_Ashes.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_TEX_NASA"
+		texturefile = "gfx/interface/ideas/RWE_TEX_NASA.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_TEX_New_Americans"
+		texturefile = "gfx/interface/ideas/RWE_TEX_New_Americans.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_ILL_Quiet_Statelet"
+		texturefile = "gfx/interface/ideas/RWE_ILL_Quiet_Statelet.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_ILL_Rust_Republic"
+		texturefile = "gfx/interface/ideas/RWE_ILL_Rust_Republic.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_ILL_Midwest_Influence"
+		texturefile = "gfx/interface/ideas/RWE_ILL_Midwest_Influence.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_AST_Memories_Of_1985"
+		texturefile = "gfx/interface/ideas/RWE_AST_Memories_Of_1985.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_AST_Weak_Federal_Government"
+		texturefile = "gfx/interface/ideas/RWE_AST_Weak_Federal_Government.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_AST_ASIO"
+		texturefile = "gfx/interface/ideas/RWE_AST_ASIO.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_AST_Immigration"
+		texturefile = "gfx/interface/ideas/RWE_AST_Immigration.dds"		
+	}
+	SpriteType = {	
+		name = "GFX_idea_RWE_Gulf_Coast_Alliance"
+		texturefile = "gfx/interface/ideas/RWE_Gulf_Coast_Alliance.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_Gulf_Coast_Alliance_Leader"
+		texturefile = "gfx/interface/ideas/RWE_Gulf_Coast_Alliance_Leader.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_Taliban_Insurgency"
+		texturefile = "gfx/interface/ideas/RWE_Taliban_Insurgency.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_MAS_the_sanders_vacuum"
+		texturefile = "gfx/interface/ideas/RWE_MAS_the_sanders_vacuum.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_MAS_Canadian_Money"
+		texturefile = "gfx/interface/ideas/RWE_MAS_Canadian_Money.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_MAS_return_of_the_massachusetts_machine"
+		texturefile = "gfx/interface/ideas/RWE_MAS_return_of_the_massachusetts_machine.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_SAF_South_African_Apartheid"
+		texturefile = "gfx/interface/ideas/RWE_SAF_South_African_Apartheid.png"	 		
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_SAF_Torchbearer_Against_Communism"
+		texturefile = "gfx/interface/ideas/RWE_SAF_Torchbearer_Against_Communism.png"	 		
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_SAF_Facing_the_Dark_Continent"
+		texturefile = "gfx/interface/ideas/RWE_SAF_Facing_the_Dark_Continent.png"	  		
+	}
+	SpriteType = {
+		name = "GFX_idea_RWE_SAF_Under_The_Shield_Of_The_Atom"
+		texturefile = "gfx/interface/ideas/RWE_SAF_Under_The_Shield_Of_The_Atom.png"	  		
+	}
+	spriteType = {
+		name = "GFX_idea_yugoslav_model"
+		textureFile = "gfx/interface/ideas/YUG/yugoslav_model.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_yug_slavic_unity_critical_low"
+		textureFile = "gfx/interface/ideas/yug_slavic_unity_critical_low.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_yug_slavic_unity_low"
+		textureFile = "gfx/interface/ideas/yug_slavic_unity_low.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_yug_slavic_unity_moderate"
+		textureFile = "gfx/interface/ideas/yug_slavic_unity_moderate.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_yug_slavic_unity_high"
+		textureFile = "gfx/interface/ideas/yug_slavic_unity_high.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_yug_floundering_economy"
+		textureFile = "gfx/interface/ideas/yug_floundering_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_yug_serbianization"
+		textureFile = "gfx/interface/ideas/yug_serbianization.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_America_Arizona_Hoover_Dam"
+		textureFile = "gfx/interface/ideas/RWE_America_Arizona_Hoover_Dam.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_America_UAPR_Hoover_Dam"
+		textureFile = "gfx/interface/ideas/RWE_UAPR_Arizona_Hoover_Dam.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_Arizona_Red_Scare"
+		textureFile = "gfx/interface/ideas/RWE_Arizona_Red_Scare.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_Arizona_National_Guard"
+		textureFile = "gfx/interface/ideas/RWE_Arizona_National_Guard.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_Arizona_Mexicanification"
+		textureFile = "gfx/interface/ideas/RWE_Arizona_Mexicanification.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_Utah_Heirs_to_Deseret"
+		textureFile = "gfx/interface/ideas/RWE_Utah_Heirs_to_Deseret.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_Utah_LDS_Church"
+		textureFile = "gfx/interface/ideas/RWE_Utah_LDS_Church.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_Utah_Native_Management"
+		textureFile = "gfx/interface/ideas/RWE_Utah_Native_Management.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_Alaska_Final_Frontier"
+		textureFile = "gfx/interface/ideas/RWE_Alaska_Final_Frontier.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_Alaska_Perfidious_Canucks"
+		textureFile = "gfx/interface/ideas/RWE_Alaska_Perfidious_Canucks.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_Alaska_Oil_Pipeline"
+		textureFile = "gfx/interface/ideas/RWE_Alaska_Oil_Pipeline.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_Hawaii_Tourist_Trap"
+		textureFile = "gfx/interface/ideas/RWE_Hawaii_Tourist_Trap.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_Hawaii_Diversity_Quota"
+		textureFile = "gfx/interface/ideas/RWE_Hawaii_Diversity_Quota.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_Hawaii_USN_Remnants"
+		textureFile = "gfx/interface/ideas/RWE_Hawaii_USN_Remnants.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_CGH_urbs_in_horto"
+		textureFile = "gfx/interface/ideas/RWE_CGH_urbs_in_horto.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRC_Maoist_Aftermath"
+		textureFile = "gfx/interface/ideas/PRC_Maoist_Aftermath.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRC_PLA"
+		textureFile = "gfx/interface/ideas/PRC_PLA.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRC_Extremely_Poor_Agricultural_Reform"
+		textureFile = "gfx/interface/ideas/PRC_Extremely_Poor_Agricultural_Reform.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRC_Poor_Agricultural_Reform"
+		textureFile = "gfx/interface/ideas/PRC_Poor_Agricultural_Reform.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRC_Mediocre_Agricultural_Reform"
+		textureFile = "gfx/interface/ideas/PRC_Mediocre_Agricultural_Reform.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRC_Acceptable_Agricultural_Reform"
+		textureFile = "gfx/interface/ideas/PRC_Acceptable_Agricultural_Reform.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRC_Strong_Agricultural_Reform"
+		textureFile = "gfx/interface/ideas/PRC_Strong_Agricultural_Reform.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_DOR_Democratic_Orientation"
+		textureFile = "gfx/interface/ideas/RWE_DOR_Democratic_Orientation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_DOR_Militant_Democratic_Orientation"
+		textureFile = "gfx/interface/ideas/RWE_DOR_Militant_Democratic_Orientation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_DOR_Islamist_Orientation"
+		textureFile = "gfx/interface/ideas/RWE_DOR_Islamist_Orientation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_POR_legacy_of_april"
+		textureFile = "gfx/interface/ideas/RWE_POR_legacy_of_april.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_POR_Military_Dominance"
+		textureFile = "gfx/interface/ideas/RWE_POR_Military_Dominance.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_POR_Right_Wing_Terrorism"
+		textureFile = "gfx/interface/ideas/RWE_POR_Right_Wing_Terrorism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_last_bastion_of_european_democracy"
+		texturefile = "gfx/interface/ideas/last_bastion_of_european_democracy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_the_tired_battlefield"
+		texturefile = "gfx/interface/ideas/the_tired_battlefield.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ENG_the_party_of_government"
+		texturefile = "gfx/interface/ideas/The_Party_Of_Government.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_ils_fading_health"   
+		texturefile = "gfx/interface/ideas/RWE_ils_fading_health.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_agriculture_to_industry"   
+		texturefile = "gfx/interface/ideas/RWE_agriculture_to_industry.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RWE_KPA"    
+		texturefile = "gfx/interface/ideas/RWE_KPA.png"
+	}
+}
