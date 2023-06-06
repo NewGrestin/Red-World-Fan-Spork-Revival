@@ -1,0 +1,33 @@
+##################
+# AMERICA IDEAS
+##################
+
+ideas = {
+
+	country = {
+
+		RWE_USA_hostile_congress = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_hostile_congress
+			
+			removal_cost = -1
+	
+			modifier = {
+			party_popularity_stability_factor = -1
+			stability_weekly = -0.01
+			political_power_cost = 0.25
+			}
+
+
+		}	
+	}
+}

@@ -1,0 +1,191 @@
+﻿l_english:
+
+  ##########################
+  # FOCUSES
+  ##########################
+  IRQ_Initial_Focus:0 "Thirty Years of Peace and Stability"
+  IRQ_2010_Affairs:0 "The Affairs of the New Year"
+  IRQ_Continue_Faith_Campaign:0 "Continue the Return to Faith Campaign"
+  IRQ_End_Faith_Campaign:0 "Reverse Course towards Secularism"
+  IRQ_Revive_NPF:0 "Revive the National Progressive Front"
+  IRQ_Purge_ICP:0 "Continue Communist Repression"
+  IRQ_Reaffirm_Soviet_Relations:0 "Reaffirm Soviet Relations"
+  IRQ_New_Five_Year_Plan:0 "Announce the New Five Year Plan"
+  IRQ_Kurdish_Terror:0 "Increase Kurdish Arrest Quotas"
+  IRQ_Arab_Spring:0 "Take on the New Protests"
+  IRQ_Crush_Students:0 "Crush the Student Movement"
+  IRQ_Crush_Communists:0 "Finalize the Communist Liquidations"
+  IRQ_Crush_Kurds:0 "Martial Law in Iraqi Kurdistan"
+  IRQ_Purge_Party:0 "Purge the Old Guard Ba'athists"
+  IRQ_Liquidate_Resistance:0 "Liquidate the Popular Resistance Front"
+  IRQ_Saddam_Consolidated:0 "Iraq, United by Blood"
+  IRQ_Greater_Ambitions:0 "Greater Ambitions"
+
+  IRQ_War_Plan_A:0 "Operation Scorch Sword"
+  IRQ_Approach_Turkey:0 "Approach Ankara"
+  IRQ_Go_It_Alone:0 "Go it Alone"
+  IRQ_Mobilize_Intel:0 "Mobilize the IIS"
+  IRQ_Resettlement:0 "Strategic Resettlement Plan"
+  IRQ_Strike_Kurdistan:0 "Strike at Kurdistan"
+
+  IRQ_War_Plan_C:0 "Operation Sultan"
+  IRQ_End_Kuwait_Resistance:0 "Unleash Uday in Kuwait"
+  IRQ_Exploit_Qatif:0 "Exploit Tensions in Qatif"
+  IRQ_Contact_Omani_Communists:0 "Contacts in Dhofar"
+  IRQ_Contact_Yemen:0 "Propose Greater Yemen"
+  IRQ_Strike_South:0 "Finish the Job"
+
+  IRQ_War_Plan_B:0 "Operation Desert Storm"
+  IRQ_Mass_Recruitment:0 "Mass Recruitment Program"
+  IRQ_Exploit_South:0 "Exploit the Southern Occupation Zones"
+  IRQ_Military_Buildup:0 "Military Buildup"
+  IRQ_Mobilize_Workforce:0 "Mobilize the Workforce"
+  IRQ_Meeting_General_Staff:0 "Meet with the General Staff"
+  IRQ_Initiate_Desert_Storm:0 "Shock and Awe"
+
+  IRQ_New_Babylon:0 "A Modern Nebuchadnezzar"
+
+  IRQ_Consolidation:0 "Consolidate our Gains"
+  IRQ_Claim_Khuzestan:0 "Address Arab Repression in Khuzestan"
+  IRQ_Claim_Hatay:0 "Claim Hatay"
+  IRQ_Fortify_Iranian_Border:0 "Fortify the Iranian Border"
+  IRQ_Invade_Iran:0 "The Eastern Thrust"
+  IRQ_Invade_Turkey:0 "The Northern Thrust"
+
+  IRQ_Purge_Uday:0 "Address the Uday Issue"
+  IRQ_Qusay_Successor:0 "Appoint Qusay as Successor"
+  IRQ_Raghad_Successor:0 "Appoint Raghad as Successor"
+  IRQ_Maintain_Course:0 "Maintain the Course"
+  IRQ_Republican_Guard_Dominance:0 "Expand the Role of the Republican Guard"
+  IRQ_A_Worthy_Arabia:0 "An Arabia Worthy of His Legacy"
+  IRQ_Loosen_Restrictions:0 "Loosen Press Restrictions"
+  IRQ_Womens_Rights:0 "Revise Women's Rights Laws"
+  IRQ_A_Rightful_Arabia:0 "A Statue, instead of a Bloodstain"
+
+  IRQ_New_Baathism:0 "Formalize the Doctrine of Neo-Ba'athism"
+  IRQ_Reinforce_Secularism:0 "Reinforce Secularism"
+  IRQ_Religious_Autonomy:0 "Grant Autonomy to the Clergy"
+  IRQ_One_Vote:0 "One Man, One Vote"
+  IRQ_PartY_Democracy:0 "Ba'athist Democracy"
+  IRQ_Better_than_Nasser:0 "A Greater Leader than Nasser Himself"
+
+  IRQ_Baathist_Takeover:0 "A Slight Change in Plans"
+  IRQ_Assassinate_Uday:0 "Eliminate Uday"
+  IRQ_Retire_Saddam:0 "Saddam's Retirement Plan"
+  IRQ_Revive_Left_Ideas:0 "Revive Ba'athist Economics"
+  IRQ_Pan_Arabism:0 "An Arab Identity"
+  IRQ_Enforce_National_Unity:0 "Enforce National Unity"
+  IRQ_Align_Syria:0 "Approach the Syrian Ba'athists"
+  IRQ_Baath_Leadership:0 "Defending the Ba'athist Cause Alone"
+  IRQ_Baath_Palestine:0 "Align the Palestinian Branch"
+  IRQ_No_Baath_Palestine:0 "Antagonize the Levant"
+  IRQ_Baath_Campaign:0 "A New Arab Republic"
+
+  IRQ_Baath_Expansion:0 "Unity"
+  IRQ_Central_Arabia_Campaign:0 "Central Arabian Campaign"
+  IRQ_South_Arabia_Campaign:0 "Pacify the Peninsula"
+  IRQ_Attack_Egypt:0 "Invade Egypt"
+  IRQ_Attack_UAR:0 "Topple the Nasserist Experiment"
+  IRQ_Core_Arabia:0 "Formalize the New Arab State"
+  IRQ_Claim_Maghreb:0 "Claim the Maghreb"
+  IRQ_Core_Khuzestan:0 "Claim Khuzestan"
+  IRQ_Revolution_Realized:0 "The Arab Revolution Realized"
+
+  IRQ_Baath_Politics:0 "Liberty"
+  IRQ_Baath_Izzat_Remains:0 "Izzat Leads the Republic"
+  IRQ_Baath_Salem_Leader:0 "Salem Assumes Leadership"
+  IRQ_Baath_Assad_Leader:0 "Allah, Arabia, and Assad"
+  IRQ_Baath_Party_Stratocracy:0 "Ba'athist Stratocracy"
+  IRQ_Baath_Party_Military_Emphasis:0 "Emphasize the Military"
+  IRQ_Baath_Party_Military_Constitution:0 "The Officer Corps Constitution"
+  IRQ_Baath_Salem_Ethnic_Pluralism:0 "Emphasize Ethnic Autonomy"
+  IRQ_Baath_Salem_Palestine_Model:0 "Adopt the Palestine Model"
+  IRQ_Baath_Salem_Rehabilitate_Saddam:0 "Rehabilitate Saddam"
+  IRQ_Baath_Assad_Consolidation:0 "Consolidate the General Secretary's Powers"
+  IRQ_Baath_Assad_Integrate_Family:0 "Introduce Political Nepotism"
+  IRQ_Baath_Assad_Military_Loyalists:0 "Military Alawitization"
+  IRQ_Baath_Party_Consolidated:0 "The Sole Legal Party"
+  IRQ_Baath_Party_Fake_Opposition:0 "The Veneer of Opposition"
+
+  IRQ_Baath_Development:0 "Socialism"
+  IRQ_Autarky:0 "Independence from the West"
+  IRQ_Autarky2:0 "Independence from the East"
+  IRQ_Arab_Socialism:0 "Arab Socialism"
+  IRQ_Support_Clergy:0 "Support the Islamic Clergy"
+  IRQ_Economic_Development:0 "Economic Development Committee"
+  IRQ_Unified_Arab_Currency:0 "Establish a Unified Currency"
+  IRQ_Maintain_Provincial_Currency:0 "Maintain Provincial Currencies"
+  IRQ_Full_State_Control:0 "Full State Control"
+  IRQ_Limited_State_Control:0 "Balanced Economics"
+  IRQ_Free_Market:0 "Allow Limited Free Enterprise"
+  IRQ_Industrialization:0 "Rapid Industrialization"
+
+  IRQ_Popular_Revolution:0 "A New Dawn for Iraq"
+  IRQ_Truth_and_Reconciliation:0 "Truth and Reconciliation Committee"
+  IRQ_Saddam_Trial:0 "Put Hussein on Trial"
+  IRQ_Purge_Military:0 "Force the General Staff Out"
+  IRQ_Dont_Purge_Military:0 "Maintain Hussein's Generals"
+  IRQ_Kill_Uday:0 "Ensure Uday Disappears"
+  IRQ_Free_Elections:0 "Organize Free Elections"
+
+  IRQ_Monarchy_Referendum:0 "Referndum on the Monarchy"
+  IRQ_Fate_of_Kuwait:0 "Our Future in Kuwait"
+
+  IRQ_Communists_Elected:0 "Revolution through Evolution"
+  IRQ_Anti_Soviet_Policy:0 "Renounce the Moscow Consensus"
+  IRQ_Pro_Soviet_Policy:0 "Embrace the Reformist Bent"
+  IRQ_War_on_Sectarianism:0 "The War on Sectarianism"
+
+  IRQ_SuccDems_Elected:0 "An Iraq for the People"
+  IRQ_Reform_Kurdistan:0 "Reform the Kurdish Administration"
+  IRQ_Expand_Welfare:0 "Promote the Zakat Model"
+
+  IRQ_Progressives_Elected:0 "Unity in Islam and Progress"
+  IRQ_Decentralization:0 "Decentralize Administrative Powers"
+  IRQ_Federalization:0 "A Federal Model"
+  IRQ_Reconcile_Saddam:0 "Reconcile with the Loyalists"
+
+  IRQ_Nationalists_Elected:0 "The More Things Change..."
+  IRQ_Saddam_Legacy:0 "Pardon Hussein Loyalists"
+  IRQ_Undermine_Politics:0 "Undermine the Committee"
+
+
+  IRQ_Islamist_Revolution:0 "The Light of Allah Touches the Euphrates"
+ 
+  ##########################
+  # PARTIES
+  ##########################
+
+  ##########################
+  # IDEAS
+  ##########################
+  RWE_IRQ_Kurdish_Unrest_Low:0 "Kurdish Unrest: §GManageable§!"
+  RWE_IRQ_Kurdish_Unrest_Low_desc:0 "Northern Iraq is host of a significant minority of Kurds, a Middle Eastern ethnic minority spread across Iran, Iraq, Syria and Turkey. In recent years, the independnece of a Kurdish state has gradually increased agitation for unification, which the Hussein regime has characteristically crushed brutally. Left unattended, however, the Kurdish resistance will continue to agitate for at least autonomy, and at most full independence."
+  RWE_IRQ_Kurdish_Unrest_Moderate:0 "Kurdish Unrest: §YNoticeable§!"
+  RWE_IRQ_Kurdish_Unrest_Moderate_desc:0 "Northern Iraq is host of a significant minority of Kurds, a Middle Eastern ethnic minority spread across Iran, Iraq, Syria and Turkey. In recent years, the independnece of a Kurdish state has gradually increased agitation for unification, which the Hussein regime has characteristically crushed brutally. Left unattended, however, the Kurdish resistance will continue to agitate for at least autonomy, and at most full independence."
+  RWE_IRQ_Kurdish_Unrest_High:0 "Kurdish Unrest: §ROverwhelming§!"
+  RWE_IRQ_Kurdish_Unrest_High_desc:0 "Northern Iraq is host of a significant minority of Kurds, a Middle Eastern ethnic minority spread across Iran, Iraq, Syria and Turkey. In recent years, the independnece of a Kurdish state has gradually increased agitation for unification, which the Hussein regime has characteristically crushed brutally. Left unattended, however, the Kurdish resistance will continue to agitate for at least autonomy, and at most full independence."
+
+  RWE_IRQ_Iraqi_Army:0 "The Eagle of the Middle East"
+  RWE_IRQ_Iraqi_Army_desc:0 "The Army of the Arab Republic of Iraq is one of, if not the largest army in the Arab World, for better or for worse. Though massive compared to their neighbors, it suffers from corruption and widespread inefficiency, coupled with the complete nonexistence of local arms production.\n\nThe Iraqi Army is a glass cannon as it stands currently, and is heavily reliant on the support of the Soviet Union to remain competetive against their smaller neighbors."
+  RWE_IRQ_Soviet_Partnership:0 "Iraqi-Soviet Treaty of Friendship and Cooperation"
+  RWE_IRQ_Soviet_Partnership_desc:0 "Iraq has historically maintained strong relations with the USSR since the fall of the monarchy, though the Ba'athist regime has alternated between mild dislike and strong support of Moscow, with the USSR's support waxing and waning in kind. Still, Iraq serves an important role as Moscow's outpost in the Arab world, and that outpost is backed by powerful, albeit somewhat outdated Cold War era equipment. New leadership in the USSR might see this relationship flourish or sour."
+  RWE_IRQ_Kuwaiti_Occupation:0 "Occupation of Kuwait"
+  RWE_IRQ_Kuwaiti_Occupation_desc:0 "The Invasion and Occupation of Kuwait in the 1970s was a turning point for Iraq. The Kuwaiti Army was easily crushed, and not long after the wayward petromonarchy was integrated at gunpoint into Iraq. Even decades later, the invasion proved traumatizing for the Gulf states, and proved pivotal in Riyadh's moves to formalize mutual defense treaties.\n\nIraq, in the meantime, has benefited hugely from this state of affairs. Kuwaiti oil revenue powers Saddam's militaristic fantasies, and few countries are scrupulous enough to care how much blood comes with their petrol. In spite of this, the Kuwaiti resistance carries on, fighting a losing battle against overwhelming odds, kept on life support by the Gulf monarchies."
+
+  ##########################
+  # EVENTS
+  ##########################
+
+  ##########################
+  # DECISIONS
+  ##########################
+
+	
+  ##########################
+  # TOOLTIPS
+  ##########################
+
+  ##########################
+  # COSMETIC TAGS
+  ##########################

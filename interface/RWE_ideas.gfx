@@ -1,5 +1,9 @@
 spriteTypes = {	
 	SpriteType = {
+		name = "GFX_idea_USA_hostile_congress"
+		texturefile = "gfx/interface/ideas/hostile_congress.dds"			
+	}
+	SpriteType = {
 		name = "GFX_LIN_Nazbol_Pic"
 		texturefile = "gfx/interface/LIN_Nazbol_Pic.tga"			
 	}
