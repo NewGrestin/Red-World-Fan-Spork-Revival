@@ -46,7 +46,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=christian_democrat 
+			ideology= centrist_ideology 
 			expire="1.1.1.1"
 			id=-1
 		}
@@ -290,18 +290,6 @@ characters={
 		country_leader = {
 			expire = "1.1.1.1"
 			ideology = american_conservative
-		}
-	}
-	USA_joseph_biden={
-		name="Joseph Biden"
-		portraits={
-			civilian={
-				large="gfx/leaders/USA/Portrait_USA_Joseph_Biden.dds"
-			}
-		}
-		country_leader = {
-			expire = "1.1.1.1"
-			ideology = old_american_democrats
 		}
 	}
 	USA_loretta_lynch={

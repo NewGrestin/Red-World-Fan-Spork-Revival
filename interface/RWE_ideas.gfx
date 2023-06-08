@@ -12,6 +12,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/LIN_Nazbol_Icon.tga"			
 	}
 	SpriteType = {
+		name = "GFX_idea_UKR_neglect_of_state_interests"
+		texturefile = "gfx/interface/ideas/GFX_ukr_neglect_of_state_interests.dds"			
+	}
+	SpriteType = {
 		name = "GFX_idea_USA_fighting_for_america"
 		texturefile = "gfx/interface/ideas/USA_fighting_for_america.dds"			
 	}

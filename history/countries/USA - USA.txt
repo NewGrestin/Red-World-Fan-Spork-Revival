@@ -177,8 +177,117 @@ add_opinion_modifier = {
 	modifier = rival
 }
 
+SOV = {
+add_opinion_modifier = {
+	target = USA
+	modifier = embargo
+}
+}
+
+every_country = {
+limit = { is_in_faction_with = SOV }
+add_opinion_modifier = {
+	target = USA
+	modifier = embargo
+}
+add_opinion_modifier = {
+	target = USA
+	modifier = sanctions 
+}
+}
+
+CUB = {
+add_opinion_modifier = {
+	target = USA
+	modifier = embargo
+}
+add_opinion_modifier = {
+	target = USA
+	modifier = sanctions 
+}
+}
+
+NEA = {
+add_opinion_modifier = {
+	target = USA
+	modifier = embargo
+}
+add_opinion_modifier = {
+	target = USA
+	modifier = sanctions 
+}
+}
+
+PCA = {
+add_opinion_modifier = {
+	target = USA
+	modifier = embargo
+}
+add_opinion_modifier = {
+	target = USA
+	modifier = sanctions 
+}
+}
+
+VEN = {
+add_opinion_modifier = {
+	target = USA
+	modifier = embargo
+}
+add_opinion_modifier = {
+	target = USA
+	modifier = sanctions 
+}
+}
+
+BOL = {
+add_opinion_modifier = {
+	target = USA
+	modifier = embargo
+}
+add_opinion_modifier = {
+	target = USA
+	modifier = sanctions 
+}
+}
+
+FIN = {
+add_opinion_modifier = {
+	target = USA
+	modifier = embargo
+}
+add_opinion_modifier = {
+	target = USA
+	modifier = sanctions 
+}
+}
+
+CEA = {
+add_opinion_modifier = {
+	target = USA
+	modifier = embargo
+}
+add_opinion_modifier = {
+	target = USA
+	modifier = sanctions 
+}
+}
+
+add_opinion_modifier = {
+	target = PCA
+	modifier = embargo
+}
+
+add_opinion_modifier = {
+	target = NEA
+	modifier = embargo
+}
+
 add_ideas = {
+	RWE_USA_extreme_rural_poverty 
+	RWE_USA_Anti_Soviet_Laws
 	RWE_USA_hostile_congress 
+	RWE_USA_Unrecognized_Government 
 	idea_america_neutrality
 
 	usa_thomas_ridge
@@ -190,6 +299,7 @@ add_ideas = {
 
 recruit_character = USA_donald_rumsfeld
 recruit_character = USA_david_duke
+recruit_character = USA_joe_biden
 recruit_character = USA_paul_i
 recruit_character = USA_amelia_b_robinson 
 recruit_character = USA_robert_bentley
@@ -246,7 +356,6 @@ recruit_character = USA_james_carter
 recruit_character = USA_robert_neugebauer
 recruit_character = USA_gerald_long
 recruit_character = USA_nikki_haley
-recruit_character = USA_joe_biden
 recruit_character = USA_loretta_lynch
 recruit_character = USA_timothy_kaine
 recruit_character = USA_shelley_capito

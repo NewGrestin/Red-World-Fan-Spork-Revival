@@ -1,0 +1,1135 @@
+focus_tree = {
+	id = republic_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = USA
+		}
+	}
+	
+	shared_focus = USA_the_default_crisis
+	shared_focus = USA_true_republican_economy
+	shared_focus = USA_A_Day_That_Will_Live_In_Infamy
+	shared_focus = USA_rumsfeld_beaten
+
+	continuous_focus_position = { x = 50 y = 1100 }
+	default = no
+}
+
+
+	shared_focus = {
+		id = USA_A_Day_That_Will_Live_In_Infamy
+		icon = GFX_focus_USA_closed_congress
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 20
+		y = 7
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		mutually_exclusive = { 
+		focus = USA_rumsfeld_beaten
+		}
+
+		completion_reward = {
+		country_event = { id = us_republic.2 days = 0 }
+		custom_effect_tooltip = usa_tt_declare_war_on_congress 
+
+		activate_decision = USA_The_War_against_Congress 
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_rumsfeld_beaten
+		icon = GFX_goal_generic_parliament2
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 23
+		y = 7
+
+		available = {
+
+		}
+
+		mutually_exclusive = { 
+		focus = USA_A_Day_That_Will_Live_In_Infamy
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_the_default_crisis
+		icon = GFX_focus_USA_Default
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 4
+		y = 0
+		available = {
+		has_idea = RWE_USA_Default
+		}
+		completion_reward = {
+		add_popularity = { ideology = nationalist popularity = -0.05 }
+		add_popularity = { ideology = centrist popularity = 0.02 }
+		add_popularity = { ideology = new_democrat popularity = 0.02 }
+		add_stability = -0.2
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_devalue_the_dollar
+		icon = GFX_goal_generic_austerity_measures
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 2
+		y = 1
+		available = {
+		has_idea = RWE_USA_Default
+		}
+		prerequisite = { 
+		focus = USA_the_default_crisis
+		}
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_branching_focus
+		icon = GFX_goal_unknown
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 2
+		y = 2
+		available = {
+		always = no
+		}
+		prerequisite = { 
+		focus = USA_devalue_the_dollar
+		}
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_continue_payments
+		icon = GFX_goal_capitalist_system
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 5
+		y = 1
+		available = {
+		has_idea = RWE_USA_Default
+		}
+
+		mutually_exclusive = { 
+		focus = USA_restructure_the_debt
+		}
+
+		prerequisite = { 
+		focus = USA_the_default_crisis
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_restructure_the_debt
+		icon = GFX_goal_generic_recovery
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 7
+		y = 1
+		available = {
+		has_idea = RWE_USA_Default
+		}
+
+		mutually_exclusive = { 
+		focus = USA_continue_payments
+		}
+
+		prerequisite = { 
+		focus = USA_the_default_crisis
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_pause_social_programs
+		icon = GFX_goal_INS_focus_abandon_ethical_policy
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 6
+		y = 2
+		available = {
+		NOT = { has_idea = RWE_USA_hostile_congress }
+		has_idea = RWE_USA_Default
+		}
+
+		mutually_exclusive = { 
+		focus = USA_slash_military_spending focus = USA_increase_middle_income_tax
+		}
+
+		prerequisite = { 
+		focus = USA_restructure_the_debt focus = USA_continue_payments
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_slash_military_spending
+		icon = GFX_focus_usa_build_the_pentagon
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 4
+		y = 2
+		available = {
+		NOT = { has_idea = RWE_USA_hostile_congress }
+		has_idea = RWE_USA_Default
+		}
+
+		mutually_exclusive = { 
+		focus = USA_pause_social_programs focus = USA_increase_middle_income_tax
+		}
+
+		prerequisite = { 
+		focus = USA_restructure_the_debt focus = USA_continue_payments
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_increase_middle_income_tax
+		icon = GFX_goal_generic_financial_markets
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 8
+		y = 2
+		available = {
+		NOT = { has_idea = RWE_USA_hostile_congress }
+		has_idea = RWE_USA_Default
+		}
+
+		mutually_exclusive = { 
+		focus = USA_pause_social_programs focus = USA_slash_military_spending
+		}
+
+		prerequisite = { 
+		focus = USA_restructure_the_debt focus = USA_continue_payments
+		}
+
+		completion_reward = {
+		add_timed_idea = { idea = RWE_USA_increased_taxation days = 365 }
+		}
+	}
+
+	shared_focus = {
+		id = USA_true_republican_economy
+		icon = GFX_goal_generic_loans
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 19
+		y = 0
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_nationalize_the_bank_of_america
+		icon = GFX_focus_generic_authoritarian_government
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 10
+		y = 1
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_true_republican_economy
+		}
+
+		mutually_exclusive = { 
+		focus = USA_finish_privatization
+		}
+
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Plan_Amtrak_Expansion
+		icon = GFX_goal_generic_railway_construction
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 11
+		y = 2
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_finish_privatization focus = USA_nationalize_the_bank_of_america
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_finish_privatization
+		icon = GFX_goal_generic_privatization
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 13
+		y = 1
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_true_republican_economy
+		}
+
+		mutually_exclusive = { 
+		focus = USA_nationalize_the_bank_of_america
+		}
+
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Lower_Business_Barriers
+		icon = GFX_goal_generic_landowner_tax_cuts
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 12
+		y = 3
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_finish_privatization
+		}
+
+		completion_reward = {
+		
+		}
+	}
+
+	shared_focus = {
+		id = USA_Incorporate_AgFirst
+		icon = GFX_focus_generic_agriculture
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 10
+		y = 3
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_nationalize_the_bank_of_america
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Protect_Southern_Farmers
+		icon = GFX_goal_manage_industries
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 11
+		y = 4
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_Incorporate_AgFirst focus = USA_Lower_Business_Barriers
+		}
+
+		mutually_exclusive = { 
+		focus = USA_End_Agricultural_Favouritism
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_End_Agricultural_Favouritism
+		icon = GFX_goal_generic_mechanisation 
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 13
+		y = 4
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_Incorporate_AgFirst focus = USA_Lower_Business_Barriers
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Protect_Southern_Farmers
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Relax_Antritrust_Laws
+		icon = GFX_goal_state_economy
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 14
+		y = 2
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_finish_privatization
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Dixie_Tax_Haven
+		icon = GFX_goal_generic_cash_stimulus_plan
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 14
+		y = 3
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_Relax_Antritrust_Laws
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_nationalize_Texan_gas
+		icon = GFX_goal_Generic_Topical_American_Foreign_Policy_Joke
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 16
+		y = 2
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		has_full_control_of_state = 375
+		}
+
+		prerequisite = { 
+		focus = USA_nationalize_the_bank_of_america focus = USA_finish_privatization
+		}
+
+		mutually_exclusive = { 
+		focus = USA_subsidize_Texan_gas
+		}
+
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_subsidize_Texan_gas
+		icon = GFX_goal_Generic_More_OIL
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 18
+		y = 2
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		has_full_control_of_state = 375
+		}
+
+		prerequisite = { 
+		focus = USA_nationalize_the_bank_of_america focus = USA_finish_privatization
+		}
+
+		mutually_exclusive = { 
+		focus = USA_nationalize_Texan_gas
+		}
+
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Branching_path_2
+		icon = GFX_goal_unknown
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 17
+		y = 3
+		available = {
+		always = no 
+		}
+
+		prerequisite = { 
+		focus = USA_nationalize_Texan_gas focus = USA_subsidize_Texan_gas
+		}
+
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_sanction_proof_economy
+		icon = GFX_goal_generic_stable_government
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 15
+		y = 1
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_true_republican_economy
+		}
+
+		mutually_exclusive = { 
+		focus = USA_join_the_global_market
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_join_the_global_market
+		icon = GFX_goal_AST_new_markets
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 17
+		y = 1
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_true_republican_economy
+		}
+
+
+		mutually_exclusive = { 
+		focus = USA_sanction_proof_economy
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_preserve_the_manufacturing_base
+		icon = GFX_goal_workers_for_business
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 22
+		y = 1
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_true_republican_economy
+		}
+
+
+		mutually_exclusive = { 
+		focus = USA_move_towards_service
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_lure_in_foreign_car_companies
+		icon = GFX_goal_bmw_car
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 20
+		y = 2
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_preserve_the_manufacturing_base
+		}
+
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_fight_against_off_shoring
+		icon = GFX_goal_generic_takeover_industries
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 22
+		y = 2
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_preserve_the_manufacturing_base
+		}
+
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_protect_heavy_industry
+		icon = GFX_goal_factory_complex 
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 21
+		y = 3
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_fight_against_off_shoring
+		}
+
+		prerequisite = { 
+		focus = USA_lure_in_foreign_car_companies
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Alabama_Steel
+		icon = steel
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 20
+		y = 4
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_protect_heavy_industry
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Mississippi_Delta_Plans
+		icon = GFX_goal_construction
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 21
+		y = 5
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_protect_heavy_industry
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_support_chemicals
+		icon = GFX_goal_chemical_industry
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 22
+		y = 4
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_fight_against_off_shoring
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_maintain_coal_communities
+		icon = GFX_goal_coal_mining
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 23
+		y = 3
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_preserve_the_manufacturing_base focus = USA_move_towards_service
+		}
+
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_promote_Duke_university
+		icon = GFX_goal_university
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 26
+		y = 2
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_move_towards_service focus = USA_preserve_the_manufacturing_base
+		}
+
+
+		mutually_exclusive = { 
+		focus = USA_support_community_colleges
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_support_community_colleges
+		icon = GFX_goal_Generic_Brain_Force_Plus
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 24
+		y = 2
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_move_towards_service focus = USA_preserve_the_manufacturing_base
+		}
+
+
+		mutually_exclusive = { 
+		focus = USA_promote_Duke_university
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_move_towards_service
+		icon = GFX_goal_conspiracy
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 27
+		y = 1
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_true_republican_economy
+		}
+
+
+		mutually_exclusive = { 
+		focus = USA_preserve_the_manufacturing_base
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_research_triangle_park
+		icon = tech_sharing
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 25
+		y = 3
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_support_community_colleges focus = USA_promote_Duke_university
+		}
+
+
+		completion_reward = {
+		add_research_slot = 1
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_promote_cinema_in_georgia
+		icon = GFX_goal_generic_cinema
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 20
+		y = 1
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_true_republican_economy
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Finance_Public_Schooling
+		icon = GFX_Focus_Improve_Literacy
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 28
+		y = 2
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_move_towards_service 
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Revitalize_the_Healthcare_Sector
+		icon = GFX_goal_MD_hospital
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 30
+		y = 2
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_move_towards_service 
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+
+	shared_focus = {
+		id = USA_Vaccination_Campaign
+		icon = GFX_goal_ENG_Highland_Research_Towns
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 29
+		y = 3
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_Revitalize_the_Healthcare_Sector
+		}
+
+		prerequisite = { 
+		focus = USA_Finance_Public_Schooling
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Pharmaceutical_Renaissance
+		icon = GFX_goal_Generic_Research
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 30
+		y = 4
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_Revitalize_the_Healthcare_Sector
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Construct_Suburbia
+		icon = GFX_goal_generic_build_housing
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 27
+		y = 3
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_move_towards_service 
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Dixie_Own_Ivy_League
+		icon = GFX_goal_PAN_Create_the_Universidad_de_Panama
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 26
+		y = 4
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_promote_Duke_university
+		}
+
+		prerequisite = { 
+		focus = USA_Construct_Suburbia
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Dulles_Technology_Corridor
+		icon = GFX_goal_generic_research3
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 28
+		y = 4
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_Construct_Suburbia
+		}
+
+		completion_reward = {
+
+		}
+
+	}

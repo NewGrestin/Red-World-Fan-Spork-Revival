@@ -1,0 +1,293 @@
+##################
+# MAS IDEAS
+##################
+
+ideas = {
+
+	country = {
+		RWE_MAS_return_of_the_massachusetts_machine = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_return_of_the_massachusetts_machine
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_gain = 0.12
+				liberal_drift = 0.2
+				revolutionary_socialist_drift = -0.05
+			}
+		}
+		RWE_MAS_the_sanders_vacuum = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_the_sanders_vacuum
+			
+			removal_cost = -1
+	
+			modifier = {
+				stability_factor = -0.15
+			}
+		}
+
+		RWE_MAS_canadian_money = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_Canadian_Money
+			
+			removal_cost = -1
+	
+			modifier = {
+				consumer_goods_factor = -0.1
+				political_power_gain = 0.05
+			}
+		}
+
+		RWE_MAS_workplace_democracy = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_workplace_democracy
+			
+			removal_cost = -1
+	
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory	 = 0.05
+			}
+		}
+
+		RWE_MAS_enviromentalist_system = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_enviromentalist_system
+			
+			removal_cost = -1
+	
+			modifier = {
+				monthly_population = 0.15
+			}
+		}
+		RWE_MAS_gun_toting_lefties = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_gun_toting_lefties
+			
+			removal_cost = -1
+	
+			modifier = {
+				army_defence_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+		RWE_MAS_defensive_army = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_defensive_army
+			
+			removal_cost = -1
+	
+			modifier = {
+				army_defence_factor = 0.1
+				army_org_regain = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+		RWE_MAS_canadian_debt_paid = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_canadian_debt_paid
+			
+			removal_cost = -1
+	
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+		RWE_MAS_unions_busted = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_canadian_debt_paid
+			
+			removal_cost = -1
+	
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				stability_factor = -0.05
+			}
+		}
+		RWE_MAS_welfare_cut = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_canadian_debt_paid
+			
+			removal_cost = -1
+	
+			modifier = {
+				consumer_goods_factor = -0.1
+				monthly_population = -0.15
+			}
+		}
+		RWE_MAS_font_of_enterprise = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_canadian_debt_paid
+			
+			removal_cost = -1
+	
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		RWE_MAS_united_army = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_canadian_debt_paid
+			
+			removal_cost = -1
+	
+			modifier = {
+				land_reinforce_rate = 0.05
+				army_org_Factor = 0.05
+			}
+		}
+		RWE_MAS_bread_and_piledrivers = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_canadian_debt_paid
+			
+			removal_cost = -1
+	
+			modifier = {
+				conscription_factor = 0.05
+				national_conservative_drift = 0.05
+			}
+		}
+		RWE_MAS_enemies_crushed = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = RWE_MAS_canadian_debt_paid
+			
+			removal_cost = -1
+	
+			modifier = {
+				revolutionary_socialist_drift = -0.03
+				moderate_socialist_drift = -0.03
+				new_democrat_drift = -0.03
+				liberal_drift = -0.03
+				centrist_drift = -0.03
+			}
+		}
+	}
+}

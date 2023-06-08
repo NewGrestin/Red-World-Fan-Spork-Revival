@@ -6,6 +6,100 @@ ideas = {
 
 	country = {
 
+		RWE_USA_extreme_rural_poverty = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = OKL_Rural_Poverty
+			
+			removal_cost = -1
+	
+			modifier = {
+			production_speed_buildings_factor = -0.4
+			production_factory_max_efficiency_factor = -0.25
+			global_building_slots_factor = -0.25
+			industry_repair_factor = -0.5
+			conscription_factor = 0.1
+			}
+		}
+
+		RWE_USA_Anti_Soviet_Laws = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = brotherhood_and_unity
+			
+			removal_cost = -1
+	
+			modifier = {
+			communist_drift = -0.01
+			revolutionary_socialist_drift = -0.01
+			moderate_socialist_drift = -0.01
+			political_power_cost = 0.15
+			stability_factor = 0.05
+			}
+		}
+
+		RWE_USA_Unrecognized_Government = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = UKR_neglect_of_state_interests
+			
+			removal_cost = -1
+	
+			modifier = {
+			guarantee_cost = 1
+			annex_cost_factor = 0.25
+			puppet_cost_factor = 0.25
+			justify_war_goal_time = 0.25
+			opinion_gain_monthly_factor = -0.5				
+			}
+		}
+
+		RWE_USA_Default = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = government_knows_best
+			
+			removal_cost = -1
+	
+			modifier = {
+			stability_weekly = -0.02	
+			consumer_goods_factor = 0.5
+			production_speed_buildings_factor = -0.15			
+			}
+		}
+
 		RWE_USA_hostile_congress = {
 			
 			
@@ -24,10 +118,32 @@ ideas = {
 			modifier = {
 			party_popularity_stability_factor = -1
 			stability_weekly = -0.01
-			political_power_cost = 0.25
+			political_power_cost = 0.5
 			}
 
 
+		}
+
+		RWE_USA_increased_taxation = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_hostile_congress
+			
+			removal_cost = -1
+	
+			modifier = {
+			political_power_cost = 0.05
+			party_popularity_stability_factor = -0.1
+			consumer_goods_factor = -0.1
+			}
 		}	
 	}
 }

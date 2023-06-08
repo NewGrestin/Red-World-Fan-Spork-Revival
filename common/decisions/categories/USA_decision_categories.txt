@@ -1,0 +1,11 @@
+USA_Debt_Ceiling_Crisis = {
+    icon = usa_congress
+
+	picture = GFX_decision_cat_RWE_Generic_American_Breakup
+
+	visible = { 
+	has_ideas = { RWE_USA_hostile_congress }
+	}
+
+	priority = 250
+}

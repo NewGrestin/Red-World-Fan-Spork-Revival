@@ -1,5 +1,21 @@
 spriteTypes = {	
 	SpriteType = {
+		name = "GFX_focus_usa_build_the_pentagon"
+		texturefile = "gfx/interface/goals/focus_usa_build_the_pentagon.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Default"
+		texturefile = "gfx/interface/goals/USA_Default.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_closed_congress"
+		texturefile = "gfx/interface/goals/USA_closed_congress.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_long_hand"
+		texturefile = "gfx/interface/goals/USA_long_hand.dds"			
+	}
+	SpriteType = {
 		name = "GFX_goal_MOT_Denounce_Technology"
 		texturefile = "gfx/interface/goals/MOT_Denounce_Technology.dds"			
 	}

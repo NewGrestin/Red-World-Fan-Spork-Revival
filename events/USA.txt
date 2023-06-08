@@ -1,0 +1,116 @@
+add_namespace = us_republic
+
+########################
+###DEBT CEILING CRISI###
+########################
+#The Situation in Congress
+country_event = {
+	id = us_republic.1
+	title = us_republic.1.t
+	desc = us_republic.1.d
+	picture = us_female_troop_saluting
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		date > 2010.1.1
+	}
+	
+	option = {
+		name = us_republic.1.a
+
+	}
+}
+
+#The Move to Close Congress
+country_event = {
+	id = us_republic.2
+	title = us_republic.2.t
+	desc = us_republic.2.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.2.a
+		add_stability = -0.05
+	}
+}
+
+
+#Armed Forces support Rumsfeld
+country_event = {
+	id = us_republic.3
+	title = us_republic.3.t
+	desc = us_republic.3.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.3.a
+
+	}
+}
+
+#Armed Forces support Congress
+country_event = {
+	id = us_republic.4
+	title = us_republic.4.t
+	desc = us_republic.4.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.4.a
+
+	}
+}
+
+#Florida declares support for Congress
+country_event = {
+	id = us_republic.5
+	title = us_republic.5.t
+	desc = us_republic.5.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.5.a
+
+	}
+}
+
+#Civil War triggered
+country_event = {
+	id = us_republic.6
+	title = us_republic.6.t
+	desc = us_republic.6.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.6.a
+
+		}
+	}
+}
+
+#The Debt Ceiling Crisis hits
+country_event = {
+	id = us_republic.99
+	title = us_republic.99.t
+	desc = us_republic.99.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.99.a
+		add_ideas = { RWE_USA_Default }
+	}
+}

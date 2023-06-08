@@ -1,0 +1,191 @@
+USA_Debt_Ceiling_Crisis = {
+	USA_Debt_Ceiling_Crisis_Mission = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			tag = USA
+		}
+
+		available = {
+		always = no
+		}
+
+		activation = {
+			country_exists = USA
+		}
+
+		is_good = no
+
+		days_mission_timeout = 180
+
+		fire_only_once = yes
+
+		timeout_effect = {			
+		complete_national_focus	= USA_the_default_crisis
+		country_event = { id = us_republic.99 days = 1 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_The_War_against_Congress = {
+		icon = gre_faction_management
+
+		allowed = {
+			tag = USA
+		}
+
+		available = {
+		always = no
+		}
+
+		activation = {
+		has_completed_focus = USA_A_Day_That_Will_Live_In_Infamy
+		}
+
+		is_good = no
+
+		days_mission_timeout = 60
+
+		fire_only_once = yes
+
+		timeout_effect = {			
+
+		}
+
+		complete_effect = {	
+		custom_effect_tooltip = usa_tt_pick_decision_2		
+		if = { 	
+		limit = { has_country_flag = USA_mil_support_woc }
+		country_event = { id = us_republic.3 days = 0 } 
+		add_stability = 0.1
+		}
+
+		else= { 	
+		random_list = {
+		60 = { 
+		country_event = { id = us_republic.3 days = 0 } 
+		add_stability = 0.05
+		}
+		40 = { 
+		country_event = { id = us_republic.4 days = 0 } 
+		add_stability = -0.15		
+		}
+		}
+		}
+		
+		custom_effect_tooltip = usa_tt_pick_decision_1
+		if = { 	
+		limit = { has_country_flag = USA_gov_support_woc }
+		country_event = { id = us_republic.3 days = 0 } 
+		add_stability = 0.1
+		}
+
+		else= { 	
+		random_list = {
+		70 = { 
+		country_event = { id = us_republic.5 days = 0 } 
+		add_stability = -0.1			
+		}
+		20 = { 
+		custom_effect_tooltip = usa_tt_random_state_leaves_republic
+		add_stability = -0.05			
+		}
+		10 = { 
+		add_stability = 0.1	
+		}
+		}
+		}
+
+		custom_effect_tooltip = usa_tt_civil_war_mechanic
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_Secure_Military_Support = {
+
+		icon = generic_police_action
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		has_completed_focus = USA_A_Day_That_Will_Live_In_Infamy
+		has_active_mission = USA_The_War_against_Congress 
+		}
+
+		available = {
+		has_active_mission = USA_The_War_against_Congress 
+		}
+
+		days_remove = 25
+
+		remove_effect = {
+		add_stability = 0.05
+		custom_effect_tooltip = usa_tt_military_support
+		set_country_flag = USA_mil_support_woc
+		}
+	}
+
+	USA_Secure_Oligarch_Support = {
+
+		icon = gre_investment_decisions
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		has_completed_focus = USA_A_Day_That_Will_Live_In_Infamy
+		has_active_mission = USA_The_War_against_Congress 
+		}
+
+		available = {
+		has_active_mission = USA_The_War_against_Congress 		 
+		}
+
+		days_remove = 25
+
+		remove_effect = {
+		add_stability = 0.05
+		}
+	}
+
+	USA_Secure_State_Support = {
+
+		icon = hol_radio_oranje
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		has_completed_focus = USA_A_Day_That_Will_Live_In_Infamy
+		has_active_mission = USA_The_War_against_Congress 
+		}
+
+		available = {
+		has_active_mission = USA_The_War_against_Congress 		 
+		}
+
+		days_remove = 25
+
+		remove_effect = {
+		add_stability = 0.05
+		custom_effect_tooltip = usa_tt_no_state_declaration
+		set_country_flag = USA_gov_support_woc 
+		}
+	}
+}
