@@ -114,3 +114,39 @@ country_event = {
 		add_ideas = { RWE_USA_Default }
 	}
 }
+
+#Foreign Policy
+#Texan Question - diplomacy or hostility
+country_event = {
+	id = us_republic.101
+	title = us_republic.101.t
+	desc = us_republic.101.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.101.a
+		set_country_flag = TEX_HOSTILE
+	}	
+	
+	option = {
+		name = us_republic.101.b
+		set_country_flag = TEX_DIPLO
+	}
+}
+
+#Republic supports New Americans
+country_event = {
+	id = us_republic.102
+	title = us_republic.102.t
+	desc = us_republic.102.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.102.a
+
+	}	
+}

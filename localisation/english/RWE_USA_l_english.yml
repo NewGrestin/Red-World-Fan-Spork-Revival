@@ -4,6 +4,8 @@
   USA_CONGRESS_ADJ:0 "American
   USA_CONGRESS_DEF:0 "the American Union" 
 
+  powerful_president:0 "Powerful President" 
+
   ##########################
   # IDEAS
   ##########################
@@ -13,13 +15,19 @@
   RWE_USA_extreme_rural_poverty_desc:0 "In inheriting the Southern United States after the fall of the USA, the American Republic inherited the part of the country where economic disparity was perhaps most pronounced among the ex-USA states. Some of the poorest states of the old USA, such as Mississippi, Alabama and Kentucky, would align themselves with Bush's American Republic. The inequality between these rural states and the East, where the offices of power would be vested, are immense and the fall of the old US institutions hasn't helped their problems. Maintenance of basic infrastructure in sectors such as energy, communication, water and transport, has degrared far below the Republic's national average, as the Atlanta government struggles with the redistribution of its decreasing income among the states. In 2010, the percentage of individuals living in poverty has reached a staggering 32% in these rural states, which is especially pronounced in their minority communities, though not restricted to them. \n\nIn this current situation, the Republic's economy is stagnating. There's immense room to grow, but lacking funding for the poorest states leaves this room occupied with bad infrastructure, a lacking consumer base, decreasing quality of life and intense internal migration from the West to the East, as those with the chance to better their opportunity leave Alabama's swamps for Atlanta's skyscrapers and Florida's beaches."  
   RWE_USA_Anti_Soviet_Laws:0 "Communist Control Act of 2001"
   RWE_USA_Anti_Soviet_Laws_desc:0 "The Communist Control Act of 2001 was based on previous legislation, put in place prior to the fall of the United States to prevent government officials from holding radical opinions, and laws passed during the Bush administration that criminalized the Communist Party USA and IWW. The CCA of 2001 expanded restrictions by introducing limits to the registration of national and local political parties based on characteristics such as professed ideology and limits to access to ballots for those that: \n\n \"§Woppose the most basic of American values, advocate for subversion of the Republic's constitution, advocate for violations of the Republic's territorial integrity, discredit the Republic's armed forces or profess loyalty to foreign states§!\". \n\nThe CCA of 2001 has been rather vaguely applied, leading to accusations of political persecution. The act has been applied in various cases, with its most controversial application being the attempted banning of the Common Sense Party from ballots in Kentucky, which was overturned by the Supreme Court. Still the CCA keeps many potential parties outside the Republic's political system, preserving the GOP monopoly on politics." 
+  RWE_USA_Anti_Soviet_Laws_2:0 "Communist Control Act of 2001" 
+  RWE_USA_Anti_Soviet_Laws_2_desc:0 "The Communist Control Act of 2001 was based on previous legislation, put in place prior to the fall of the United States to prevent government officials from holding radical opinions, and laws passed during the Bush administration that criminalized the Communist Party USA and IWW. The CCA of 2001 expanded restrictions by introducing limits to the registration of national and local political parties based on characteristics such as professed ideology and limits to access to ballots for those that: \n\n \"§Woppose the most basic of American values, advocate for subversion of the Republic's constitution, advocate for violations of the Republic's territorial integrity, discredit the Republic's armed forces or profess loyalty to foreign states§!\". \n\nThe CCA of 2001 has been rather vaguely applied, leading to accusations of political persecution. The act has been applied in various cases, with its most controversial application being the attempted banning of the Common Sense Party from ballots in Kentucky, which was overturned by the Supreme Court. Still the CCA keeps many potential parties outside the Republic's political system, preserving the GOP monopoly on politics." 
   RWE_USA_Default:0 "Automatic Default"
   RWE_USA_Default_desc:0 "By hitting the debt ceiling, the government has become unable to pay off large shares of its deficit, automatically defaulting on them in principle. The event has caused trust in the system to collapse, as stock markets are closed early and government employees return home without pay." 
   RWE_USA_Unrecognized_Government:0 "Unrecognized Government"
   RWE_USA_Unrecognized_Government_desc:0 "Despite our clear direct claim to the entirety of the old United States, the rest of the international community doesn't recognize it. Even worse, a large part of the Soviet-led world order doesn't recognize us as a state actor at all, instead opting to declare us a pariah state and embargo us." 
-
   RWE_USA_increased_taxation:0 "Higher Income Tax"
+  RWE_USA_Neo_Americana:0 "Neo-Americana" 
+  RWE_USA_Neo_Americana_2:0 "Neo-Americana" 
 
+  ##########################
+  # FOCUS
+  ##########################
   USA_the_default_crisis:0 "A Crisis of National Debt"
   USA_the_default_crisis_desc:0 "The worst outcome has happened: Congress has kept the budget act from being passed, triggering the Republic to default on its national debt. Trust in our economy lies in shatters and Rumsfeld is left to pick up the pieces, as the threat of impeachment now looms."
   USA_devalue_the_dollar:0 "Devalue the Dollar"
@@ -79,16 +87,55 @@
   USA_rumsfeld_beaten:0 "The Executing Legislature"
   USA_rumsfeld_beaten_desc:0 "The Congress has brought Rumsfeld to his knees, finalizing agreements on the national debt ceiling and ending the struggle between the executive and the legislative. Rumsfeld's popularity is rather likely to not endure the coming presidential election and the GOP is already looking for the next man for the job." 
   USA_A_Day_That_Will_Live_In_Infamy:0 "A Day that will Live in Infamy"
+  USA_Rule_by_Decree:0 "Executive Supremacy"
+  USA_Expand_Presidential_Powers:0 "Maintain Trias Politica" 
+  USA_Disband_the_Supreme_Court:0 "Disband the \"SCOTUSSR\""
+  USA_Puppet_Court:0 "Pack the Courts" 
+  USA_When_the_President_does_It:0 "When the President does it..." 
+  USA_Prepare_for_2010:0 "Prepare for the 2010 Campaign"
+  USA_Nurture_RNC_Independence:0 "Preserve RNC Independence"
+  USA_Rumsfeldism:0 "Rumsfeldism" 
+  USA_Relax_XXII:0 "Relax the Twenty-Second" 
+  USA_Abolish_Term_Limits:0 "Abolish Term Limits" 
+  USA_Christian_Nationhood:0 "America, a Christian Nation" 
+  USA_Christian_Nationhood_desc:0 "\"America is a Christian nation\" is a line that is needed in our constitution, making clear that Americas values and morality has always relied on its Christian history." 
+  USA_GOP_Megachurch:0 "Repeal the Johnson Amendment" 
+  USA_GOP_Megachurch_desc:0 "The Johnson Amendment of the U.S. Tax Code prohobits the endorsing of political candidates by non-profit organizations, including most importantly the church. By repealing the Johnson Amendment, we maintain the Church's tax exemption but do not limit their freedom of speech any longer." 
+  USA_Declare_the_Culture_War:0 "The Culture War" 
+  USA_Expand_CCA_Restrictions:0 "Expand CCA Restrictions" 
+  USA_Expand_CCA_Restrictions_desc:0 "The Communist conspiracy that had beset our Congress has shown to us that the CCA wasn't just necessary, but too allowing in a world filled with Reds. Restrictions shall be expanded to include those who propose anti-Christian values and have connections with organisations of foreign origin." 
+  USA_The_PATRIOT_Act:0 "The PATRIOT Act"
+  USA_Censor_Anti_Republic_Media:0 "Censor Anti-State Media"
+  USA_Establish_Media_Hotlines:0 "Establish Media Hotlines" 
+  USA_Made_in_America:0 "Made-in-America Program" 
+  USA_Enshrine_Family_Values:0 "Enshrine Family Values" 
+  USA_Neo-Americana:0 "Neo-Americana"
+  USA_Neo-Americana_desc:0 "Neo-Americana is the nostalgia many still feel for the old United States and its values. As part of the GOP platform, the old United States must always be glorified and the restoration of it shouldn't be considered just a simple dream, but a concrete policy goal." 
+  USA_Repeal_Barnette:0 "Repeal Barnette"
+  USA_Apple_Pie_Politics:0 "Apple Pie Politics" 
+  USA_State_of_Emergency:0 "Declare a State of Emergency" 
+ 
+  USA_Resolve_the_Texan_Question:0 "Resolve the Texan Question" 
+  USA_Resolve_the_Texan_Question_desc:0 "Texas has always been an integral part of the old United States and the South, fueling the entire continental USA with its oil. The Lone Star has been mutilated by Mexico, its independence a communist plot to weaken the American people. Reunification with our brothers in the Lone Star State remains the question of Republic foreign policy." 
+  
 
-  USA_Debt_Ceiling_Crisis:0 "The Debt Ceiling Crisis of 2010"
+  ##########################
+  # DECISIONS
+  ##########################
+  USA_Debt_Ceiling_Crisis:0 "Politics of the Republic"
   USA_Debt_Ceiling_Crisis_desc:0 "\n\n\n\n\n\n\nThe loss of Congress in 2008 has left Rumsfeld and the GOP in an awkward position. As a POTUS without a Congress, Rumsfeld has often butted heads with the legislature, which has led to the current crisis. Congress has refused to raise the debt ceiling despite pleas from the Treasury as it quickly approaches the ceiling, overseeing a national debt that cannot be fixed in the short term. Rumsfeld is personally invested in the crisis and has been involved in negotiations with members of Congress, including with the party whips of Common Sense (Newt Gingrich) and the NPP (Clay Higgins), but has been unable to cross the aisle and reach an agreement with the opposition. Voices inside the administration have already proposed the disbanding of the Congress as the only solution to the problem, declaring that the constitution never planned for the contemporary situation of the American Republic." 
   USA_Debt_Ceiling_Crisis_Mission:0 "Debt Ceiling Crisis" 
+  USA_Debt_Ceiling_Crisis_Mission_desc:0 "The loss of Congress in 2008 has left Rumsfeld and the GOP in an awkward position. As a POTUS without a Congress, Rumsfeld has often butted heads with the legislature, which has led to the current crisis. Congress has refused to raise the debt ceiling despite pleas from the Treasury as it quickly approaches the ceiling, overseeing a national debt that cannot be fixed in the short term. Rumsfeld is personally invested in the crisis and has been involved in negotiations with members of Congress, including with the party whips of Common Sense (Newt Gingrich) and the NPP (Clay Higgins), but has been unable to cross the aisle and reach an agreement with the opposition. Voices inside the administration have already proposed the disbanding of the Congress as the only solution to the problem, declaring that the constitution never planned for the contemporary situation of the American Republic."
   USA_Secure_Military_Support:0 "Approach Loyal Generals" 
   USA_Secure_Oligarch_Support:0 "Intimidate Big Business" 
   USA_Secure_State_Support:0 "Secure the Governors"
   USA_The_War_against_Congress:0 "Declare War on Congress" 
   USA_The_War_against_Congress_desc:0 "The obstructionists in Congress are an existential threat to our nation, our democracy. The Presidency must act fast before these obstructing communist-sympathisers sell the country to the Northern Commonwealth by forcing a national default." 
 
+
+  ##########################
+  # TOOLTIPS
+  ##########################
   usa_tt_declare_war_on_congress:0 "\nRumsfeld will disband Congress by force, allowing the Presidency to tackle the debt crisis with impunity. A set of §Ydecisions§! will be available in preparation of the disbanding of Congress.\n\n"
   usa_tt_random_state_leaves_republic:0 "A state may decide to leave the Republic and declare its §Rindependence§!"
   usa_tt_no_state_declaration:0 "\nBy finishing this decision §Rbefore§! declaring war on Congress, §Yno state will declare their support for Congress or leave the Union§!." 
@@ -96,9 +143,15 @@
   usa_tt_pick_decision_1:0 "\nFinishing the decision \"§YSecure the Governors§!\" will prevent states from opposing Rumsfeld. \n\n§RCurrently, our chances are:§!"
   usa_tt_pick_decision_2:0 "\nFinishing the decision \"§YApproach Loyal Generals§!\" will guarantee military support for Rumsfeld. \n\n§RCurrently, our chances are:§!" 
   usa_tt_civil_war_mechanic:0 "\nIf we are below 30% stability£stability_texticon, the War on Congress may devolve into an §RACTUAL CIVIL WAR!§!"  
+  USA_RUMSFELD_THIRD_TERM:0 "Donald Rumsfeld has been elected for his §Ythird presidential term§!." 
 
-  #EVENTS
+  usa_approach_texas_tt:0 "We can either approach the [TEX.GetNameDef] through §Gdiplomacy§!£stability_texticon or §Rhostility§!£pol_violence regarding the question of Texan-Republican reunification. §YThis choice§! will decide how we approach foreign policy with ex-USA states." 
+  usa_approach_texas_tt_diplo:0 "\n§GDiplomatic Approach§!:" 
+  usa_approach_texas_tt_hostile:0 "\n§RHostile Approach§!:" 
 
+  ##########################
+  # EVENTS
+  ##########################
   us_republic.1.t:0 "Briefing on the Congressional Situation"
   us_republic.1.d:0 "Good morning, Mr. President, \n\nThe Congress of the Republic lost its GOP majority in 2008 after the poorest showing since the inception of our Republic in Atlanta by former president Bush. With our poor showing, the Common Sense Party and the New Populist Party gained a foot in the door of Congress, despite the GOP remaining the biggest party. Since 2008, cooperation between the three main parties has become the modus operandi of Rumsfeld's administration. The NPP has become a close partner in this, with Common Sense remaining obstructionist. \n\nHowever, the status quo suddenly changed in late 2009, as the issue of the debt ceiling was taken up by Congress. The normal decision to increase the ceiling was suddenly blocked by the NPP, which joined Common Sense in its obstructionist ways due to its overly libertarian economics. Duke rallied against the ceiling in his usual, far-right fashion, tying it to Jewish conspiracies, while Common Sense blocked the ceiling increase on the basis of opposing the spending deficit. The Presidency is now held hostage by Congress, putting a gun to Rumsfeld's head and forcing him to compromise with either the radicals of the NPP, whose ideological motivation may not allow for serious negotiations, or Common Sense."
   us_republic.1.a:0 "A nation held hostage through debt..." 
@@ -115,4 +168,7 @@
   us_republic.99.desc:0 "We have been unable to find compromise or disband Congress, leaving us without any room to continue paying off the debts of the American Republic. In every sense of the word, except perhaps formal, we have declared a debt default, leaving us in extraordinarily bad position." 
   us_republic.99.a:0 "Damn it!" 
 
-
+  us_republic.102.t:0 "The Republic supports the New Americans" 
+  us_republic.102.d:0 "In an adress to the public of the Republic, President [USA.GetLeader] declared that the Republic would no longer sit idly by while the Texan government brutally surpressed red-blooded Americans and its own citizens for their democratic desire to join the Republic. Referring to the 29th of December attacks that rocked Texas, the President argued that the attacks were a clear signal to the ruling elite of Houston, which were to blind and arrogant to consider the wishes of the people after independence. \n\nThe hostile rhetoric employed by the Republic has put Texas on edge. Expectations are that military conflict will soon arrive to the Lone Star State, as the Republic hungrily looks at Texas and its natural wealth and prosperity, untouched by the fall of the USA and Mexico's military incursions. The question is, however, what kind of action the Republic will employ in pursuing its goal of reunification." 
+  us_republic.102.a:0 "Contact the New Americans and plan a coup d'état"
+  us_republic.102.b:0 "We cannot wait, we will strike at midnight" 

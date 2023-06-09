@@ -12,11 +12,91 @@ focus_tree = {
 	shared_focus = USA_true_republican_economy
 	shared_focus = USA_A_Day_That_Will_Live_In_Infamy
 	shared_focus = USA_rumsfeld_beaten
+	shared_focus = USA_Resolve_the_Texan_Question
+	shared_focus = USA_Militarize_the_Northern_Border
 
 	continuous_focus_position = { x = 50 y = 1100 }
 	default = no
 }
 
+	shared_focus = {
+		id = USA_Resolve_the_Texan_Question
+		icon = state_of_texas
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 36
+		y = 6
+
+		cancelable = no
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		TEX = { exists = yes is_subject = no }
+		NOT = { has_war_with = TEX }
+		}
+		
+		bypass = { 
+		TEX = { OR = { exists = no is_subject = yes } }
+		}
+
+		select_effect = {
+		country_event = { id = us_republic.101 days = 0 }
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = usa_approach_texas_tt
+		
+		if = { 
+		limit = { has_country_flag = TEX_HOSTILE }
+		custom_effect_tooltip = usa_approach_texas_tt_hostile
+		country_event = { id = us_republic.102 days = 0 }
+		add_war_support = 0.05
+		}
+		
+		else_if = { 
+		limit = { has_country_flag = TEX_DIPLO }
+		custom_effect_tooltip = usa_approach_texas_tt_diplo
+		}
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Militarize_the_Northern_Border
+		icon = state_of_texas
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 41
+		y = 6
+
+		cancelable = no
+
+		available = {
+
+		}
+	
+		mutually_exclusive = {
+
+		}
+	
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+
+	}
 
 	shared_focus = {
 		id = USA_A_Day_That_Will_Live_In_Infamy
@@ -41,6 +121,609 @@ focus_tree = {
 		custom_effect_tooltip = usa_tt_declare_war_on_congress 
 
 		activate_decision = USA_The_War_against_Congress 
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Rule_by_Decree
+		icon = GFX_focus_SAF_colonialist_crusade2
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 23
+		y = 8
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_A_Day_That_Will_Live_In_Infamy
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Expand_Presidential_Powers
+		}
+
+		completion_reward = {
+		remove_ideas = { RWE_USA_hostile_congress }
+		add_country_leader_trait = powerful_president 
+
+		set_country_flag = USA_EXECUTIVE_SUPREMACY_FOCUS_COMPL
+		custom_effect_tooltip = usa_tt_executive_supremacy_trait_every_leader
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Expand_CCA_Restrictions
+		icon = GFX_goal_Generic_Purge_Social_Democracy
+		cost = 5
+		ai_will_do = {
+			base = 100
+		}
+		x = 25
+		y = 8
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_A_Day_That_Will_Live_In_Infamy
+		}
+
+		completion_reward = {
+		swap_ideas = { remove_idea = RWE_USA_Anti_Soviet_Laws add_idea = RWE_USA_Anti_Soviet_Laws_2 }
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Relax_XXII
+		icon = GFX_goal_constitutional_guarantees
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 26
+		y = 9
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_Rule_by_Decree focus = USA_Expand_Presidential_Powers
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Abolish_Term_Limits
+		icon = GFX_goal_treaty_fails
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 26
+		y = 10
+
+		available = {
+		has_country_flag = USA_RUMSFELD_THIRD_TERM
+		has_political_power > 199
+		}
+
+		prerequisite = { 
+		focus = USA_Relax_XXII
+		}
+
+		completion_reward = {
+		add_stability = -0.05
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Prepare_for_2010
+		icon = GFX_goal_MD_Election
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 18
+		y = 8
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_A_Day_That_Will_Live_In_Infamy
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Rumsfeldism
+		icon = GFX_focus_USA_Rumsfeld
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 20
+		y = 9
+
+		available = {
+		has_completed_focus = USA_Relax_XXII
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Nurture_RNC_Independence
+		}
+
+		prerequisite = { 
+		focus = USA_Prepare_for_2010 
+		}
+
+		prerequisite = { 
+		focus = USA_Rule_by_Decree focus = USA_Expand_Presidential_Powers
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Nurture_RNC_Independence
+		icon = GFX_goal_MD_Election
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 17
+		y = 9
+
+		available = {
+	
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Rumsfeldism
+		}
+
+		prerequisite = { 
+		focus = USA_Prepare_for_2010 
+		}
+
+		prerequisite = { 
+		focus = USA_Rule_by_Decree focus = USA_Expand_Presidential_Powers
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Christian_Nationhood
+		icon = GFX_goal_american_christianity
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 21
+		y = 10
+
+		available = {
+		NOT = { 
+		has_country_leader = {
+		character = USA_benjamin_netanyahu 
+		ruling_only = yes
+		}
+		}
+		}
+
+		prerequisite = { 
+		focus = USA_Rumsfeldism
+		}
+
+		prerequisite = { 
+		focus = USA_Puppet_Court focus = USA_Disband_the_Supreme_Court
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_GOP_Megachurch
+		icon = GFX_goal_american_christianity
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 21
+		y = 11
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_Christian_Nationhood
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Declare_the_Culture_War
+		icon = GFX_goal_american_christianity
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 19
+		y = 10
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_Rumsfeldism focus = USA_Nurture_RNC_Independence
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Enshrine_Family_Values
+		icon = GFX_goal_Generic_Family
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 20
+		y = 12
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_Declare_the_Culture_War
+		}
+
+		prerequisite = { 
+		focus = USA_GOP_Megachurch
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Neo-Americana
+		icon = GFX_goal_USA_fortress
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 24
+		y = 10
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_Rumsfeldism focus = USA_Nurture_RNC_Independence
+		}
+
+		prerequisite = { 
+		focus = USA_Puppet_Court focus = USA_Disband_the_Supreme_Court
+		}
+
+		completion_reward = {
+		add_ideas = { RWE_USA_Neo_Americana }
+		}
+	}
+
+	shared_focus = {
+		id = USA_Apple_Pie_Politics
+		icon = GFX_goal_USA_fortress
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 23
+		y = 11
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_Neo-Americana
+		}
+
+		completion_reward = {
+		swap_ideas = { remove_idea = RWE_USA_Neo_Americana add_idea = RWE_USA_Neo_Americana_2 }
+		}
+	}
+
+	shared_focus = {
+		id = USA_Repeal_Barnette
+		icon = GFX_goal_generic_trial
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 25
+		y = 11
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_Neo-Americana
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_The_PATRIOT_Act
+		icon = national_security_agency_focus
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 16
+		y = 10
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_Rumsfeldism focus = USA_Nurture_RNC_Independence
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Made_in_America
+		icon = consumer_goods
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 14
+		y = 10
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_Rumsfeldism focus = USA_Nurture_RNC_Independence
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Censor_Anti_Republic_Media
+		icon = GFX_goal_generic_media_controls
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 19
+		y = 11
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_The_PATRIOT_Act
+		}
+
+		prerequisite = { 
+		focus = USA_Declare_the_Culture_War
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Establish_Media_Hotlines
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Establish_Media_Hotlines
+		icon = GFX_goal_generic_phone_crisis
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 17
+		y = 11
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_The_PATRIOT_Act
+		}
+
+		prerequisite = { 
+		focus = USA_Declare_the_Culture_War
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Censor_Anti_Republic_Media
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_State_of_Emergency
+		icon = GFX_goal_refugee_management
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 16
+		y = 12
+
+		available = {
+		has_war_with_major = yes
+		enemies_strength_ratio > 1
+		}
+
+		prerequisite = { 
+		focus = USA_The_PATRIOT_Act
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_When_the_President_does_It
+		icon = GFX_focus_USA_Nixon
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 15
+		y = 9
+
+		available = {
+
+		}
+
+		prerequisite = { 
+		focus = USA_Prepare_for_2010 
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Puppet_Court
+		icon = GFX_goal_generic_court
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 22
+		y = 9
+
+		available = {
+
+		}
+
+		prerequisite = { 
+		focus = USA_Rule_by_Decree focus = USA_Expand_Presidential_Powers
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Disband_the_Supreme_Court
+		}
+
+		completion_reward = {
+		add_stability = 0.1
+		add_popularity = { ideology = national_conservative popularity = 0.05 }
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Disband_the_Supreme_Court
+		icon = GFX_focus_SOV_the_last_purge
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 24
+		y = 9
+
+		available = {
+
+		}
+
+		prerequisite = { 
+		focus = USA_Rule_by_Decree
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Puppet_Court
+		}
+
+		completion_reward = {
+		add_stability = -0.05
+		add_political_power = 150
+		add_popularity = { ideology = nationalist popularity = 0.05 }
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Expand_Presidential_Powers
+		icon = GFX_goal_generic_dissolve_parliament1
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 21
+		y = 8
+
+		available = {
+
+		}
+
+		prerequisite = { 
+		focus = USA_A_Day_That_Will_Live_In_Infamy
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Rule_by_Decree
+		}
+
+		completion_reward = {
+		remove_ideas = { RWE_USA_hostile_congress }
 		}
 
 	}
@@ -238,7 +921,7 @@ focus_tree = {
 
 	shared_focus = {
 		id = USA_increase_middle_income_tax
-		icon = GFX_goal_generic_financial_markets
+		icon = GFX_focus_ITA_devaluate_the_lire
 		cost = 3
 		ai_will_do = {
 			base = 100
@@ -311,7 +994,7 @@ focus_tree = {
 
 	shared_focus = {
 		id = USA_Plan_Amtrak_Expansion
-		icon = GFX_goal_generic_railway_construction
+		icon = GFX_focus_generic_railroad
 		cost = 3
 		ai_will_do = {
 			base = 100

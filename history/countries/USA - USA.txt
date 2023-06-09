@@ -382,6 +382,16 @@ recruit_character = USA_frank_ancona
 recruit_character = USA_carly_fiorina
 recruit_character = usa_william_mcraven
 
+recruit_character = USA_rick_santorum 
+recruit_character = USA_benjamin_netanyahu 
+recruit_character = USA_dan_crenshaw 
+recruit_character = USA_Thomas_Ridge 
+recruit_character = USA_Ron_DeSantis 
+recruit_character = USA_Robert_Gates 
+recruit_character = USA_Paul_Wolfowitz 
+recruit_character = USA_MTG 
+recruit_character = USA_mark_meadows 
+
 if = {
 	limit = {
 		has_dlc = "No Step Back"

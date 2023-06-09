@@ -6,6 +6,51 @@ ideas = {
 
 	country = {
 
+		RWE_USA_Neo_Americana = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = OKL_Rural_Poverty
+			
+			removal_cost = -1
+	
+			modifier = {
+			war_support_factor = 0.05
+			justify_war_goal_time = -0.15
+			}
+		}
+
+		RWE_USA_Neo_Americana_2 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = OKL_Rural_Poverty
+			
+			removal_cost = -1
+	
+			modifier = {
+			war_support_factor = 0.1
+			nationalism_drift = 0.01
+			surrender_limit = 0.1
+			consumer_goods_factor = 0.03
+			justify_war_goal_time = -0.15
+			}
+		}
+
 		RWE_USA_extreme_rural_poverty = {
 			
 			
@@ -41,7 +86,7 @@ ideas = {
 				always = yes
 			}
 
-            		picture = brotherhood_and_unity
+            		picture = generic_communism_banned
 			
 			removal_cost = -1
 	
@@ -50,6 +95,31 @@ ideas = {
 			revolutionary_socialist_drift = -0.01
 			moderate_socialist_drift = -0.01
 			political_power_cost = 0.15
+			stability_factor = 0.05
+			}
+		}
+
+		RWE_USA_Anti_Soviet_Laws_2 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = generic_communism_banned
+			
+			removal_cost = -1
+	
+			modifier = {
+			communist_drift = -0.05
+			revolutionary_socialist_drift = -0.05
+			moderate_socialist_drift = -0.03
+			new_democrat_drift = -0.01
+			political_power_cost = 0.2
 			stability_factor = 0.05
 			}
 		}
@@ -135,7 +205,7 @@ ideas = {
 				always = yes
 			}
 
-            		picture = USA_hostile_congress
+            		picture = EST_exploit_the_banks
 			
 			removal_cost = -1
 	

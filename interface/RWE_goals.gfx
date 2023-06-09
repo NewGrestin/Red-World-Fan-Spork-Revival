@@ -4,6 +4,50 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_usa_build_the_pentagon.dds"			
 	}
 	SpriteType = {
+		name = "GFX_focus_generic_coffee"
+		texturefile = "gfx/interface/goals/focus_generic_coffee.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_ITA_devaluate_the_lire"
+		texturefile = "gfx/interface/goals/focus_ITA_devaluate_the_lire.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_the_last_purge"
+		texturefile = "gfx/interface/goals/focus_SOV_the_last_purge.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_hydroelectric_energy"
+		texturefile = "gfx/interface/goals/focus_generic_hydroelectric_energy.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_conspiracy"
+		texturefile = "gfx/interface/goals/focus_generic_conspiracy.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_SWI_issue_war_bonds"
+		texturefile = "gfx/interface/goals/focus_SWI_issue_war_bonds.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_SWI_neutrality_on_the_move"
+		texturefile = "gfx/interface/goals/focus_SWI_neutrality_on_the_move.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_land_reclamation"
+		texturefile = "gfx/interface/goals/focus_generic_land_reclamation.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_fascist_propaganda"
+		texturefile = "gfx/interface/goals/focus_generic_fascist_propaganda.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_railroad"
+		texturefile = "gfx/interface/goals/focus_generic_railroad.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Nixon"
+		texturefile = "gfx/interface/goals/USA_Nixon.dds"			
+	}
+	SpriteType = {
 		name = "GFX_focus_USA_Default"
 		texturefile = "gfx/interface/goals/USA_Default.dds"			
 	}
@@ -14,6 +58,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_USA_long_hand"
 		texturefile = "gfx/interface/goals/USA_long_hand.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Rumsfeld"
+		texturefile = "gfx/interface/goals/USA_Rumsfeld.dds"			
 	}
 	SpriteType = {
 		name = "GFX_goal_MOT_Denounce_Technology"

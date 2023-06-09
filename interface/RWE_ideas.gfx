@@ -4,6 +4,34 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/hostile_congress.dds"			
 	}
 	SpriteType = {
+		name = "GFX_idea_EST_exploit_the_banks"
+		texturefile = "gfx/interface/ideas/idea_EST_exploit_the_banks.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_ETH_coffee_exports"
+		texturefile = "gfx/interface/ideas/idea_ETH_coffee_exports.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_ETH_corrupt_bureaucracy"
+		texturefile = "gfx/interface/ideas/idea_ETH_corrupt_bureaucracy.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_ETH_conservative_high_command"
+		texturefile = "gfx/interface/ideas/idea_ETH_conservative_high_command.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_communism_banned"
+		texturefile = "gfx/interface/ideas/idea_generic_communism_banned.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_fuel_reserves"
+		texturefile = "gfx/interface/ideas/idea_generic_fuel_reserves.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_LIT_invested_in_farms"
+		texturefile = "gfx/interface/ideas/idea_LIT_invested_in_farms.dds"			
+	}
+	SpriteType = {
 		name = "GFX_LIN_Nazbol_Pic"
 		texturefile = "gfx/interface/LIN_Nazbol_Pic.tga"			
 	}
