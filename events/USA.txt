@@ -1,4 +1,38 @@
 add_namespace = us_republic
+add_namespace = us_republic_news
+
+########################
+###DEBT CEILING CRISI###
+########################
+#Rumsfeld forces Congress to disband
+news_event = {
+	id = us_republic_news.1
+	title = us_republic_news.1.t
+	desc = us_republic_news.1.d
+	picture = RWE_USA_Congress
+	
+	is_triggered_only = yes
+
+	option = {
+		name = us_republic_news.1.a
+
+	}
+}
+
+#Rumsfeld and Congress at War
+news_event = {
+	id = us_republic_news.2
+	title = us_republic_news.2.t
+	desc = us_republic_news.2.d
+	picture = RWE_USA_Civil_War
+	
+	is_triggered_only = yes
+
+	option = {
+		name = us_republic_news.2.a
+
+	}
+}
 
 ########################
 ###DEBT CEILING CRISI###
@@ -95,8 +129,56 @@ country_event = {
 	
 	option = {
 		name = us_republic.6.a
-
+		ATL = { transfer_state = 365 }
+		set_capital = { state = 371 remember_old_capital = yes }
+		every_state = { 
+			limit = { is_core_of = USA }
+			add_core_of = ATL
 		}
+	}
+}
+
+#Atlanta won
+country_event = {
+	id = us_republic.70
+	title = us_republic.70.t
+	desc = us_republic.70.d
+	picture = us_female_troop_saluting
+	
+	fire_only_once = yes
+
+	trigger = { 
+	tag = ATL
+	USA = { exists = no }
+	has_war = no
+	is_subject = no
+	}
+	
+	option = {
+		name = us_republic.70.a
+		set_cosmetic_tag = USA_CONGRESS
+		every_state = { 
+			limit = { is_core_of = USA }
+			remove_core_of = USA 
+		}		
+	}
+}
+
+#CIVIL WAR
+country_event = {
+	id = us_republic.80
+	title = us_republic.80.t
+	desc = us_republic.80.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.80.a
+		declare_war_on = {
+    		target = ATL
+    		type = annex_everything
+		}		
 	}
 }
 
@@ -145,8 +227,13 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = {
+	option = { #Support a Coup
 		name = us_republic.102.a
+
+	}
+
+	option = { #Invade now
+		name = us_republic.102.b
 
 	}	
 }

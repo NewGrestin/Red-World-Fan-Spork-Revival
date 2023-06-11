@@ -23,7 +23,7 @@ ideas = {
 	
 			modifier = {
 			war_support_factor = 0.05
-			justify_war_goal_time = -0.15
+			compliance_gain = 0.1
 			}
 		}
 
@@ -44,10 +44,8 @@ ideas = {
 	
 			modifier = {
 			war_support_factor = 0.1
-			nationalism_drift = 0.01
-			surrender_limit = 0.1
-			consumer_goods_factor = 0.03
-			justify_war_goal_time = -0.15
+			surrender_limit = 0.1		
+			compliance_gain = 0.15
 			}
 		}
 

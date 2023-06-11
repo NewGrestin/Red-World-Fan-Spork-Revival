@@ -283,6 +283,8 @@ add_opinion_modifier = {
 	modifier = embargo
 }
 
+give_guarantee = TEX
+
 add_ideas = {
 	RWE_USA_extreme_rural_poverty 
 	RWE_USA_Anti_Soviet_Laws

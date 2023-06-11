@@ -1,8 +1,8 @@
 ﻿l_english:
 
-  USA_CONGRESS:0 "American Union"
+  USA_CONGRESS:0 "American Republic"
   USA_CONGRESS_ADJ:0 "American
-  USA_CONGRESS_DEF:0 "the American Union" 
+  USA_CONGRESS_DEF:0 "the American Republic" 
 
   powerful_president:0 "Powerful President" 
 
@@ -111,13 +111,17 @@
   USA_Enshrine_Family_Values:0 "Enshrine Family Values" 
   USA_Neo-Americana:0 "Neo-Americana"
   USA_Neo-Americana_desc:0 "Neo-Americana is the nostalgia many still feel for the old United States and its values. As part of the GOP platform, the old United States must always be glorified and the restoration of it shouldn't be considered just a simple dream, but a concrete policy goal." 
-  USA_Repeal_Barnette:0 "Repeal Barnette"
-  USA_Apple_Pie_Politics:0 "Apple Pie Politics" 
+  USA_Repeal_Barnette:0 "Repeal Barnette v. West Virginia"
+  USA_Repeal_Barnette_desc:0 "Barnette v West Virginia State Board of Education overturned the decision of Minersvile School District v Gobitis and turned the pledge of allegiance from a mandatory tradition to a voluntary choice for school students, ushering in an era of anti-patriotic sentiment in America's youth. With the Supreme Court on our side, can undo this past mistake."  
+  USA_Apple_Pie_Politics:0 "Apple Pie Politics"  
+  USA_Apple_Pie_Politics_desc:0 "Coined as Apple Pie Politics by its critics, Neo-Americana relies on nostalgia for not just the past in its politics, but also the past in its culture. Memories of mons baking apple pies in the wealthy suburbs should emphasise America's exceptional nature, even if we have to ignore all the bad historical bagage." 
   USA_State_of_Emergency:0 "Declare a State of Emergency" 
  
   USA_Resolve_the_Texan_Question:0 "Resolve the Texan Question" 
   USA_Resolve_the_Texan_Question_desc:0 "Texas has always been an integral part of the old United States and the South, fueling the entire continental USA with its oil. The Lone Star has been mutilated by Mexico, its independence a communist plot to weaken the American people. Reunification with our brothers in the Lone Star State remains the question of Republic foreign policy." 
-  
+  USA_Militarize_the_Northern_Border:0 "Militarize the Northern Border" 
+  USA_Rival_Government:0 "The Legitimate Remnants" 
+  USA_Rival_Government_desc:0 "We remain the last remnants of the old United States government. Our claim to the entire ex-USA remains the most valid according to international law, unlike the fake communist governments of Philadelphia or the West Coast. We will maintain this position till the day we unite the old continental USA."  
 
   ##########################
   # DECISIONS
@@ -131,7 +135,10 @@
   USA_Secure_State_Support:0 "Secure the Governors"
   USA_The_War_against_Congress:0 "Declare War on Congress" 
   USA_The_War_against_Congress_desc:0 "The obstructionists in Congress are an existential threat to our nation, our democracy. The Presidency must act fast before these obstructing communist-sympathisers sell the country to the Northern Commonwealth by forcing a national default." 
-
+  USA_Civil_War_Mission:0 "Another American Civil War"
+  USA_Civil_War_Mission_desc:0 "Congress now squarely opposes Rumsfeld and the extreme GOP for the illegal decision to disband Congress and the threat to use military force against Congress by Rumsfeld. His gamble failed to pay off and now, Atlanta arms itself, knowing that Rumsfeld won't wait patiently nor surrender that easily. American democracy is in peril and Congress isn't standing down." 
+  USA_States_Flip:0 "Pre-Conflict Events"
+  USA_States_Flip_desc:0 "As conflict looms on the horizon, states are questioned in their loyalty to Rumsfeld or Congress. Before the war can break out, these states still decide which side they opt to support." 
 
   ##########################
   # TOOLTIPS
@@ -164,6 +171,10 @@
   us_republic.5.t:0 "Florida declares support for Congress" 
   us_republic.6.t:0 "Congress stands Defiant" 
 
+  us_republic.80.t:0 "Another American Civil War"
+  us_republic.80.d:0 "The irony is quite palpable, even in the tense office of Rumsfeld and the members of his closest circle. Once more, the Southern US is the birthplace of an American civil war. At least this time it's for a less sinister purpose, even his critics can agree with that sentiment. \n\nStates have flipped to Congress in opposing Rumsfeld. At the same time, Rumsfeld knows that the rest of America watches with baited breath. The socialists in the North will probably not wait for us to clean up Congress to pick at our carcass, nor will Mexico wait for our approval as it eyes up the oil wealth of Texas. In an ideal scenario, we can stop such a crisis from happening by swiftly ending this rebellion." 
+  us_republic.80.a:0 "We will break this house before it divides again!" 
+
   us_republic.99.t:0 "Reaching the Ceiling"
   us_republic.99.desc:0 "We have been unable to find compromise or disband Congress, leaving us without any room to continue paying off the debts of the American Republic. In every sense of the word, except perhaps formal, we have declared a debt default, leaving us in extraordinarily bad position." 
   us_republic.99.a:0 "Damn it!" 
@@ -172,3 +183,13 @@
   us_republic.102.d:0 "In an adress to the public of the Republic, President [USA.GetLeader] declared that the Republic would no longer sit idly by while the Texan government brutally surpressed red-blooded Americans and its own citizens for their democratic desire to join the Republic. Referring to the 29th of December attacks that rocked Texas, the President argued that the attacks were a clear signal to the ruling elite of Houston, which were to blind and arrogant to consider the wishes of the people after independence. \n\nThe hostile rhetoric employed by the Republic has put Texas on edge. Expectations are that military conflict will soon arrive to the Lone Star State, as the Republic hungrily looks at Texas and its natural wealth and prosperity, untouched by the fall of the USA and Mexico's military incursions. The question is, however, what kind of action the Republic will employ in pursuing its goal of reunification." 
   us_republic.102.a:0 "Contact the New Americans and plan a coup d'état"
   us_republic.102.b:0 "We cannot wait, we will strike at midnight" 
+
+  #News
+
+  us_republic_news.1.t:0 "Rumsfeld Disbands Congress"
+  us_republic_news.1.d:0 "In a decision that has stunned commentators across the ex-USA countries and Canada, President Donald Rumsfeld has forced the Congress of the Republic to disband under the threat of laying siege to the old Georgian state congress, which housed the Republic's legislative branch. \n\nThe disbanding of Congress is the finale of a long conflict between the opposition-held House and Senate and the Republican presidency regarding the debt ceiling, as the opposition had \"held the nation hostage\", according to President Rumsfeld, in its decision to not move the ceiling. After months of failed talks, Rumsfeld publicly came forward and announced the disbanding of Congress. Before the opposition could even react to Rumsfeld's illegal decision, the ARAF sided with the President and besieged Congress. \n\nSome have stated that this may be the last nail in the coffin of liberal American democracy. with Congress disbanded, Rumsfeld sets the stage for another decade of GOP supremacy in the Republic's politics."
+  us_republic_news.1.a:0 "What will the future hold for America?" 
+
+  us_republic_news.2.t:0 "Congress goes to War with Rumsfeld"
+  us_republic_news.2.d:0 "Shock and horror grip many as they closely watch the videos of Republic tanks driving through Atlanta, their crews pledging allegiance to Congress instead of the President after Rumsfeld has failed to disband Congress. Publicly announcing the disbandement yesterday evening, Rumsfeld had hoped he would have the military's support in the matter and force Congress to its knees. His hopes would be swiftly crushed, as brigades of the ARAF confronted Rumsfeld loyalists in Atlanta. \n\nWhile no casualties have yet been made, the events unfolding in the Republic can only end with violent confrontation between those loyal to Congress and American democracy and those loyal to Rumsfeld and his wing of the GOP. Even the Republican Party, the original behemoth of the Republic, has been split by the conflict, with many moderates betraying Rumsfeld in this time of crisis and aligning themselves with Congress and its ruling party, the Common Sense Party. Conflict seems all but assured in the coming weeks." 
+  us_republic_news.2.a:0 "A House divided..." 

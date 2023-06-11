@@ -14,6 +14,8 @@ focus_tree = {
 	shared_focus = USA_rumsfeld_beaten
 	shared_focus = USA_Resolve_the_Texan_Question
 	shared_focus = USA_Militarize_the_Northern_Border
+	shared_focus = USA_Rival_Government
+	shared_focus = USA_Compromise_with_NEA
 
 	continuous_focus_position = { x = 50 y = 1100 }
 	default = no
@@ -53,6 +55,11 @@ focus_tree = {
 		custom_effect_tooltip = usa_approach_texas_tt_hostile
 		country_event = { id = us_republic.102 days = 0 }
 		add_war_support = 0.05
+		diplomatic_relation = {
+    		country = TEX
+    		relation = guarantee
+    		active = no
+		}
 		}
 		
 		else_if = { 
@@ -66,7 +73,7 @@ focus_tree = {
 
 	shared_focus = {
 		id = USA_Militarize_the_Northern_Border
-		icon = state_of_texas
+		icon = fortify_city
 		cost = 3
 		ai_will_do = {
 			base = 100
@@ -74,14 +81,81 @@ focus_tree = {
 		x = 41
 		y = 6
 
-		cancelable = no
-
 		available = {
-
+		is_owner_neighbor_of = NEA
+		NEA = { is_subject = no NOT = { has_war_with = USA } exists = yes }
 		}
 	
 		mutually_exclusive = {
 
+		}
+	
+		bypass = { 
+		NEA = { exists = no }
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Rival_Government
+		icon = GFX_focus_ETH_re-convene_the_parliament
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 42
+		y = 5
+
+		available = {
+		NEA = { is_subject = no exists = yes }
+		}
+	
+		mutually_exclusive = {
+		focus = USA_Compromise_with_NEA
+		}
+	
+		bypass = { 
+		NEA = { exists = no }
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Compromise_with_NEA
+		icon = GFX_focus_ETH_re-convene_the_parliament
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 44
+		y = 5
+
+		available = {
+		OR = { 
+		has_government = moderate_socialist
+		has_government = revolutionary_socialist
+		has_government = communist 
+		}
+		NEA = { is_subject = no exists = yes NOT = { has_war_with = USA } }
+		}
+	
+		mutually_exclusive = {
+		focus = USA_Rival_Government
 		}
 	
 		bypass = { 
@@ -95,7 +169,6 @@ focus_tree = {
 		completion_reward = {
 
 		}
-
 	}
 
 	shared_focus = {
@@ -586,6 +659,28 @@ focus_tree = {
 
 		mutually_exclusive = { 
 		focus = USA_Censor_Anti_Republic_Media
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Expanded_Definition_of_Terrorist
+		icon = GFX_goal_generic_martial_law
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 15
+		y = 11
+
+		available = {
+		}
+
+		prerequisite = { 
+		focus = USA_The_PATRIOT_Act
 		}
 
 		completion_reward = {
