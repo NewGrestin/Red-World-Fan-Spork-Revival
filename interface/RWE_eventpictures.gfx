@@ -1,6 +1,26 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "USA_Its_Rover"
+		texturefile = "gfx/event_pictures/report_event/USA_Its_Rover.dds"
+	}
+
+	spriteType = {
+		name = "USA_Bridge"
+		texturefile = "gfx/event_pictures/report_event/USA_Bridge.dds"
+	}
+
+	spriteType = {
+		name = "USA_Winter"
+		texturefile = "gfx/event_pictures/report_event/USA_Winter.dds"
+	}
+
+	spriteType = {
+		name = "USA_Victory"
+		texturefile = "gfx/event_pictures/report_event/USA_Victory.dds"
+	}
+
+	spriteType = {
 		name = "generic_government_bond"
 		texturefile = "gfx/event_pictures/report_event/generic_government_bond.tga"
 	}

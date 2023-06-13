@@ -287,6 +287,7 @@ give_guarantee = TEX
 
 add_ideas = {
 	RWE_USA_extreme_rural_poverty 
+	RWE_Shadow_Oligarchy 
 	RWE_USA_Anti_Soviet_Laws
 	RWE_USA_hostile_congress 
 	RWE_USA_Unrecognized_Government 
@@ -299,7 +300,18 @@ add_ideas = {
 	usa_inm_michael_hayden
 }
 
+set_variable = { USA_Oligarchic_Influence = 0.18 }
+
 recruit_character = USA_donald_rumsfeld
+recruit_character = USA_Thomas_Ridge 
+recruit_character = USA_rick_santorum 
+recruit_character = USA_benjamin_netanyahu 
+recruit_character = USA_dan_crenshaw 
+recruit_character = USA_Ron_DeSantis 
+recruit_character = USA_Robert_Gates 
+recruit_character = USA_Paul_Wolfowitz 
+recruit_character = USA_MTG 
+recruit_character = USA_mark_meadows 
 recruit_character = USA_david_duke
 recruit_character = USA_joe_biden
 recruit_character = USA_paul_i
@@ -383,16 +395,6 @@ recruit_character = USA_congress_of_corporations
 recruit_character = USA_frank_ancona
 recruit_character = USA_carly_fiorina
 recruit_character = usa_william_mcraven
-
-recruit_character = USA_rick_santorum 
-recruit_character = USA_benjamin_netanyahu 
-recruit_character = USA_dan_crenshaw 
-recruit_character = USA_Thomas_Ridge 
-recruit_character = USA_Ron_DeSantis 
-recruit_character = USA_Robert_Gates 
-recruit_character = USA_Paul_Wolfowitz 
-recruit_character = USA_MTG 
-recruit_character = USA_mark_meadows 
 
 if = {
 	limit = {

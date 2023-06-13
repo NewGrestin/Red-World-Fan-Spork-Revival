@@ -237,3 +237,341 @@ country_event = {
 
 	}	
 }
+
+#Covington Bridge Incident
+country_event = {
+	id = us_republic.200
+	title = us_republic.200.t
+	desc = us_republic.200.d
+	picture = USA_Bridge
+	
+	is_triggered_only = yes
+	
+	option = { #Tell them to stand down
+		name = us_republic.200.a
+	set_country_flag = US_STAY
+	}
+
+	option = { #Push and see how far it goes
+		name = us_republic.200.b
+	set_country_flag = US_PUSH
+	}	
+}
+
+#Covington Bridge Incident - both pushed
+country_event = {
+	id = us_republic.201
+	title = us_republic.201.t
+	desc = us_republic.201.d
+	picture = USA_Bridge
+	
+	fire_only_once = yes
+
+	trigger = { 
+	OR = { 
+	has_country_flag = US_PUSH
+	has_country_flag = US_STAY
+	}
+	NEA = { has_country_flag = US_PUSH }
+	USA = { has_country_flag = US_PUSH }
+	}
+	
+	immediate = {
+	start_border_war = {
+    	change_state_after_war = no
+    	attacker = {
+        state = 369
+        num_provinces = 1
+        on_win = us_republic.202
+        on_lose = us_republic.203
+        on_cancel = us_republic.204
+        modifier = -0.2
+    	}	
+    	defender = {
+        state = 261
+        num_provinces = 1
+        on_win = us_republic.203
+        on_lose = us_republic.202
+        on_cancel = us_republic.204
+        modifier = -0.2
+    	}	
+	}
+	}
+
+	option = { #
+		name = us_republic.201.a
+
+	}	
+}
+
+#Covington Bridge Incident - America won
+country_event = {
+	id = us_republic.202
+	title = us_republic.202.t
+	desc = us_republic.202.d
+	picture = USA_Victory
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	hidden_effect = {
+	USA = {
+	set_province_controller = 4601
+	set_province_controller = 11890
+	set_province_controller = 971
+	}
+	NEA = {	 
+	add_war_support = -0.05
+	add_stability = -0.05
+	add_political_power = -75
+	add_manpower = -250
+	}
+	}
+	}
+
+	option = { #This is a declaration of war
+		name = us_republic.202.a
+		army_experience = 5
+		if = { 
+		limit = { tag = NEA }
+		declare_war_on = {
+    		target = USA
+    		type = annex_everything
+		}
+		}
+	}	
+}
+
+#Covington Bridge Incident - NEA won
+country_event = {
+	id = us_republic.203
+	title = us_republic.203.t
+	desc = us_republic.203.d
+	picture = USA_Winter
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	hidden_effect = {
+	USA = {
+	add_war_support = -0.05
+	add_stability = -0.05
+	add_political_power = -150
+	add_manpower = -550
+	}
+	NEA = {	 
+	add_war_support = 0.05
+	add_stability = 0.05
+	army_experience = 5
+	}
+	}
+	}
+
+	option = { #This is a declaration of war
+		name = us_republic.203.a
+		army_experience = 5
+		if = { 
+		limit = { tag = USA }
+		declare_war_on = {
+    		target = NEA
+    		type = annex_everything
+		}
+		}
+	}	
+}
+
+#Covington Bridge Incident - stalemate
+country_event = {
+	id = us_republic.204
+	title = us_republic.204.t
+	desc = us_republic.204.d
+	picture = USA_Winter
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	hidden_effect = {
+	USA = {
+	add_war_support = -0.05
+	add_stability = -0.05
+	add_political_power = -50
+	add_manpower = -100
+	}
+	NEA = {	 
+	add_war_support = -0.05
+	add_stability = -0.05
+	add_political_power = -50
+	add_manpower = -100
+	}
+	}
+	}
+
+	option = { #This is a declaration of war
+		name = us_republic.204.a
+		army_experience = 2
+		if = { 
+		limit = { tag = USA }
+		declare_war_on = {
+    		target = NEA
+    		type = annex_everything
+		}
+		}
+	}	
+}
+
+#Covington Bridge Incident - NEA pushed
+country_event = {
+	id = us_republic.205
+	title = us_republic.205.t
+	desc = us_republic.205.d
+	picture = USA_Bridge
+	
+	fire_only_once = yes
+
+	trigger = { 
+	OR = { 
+	has_country_flag = US_PUSH
+	has_country_flag = US_STAY
+	}
+	NEA = { has_country_flag = US_PUSH }
+	USA = { has_country_flag = US_STAY }
+	}
+	
+	immediate = {
+	start_border_war = {
+    	change_state_after_war = no
+    	attacker = {
+        state = 261
+        num_provinces = 2
+        on_win = us_republic.203
+        on_lose = us_republic.202
+        on_cancel = us_republic.204
+        modifier = 0.5
+    	}	
+    	defender = {
+        state = 369
+        num_provinces = 2
+        on_win = us_republic.202
+        on_lose = us_republic.203
+        on_cancel = us_republic.204
+        modifier = -0.2
+    	}	
+	}
+	}
+
+	option = { #
+		name = us_republic.201.a
+
+	}	
+}
+
+#Covington Bridge Incident - USA pushed
+country_event = {
+	id = us_republic.206
+	title = us_republic.206.t
+	desc = us_republic.206.d
+	picture = USA_Bridge
+	
+	fire_only_once = yes
+
+	trigger = { 
+	OR = { 
+	has_country_flag = US_PUSH
+	has_country_flag = US_STAY
+	}
+	NEA = { has_country_flag = US_STAY }
+	USA = { has_country_flag = US_PUSH }
+	}
+	
+	immediate = {
+	start_border_war = {
+    	change_state_after_war = no
+    	attacker = {
+        state = 369
+        num_provinces = 2
+        on_win = us_republic.202
+        on_lose = us_republic.203
+        on_cancel = us_republic.204
+        modifier = 0.5
+    	}	
+    	defender = {
+        state = 261
+        num_provinces = 2
+        on_win = us_republic.203
+        on_lose = us_republic.202
+        on_cancel = us_republic.204
+        modifier = -0.2
+    	}	
+	}
+	}
+
+	option = { #
+		name = us_republic.201.a
+
+	}	
+}
+
+#Covington Bridge Incident - both stay
+country_event = {
+	id = us_republic.207
+	title = us_republic.207.t
+	desc = us_republic.207.d
+	picture = USA_Bridge
+	
+	fire_only_once = yes
+
+	trigger = { 
+	tag = USA
+	NEA = { has_country_flag = US_STAY }
+	USA = { has_country_flag = US_STAY }
+	}
+
+	option = { #Let's pretend this didn't happen
+		name = us_republic.207.a
+		add_war_support = -0.05
+	}
+
+	option = { #We will not forgive, to war!
+		name = us_republic.207.b
+		add_war_support = -0.05
+		create_wargoal = {
+    		type = puppet_wargoal_focus
+    		target = NEA
+		}
+	}	
+}
+
+#Normal Politics
+#Rumsfeld relaxes the Two Term Rule
+country_event = {
+	id = us_republic.600
+	title = us_republic.600.t
+	desc = us_republic.600.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.600.a
+
+	}	
+}
+
+#Rumsfeld gets impeached
+country_event = {
+	id = us_republic.601
+	title = us_republic.601.t
+	desc = us_republic.601.d
+	picture = USA_Its_Rover
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.601.a
+		add_popularity = { ideology = nationalist popularity = -0.05 } 
+		retire_ideology_leader = nationalist
+		retire_ideology_leader = national_conservative
+		set_politics = { ruling_party = national_conservative } 
+		add_ideas = { usa_mitch_mcconnell }
+	}	
+}

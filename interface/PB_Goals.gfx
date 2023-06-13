@@ -27,6 +27,11 @@ spriteTypes = {
 	}
 
         SpriteType = {
+		name = "GFX_goal_NEA_Diplomacy"
+		texturefile = "gfx/interface/goals/NEA_Diplomacy.dds"
+	}
+
+        SpriteType = {
 		name = "GFX_goal_gas_mask_generic"
 		texturefile = "gfx/interface/goals/PB_Goals/gas_mask_generic.dds"
 	}

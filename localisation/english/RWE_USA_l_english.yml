@@ -24,6 +24,13 @@
   RWE_USA_increased_taxation:0 "Higher Income Tax"
   RWE_USA_Neo_Americana:0 "Neo-Americana" 
   RWE_USA_Neo_Americana_2:0 "Neo-Americana" 
+  RWE_Shadow_Oligarchy:0 "Republic of Oligarchs"
+  RWE_Shadow_Oligarchy_desc:0 "The American Republic, in its poor economic state and its even poorer political situation, has become the pawn of oligarchs, rich businesses and international corporations, seizing on the opportunity of depressed wages, poverty and our natural resources. With the richest parts of the country falling to Soviet-backed communists and revolutionary anarchists, the pre-existing oligarchy of the old USA fled to the South and made it their playground. \n\nToday, their influence on the Republic's politics is immense. They maintain good relations with the GOP, but aren't motivated by ideology nor personal relations. They are only motivated by profit. While they smoke away a day's wage worth of cigars in their Florida mansion in the afternoon, the common American toils the hardest they have ever had to toil since the Revolutionary Wars. \n\n£ETH_imperial_treasury §ROligarchs Influence§!: [?USA_Oligarchic_Influence|%0.0]" 
+
+  oligarch_influence_modifier:0 "Monthly change to £ETH_imperial_treasury Oligarchs Influence" 
+
+  RWE_The_Union:0 "Member of the Union States"
+  RWE_The_Union_1:0 "Leadership of the Union States" 
 
   ##########################
   # FOCUS
@@ -87,13 +94,21 @@
   USA_rumsfeld_beaten:0 "The Executing Legislature"
   USA_rumsfeld_beaten_desc:0 "The Congress has brought Rumsfeld to his knees, finalizing agreements on the national debt ceiling and ending the struggle between the executive and the legislative. Rumsfeld's popularity is rather likely to not endure the coming presidential election and the GOP is already looking for the next man for the job." 
   USA_A_Day_That_Will_Live_In_Infamy:0 "A Day that will Live in Infamy"
+  USA_A_Day_That_Will_Live_In_Infamy_desc:0 "Congress has frustrated every attempt at reconciliation between it and the executive, playing its partisan game while dooming the nation for its perverted ideology. We cannot accept this turn of events, even if they are completely legal. Sometimes, you have to break the law to save the law."
   USA_Rule_by_Decree:0 "Executive Supremacy"
+  USA_Rule_by_Decree_desc:0 "The Debt Ceiling Crisis has shown that Congress cannot be trusted with the maintaining of democracy and stability in the Republic. Thus, Congress's power will be severly limited in the new constitution, creating a truly presidentialist system of democracy. Hail to the chief!"
   USA_Expand_Presidential_Powers:0 "Maintain Trias Politica" 
+  USA_Expand_Presidential_Powers_desc:0 "While we maintain the plan to expand presidential powers in the wake of the siege of Congress, we must not dilute American democracy for our own political purposes. The Trias Politica is practically divine in its properties and a healthy democracy cannot be without it. Let Congress remain independent and let the Presidency be strong."
   USA_Disband_the_Supreme_Court:0 "Disband the \"SCOTUSSR\""
+  USA_Disband_the_Supreme_Court_desc:0 "Just like Congress, we fear that the old Supreme Court was perverted after Reagan's disaster. Today, crypto-communists have infiltrated our universities and indoctrinated the new judicial generation of lawyers and judges. The court cannot be accepted in its current situation, so it must be dismissed and removed from the new constitution."
   USA_Puppet_Court:0 "Pack the Courts" 
+  USA_Puppet_Court_desc:0 "While the Supreme Court is clearly against us and doesn't cooperate as much as it should, we shouldn't rush to extraordinary measures. Disbanding the SCOTUS would end decades of democratic tradition. Instead, we should follow the tradition of packing the court whenever it is possible, turning the SCOTUS partisan for our own benefit."
   USA_When_the_President_does_It:0 "When the President does it..." 
+  USA_When_the_President_does_It_desc:0 "As the presidential campaign continues, worries have popped up about the possibility of the GOP losing the seat of the Presidency to the Common Sensers or even worse, the NPP. Plagued with the probability, immorality gives way to particularly creative actions. It may not be 100% legal, but who is going to jail the President after he has won the election?"
   USA_Prepare_for_2010:0 "Prepare for the 2010 Campaign"
+  USA_Prepare_for_2010_desc:0 "Rumsfeld's second term is coming to a close, so the country prepares itself for the tradition of presidential election. Our campaign strategists have proposed new and exciting ways to preserve our hold on the Republic. We shall see if their tactics will work."
   USA_Nurture_RNC_Independence:0 "Preserve RNC Independence"
+  USA_Nurture_RNC_Independence_desc:0 "The Republic National Committee shouldn't be compromised for the sake of Rumsfeld's own political ambitions. Decades of democracy would just go to waste if we were to strike against the RNC's independence and we would not know if the party could survive such a grievous commitment against democracy. Let the voter decide our fate, as they always have." 
   USA_Rumsfeldism:0 "Rumsfeldism" 
   USA_Relax_XXII:0 "Relax the Twenty-Second" 
   USA_Abolish_Term_Limits:0 "Abolish Term Limits" 
@@ -116,12 +131,34 @@
   USA_Apple_Pie_Politics:0 "Apple Pie Politics"  
   USA_Apple_Pie_Politics_desc:0 "Coined as Apple Pie Politics by its critics, Neo-Americana relies on nostalgia for not just the past in its politics, but also the past in its culture. Memories of mons baking apple pies in the wealthy suburbs should emphasise America's exceptional nature, even if we have to ignore all the bad historical bagage." 
   USA_State_of_Emergency:0 "Declare a State of Emergency" 
- 
+  USA_Expanded_Definition_of_Terrorist:0 "The Inclusive Terrorism Act" 
+
   USA_Resolve_the_Texan_Question:0 "Resolve the Texan Question" 
   USA_Resolve_the_Texan_Question_desc:0 "Texas has always been an integral part of the old United States and the South, fueling the entire continental USA with its oil. The Lone Star has been mutilated by Mexico, its independence a communist plot to weaken the American people. Reunification with our brothers in the Lone Star State remains the question of Republic foreign policy." 
   USA_Militarize_the_Northern_Border:0 "Militarize the Northern Border" 
   USA_Rival_Government:0 "The Legitimate Remnants" 
   USA_Rival_Government_desc:0 "We remain the last remnants of the old United States government. Our claim to the entire ex-USA remains the most valid according to international law, unlike the fake communist governments of Philadelphia or the West Coast. We will maintain this position till the day we unite the old continental USA."  
+  USA_Compromise_with_NEA:0 "Cross the Aisle" 
+  USA_Compromise_with_NEA_desc:0 "With the current situation having changed radically since the days of Bush's evacuation of the North, we have become far more open and accepting of the Philadelphia government. Compromise has thus become a possibility." 
+  USA_Antagonize_Saint_Louis:0 "Retract Recognition for Saint Louis"
+  USA_Contact_Saint_Louis:0 "Further ex-USA Integration" 
+  USA_Support_Philadelphian_Patriots:0 "Arm Northern Militants" 
+  USA_Memories_of_the_Alamo:0 "Remember the Alamo!"
+  USA_Contact_Mexico:0 "Negotiate with Mexico" 
+  USA_Covington_Bridge_Incident:0 "Covington Bridge Incident" 
+  USA_Liberty_Bell_Rings:0 "Liberty Bell Rings Again"
+  USA_Distinct_American_Socialism:0 "One America - One Party"
+  USA_Solidarity_Forever:0 "Solidarity Forever" 
+  USA_Puerto_Rico_Plan:0 "Puerto Rico Plan"
+  USA_Puerto_Rico_Plan_desc:0 "The war has developed, but not necessarily in our favour. With the reds beating us back to the Seas, we shall look beyond the Seas for our salvation. Military and political staff have thus prepared a total evacuation of the government to our new bastion: Puerto Rico." 
+  USA_Confederation_of_International_States:0 "The Confederation of Independent States" 
+  USA_Contact_with_Moscow:0 "Establish a Moscow Embassy" 
+  USA_American_Internationale:0 "The American Internationale" 
+  USA_Form_the_Union:0 "The Union States" 
+  USA_South_American_Embargo_Negotiations:0 "Negotiate with South America" 
+  USA_Apologize_for_Atrocities:0 "Apologize for Past Imperialism" 
+  USA_Midwestern_Panic:0 "Fund Unificationist \'Rebels\'" 
+  USA_Pan_American_Military:0 "Found the All-American Army" 
 
   ##########################
   # DECISIONS
@@ -140,6 +177,10 @@
   USA_States_Flip:0 "Pre-Conflict Events"
   USA_States_Flip_desc:0 "As conflict looms on the horizon, states are questioned in their loyalty to Rumsfeld or Congress. Before the war can break out, these states still decide which side they opt to support." 
 
+  USA_Pressure_Denver:0 "Pressure Denver"
+  USA_Pressure_Denver_desc:0 "The United States of the Midwest are an artificial creation established by Midwestern political elites in an attempt to secure their own little business through a government that represents the interests of the oligarchy, not the people like the Republic's. Recognizing this fact, it is baffling that the Midwest has attempted to create its own national identity to surplant American identity, so a little nudging is needed for them to join our glorious union project." 
+  USA_Pressure_Saint_Louis:0 "Pressure Saint Louis" 
+
   ##########################
   # TOOLTIPS
   ##########################
@@ -151,10 +192,13 @@
   usa_tt_pick_decision_2:0 "\nFinishing the decision \"§YApproach Loyal Generals§!\" will guarantee military support for Rumsfeld. \n\n§RCurrently, our chances are:§!" 
   usa_tt_civil_war_mechanic:0 "\nIf we are below 30% stability£stability_texticon, the War on Congress may devolve into an §RACTUAL CIVIL WAR!§!"  
   USA_RUMSFELD_THIRD_TERM:0 "Donald Rumsfeld has been elected for his §Ythird presidential term§!." 
-
+  usa_tt_executive_supremacy_trait_every_leader:0 "Every new President will gain the trait \'§YPowerful President§!\' when in office." 
+ 
   usa_approach_texas_tt:0 "We can either approach the [TEX.GetNameDef] through §Gdiplomacy§!£stability_texticon or §Rhostility§!£pol_violence regarding the question of Texan-Republican reunification. §YThis choice§! will decide how we approach foreign policy with ex-USA states." 
   usa_approach_texas_tt_diplo:0 "\n§GDiplomatic Approach§!:" 
   usa_approach_texas_tt_hostile:0 "\n§RHostile Approach§!:" 
+  USA_tt_add_idea_the_union:0 "\nAdds the §YMember of the Union States§! idea to all current subject nations. (Civilian industry to overlord: §G+20.00%§!, Master can build constructions on the subject's territory: §GYes§!).\n\n"
+  
 
   ##########################
   # EVENTS
@@ -184,6 +228,24 @@
   us_republic.102.a:0 "Contact the New Americans and plan a coup d'état"
   us_republic.102.b:0 "We cannot wait, we will strike at midnight" 
 
+  us_republic.200.t:0 "Covington Bridge Attack"
+  us_republic.200.d:0 "Details about the exact circumstances have been unclear, as the administrations in Philadelphia and Atlanta work around the clock to understand the developing situation near the Covington Bridge near Cincinnati. Clashes have broken out between border guards with life rounds being fired across the Ohio river. A decision needs to be made: stand down or push ahead." 
+  us_republic.200.a:0 "Force the troops to stand down!"
+  us_republic.200.b:0 "We have the element of surprise, push!" 
+
+  us_republic.207.t:0 "The Awkward Battle of Covington Bridge"
+  us_republic.207.d:0 "The struggle between border soldiers have ended with an awkward acknowledgement of the situation by both parties, both declaring their intention to not escalate and commanding their troops to stay down. The tension of Covington bridge has already passed, but some may not be eager to let a good opportunity for war go to waste."
+  us_republic.207.a:0 "War has been averted"
+  us_republic.207.b:0 "We will not forget Covington!" 
+
+  us_republic.600.t:0 "Rumsfeld increases the Term Limit"
+  us_republic.600.d:0 ""
+  us_republic.600.a:0 ""
+  us_republic.601.t:0 "Congress impeaches Rumsfeld"
+  us_republic.601.d:0 "Following Rumsfeld's ridiculous display in attempting to disband Congress, every last inch of good will has dissapeared among the opposition, with even moderates of the GOP turning against the radical wing. Led by Republican senate members Jeff Sessions and Mike Huckabee, the moderate faction of the party broke with the majority by voting with the opposition when it came to impeaching president Rumsfeld, easily clearing the majority needed for the process. Rumsfeld has already denounced the \'RINOs\' for holding communist sympathy, but even his most ardent defender has turned rather quiet, fearing for the future of their career and the GOP. \n\nAs Rumsfeld enters history, his vice president, Thomas Ridge, is tasked with leading the GOP administration into the presidential race. With Rumsfeld's last term ending with the failure of his illegal seizure of power and the disruption of the GOP dominant status quo, it isn't expected that the man who threw it all away will be remembered fondly in American history. New VP Mitch McConnell has already stated that he believes Rumsfeld will be remembered alongside presidents like Ronald Reagan and Herbert Hoover as monumental dissapointments in America's long unbroken history of democracy." 
+  us_republic.601.a:0 "A sad end for a sad man..." 
+
+
   #News
 
   us_republic_news.1.t:0 "Rumsfeld Disbands Congress"
@@ -193,3 +255,8 @@
   us_republic_news.2.t:0 "Congress goes to War with Rumsfeld"
   us_republic_news.2.d:0 "Shock and horror grip many as they closely watch the videos of Republic tanks driving through Atlanta, their crews pledging allegiance to Congress instead of the President after Rumsfeld has failed to disband Congress. Publicly announcing the disbandement yesterday evening, Rumsfeld had hoped he would have the military's support in the matter and force Congress to its knees. His hopes would be swiftly crushed, as brigades of the ARAF confronted Rumsfeld loyalists in Atlanta. \n\nWhile no casualties have yet been made, the events unfolding in the Republic can only end with violent confrontation between those loyal to Congress and American democracy and those loyal to Rumsfeld and his wing of the GOP. Even the Republican Party, the original behemoth of the Republic, has been split by the conflict, with many moderates betraying Rumsfeld in this time of crisis and aligning themselves with Congress and its ruling party, the Common Sense Party. Conflict seems all but assured in the coming weeks." 
   us_republic_news.2.a:0 "A House divided..." 
+
+  ##########################
+  # LEADERS
+  ##########################
+  POLITICS_THOMAS_RIDGE_DESC:0 "Ridge started his rocky career in politics with the fall of the United States of America after Reagan's proclamation, forced to flee the North after fears of revolution spread and he was personally targeted due to his legal career. Moving to the South, Ridge quickly entered parliament during the tide of Republicanism after the fall for North Carolina. During the Bush era, Ridge took upon him a number of odd jobs and committees, making himself a semi-known star inside the Republican ranks, even if not that popular outside of his own constituency. \n\nRidge truly started his political career after President Bush appointed him to the coveted spot of deputy secretary of national security, leading to his long relation with the secretary of national security, Donald Rumsfeld. It would be this connection that led to Rumsfeld personally championing Ridge as his VP after Bush died. Under Rumsfeld, Ridge has been a simple side-character, having had little actual say in policy due to Rumsfeld's ruthless micromanagement and the powers that be stopping him at every turn of the way, frustrating his moderation efforts. However, now that Rumsfeld is gone, Ridge still knows that he will not make an impact on American history, convined to an administration and a party that will face the tree of hanging men in the coming election. Rumsfeld made a great mistake and the Republicans and Ridge will pay for his gamble." 

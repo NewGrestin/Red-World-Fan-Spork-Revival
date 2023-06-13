@@ -35,8 +35,9 @@ focus_tree = {
 
 		available = {
 		NOT = { has_idea = RWE_USA_Default }
-		TEX = { exists = yes is_subject = no }
-		NOT = { has_war_with = TEX }
+		has_war = no 
+		is_owner_neighbor_of = TEX
+		TEX = { exists = yes NOT = { has_war_with = USA } is_subject = no }
 		}
 		
 		bypass = { 
@@ -78,10 +79,11 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 		}
-		x = 41
-		y = 6
+		x = 40
+		y = 5
 
 		available = {
+		NOT = { has_idea = RWE_USA_Default }
 		is_owner_neighbor_of = NEA
 		NEA = { is_subject = no NOT = { has_war_with = USA } exists = yes }
 		}
@@ -92,6 +94,643 @@ focus_tree = {
 	
 		bypass = { 
 		NEA = { exists = no }
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Covington_Bridge_Incident
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 39
+		y = 6
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		is_owner_neighbor_of = NEA
+		NEA = { is_subject = no NOT = { has_war_with = USA } exists = yes }
+		}
+	
+		prerequisite = {
+		focus = USA_Rival_Government focus = USA_Compromise_with_NEA
+		}
+
+		prerequisite = {
+		focus = USA_Militarize_the_Northern_Border
+		}
+
+		bypass = { 
+		NEA = { exists = no }
+		}
+
+		select_effect = {
+
+		}
+
+		will_lead_to_war_with = NEA 
+
+		cancelable = no
+
+		completion_reward = {
+		country_event = { id = us_republic.200 days = 0 }
+		NEA = { country_event = { id = us_republic.200 days = 0 } }
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Puerto_Rico_Plan
+		icon = GFX_goal_generic_coastal_navy
+		cost = 2
+		ai_will_do = {
+			base = 100
+		}
+		x = 43
+		y = 6
+
+		available = {
+		has_war_with = NEA 
+		surrender_progress > 0.5
+		NOT = { controls_state = 365 }
+		owns_state = 686		
+		}
+
+		#allow_branch = { 
+		#has_war_with = NEA 
+		#surrender_progress > 0.5
+		#}
+	
+		prerequisite = {
+		focus = USA_Rival_Government focus = USA_Compromise_with_NEA
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		add_war_support = -0.05
+		add_stability = -0.05
+		white_peace = NEA
+		every_state = { 
+			limit = { NOT = { is_core_of = PUE } is_owned_by = USA }
+			transfer_state_to = NEA
+		}
+		set_capital = { state = 686 }
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Form_the_Union
+		icon = GFX_goal_agency
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 39
+		y = 8
+
+		available = {
+		has_war = no
+		is_subject = no
+		num_subjects > 0 
+		}
+	
+		prerequisite = {
+		focus = USA_Contact_Saint_Louis
+		focus = USA_Antagonize_Saint_Louis
+		}
+
+		mutually_exclusive = {
+		focus = USA_Confederation_of_International_States
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+			add_ideas = { RWE_The_Union_1 }
+			custom_effect_tooltip = USA_tt_add_idea_the_union
+			every_country = { 
+				limit = { is_subject_of = USA }
+				add_ideas = { RWE_The_Union }
+			}
+		set_rule = { 
+		can_force_government = yes
+		}
+		activate_decision = USA_Pressure_Denver 
+
+		if = { 
+		limit = { NOT = { has_completed_focus = USA_Antagonize_Saint_Louis } }
+		activate_decision = USA_Pressure_Saint_Louis 
+		}
+		}
+	}
+
+	shared_focus = {
+		id = USA_Midwestern_Panic
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 38
+		y = 9
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Form_the_Union
+		}
+	
+		prerequisite = {
+		focus = USA_Antagonize_Saint_Louis
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Pan_American_Military
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_alternative
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 40
+		y = 9
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Form_the_Union
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Confederation_of_International_States
+		icon = GFX_goal_generic_parliament
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 42
+		y = 8
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Liberty_Bell_Rings
+		}
+	
+		prerequisite = {
+		focus = USA_Contact_Saint_Louis
+		}
+
+		mutually_exclusive = {
+		focus = USA_Form_the_Union
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		set_rule = { 
+		can_guarantee_other_ideologies = yes
+		}
+		}
+	}
+
+	shared_focus = {
+		id = USA_American_Internationale
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 47
+		y = 8
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Solidarity_Forever
+		}
+
+		mutually_exclusive = {
+		focus = USA_Contact_with_Moscow
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_South_American_Embargo_Negotiations
+		icon = GFX_goal_generic_positive_trade_relations_gold
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 49
+		y = 8
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Solidarity_Forever
+		focus = USA_Distinct_American_Socialism
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Apologize_for_Atrocities
+		icon = GFX_goal_skull_treaty
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 49
+		y = 9
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_South_American_Embargo_Negotiations
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Contact_with_Moscow
+		icon = GFX_focus_SOV_third_rome
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 45
+		y = 8
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Solidarity_Forever
+		focus = USA_Distinct_American_Socialism
+		}
+
+		mutually_exclusive = {
+		focus = USA_American_Internationale
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Liberty_Bell_Rings
+		icon = GFX_goal_Fight_for_Freedom
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 42
+		y = 7
+
+		available = {
+		NEA = { exists = no }
+		owns_state = 360
+		owns_state = 358
+		owns_state = 393
+		is_subject = no
+		}
+	
+		prerequisite = {
+		focus = USA_Rival_Government
+		}
+
+		mutually_exclusive = {
+		focus = USA_Distinct_American_Socialism
+		focus = USA_Solidarity_Forever
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		every_state = { 
+		limit = { is_core_of = NEA is_claimed_by = USA }
+		add_core_of = USA
+		}
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Distinct_American_Socialism
+		icon = GFX_goal_HOL_council_communism
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 44
+		y = 7
+
+		available = {
+		NEA = { exists = no }
+		owns_state = 360
+		owns_state = 358
+		owns_state = 393
+		OR = { 
+		has_government = revolutionary_socialist
+		has_government = communist
+		has_government = moderate_socialist
+		}
+		is_subject = no
+		}
+	
+		prerequisite = {
+		focus = USA_Compromise_with_NEA
+		focus = USA_Rival_Government
+		}
+	
+		mutually_exclusive = {
+		focus = USA_Liberty_Bell_Rings
+		focus = USA_Solidarity_Forever
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		every_state = { 
+		limit = { is_core_of = NEA is_claimed_by = USA }
+		add_core_of = USA
+		}
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Solidarity_Forever
+		icon = GFX_goal_GRL_IWW_3
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 46
+		y = 7
+
+		available = {
+		NEA = { exists = no }
+		owns_state = 360
+		owns_state = 358
+		owns_state = 393
+		OR = { 
+		has_government = revolutionary_socialist
+		has_government = communist
+		has_government = moderate_socialist
+		}
+		is_subject = no
+		}
+	
+		prerequisite = {
+		focus = USA_Compromise_with_NEA
+		}
+	
+		mutually_exclusive = {
+		focus = USA_Liberty_Bell_Rings
+		focus = USA_Distinct_American_Socialism
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		every_state = { 
+		limit = { is_core_of = NEA is_claimed_by = USA }
+		add_core_of = USA
+		}
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Contact_Saint_Louis
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 40
+		y = 7
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Militarize_the_Northern_Border
+		}
+
+		mutually_exclusive = {
+		focus = USA_Antagonize_Saint_Louis
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Antagonize_Saint_Louis
+		icon = GFX_focus_generic_conspiracy
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 37
+		y = 7
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Militarize_the_Northern_Border
+		focus = USA_Resolve_the_Texan_Question
+		}
+
+		mutually_exclusive = {
+		focus = USA_Contact_Saint_Louis
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Memories_of_the_Alamo
+		icon = GFX_focus_secret_rearmament
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 34
+		y = 7
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Resolve_the_Texan_Question
+		}
+
+		bypass = { 
+
 		}
 
 		select_effect = {
@@ -131,18 +770,22 @@ focus_tree = {
 		}
 
 		completion_reward = {
+		every_state = { 
+		limit = { is_core_of = NEA NOT = { is_claimed_by = USA } }
+		add_claim_by = USA
+		}
 
 		}
 	}
 
 	shared_focus = {
 		id = USA_Compromise_with_NEA
-		icon = GFX_focus_ETH_re-convene_the_parliament
+		icon = GFX_goal_NEA_Diplomacy
 		cost = 3
 		ai_will_do = {
 			base = 100
 		}
-		x = 44
+		x = 45
 		y = 5
 
 		available = {
@@ -270,7 +913,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+		add_stability = -0.05
+		add_popularity = { ideology = nationalist popularity = -0.05 }
+		country_event = { id = us_republic.600 days = 0 }
 		}
 
 	}
@@ -285,6 +930,8 @@ focus_tree = {
 		x = 26
 		y = 10
 
+		cancelable = no
+
 		available = {
 		has_country_flag = USA_RUMSFELD_THIRD_TERM
 		has_political_power > 199
@@ -294,8 +941,13 @@ focus_tree = {
 		focus = USA_Relax_XXII
 		}
 
+		select_effect = { 
+		add_political_power = -200
+		}
+
 		completion_reward = {
-		add_stability = -0.05
+		add_stability = -0.1
+
 		}
 
 	}
@@ -520,7 +1172,7 @@ focus_tree = {
 
 	shared_focus = {
 		id = USA_Apple_Pie_Politics
-		icon = GFX_goal_USA_fortress
+		icon = GFX_focus_usa_guarantee_the_american_dream
 		cost = 3
 		ai_will_do = {
 			base = 100

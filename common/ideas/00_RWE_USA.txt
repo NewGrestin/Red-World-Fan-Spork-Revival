@@ -6,6 +6,69 @@ ideas = {
 
 	country = {
 
+		RWE_Shadow_Oligarchy = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = tur_etatism
+			
+			removal_cost = -1
+	
+			modifier = {
+			oligarch_influence_modifier = 0.01
+			}
+		}
+
+		RWE_The_Union = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = OKL_Rural_Poverty
+			
+			removal_cost = -1
+	
+			modifier = {
+			can_master_build_for_us = 1
+			cic_to_overlord_factor = 0.2
+			}
+		}
+
+		RWE_The_Union_1 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = OKL_Rural_Poverty
+			
+			removal_cost = -1
+	
+			modifier = {
+			puppet_cost_factor = -0.5
+			subjects_autonomy_gain = -0.25
+			master_build_autonomy_factor = -0.5
+			}
+		}
+
 		RWE_USA_Neo_Americana = {
 			
 			

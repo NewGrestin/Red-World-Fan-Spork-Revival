@@ -1,0 +1,22 @@
+on_actions = {
+	on_startup = { 
+		effect = {
+			USA = { 
+				clamp_temp_variable = {
+    					var = USA_Oligarchic_Influence 
+    					min = 0
+    					min = 100
+				}
+			}
+		}
+	}
+
+
+	on_monthly = { 
+		effect = { 
+			USA = { 
+			add_to_variable = { USA_Oligarchic_Influence = modifier@oligarch_influence_modifier }
+			}
+		}
+	}
+}

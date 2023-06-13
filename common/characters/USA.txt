@@ -137,6 +137,27 @@ characters={
 		}
 	}
 
+	USA_Thomas_Ridge ={
+		name="Thomas Ridge"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Thomas_Ridge.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_THOMAS_RIDGE_DESC"
+			ideology=american_nationalist
+			expire="1.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_THOMAS_RIDGE_DESC"
+			ideology=american_conservative
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+
 	USA_rick_santorum ={
 		name="Rick Santorum"
 		portraits={
@@ -180,7 +201,7 @@ characters={
 	}
 
 	USA_mark_meadows ={
-		name="Mark Meadows
+		name="Mark Meadows" 
 		portraits={
 			civilian={
 				large="gfx/leaders/USA/Portrait_USA_Mark_Meadows.dds"
@@ -268,27 +289,6 @@ characters={
 		portraits={
 			civilian={
 				large="gfx/leaders/USA/Portrait_USA_Ron_DeSantis.dds"
-			}
-		}
-		country_leader={
-			desc="POLITICS_BENJAMIN_NITAI_DESC"
-			ideology=american_nationalist
-			expire="1.1.1.1"
-			id=-1
-		}
-		country_leader={
-			desc="POLITICS_BENJAMIN_NITAI_DESC"
-			ideology=american_conservative
-			expire="1.1.1.1"
-			id=-1
-		}
-	}
-
-	USA_Thomas_Ridge ={
-		name="Thomas Ridge"
-		portraits={
-			civilian={
-				large="gfx/leaders/USA/Portrait_USA_Thomas_Ridge.dds"
 			}
 		}
 		country_leader={
