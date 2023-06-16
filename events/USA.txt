@@ -575,3 +575,48 @@ country_event = {
 		add_ideas = { usa_mitch_mcconnell }
 	}	
 }
+
+#Business Plot
+country_event = {
+	id = us_republic.700
+	title = us_republic.700.t
+	desc = us_republic.700.d
+	picture = USA_Its_Rover
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.700.a
+		USA_congress_of_corporations = {
+			promote_character = corporate
+		}
+		add_popularity = { ideology = fascist popularity = 0.1 } 
+		set_politics = { ruling_party = fascist } 
+		add_stability = -0.05
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = USA_The_Business_Plot
+	}	
+}
+
+#GOP is decriminalized
+country_event = {
+	id = us_republic.701
+	title = us_republic.701.t
+	desc = us_republic.701.d
+	picture = USA_Its_Rover
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = us_republic.701.a
+		add_popularity = { ideology = national_conservative popularity = 0.05 }
+		create_country_leader = {
+		name = "Charles Koch"
+		desc = ""
+		picture = "gfx/leaders/USA/Portrait_USA_Charles_Koch.dds"
+		expire="1.1.1.1"
+		id=-1
+		ideology = fiscal_conservative 
+		}
+	}	
+}

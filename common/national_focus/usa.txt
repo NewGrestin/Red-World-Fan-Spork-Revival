@@ -10,12 +10,13 @@ focus_tree = {
 	
 	shared_focus = USA_the_default_crisis
 	shared_focus = USA_true_republican_economy
-	shared_focus = USA_A_Day_That_Will_Live_In_Infamy
-	shared_focus = USA_rumsfeld_beaten
+	#shared_focus = USA_A_Day_That_Will_Live_In_Infamy
+	#shared_focus = USA_rumsfeld_beaten
 	shared_focus = USA_Resolve_the_Texan_Question
 	shared_focus = USA_Militarize_the_Northern_Border
 	shared_focus = USA_Rival_Government
-	shared_focus = USA_Compromise_with_NEA
+	#shared_focus = USA_Compromise_with_NEA
+	shared_focus = USA_The_Business_Plot
 
 	continuous_focus_position = { x = 50 y = 1100 }
 	default = no
@@ -119,6 +120,7 @@ focus_tree = {
 		available = {
 		NOT = { has_idea = RWE_USA_Default }
 		is_owner_neighbor_of = NEA
+		has_war = no 
 		NEA = { is_subject = no NOT = { has_war_with = USA } exists = yes }
 		}
 	
@@ -249,6 +251,37 @@ focus_tree = {
 	}
 
 	shared_focus = {
+		id = USA_Undo_Reagans_Mistake
+		icon = GFX_goal_USA_Reagan
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 36
+		y = 8
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Antagonize_Saint_Louis
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
 		id = USA_Midwestern_Panic
 		icon = GFX_focus_ETH_freedom_at_gunpoint
 		cost = 10
@@ -325,7 +358,7 @@ focus_tree = {
 		y = 8
 
 		available = {
-
+		has_country_flag = TEX_DIPLO
 		}
 	
 		prerequisite = {
@@ -649,7 +682,7 @@ focus_tree = {
 		y = 7
 
 		available = {
-
+		has_country_flag = TEX_DIPLO
 		}
 	
 		prerequisite = {
@@ -685,7 +718,7 @@ focus_tree = {
 		y = 7
 
 		available = {
-
+		has_country_flag = TEX_HOSTILE
 		}
 	
 		prerequisite = {
@@ -722,7 +755,46 @@ focus_tree = {
 		y = 7
 
 		available = {
+		OR = { 
+		TEX = { is_subject_of = USA }
+		AND = { 
+		TEX = { exists = no }
+		owns_state = 375
+		owns_state = 899
+		}
+		}		
+		}
+	
+		prerequisite = {
+		focus = USA_Resolve_the_Texan_Question
+		}
 
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Reapproach_the_OPEC
+		icon = joining_the_opec
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 32
+		y = 7
+
+		available = {
+		
 		}
 	
 		prerequisite = {
@@ -754,6 +826,14 @@ focus_tree = {
 		y = 5
 
 		available = {
+		OR = { 
+		TEX = { is_subject_of = USA }
+		AND = { 
+		TEX = { exists = no }
+		owns_state = 375
+		owns_state = 899
+		}
+		}
 		NEA = { is_subject = no exists = yes }
 		}
 	
@@ -812,6 +892,563 @@ focus_tree = {
 		completion_reward = {
 
 		}
+	}
+
+	shared_focus = {
+		id = USA_The_Business_Plot
+		icon = GFX_goal_COS_Ferrer_Coup
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 21
+		y = 7
+
+		available = {
+		always = no
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Veil_of_Democracy
+		icon = GFX_goal_MD_Election
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 17
+		y = 8
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_The_Business_Plot
+		}
+
+		mutually_exclusive = {
+		focus = USA_Economy_with_a_State
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Economy_with_a_State
+		icon = GFX_goal_generic_debt_negotiations
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 24
+		y = 8
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		has_country_leader = {
+		character = USA_congress_of_corporations 
+		ruling_only = yes
+		}
+		}
+
+		prerequisite = {
+		focus = USA_The_Business_Plot
+		}
+
+		mutually_exclusive = {
+		focus = USA_Veil_of_Democracy
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Appoint_the_Administration
+		icon = GFX_goal_agency
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 26
+		y = 9
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_Economy_with_a_State
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Criminalize_Socialism
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 24
+		y = 10
+
+		available = {
+		NOT = { has_idea = RWE_USA_Anti_Soviet_Laws }
+		NOT = { has_idea = RWE_USA_Anti_Soviet_Laws_2 }
+		}
+
+		prerequisite = {
+		focus = USA_Appoint_the_Administration
+		}
+
+		prerequisite = {
+		focus = USA_New_Corporatocracy
+		}
+
+		completion_reward = {
+		add_ideas = { RWE_USA_Anti_Soviet_Laws }
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Return_of_Wall_Street
+		icon = GFX_goal_generic_recovery
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 25
+		y = 11
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		owns_state = 358
+		}
+
+		prerequisite = {
+		focus = USA_Appoint_the_Administration
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_End_Needless_Regulation
+		icon = GFX_goal_generic_prohibition
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 26
+		y = 10
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_Appoint_the_Administration
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Institutionalize_Neopatrimonialism
+		icon = GFX_goal_generic_civilian_oversight
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 28
+		y = 10
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_Appoint_the_Administration
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Abolish_Zoning
+		icon = GFX_goal_generic_industry_reallocation
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 18
+		y = 10
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_Night_Watchman_State
+		}
+
+		completion_reward = {
+		add_stability = -0.1
+		add_ideas = { RWE_No_Zoning_Laws }
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Reinforce_Academic_Control
+		icon = GFX_goal_university
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 14
+		y = 10
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_Gerrymander_Galore
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Gerrymander_Galore
+		icon = GFX_goal_generic_land_reform
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 15
+		y = 9
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_Veil_of_Democracy
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Controlled_Opposition
+		icon = GFX_goal_consolidating_coalitionv2
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 16
+		y = 10
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_Gerrymander_Galore
+		focus = USA_Night_Watchman_State
+		}
+
+		completion_reward = {
+		add_stability = 0.05
+		country_event = { id = us_republic.701 days = 1 } 
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Reinforce_State_Rights
+		icon = GFX_goal_generic_government_deals
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 17
+		y = 11
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_Veil_of_Democracy
+		}
+
+		prerequisite = {
+		focus = USA_Controlled_Opposition
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Cement_Oligarchic_Power
+		icon = GFX_focus_mex_privatisation
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 23
+		y = 9
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_Economy_with_a_State
+		focus = USA_Veil_of_Democracy
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Night_Watchman_State
+		icon = GFX_goal_generic_civilian_oversight
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 18
+		y = 9
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_Veil_of_Democracy
+		}
+
+		mutually_exclusive = {
+		focus = USA_New_Corporatocracy
+		}
+
+		completion_reward = {
+		add_popularity = { ideology = fascist popularity = -0.05 } 
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_New_Corporatocracy
+		icon = GFX_goal_generic_council
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 21
+		y = 9
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_Economy_with_a_State
+		focus = USA_Veil_of_Democracy
+		}
+
+		mutually_exclusive = {
+		focus = USA_Night_Watchman_State
+		}
+
+		completion_reward = {
+		add_popularity = { ideology = fascist popularity = 0.1 } 
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_PMC_Doctrine
+		icon = GFX_focus_SWI_issue_war_bonds
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 20
+		y = 10
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_New_Corporatocracy
+		focus = USA_Night_Watchman_State
+		}
+
+		mutually_exclusive = {
+		focus = USA_Maintain_Traditional_Army
+		}
+
+		completion_reward = {
+		if = { 
+		limit = { has_idea = RWE_Military_Forces_Burden }
+		remove_ideas = RWE_Military_Forces_Burden 
+		}
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Maintain_Traditional_Army
+		icon = GFX_goal_USA_new_deal
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 22
+		y = 10
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_New_Corporatocracy
+		}
+
+		mutually_exclusive = {
+		focus = USA_PMC_Doctrine
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_War_is_a_Racket
+		icon = GFX_goal_Arms_Export
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 21
+		y = 11
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_PMC_Doctrine 
+		focus = USA_Maintain_Traditional_Army
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Second_Gilded_Age
+		icon = GFX_goal_capitalist_system
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 23
+		y = 12
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_War_is_a_Racket
+		}
+
+		prerequisite = {
+		focus = USA_Return_of_Wall_Street
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Life_Liberty_and_Property
+		icon = GFX_goal_workers_for_business
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 19
+		y = 12
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = {
+		focus = USA_War_is_a_Racket
+		}
+
+		prerequisite = {
+		focus = USA_Reinforce_State_Rights
+		}
+
+		completion_reward = {
+
+		}
+
 	}
 
 	shared_focus = {
@@ -1582,7 +2219,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+		set_temp_variable = { USA_temp_Oligarchic_Influence = 0.05 }
+		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 	}
 
@@ -1608,7 +2247,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+		set_temp_variable = { USA_temp_Oligarchic_Influence = -0.05 }
+		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 	}
 
@@ -1734,7 +2375,9 @@ focus_tree = {
 
 
 		completion_reward = {
-
+		set_temp_variable = { USA_temp_Oligarchic_Influence = -0.1 }
+		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 
 	}
@@ -1785,7 +2428,9 @@ focus_tree = {
 
 
 		completion_reward = {
-
+		set_temp_variable = { USA_temp_Oligarchic_Influence = 0.1 }
+		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 
 	}
@@ -1856,7 +2501,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+		set_temp_variable = { USA_temp_Oligarchic_Influence = -0.05 }
+		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 	}
 
@@ -1904,7 +2551,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+		set_temp_variable = { USA_temp_Oligarchic_Influence = 0.1 }
+		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 	}
 
@@ -1926,7 +2575,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+		set_temp_variable = { USA_temp_Oligarchic_Influence = 0.15 }
+		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 	}
 
@@ -2050,6 +2701,7 @@ focus_tree = {
 		y = 1
 		available = {
 		NOT = { has_idea = RWE_USA_Default }
+		has_idea = free_trade
 		}
 
 		prerequisite = { 

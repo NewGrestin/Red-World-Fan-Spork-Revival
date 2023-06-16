@@ -6,6 +6,34 @@ ideas = {
 
 	country = {
 
+		RWE_Military_Forces_Burden = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = ETH_conservative_high_command
+			
+			removal_cost = -1
+	
+			modifier = {
+			army_org_factor = -0.1
+			coordination_bonus = -0.25
+			experience_loss_factor = 0.25
+			planning_speed = -0.2
+			special_forces_cap = -0.5
+			command_power_gain_mult = -0.5
+			max_command_power = 40
+			training_time_factor = 0.5
+			agency_upgrade_time = 0.25
+			}
+		}
+
 		RWE_Shadow_Oligarchy = {
 			
 			
@@ -276,5 +304,28 @@ ideas = {
 			consumer_goods_factor = -0.1
 			}
 		}	
+
+		#BUSINESS PLOT
+
+		RWE_No_Zoning_Laws = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = SOV_fourth_five_year_plan
+			
+			removal_cost = -1
+	
+			modifier = {
+			production_speed_buildings_factor = 0.25
+			global_building_slots = 1
+			}
+		}
 	}
 }

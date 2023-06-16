@@ -25,7 +25,10 @@
   RWE_USA_Neo_Americana:0 "Neo-Americana" 
   RWE_USA_Neo_Americana_2:0 "Neo-Americana" 
   RWE_Shadow_Oligarchy:0 "Republic of Oligarchs"
-  RWE_Shadow_Oligarchy_desc:0 "The American Republic, in its poor economic state and its even poorer political situation, has become the pawn of oligarchs, rich businesses and international corporations, seizing on the opportunity of depressed wages, poverty and our natural resources. With the richest parts of the country falling to Soviet-backed communists and revolutionary anarchists, the pre-existing oligarchy of the old USA fled to the South and made it their playground. \n\nToday, their influence on the Republic's politics is immense. They maintain good relations with the GOP, but aren't motivated by ideology nor personal relations. They are only motivated by profit. While they smoke away a day's wage worth of cigars in their Florida mansion in the afternoon, the common American toils the hardest they have ever had to toil since the Revolutionary Wars. \n\n£ETH_imperial_treasury §ROligarchs Influence§!: [?USA_Oligarchic_Influence|%0.0]" 
+  RWE_Shadow_Oligarchy_desc:0 "The American Republic, in its poor economic state and its even poorer political situation, has become the pawn of oligarchs, rich businesses and international corporations, seizing on the opportunity of depressed wages, poverty and our natural resources. With the richest parts of the country falling to Soviet-backed communists and revolutionary anarchists, the pre-existing oligarchy of the old USA fled to the South and made it their playground. \n\nToday, their influence on the Republic's politics is immense. They maintain good relations with the GOP, but aren't motivated by ideology nor personal relations. They are only motivated by profit. While they smoke away a day's wage worth of cigars in their Florida mansion in the afternoon, the common American toils the hardest they have ever had to toil since the Revolutionary Wars. \n\n§ROligarchs Influence§! £ETH_imperial_treasury: [?USA_Oligarchic_Influence|%0.0]" 
+  RWE_Military_Forces_Burden:0 "Burden of the Army"
+  RWE_Military_Forces_Burden_desc:0 "Inheriting a large part of the old United States armed forces after the fall of the old Union, the Republic has been lucky to inherit the USA's military power status but has also been burdened with the excessive Pentagon spending of the Reagan era. The spending on the Republic's Armed Forces has been a central driver of the financial problems of Atlanta, forcing the national budget into a deficit since its foundation and inhibiting spending in other areas that would help the country escape the vicious poverty cycle. Despite this huge budget, the military still is too big for its state, limiting the efficiency of our military operations heavily. Expansion of the current army is simply not an option with the budgetary restraints of the Republic and so we are stuck with a huge military with quite limited capabilities." 
+  RWE_No_Zoning_Laws:0 "No Zoning Laws" 
 
   oligarch_influence_modifier:0 "Monthly change to £ETH_imperial_treasury Oligarchs Influence" 
 
@@ -159,6 +162,31 @@
   USA_Apologize_for_Atrocities:0 "Apologize for Past Imperialism" 
   USA_Midwestern_Panic:0 "Fund Unificationist \'Rebels\'" 
   USA_Pan_American_Military:0 "Found the All-American Army" 
+  USA_Undo_Reagans_Mistake:0 "The Seminal Tragedy of the Century" 
+  USA_Undo_Reagans_Mistake_desc:0 "Ronald Reagan will be remembered as the seminal tragedy of the American century, failing in his most basic task of keeping the USA together and accepting its doom without a fight. His failure of a legacy shall be undone, as our government recognizes his legacy as the tragedy that it is." 
+  USA_Reapproach_the_OPEC:0 "Reapproach the OPEC" 
+
+  USA_The_Business_Plot:0 "The Business Plot" 
+  USA_Veil_of_Democracy:0 "Reinstate Hollow Democracy"
+  USA_Economy_with_a_State:0 "Economy with a State" 
+  USA_Night_Watchman_State:0 "Night-Watchman State"
+  USA_New_Corporatocracy:0 "Control and Corporatocracy"
+  USA_Maintain_Traditional_Army:0 "Preserve the Republic's Army"
+  USA_PMC_Doctrine:0 "Merchants of Death" 
+  USA_Cement_Oligarchic_Power:0 "Solidify the Oligarchs" 
+  USA_Appoint_the_Administration:0 "Establish the National Board" 
+  USA_Criminalize_Socialism:0 "Reintroduce the 2001 CCA" 
+  USA_Return_of_Wall_Street:0 "Revitalize Wall Street" 
+  USA_End_Needless_Regulation:0 "End Needless Regulation" 
+  USA_Reinforce_State_Rights:0 "Federalism into Confederalism"
+  USA_Abolish_Zoning:0 "Abolish Zoning Laws" 
+  USA_War_is_a_Racket:0 "War is a Racket" 
+  USA_Reinforce_Academic_Control:0 "Defund Oppositional Academia"
+  USA_Controlled_Opposition:0 "Controlled Opposition"
+  USA_Gerrymander_Galore:0 "Gerrymander Galore"
+  USA_Second_Gilded_Age:0 "A Second Gilded Age" 
+  USA_Life_Liberty_and_Property:0 "Life, Liberty and Property"
+  USA_Institutionalize_Neopatrimonialism:0 "Institutionalize Neopatrimonialism" 
 
   ##########################
   # DECISIONS
@@ -198,7 +226,10 @@
   usa_approach_texas_tt_diplo:0 "\n§GDiplomatic Approach§!:" 
   usa_approach_texas_tt_hostile:0 "\n§RHostile Approach§!:" 
   USA_tt_add_idea_the_union:0 "\nAdds the §YMember of the Union States§! idea to all current subject nations. (Civilian industry to overlord: §G+20.00%§!, Master can build constructions on the subject's territory: §GYes§!).\n\n"
-  
+  TEX_HOSTILE:0 "Has chosen for a §RHostile Approach§!£pol_violence\n" 
+  TEX_DIPLO:0 "Has chosen for a §GDiplomatic Approach§!£stability_texticon\n" 
+
+  USA_tt_oligarch_influence_change:0 "\nOligarchs influence £ETH_imperial_treasury  changes by: [?USA_temp_Oligarchic_Influence|%=.1-]"
 
   ##########################
   # EVENTS
@@ -245,6 +276,9 @@
   us_republic.601.d:0 "Following Rumsfeld's ridiculous display in attempting to disband Congress, every last inch of good will has dissapeared among the opposition, with even moderates of the GOP turning against the radical wing. Led by Republican senate members Jeff Sessions and Mike Huckabee, the moderate faction of the party broke with the majority by voting with the opposition when it came to impeaching president Rumsfeld, easily clearing the majority needed for the process. Rumsfeld has already denounced the \'RINOs\' for holding communist sympathy, but even his most ardent defender has turned rather quiet, fearing for the future of their career and the GOP. \n\nAs Rumsfeld enters history, his vice president, Thomas Ridge, is tasked with leading the GOP administration into the presidential race. With Rumsfeld's last term ending with the failure of his illegal seizure of power and the disruption of the GOP dominant status quo, it isn't expected that the man who threw it all away will be remembered fondly in American history. New VP Mitch McConnell has already stated that he believes Rumsfeld will be remembered alongside presidents like Ronald Reagan and Herbert Hoover as monumental dissapointments in America's long unbroken history of democracy." 
   us_republic.601.a:0 "A sad end for a sad man..." 
 
+  us_republic.701.t:0 "Reconstruction of the GOP"
+  us_republic.701.d:0 "Since the sudden chaos and the house arrest of the former President of the Republic, the GOP leadership and its members have been extremely quiet about the political situation developing in Atlanta. Today, however, the GOP came forward for the first time, declaring that their silence was in preperation for upcoming snap elections, as the party prepared itself with new leadership after \'recent events\'. Their new unopposed candidate for the presidential election is billionare Charles Koch, an active face in American politics since his estrangement with Charles Koch, a prominent oligarch donor in the Midwest. Koch has expressed his excitement to run for the office of President and promised a return to pre-Reagan fiscal conservatism and rationality, something that has been celebrated by the moderate wing of the party but which has alerted some, as the sudden shift in the party's ideology has come quite unnatural and without seemingly any rhyme or reason."
+  us_republic.701.a:0 "Vote Koch for good governance!" 
 
   #News
 
@@ -259,4 +293,4 @@
   ##########################
   # LEADERS
   ##########################
-  POLITICS_THOMAS_RIDGE_DESC:0 "Ridge started his rocky career in politics with the fall of the United States of America after Reagan's proclamation, forced to flee the North after fears of revolution spread and he was personally targeted due to his legal career. Moving to the South, Ridge quickly entered parliament during the tide of Republicanism after the fall for North Carolina. During the Bush era, Ridge took upon him a number of odd jobs and committees, making himself a semi-known star inside the Republican ranks, even if not that popular outside of his own constituency. \n\nRidge truly started his political career after President Bush appointed him to the coveted spot of deputy secretary of national security, leading to his long relation with the secretary of national security, Donald Rumsfeld. It would be this connection that led to Rumsfeld personally championing Ridge as his VP after Bush died. Under Rumsfeld, Ridge has been a simple side-character, having had little actual say in policy due to Rumsfeld's ruthless micromanagement and the powers that be stopping him at every turn of the way, frustrating his moderation efforts. However, now that Rumsfeld is gone, Ridge still knows that he will not make an impact on American history, convined to an administration and a party that will face the tree of hanging men in the coming election. Rumsfeld made a great mistake and the Republicans and Ridge will pay for his gamble." 
+  POLITICS_THOMAS_RIDGE_DESC:0 "Ridge started his rocky career in politics with the fall of the United States of America after Reagan's proclamation, forced to flee the North after fears of revolution spread and he was personally targeted due to his legal career. Moving to the South, Ridge quickly entered parliament during the tide of Republicanism after the fall for North Carolina. During the Bush era, Ridge took upon him a number of odd jobs and committees, making himself a semi-known star inside the Republican ranks, even if not that popular outside of his own constituency. \n\nRidge truly started his political career after President Bush appointed him to the coveted spot of deputy secretary of national security, leading to his long relation with the vice president, Donald Rumsfeld. It would be this connection that led to Rumsfeld personally championing Ridge as his VP after Bush died. Under Rumsfeld, Ridge has been a simple side-character, having had little actual say in policy due to Rumsfeld's ruthless micromanagement and the powers that be stopping him at every turn of the way, frustrating his moderation efforts. However, now that Rumsfeld is gone, Ridge still knows that he will not make an impact on American history, convined to an administration and a party that will face the tree of hanging men in the coming election. Rumsfeld made a great mistake and the Republicans and Ridge will pay for his gamble." 

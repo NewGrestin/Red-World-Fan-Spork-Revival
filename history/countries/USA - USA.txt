@@ -291,6 +291,7 @@ add_ideas = {
 	RWE_USA_Anti_Soviet_Laws
 	RWE_USA_hostile_congress 
 	RWE_USA_Unrecognized_Government 
+	RWE_Military_Forces_Burden 
 	idea_america_neutrality
 
 	usa_thomas_ridge
