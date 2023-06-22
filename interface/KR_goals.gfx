@@ -89,6 +89,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_BEL_Monarchy"
+		texturefile = "gfx/interface/goals/BEL_Monarchy.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_goal_american_christianity"
 		texturefile = "gfx/interface/goals/american_christianity.dds"
 	}
@@ -2732,10 +2737,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_BEL_Belgium_Flag"
 		texturefile = "gfx/interface/goals/BEL_Belgium_Flag.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_BEL_Monarchy"
-		texturefile = "gfx/interface/goals/BEL_Monarchy.png"
 	}
 	SpriteType = {
 		name = "GFX_goal_BEL_Resist_and_Bite"

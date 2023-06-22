@@ -4,8 +4,45 @@ USA_Debt_Ceiling_Crisis = {
 	picture = GFX_decision_cat_RWE_Generic_American_Breakup
 
 	visible = { 
-	has_ideas = { RWE_USA_hostile_congress }
+	tag = USA
 	}
 
 	priority = 250
+}
+
+USA_Foreign_Policy = {
+    	icon = GFX_decision_category_power_struggle
+
+	picture = GFX_decision_cat_RWE_Generic_American_Breakup
+
+	visible = { 
+	tag = USA
+	}
+
+	priority = 200
+}
+
+RWE_2nd_Mexican_American_War = {
+    icon = Mex_America_War
+
+	picture = GFX_decision_cat_Mex_America_War_Picture
+
+	allowed = { 
+		OR = { 
+		tag = USA
+		tag = LIN
+		tag = MOT
+		tag = ILL
+		tag = PCA
+		tag = UTA
+		tag = ARI
+		tag = GRL
+		tag = TEX
+		tag = MWA
+		tag = NEA
+		tag = OKL
+		}
+	}
+
+	priority = 300
 }

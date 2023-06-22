@@ -12,6 +12,9 @@ characters={
 			id=-1
 		}
 	}
+
+	#########
+
 	USA_paul_i={
 		name="Paul I"
 		portraits={
@@ -25,6 +28,74 @@ characters={
 			id=-1
 		}
 	}
+	USA_monarchist_convention={
+		name="Council on the First Citizen Elect"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Monarchist_Convention.dds"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	USA_Jean_Christophe_Napoleon ={
+		name="Jean-Christophe I"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Napoleon.dds"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	USA_Philip_of_Belgium ={
+		name="Philip I"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Philip_of_Belgium.dds"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	USA_Robert_Lee ={
+		name="Robert I"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Robert_Lee.dds"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	USA_Georg_Friedrich ={
+		name="Georg I"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Karl_Friedrich.dds"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	
+	#########
+
 	USA_robert_bentley={
 		name="Robert Bentley"
 		portraits={

@@ -11,16 +11,192 @@ focus_tree = {
 	shared_focus = USA_the_default_crisis
 	shared_focus = USA_true_republican_economy
 	#shared_focus = USA_A_Day_That_Will_Live_In_Infamy
-	#shared_focus = USA_rumsfeld_beaten
+	shared_focus = USA_rumsfeld_beaten
 	shared_focus = USA_Resolve_the_Texan_Question
 	shared_focus = USA_Militarize_the_Northern_Border
 	shared_focus = USA_Rival_Government
 	#shared_focus = USA_Compromise_with_NEA
-	shared_focus = USA_The_Business_Plot
+	#shared_focus = USA_The_Business_Plot
+	shared_focus = USA_Republic_Air_Force
 
 	continuous_focus_position = { x = 50 y = 1100 }
 	default = no
 }
+
+
+	######################################
+	#	AIR FORCE	 	     #
+	######################################
+
+	shared_focus = {
+		id = USA_Republic_Air_Force
+		icon = GFX_focus_USA_Airforce_1
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 37
+		y = 0
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Solve_ARAF_Rigidity
+		icon = GFX_focus_USA_Airforce_1
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 35
+		y = 1
+
+		prerequisite = {
+		focus = USA_Republic_Air_Force
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Adopt_the_SSPARS
+		icon = GFX_goal_generic_radar_instillation
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 36
+		y = 2
+
+		prerequisite = {
+		focus = USA_Republic_Air_Force
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Expand_Airbases
+		icon = GFX_goal_generic_airbase
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 35
+		y = 3
+
+		prerequisite = {
+		focus = USA_Adopt_the_SSPARS
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Spirit_of_Boyd_and_Christie
+		icon = GFX_focus_USA_Fighter_Mafia
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 41
+		y = 1
+
+		prerequisite = {
+		focus = USA_Republic_Air_Force
+		}
+
+		mutually_exclusive = {
+		focus = USA_Spirit_of_LeMay
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Spirit_of_LeMay
+		icon = GFX_focus_USA_Airforce_1
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 38
+		y = 1
+
+		prerequisite = {
+		focus = USA_Republic_Air_Force
+		}
+
+		mutually_exclusive = {
+		focus = USA_Spirit_of_Boyd_and_Christie
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Missile_Defense_Agency
+		icon = GFX_focus_rocketry
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 37
+		y = 3
+
+		prerequisite = {
+		focus = USA_Spirit_of_LeMay
+		focus = USA_Adopt_the_SSPARS
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	######################################
+	#	FOREIGN POLICY	 	     #
+	######################################
 
 	shared_focus = {
 		id = USA_Resolve_the_Texan_Question
@@ -119,9 +295,9 @@ focus_tree = {
 
 		available = {
 		NOT = { has_idea = RWE_USA_Default }
-		is_owner_neighbor_of = NEA
+		owns_state = 369
 		has_war = no 
-		NEA = { is_subject = no NOT = { has_war_with = USA } exists = yes }
+		NEA = { NOT = { has_war_with = USA } exists = yes owns_state = 261 }
 		}
 	
 		prerequisite = {
@@ -152,13 +328,50 @@ focus_tree = {
 	}
 
 	shared_focus = {
+		id = USA_Meddle_in_Commonwealth_Affairs
+		icon = GFX_focus_SOV_organize_wreckers
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 43
+		y = 6
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		NEA = { has_war = no exists = yes is_subject = no NOT = { OR = { has_completed_focus = NEA_initiate_leadership_election has_completed_focus = NEA_begin_investigation has_completed_focus = NEA_american_peace_act  } } }
+		}
+	
+		prerequisite = {
+		focus = USA_Rival_Government
+		}
+
+		prerequisite = {
+		focus = USA_Militarize_the_Northern_Border
+		}
+
+		allow_branch = { 
+		is_ai = no
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		country_event = { id = us_republic.300 days = 0 }
+		}
+
+	}
+
+	shared_focus = {
 		id = USA_Puerto_Rico_Plan
 		icon = GFX_goal_generic_coastal_navy
 		cost = 2
 		ai_will_do = {
 			base = 100
 		}
-		x = 43
+		x = 41
 		y = 6
 
 		available = {
@@ -261,11 +474,350 @@ focus_tree = {
 		y = 8
 
 		available = {
-
+		has_completed_focus = USA_Neo-Americana
 		}
 	
 		prerequisite = {
 		focus = USA_Antagonize_Saint_Louis
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		add_war_support = 0.05
+		add_ideas = { RWE_USA_Restoring_the_Union }
+		}
+	}
+
+	shared_focus = {
+		id = USA_Seize_Missouri
+		icon = GFX_focus_USA_Missouri
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 35
+		y = 10
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		is_owner_neighbor_of = ILL
+		has_war = no 		
+		ILL = { exists = yes NOT = { has_war_with = USA } owns_state = 373 }
+		}
+
+		will_lead_to_war_with = ILL
+	
+		prerequisite = {
+		focus = USA_Undo_Reagans_Mistake
+		}
+
+		prerequisite = {
+		focus = USA_Midwestern_Panic
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		country_event = { id = us_republic.209 days = 0 }
+		
+		effect_tooltip = {
+		transfer_state = 373
+		add_named_threat = {
+    		threat = 7
+    		name = "Violation of Illinois Sovereignty" 
+		}
+		}
+
+		ILL = { country_event = { id = us_republic.210 days = 2 } }
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Mexican_Provocations
+		icon = GFX_focus_mex_jefe_maximo
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 34
+		y = 9
+
+		available = {
+		OR = { 
+		USA = { is_owner_neighbor_of = MEX }
+		AND = {
+		TEX = { is_subject_of = USA }
+		TEX = { is_owner_neighbor_of = MEX }
+		}		
+		}
+		MEX = { exists = yes NOT = { is_subject_of = USA } }
+		}
+	
+		prerequisite = {
+		focus = USA_Undo_Reagans_Mistake
+		focus = USA_Memories_of_the_Alamo
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Mexican_American_War
+		icon = GFX_focus_attack_mexico
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 33
+		y = 11
+
+		available = {
+		OR = { 
+		USA = { is_owner_neighbor_of = MEX }
+		AND = {
+		TEX = { is_subject_of = USA }
+		TEX = { is_owner_neighbor_of = MEX }
+		}		
+		}
+		MEX = { exists = yes NOT = { is_subject_of = USA } }
+		}
+	
+		prerequisite = {
+		focus = USA_Mexican_Provocations
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Orchestrate_the_Independent_Revolution
+		icon = GFX_goal_USA_Reagan
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 37
+		y = 10
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Midwestern_Panic
+		}
+
+		mutually_exclusive = {
+		focus = USA_Intervene_in_Kansas
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Intervene_in_Kansas
+		icon = GFX_goal_USA_Reagan
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 39
+		y = 10
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Midwestern_Panic
+		}
+
+		mutually_exclusive = {
+		focus = USA_Orchestrate_the_Independent_Revolution
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Authorize_a_Full_Invasion
+		icon = GFX_focus_spa_the_war_of_vengeance
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 39
+		y = 11
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Intervene_in_Kansas
+		focus = USA_Orchestrate_the_Independent_Revolution
+		}
+
+		mutually_exclusive = {
+		focus = USA_Cement_the_New_Border
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Cement_the_New_Border
+		icon = GFX_goal_treaty_fails
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 37
+		y = 11
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Intervene_in_Kansas
+		focus = USA_Orchestrate_the_Independent_Revolution
+		}
+
+		mutually_exclusive = {
+		focus = USA_Authorize_a_Full_Invasion
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Jail_Midwestern_Opposition
+		icon = GFX_focus_USA_Opposition_Lock
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 35
+		y = 11
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Intervene_in_Kansas
+		focus = USA_Orchestrate_the_Independent_Revolution
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_The_Rushmore_Declaration
+		icon = GFX_focus_USA_Rushmore
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 38
+		y = 12
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Intervene_in_Kansas
+		focus = USA_Orchestrate_the_Independent_Revolution
+		}
+
+		mutually_exclusive = {
+		focus = USA_Authorize_a_Full_Invasion
 		}
 
 		bypass = { 
@@ -332,6 +884,267 @@ focus_tree = {
 	
 		prerequisite = {
 		focus = USA_Form_the_Union
+		focus = USA_Confederation_of_International_States
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Sign_NAFTA
+		icon = GFX_goal_new_treaty
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 42
+		y = 9
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Confederation_of_International_States
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Reinforce_a_Common_Currency
+		icon = GFX_goal_generic_austerity_measures
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 42
+		y = 10
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Sign_NAFTA
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Backed_by_Banking
+		icon = GFX_goal_generic_banking_legislation
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 43
+		y = 11
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Reinforce_a_Common_Currency
+		}
+
+		mutually_exclusive = {
+		focus = USA_Return_of_the_Gold_Standard
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Return_of_the_Gold_Standard
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 41
+		y = 11
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Reinforce_a_Common_Currency
+		}
+
+		mutually_exclusive = {
+		focus = USA_Backed_by_Banking
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Freedom_of_Movement
+		icon = GFX_goal_social_reforms
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 44
+		y = 9
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Confederation_of_International_States
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Found_INTERPol_USA
+		icon = GFX_goal_generic_police_state
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 46
+		y = 9
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Confederation_of_International_States
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Allow_Observer_States
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 47
+		y = 10
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Confederation_of_International_States
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Coordinate_Immigration_Policy
+		icon = GFX_focus_generic_population_growth
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 45
+		y = 10
+
+		available = {
+
+		}
+	
+		prerequisite = {
+		focus = USA_Found_INTERPol_USA
+		}
+
+		prerequisite = {
+		focus = USA_Freedom_of_Movement
 		}
 
 		bypass = { 
@@ -402,6 +1215,10 @@ focus_tree = {
 
 		}
 	
+		allow_branch = {
+		has_government = communist
+		}
+
 		prerequisite = {
 		focus = USA_Solidarity_Forever
 		}
@@ -432,6 +1249,10 @@ focus_tree = {
 		}
 		x = 49
 		y = 8
+
+		allow_branch = {
+		has_government = communist
+		}
 
 		available = {
 
@@ -465,6 +1286,10 @@ focus_tree = {
 		x = 49
 		y = 9
 
+		allow_branch = {
+		has_government = communist
+		}
+
 		available = {
 
 		}
@@ -495,6 +1320,10 @@ focus_tree = {
 		}
 		x = 45
 		y = 8
+
+		allow_branch = {
+		has_government = communist
+		}
 
 		available = {
 
@@ -578,6 +1407,10 @@ focus_tree = {
 		x = 44
 		y = 7
 
+		allow_branch = {
+		has_government = communist
+		}
+
 		available = {
 		NEA = { exists = no }
 		owns_state = 360
@@ -629,6 +1462,10 @@ focus_tree = {
 		}
 		x = 46
 		y = 7
+
+		allow_branch = {
+		has_government = communist
+		}
 
 		available = {
 		NEA = { exists = no }
@@ -739,7 +1576,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+		ILL = {
+		add_opinion_modifier = {
+   	 	target = USA
+    		modifier = retracted_recognition 
+		}
+		}
 		}
 
 	}
@@ -893,6 +1735,11 @@ focus_tree = {
 
 		}
 	}
+
+
+	######################################
+	#	BUSINESS PLOT		     #
+	######################################
 
 	shared_focus = {
 		id = USA_The_Business_Plot
@@ -1451,6 +2298,11 @@ focus_tree = {
 
 	}
 
+
+	######################################
+	#	RUMSFELD VICTORIOUS 	     #
+	######################################
+
 	shared_focus = {
 		id = USA_A_Day_That_Will_Live_In_Infamy
 		icon = GFX_focus_USA_closed_congress
@@ -1614,7 +2466,7 @@ focus_tree = {
 
 	shared_focus = {
 		id = USA_Rumsfeldism
-		icon = GFX_focus_USA_Rumsfeld
+		icon = GFX_focus_USA_Rumsfeld_2
 		cost = 3
 		ai_will_do = {
 			base = 100
@@ -1804,6 +2656,7 @@ focus_tree = {
 
 		completion_reward = {
 		add_ideas = { RWE_USA_Neo_Americana }
+		country_event = { id = us_republic.604 days = 0 }
 		}
 	}
 
@@ -2099,7 +2952,7 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-		focus = USA_A_Day_That_Will_Live_In_Infamy
+		focus = USA_Disband_the_Supreme_Court
 		}
 
 		mutually_exclusive = { 
@@ -2111,6 +2964,10 @@ focus_tree = {
 		}
 
 	}
+
+	######################################
+	#	CONGRESS VICTORIOUS 	     #
+	######################################
 
 	shared_focus = {
 		id = USA_rumsfeld_beaten
@@ -2135,6 +2992,1274 @@ focus_tree = {
 		}
 
 	}
+
+	shared_focus = {
+		id = USA_start_impeachment_procedure
+		icon = GFX_focus_USA_Rumsfeld_Impeachment
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 19
+		y = 8
+
+		available = {
+		has_country_leader = {
+    		name = "Donald Rumsfeld"
+    		ruling_only = yes
+		}
+		}
+
+		prerequisite = { 
+		focus = USA_rumsfeld_beaten
+		}
+
+		completion_reward = {
+		add_stability = -0.05
+		effect_tooltip = {
+		retire_ideology_leader = nationalist
+		}
+		country_event = { id = us_republic.601 days = 0 }
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_repeal_the_cca
+		icon = GFX_focus_SOV_the_last_purge
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 25
+		y = 8
+
+		available = {
+
+		}
+
+		prerequisite = { 
+		focus = USA_rumsfeld_beaten
+		}
+
+		completion_reward = {
+		add_popularity = { ideology = new_democrat popularity = 0.05 }
+		add_popularity = { ideology = moderate_socialist popularity = 0.05 }		
+		add_popularity = { ideology = communist popularity = 0.02 }		
+		add_popularity = { ideology = revolutionary_socialist popularity = 0.01 }		
+		if = { 
+		limit = { has_idea = RWE_USA_Anti_Soviet_Laws }
+		remove_ideas = { RWE_USA_Anti_Soviet_Laws }
+		}
+
+		else_if = { 
+		limit = { has_idea = RWE_USA_Anti_Soviet_Laws_2 }
+		remove_ideas = { RWE_USA_Anti_Soviet_Laws_2 }
+		}
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_2010_election
+		icon = focus_2010_election
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 23
+		y = 8
+
+		available = {
+
+		}
+
+		prerequisite = { 
+		focus = USA_rumsfeld_beaten
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_New_Populists_Prevail
+		icon = GFX_focus_USA_NPP
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 17
+		y = 9
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_2010_election
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Solving_our_Dirty_Hands
+		icon = GFX_focus_USA_NPP
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 16
+		y = 10
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_New_Populists_Prevail
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Big_Tent
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Pan_Patriotism
+		icon = GFX_focus_USA_NPP
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 16
+		y = 11
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Solving_our_Dirty_Hands
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Subvert_the_System
+		icon = GFX_focus_USA_NPP
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 17
+		y = 12
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Pan_Patriotism
+		}
+
+		prerequisite = { 
+		focus = USA_Against_Godless_Communism
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Opposition_with_a_Government
+		focus = USA_Wrapped_in_the_Flag_Carrying_the_Cross
+		}
+
+		completion_reward = {
+		add_ideas = { RWE_USA_GOP_NPP }
+		mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Hijack_Rumsfelds_Legacy
+		icon = GFX_focus_USA_Rumsfeld_2
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 18
+		y = 13
+
+		allow_branch = { 
+		has_completed_focus = USA_Subvert_the_System
+		}
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Subvert_the_System
+		}
+
+		prerequisite = { 
+		focus = USA_Ban_Red_Immigrants
+		}
+
+		completion_reward = {
+		swap_ideas = { remove_idea = RWE_USA_GOP_NPP add_idea = RWE_USA_GOP_NPP_2 }
+		custom_effect_tooltip = USA_nationalist_to_fascist_pop_tt
+		add_popularity = { ideology = fascist popularity = var:party_popularity@nationalist }
+		hidden_effct = { 
+		add_popularity = { ideology = nationalist popularity = -1 }
+		}		
+
+		custom_effect_tooltip = USA_nationalist_to_fascist_characters_tt
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Adopt_Neo_Americana
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 16
+		y = 13
+
+		allow_branch = { 
+		#OR = {
+		#has_completed_focus = USA_Subvert_the_System
+		#has_completed_focus = USA_Hamiltonian_Monarchism
+		#}
+		}
+
+		available = {
+		is_subject = no
+		}
+
+		prerequisite = { 
+		focus = USA_Subvert_the_System
+		focus = USA_Hamiltonian_Monarchism
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Ambitions_of_European_America
+		}
+
+		completion_reward = {
+		add_popularity = { ideology = fascist popularity = 0.03 }
+		add_ideas = { RWE_USA_Neo_Americana_NPP }
+		country_event = { id = us_republic.607 days = 0 }
+		}
+	}
+
+	shared_focus = {
+		id = USA_Against_Soviet_Globalism
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 17
+		y = 14
+
+		allow_branch = { 
+		has_completed_focus = USA_Subvert_the_System
+		}
+
+		available = {
+		is_subject = no 
+		has_government = fascist
+		any_country = { 
+		NOT = { tag = USA }
+		NOT = { has_war_with = USA }
+		capital_scope = { OR = { is_on_continent = north_america is_on_continent = south_america } }
+		OR = { 
+		has_government = nationalist
+		has_government = fascist
+		has_government = monarchist
+		}
+		}
+		}
+
+		prerequisite = { 
+		focus = USA_Adopt_Neo_Americana	
+		focus = USA_Hijack_Rumsfelds_Legacy
+		}
+
+		completion_reward = {
+		add_ideas = { RWE_Anti_Bolshevism_Pact }
+		every_country = { 
+			limit = { 
+			is_subject = no 
+			NOT = { has_war_with = USA }
+			capital_scope = { OR = { is_on_continent = north_america is_on_continent = south_america } }
+			OR = { 
+			has_government = nationalist
+			has_government = fascist
+			has_government = monarchist
+			}
+			}
+			country_event = { id = us_republic.305 days = 1 }
+		}
+	}
+	}
+
+	shared_focus = {
+		id = USA_Christian_Nation
+		icon = GFX_goal_american_christianity
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 15
+		y = 14
+
+		allow_branch = { 
+		OR = {
+		has_completed_focus = USA_Subvert_the_System
+		has_completed_focus = USA_Wrapped_in_the_Flag_Carrying_the_Cross
+		}
+		}
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Subvert_the_System
+		focus = USA_Wrapped_in_the_Flag_Carrying_the_Cross
+		}
+
+		completion_reward = {
+		add_ideas = { RWE_Christian_Nation }
+		if = { 
+		limit = { has_cosmetic_tag = USA_fascist_2 }
+		add_popularity = { ideology = fascist popularity = 0.02 }
+		add_stability = 0.02
+		}
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Opposition_with_a_Government
+		icon = GFX_focus_USA_NPP
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 15
+		y = 12
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Strenghten_the_Paramilitary
+		focus = USA_Pan_Patriotism
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Subvert_the_System
+		focus = USA_Wrapped_in_the_Flag_Carrying_the_Cross
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Constitutional_Nationalism
+		icon = GFX_focus_USA_NPP_Constitution
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 16
+		y = 13
+
+		allow_branch = { 
+		has_completed_focus = USA_Opposition_with_a_Government
+		}
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Opposition_with_a_Government
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Attack_Cultural_Marxism
+		icon = GFX_goal_GRL_University_Marxism
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 14
+		y = 15
+
+		allow_branch = { 
+		has_completed_focus = USA_Opposition_with_a_Government
+		}
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Populist_Media_Machine
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Criticize_the_Culture_War
+		icon = GFX_focus_USA_NPP
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 16
+		y = 15
+
+		allow_branch = { 
+		has_completed_focus = USA_Opposition_with_a_Government
+		}
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Populist_Media_Machine
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Ambitions_of_European_America
+		icon = GFX_focus_USA_Pan_America
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 14
+		y = 13
+
+		allow_branch = { 
+		#OR = {
+		#has_completed_focus = USA_Opposition_with_a_Government
+		#has_completed_focus = USA_Wrapped_in_the_Flag_Carrying_the_Cross
+		#has_completed_focus = USA_Hamiltonian_Monarchism
+		#}
+		}
+
+		available = {
+		is_subject = no
+		}
+
+		prerequisite = { 
+		focus = USA_Opposition_with_a_Government
+		focus = USA_Wrapped_in_the_Flag_Carrying_the_Cross
+		focus = USA_Hamiltonian_Monarchism
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Adopt_Neo_Americana
+		}
+
+		completion_reward = {
+		add_ideas = { RWE_Pan_America }
+		add_relation_modifier = { 
+		target = CAN
+		modifier = USA_Pan_Americanism 
+		}
+		unlock_decision_tooltip = USA_Realize_Pan_America 
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Populist_Media_Machine
+		icon = GFX_focus_USA_NPP
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 15
+		y = 14
+
+		allow_branch = { 
+		has_completed_focus = USA_Opposition_with_a_Government
+		}
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Opposition_with_a_Government
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+	shared_focus = {
+		id = USA_Big_Tent
+		icon = GFX_focus_USA_NPP
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 13
+		y = 10
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_New_Populists_Prevail
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Solving_our_Dirty_Hands
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Strenghten_the_Paramilitary
+		icon = GFX_focus_ITA_banda_carita
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 14
+		y = 11
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Big_Tent
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Invite_Fringe_Movements
+		icon = GFX_focus_USA_NPP
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 12
+		y = 11
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Big_Tent
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Wrapped_in_the_Flag_Carrying_the_Cross
+		icon = GFX_focus_USA_Cross_and_Flag
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 13
+		y = 12
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Strenghten_the_Paramilitary
+		focus = USA_Invite_Fringe_Movements
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Opposition_with_a_Government
+		focus = USA_Subvert_the_System
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Hamiltonian_Monarchism
+		icon = GFX_GRE_empower_monarchy
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 11
+		y = 12
+
+		available = {
+		OR = { 
+		has_government = fascist
+		has_government = monarchist
+		}
+		}
+
+		allow_branch = {
+		#has_government = monarchist
+		}
+
+		prerequisite = { 
+		focus = USA_Invite_Fringe_Movements
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Opposition_with_a_Government
+		focus = USA_Wrapped_in_the_Flag_Carrying_the_Cross
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_The_Muppet_King
+		icon = GFX_focus_USA_Behind_Throne
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 12
+		y = 13
+
+		available = {
+		OR = { 
+		has_government = fascist
+		has_government = monarchist
+		}
+		}
+
+		allow_branch = {
+		#has_government = monarchist
+		}
+
+		prerequisite = { 
+		focus = USA_Hamiltonian_Monarchism
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_New_Civil_Traditions
+		icon = GFX_goal_generic_culture2
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 10
+		y = 13
+
+		available = {
+		OR = { 
+		has_government = fascist
+		has_government = monarchist
+		}
+		}
+
+		allow_branch = {
+		#has_government = monarchist
+		}
+
+		prerequisite = { 
+		focus = USA_Hamiltonian_Monarchism
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Chained_to_the_Constitution
+		icon = GFX_focus_rom_handle_king
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 13
+		y = 14
+
+		available = {
+		OR = { 
+		has_government = fascist
+		has_government = monarchist
+		}
+		}
+
+		allow_branch = {
+		#has_government = monarchist
+		}
+
+		prerequisite = { 
+		focus = USA_New_Civil_Traditions
+		}
+
+		prerequisite = { 
+		focus = USA_The_Muppet_King
+		}
+
+		mutually_exclusive = { 
+		focus = USA_American_Absolutism
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_American_Absolutism
+		icon = GFX_goal_TEX_every_man_a_king
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 11
+		y = 14
+
+		available = {
+		OR = { 
+		has_government = fascist
+		has_government = monarchist
+		}
+		}
+
+		allow_branch = {
+		#has_government = monarchist
+		}
+
+		prerequisite = { 
+		focus = USA_New_Civil_Traditions
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Chained_to_the_Constitution
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Reclaim_the_Belgian_Throne
+		icon = GFX_focus_BEL_Monarchy
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 9
+		y = 14
+
+		available = {
+		OR = { 
+		has_government = fascist
+		has_government = monarchist
+		}
+		has_country_leader = {
+    		name = "Philip I"
+    		ruling_only = yes
+		}
+
+		BEL = { 
+		exists = yes
+		NOT = { has_government = monarchist }
+		}
+		}
+
+		allow_branch = {
+		has_country_leader = {
+    		name = "Philip I"
+    		ruling_only = yes
+		}
+		}
+
+		prerequisite = { 
+		focus = USA_New_Civil_Traditions
+		focus = USA_The_Muppet_King
+		}
+
+		completion_reward = {
+		every_state = { 
+			limit = { is_core_of = BEL }
+			add_claim_by = USA
+		}
+		create_wargoal = {
+    		target = BEL
+    		type = take_claimed_state 
+		}
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Napoleonic_Restoration
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 9
+		y = 14
+
+		available = {
+		OR = { 
+		has_government = fascist
+		has_government = monarchist
+		}
+		has_country_leader = {
+    		name = "Jean-Christophe I"
+    		ruling_only = yes
+		}
+
+		FRA = { 
+		exists = yes
+		NOT = { has_government = monarchist }
+		}
+		}
+
+		allow_branch = {
+		has_country_leader = {
+    		name = "Jean-Christophe I"
+    		ruling_only = yes
+		}
+		}
+
+		prerequisite = { 
+		focus = USA_New_Civil_Traditions
+		focus = USA_The_Muppet_King
+		}
+
+		completion_reward = {
+		every_state = { 
+			limit = { is_core_of = FRA }
+			add_claim_by = USA
+		}
+		create_wargoal = {
+    		target = FRA
+    		type = take_claimed_state 
+		}
+		create_wargoal = {
+    		target = ENG
+    		type = puppet_wargoal_focus 
+		}
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Napoleonic_Restoration_2
+		icon = GFX_goal_napoleonic_state
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 9
+		y = 15
+
+		available = {
+		OR = { 
+		has_government = fascist
+		has_government = monarchist
+		}
+		has_country_leader = {
+    		name = "Jean-Christophe I"
+    		ruling_only = yes
+		}
+
+		FRA = { 
+		exists = yes
+		NOT = { has_government = monarchist }
+		}
+		}
+
+		allow_branch = {
+		has_country_leader = {
+    		name = "Jean-Christophe I"
+    		ruling_only = yes
+		}
+		}
+
+		prerequisite = { 
+		focus = USA_Napoleonic_Restoration
+		}
+
+		completion_reward = {
+			add_popularity = { ideology = monarchist popularity = 0.1 }
+			USA_Jean_Christophe_Napoleon = { add_country_leader_trait = the_restorer }
+		}
+	}
+
+	shared_focus = {
+		id = USA_Kaiserschlacht
+		icon = GFX_focus_ger_return_of_the_kaiser
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 9
+		y = 14
+
+		available = {
+		OR = { 
+		has_government = fascist
+		has_government = monarchist
+		}
+		has_country_leader = {
+    		name = "Georg I"
+    		ruling_only = yes
+		}
+
+		GER = { 
+		exists = yes
+		NOT = { has_government = monarchist }
+		}
+		}
+
+		allow_branch = {
+		#has_country_leader = {
+    		#name = "Georg I"
+    		#ruling_only = yes
+		#}
+		}
+
+		prerequisite = { 
+		focus = USA_New_Civil_Traditions
+		focus = USA_The_Muppet_King
+		}
+
+		completion_reward = {
+		every_state = { 
+			limit = { OR = { is_core_of = GER state = 839 state = 28 state = 800 state = 742 state = 63 state = 743 state = 66 state = 67 state = 981 state = 86 state = 85 state = 5 state 741 state = 188 } }
+			add_claim_by = USA
+		}
+		create_wargoal = {
+    		target = GER
+    		type = take_claimed_state 
+		}
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Against_Godless_Communism
+		icon = GFX_focus_USA_NPP
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 18
+		y = 10
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_New_Populists_Prevail
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Support_Nativist_Sentiment
+		icon = GFX_goal_national_populism
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 22
+		y = 10
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_New_Populists_Prevail
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Fuhrerprinzip
+		icon = GFX_focus_USA_NPP
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 21
+		y = 11
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Support_Nativist_Sentiment
+		}
+
+		mutually_exclusive = { 
+		focus = USA_State_Rights
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_State_Rights
+		icon = GFX_focus_USA_NPP
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 23
+		y = 11
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Support_Nativist_Sentiment
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Fuhrerprinzip
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Secure_the_Intelligence_Apparatus
+		icon = national_security_agency_focus
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 20
+		y = 12
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Fuhrerprinzip
+		focus = USA_Ban_Red_Immigrants
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Fuhrerprinzip
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Ban_Red_Immigrants
+		icon = GFX_focus_USA_NPP
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 19
+		y = 11
+
+		available = {
+		has_government = fascist
+		}
+
+		prerequisite = { 
+		focus = USA_Against_Godless_Communism
+		}
+
+		prerequisite = { 
+		focus = USA_Support_Nativist_Sentiment
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Republicans_Prevail
+		icon = GFX_focus_ETH_the_heir_of_solomon
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 21
+		y = 9
+
+		available = {
+		OR = {
+		has_government = national_conservative
+		has_government = nationalist
+		}
+		}
+
+		prerequisite = { 
+		focus = USA_2010_election
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Common_Sense_Prevail
+		icon = GFX_focus_USA_Common_Sensers
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 25
+		y = 9
+
+		available = {
+		has_government = centrist
+		}
+
+		prerequisite = { 
+		focus = USA_2010_election
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_JUSTICE_Prevail
+		icon = GFX_focus_ETH_the_heir_of_solomon
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 29
+		y = 9
+
+		available = {
+		has_government = new_democrat
+		}
+
+		prerequisite = { 
+		focus = USA_2010_election
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	######################################
+	#	DEFAULT CRISIS	 	     #
+	######################################
 
 	shared_focus = {
 		id = USA_the_default_crisis
@@ -2333,6 +4458,11 @@ focus_tree = {
 		add_timed_idea = { idea = RWE_USA_increased_taxation days = 365 }
 		}
 	}
+
+
+	######################################
+	#	ECONOMIC FOCUS TREE 	     #
+	######################################
 
 	shared_focus = {
 		id = USA_true_republican_economy
@@ -2605,7 +4735,9 @@ focus_tree = {
 
 
 		completion_reward = {
-
+		set_temp_variable = { USA_temp_Oligarchic_Influence = -0.2 }
+		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 
 	}
@@ -2634,31 +4766,9 @@ focus_tree = {
 
 
 		completion_reward = {
-
-		}
-
-	}
-
-	shared_focus = {
-		id = USA_Branching_path_2
-		icon = GFX_goal_unknown
-		cost = 3
-		ai_will_do = {
-			base = 100
-		}
-		x = 17
-		y = 3
-		available = {
-		always = no 
-		}
-
-		prerequisite = { 
-		focus = USA_nationalize_Texan_gas focus = USA_subsidize_Texan_gas
-		}
-
-
-		completion_reward = {
-
+		set_temp_variable = { USA_temp_Oligarchic_Influence = 0.2 }
+		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 
 	}
@@ -2685,7 +4795,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = USA_sanctions_hit_less_hard_tt
 		}
 
 	}
@@ -2790,7 +4900,9 @@ focus_tree = {
 
 
 		completion_reward = {
-
+		set_temp_variable = { USA_temp_Oligarchic_Influence = -0.1 }
+		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 
 	}
@@ -2817,7 +4929,22 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+	random_owned_state = {
+	add_extra_state_shared_building_slots = 2
+	add_building_construction = {
+    	type = industrial_complex
+    	level = 2
+    	instant_build = yes
+	}
+	}
+	random_owned_state = {
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+    	type = arms_factory
+    	level = 1
+    	instant_build = yes
+	}
+	}
 		}
 
 	}
@@ -2833,6 +4960,7 @@ focus_tree = {
 		y = 4
 		available = {
 		NOT = { has_idea = RWE_USA_Default }
+		owns_state = 367
 		}
 
 		prerequisite = { 
@@ -2840,7 +4968,19 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+	367 = {
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+    	type = industrial_complex
+    	level = 1
+    	instant_build = yes
+	}
+	}
+		add_resource = {
+    		type = steel
+    		amount = 21
+    		state = 367
+		}
 		}
 
 	}
@@ -2886,7 +5026,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+		set_temp_variable = { USA_temp_Oligarchic_Influence = 0.05 }
+		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 
 	}
@@ -2925,6 +5067,7 @@ focus_tree = {
 		x = 26
 		y = 2
 		available = {
+		num_of_factories > 80
 		NOT = { has_idea = RWE_USA_Default }
 		}
 
@@ -2953,6 +5096,7 @@ focus_tree = {
 		x = 24
 		y = 2
 		available = {
+		num_of_factories > 80
 		NOT = { has_idea = RWE_USA_Default }
 		}
 
@@ -3010,6 +5154,7 @@ focus_tree = {
 		y = 3
 		available = {
 		NOT = { has_idea = RWE_USA_Default }
+		num_of_factories > 110
 		}
 
 		prerequisite = { 
@@ -3188,7 +5333,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+		set_temp_variable = { USA_temp_Oligarchic_Influence = 0.05 }
+		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 
 	}

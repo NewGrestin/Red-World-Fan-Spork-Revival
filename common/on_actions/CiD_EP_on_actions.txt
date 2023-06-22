@@ -19,4 +19,221 @@ on_actions = {
 			}
 		}
 	}
+
+	on_weekly = { 
+		effect = { 
+			USA = { 
+			if = { 
+			limit = { check_variable = { USA_state_count_var = 12 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_12 } }
+			set_cosmetic_tag = USA_12
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 13 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_13 } }
+			set_cosmetic_tag = USA_13
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 14 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_14 } }
+			set_cosmetic_tag = USA_14
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 15 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_15 } }
+			set_cosmetic_tag = USA_15
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 16 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_16 } }
+			set_cosmetic_tag = USA_16
+			}
+			
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 17 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_17 } }
+			set_cosmetic_tag = USA_17
+			}
+			
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 18 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_18 } }
+			set_cosmetic_tag = USA_18
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 19 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_19 } }
+			set_cosmetic_tag = USA_19
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 20 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_20 } }
+			set_cosmetic_tag = USA_20
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 21 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_21 } }
+			set_cosmetic_tag = USA_21
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 22 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_22 } }
+			set_cosmetic_tag = USA_22
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 23 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_23 } }
+			set_cosmetic_tag = USA_23
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 24 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_24 } }
+			set_cosmetic_tag = USA_24
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 25 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_25 } }
+			set_cosmetic_tag = USA_25
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 26 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_26 } }
+			set_cosmetic_tag = USA_26
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 27 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_27 } }
+			set_cosmetic_tag = USA_27
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 28 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_28 } }
+			set_cosmetic_tag = USA_28
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 29 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_29 } }
+			set_cosmetic_tag = USA_29
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 30 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_30 } }
+			set_cosmetic_tag = USA_30
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 31 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_31 } }
+			set_cosmetic_tag = USA_31
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 32 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_32 } }
+			set_cosmetic_tag = USA_32
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 33 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_33 } }
+			set_cosmetic_tag = USA_33
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 34 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_34 } }
+			set_cosmetic_tag = USA_34
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 35 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_35 } }
+			set_cosmetic_tag = USA_35
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 36 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_36 } }
+			set_cosmetic_tag = USA_36
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 37 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_37 } }
+			set_cosmetic_tag = USA_37
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 38 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_38 } }
+			set_cosmetic_tag = USA_38
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 39 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_39 } }
+			set_cosmetic_tag = USA_39
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 40 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_40 } }
+			set_cosmetic_tag = USA_40
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 41 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_41 } }
+			set_cosmetic_tag = USA_41
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 42 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_42 } }
+			set_cosmetic_tag = USA_42
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 43 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_43 } }
+			set_cosmetic_tag = USA_43
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 44 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_44 } }
+			set_cosmetic_tag = USA_44
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 45 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_45 } }
+			set_cosmetic_tag = USA_45
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 46 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_46 } }
+			set_cosmetic_tag = USA_46
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 47 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_47 } }
+			set_cosmetic_tag = USA_47
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 48 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_48 } }
+			set_cosmetic_tag = USA_48
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 49 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_49 } }
+			set_cosmetic_tag = USA_49
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 50 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_50 } }
+			set_cosmetic_tag = USA_50
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 51 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_51 } }
+			set_cosmetic_tag = USA_51
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 52 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_52 } }
+			set_cosmetic_tag = USA_52
+			}
+
+			else_if = { 
+			limit = { check_variable = { USA_state_count_var = 53 } has_country_flag = USA_OLD_FLAG_CF NOT = { has_cosmetic_tag = USA_53 } }
+			set_cosmetic_tag = USA_53
+			}
+			}
+
+		}
+	}
 }

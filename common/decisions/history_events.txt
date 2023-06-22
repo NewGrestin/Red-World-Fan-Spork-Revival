@@ -1,0 +1,2878 @@
+fifties = {
+	
+	Disable_History = {
+
+		icon = GFX_decision_unknown
+
+		allowed = {
+		always = yes
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+		set_global_flag = STOP_HISTORY_GF 
+		}
+	}
+
+	ENG_malayan_emergency = {
+
+		icon = generic_scorched_earth
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+				original_tag = MAY
+				original_tag = BOR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.38 }
+		}
+	}
+
+	ENG_1950_general_election = {
+
+		icon = eng_labour
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.39 }
+		}
+	}
+
+	KOR_korean_war = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+				original_tag = PRK
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.57 }
+		}
+	}
+
+	ENG_1951_general_election = {
+
+		icon = eng_conservatives
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.40 }
+		}
+	}
+
+	ENG_death_of_king_george = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.41 }
+		}
+	}
+
+	KEN_mau_mau_uprising = {
+
+		icon = generic_scorched_earth
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+				original_tag = KEN
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.47 }
+		}
+	}
+
+	USA_surrender_at_okpo_dong = {
+
+		icon = generic_scorched_earth
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+				original_tag = PRK
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.3 }
+		}
+	}
+
+	USA_1952_election = {
+
+		icon = republicans
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.2 }
+		}
+	}
+
+	SOV_death_of_stalin = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.22 }
+		}
+	}
+
+	SOV_rise_of_malenkov_and_beria = {
+
+		icon = oppression
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.23 }
+		}
+	}
+
+	ENG_coronation_of_elizabeth = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.52 }
+		}
+	}
+	
+	USA_operation_ajax = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+				original_tag = PER
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.4 }
+		}
+	}
+	
+	USA_1954_guatemalan_coup = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+				original_tag = GUA
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.5 }
+		}
+	}
+
+	CYP_cyprus_emergency = {
+
+		icon = generic_scorched_earth
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+			    original_tag = CYP
+				original_tag = GRE
+				original_tag = TUR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.53 }
+		}
+	}
+
+	ENG_1955_general_election = {
+
+		icon = eng_conservatives
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.54 }
+		}
+	}
+	
+	USA_assassination_of_jfk = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.1 }
+		}
+	}
+
+	SOV_new_socialist_platform = {
+
+		icon = ger_mefo_bills
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.17 }
+		}
+	}
+
+	UAR_suez_crisis = {
+
+		icon = generic_tank
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+				original_tag = UAR
+				original_tag = EGY
+				original_tag = SYR
+				original_tag = NAC
+				original_tag = RLN
+				original_tag = RAS
+				original_tag = PAL
+				original_tag = KIS
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+				original_tag = FRA
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.12 }
+		}
+	}
+
+	USA_1956_election = {
+
+		icon = republicans
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.6 }
+		}
+	}
+
+	SOV_space_speech = {
+
+		icon = generic_decision
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.18 }
+		}
+	}
+
+	SOV_1959_coup_attempt = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.24 }
+		}
+	}
+}
+
+sixties = {
+	
+	PRC_shanghai_summit = {
+
+		icon = jap_conquer_china
+
+		allowed = {
+			OR = {
+				original_tag = PRC
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+				original_tag = PRK
+				original_tag = MON
+				original_tag = VIN
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.25 }
+		}
+	}
+
+	TUR_1960_turkish_coup = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			OR = {
+				original_tag = TUR
+				original_tag = KUR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.37 }
+		}
+	}
+
+	USA_1960_election = {
+
+		icon = republicans
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.8 }
+		}
+	}
+	
+	USA_cuban_missile_crisis = {
+
+		icon = ger_military_buildup
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+				original_tag = CUB
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.9 }
+		}
+	}
+
+	USA_civil_rights_movement = {
+
+		icon = generic_independence
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.7 }
+		}
+	}
+
+	SOV_1963_economic_report = {
+
+		icon = ger_mefo_bills
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.29 }
+		}
+	}
+
+	SOV_politburo_reorganization = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.30 }
+		}
+	}
+
+	SOV_berias_coup = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.31 }
+		}
+	}
+
+	SOV_great_freeze = {
+
+		icon = oppression
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.19 }
+		}
+	}
+	
+	USA_assassination_of_richard_nixon = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.10 }
+		}
+	}
+
+	USA_1964_election = {
+
+		icon = republicans
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.58 }
+		}
+	}
+
+	ITA_years_of_lead = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+			    original_tag = ITA
+				original_tag = LOM
+				original_tag = PIE
+				original_tag = PIS
+				original_tag = VNT
+				original_tag = TUS
+				original_tag = NAP
+				original_tag = SCY
+				original_tag = SAR
+				original_tag = AMA
+				original_tag = GEN
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.85 }
+		}
+	}
+
+	USA_compromise_of_1965 = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.59 }
+		}
+	}
+
+	USA_nam_dong_incident = {
+
+		icon = generic_scorched_earth
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+				original_tag = VIN
+				original_tag = AST
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.60 }
+		}
+	}
+
+	SOV_1966_tashkent_earthquake = {
+
+		icon = generic_scorched_earth
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.32 }
+		}
+	}
+
+	SOV_african_health_initiative = {
+
+		icon = generic_operation
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.49 }
+		}
+	}
+
+	USA_1968_election = {
+
+		icon = democrats
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.11 }
+		}
+	}
+
+	USA_southern_compromise = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.62 }
+		}
+	}
+
+	SOV_international_socialism_committee = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			    original_tag = GER
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = FRA
+				original_tag = AUS
+				original_tag = BAV
+				original_tag = ITA
+				original_tag = POL
+			    original_tag = CZE
+				original_tag = HUN
+				original_tag = ROM
+				original_tag = BUL
+				original_tag = ALB
+				original_tag = CUB
+				original_tag = PCA
+				original_tag = PRC
+				original_tag = PRK
+				original_tag = MON
+				original_tag = AFG
+				original_tag = VIN
+				original_tag = LAO
+				original_tag = CMB
+				original_tag = INS
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.50 }
+		}
+	}
+
+	SOV_white_house_or_mental_asylum = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.15 }
+		}
+	}
+}
+
+seventies = {
+	
+	USA_assassination_of_rfk = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.61 }
+		}
+	}
+
+	USA_paris_peace_accords = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+				original_tag = VIN
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.65 }
+		}
+	}
+
+	USA_moon_landing = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.63 }
+		}
+	}
+
+	SOV_assassination_of_andrei_gromyko = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.51 }
+		}
+	}
+
+	USA_1972_election = {
+
+		icon = republicans
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.13 }
+		}
+	}
+
+	CHL_september_war = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			OR = {
+			    original_tag = CHL
+				original_tag = ARG
+				original_tag = PRU
+				original_tag = BOL
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.75 }
+		}
+	}
+
+	SOV_surprise_detente = {
+
+		icon = ger_military_buildup
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+				original_tag = SOV
+				original_tag = RUS
+				original_tag = BLR
+				original_tag = UKR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EST
+				original_tag = GEO
+				original_tag = ARM
+				original_tag = AZR
+				original_tag = KZH
+				original_tag = UZB
+				original_tag = TJI
+				original_tag = TRM
+				original_tag = KYR
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.16 }
+		}
+	}
+
+	AST_1975_constitutional_crisis = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = AST
+				original_tag = WAS
+				original_tag = NRT
+				original_tag = SAS
+				original_tag = TAS
+				original_tag = QLD
+				original_tag = NSW
+				original_tag = VIC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.83 }
+		}
+	}
+
+	USA_attempted_assassination_of_ashbrook = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.64 }
+		}
+	}
+
+	ITA_historic_compromise = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = ITA
+				original_tag = LOM
+				original_tag = PIE
+				original_tag = PIS
+				original_tag = VNT
+				original_tag = TUS
+				original_tag = NAP
+				original_tag = SCY
+				original_tag = SAR
+				original_tag = AMA
+				original_tag = GEN
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.84 }
+		}
+	}
+	
+	USA_spanish_crisis = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+				original_tag = SPR
+				original_tag = CAT
+				original_tag = BSQ
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.14 }
+		}
+	}
+
+	USA_impeachment_of_john_ashbrook = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.21 }
+		}
+	}
+
+	USA_1976_election = {
+
+		icon = democrats
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.20 }
+		}
+	}
+
+	PER_iranian_revolution = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			OR = {
+			    original_tag = PER
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.26 }
+		}
+	}
+
+	USA_chicago_convention = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.66 }
+		}
+	}
+}
+
+eighties = {
+	
+	USA_1980_election = {
+
+		icon = republicans
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.27 }
+		}
+	}
+
+	USA_1980_economic_crisis = {
+
+		icon = ger_mefo_bills
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.28 }
+		}
+	}
+
+	USA_reagan_assassination_attempt = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.36 }
+		}
+	}
+
+	USA_1984_election = {
+
+		icon = republicans
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.34 }
+		}
+	}
+
+	ITA_anni_neri = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+			    original_tag = ITA
+				original_tag = LOM
+				original_tag = PIE
+				original_tag = PIS
+				original_tag = VNT
+				original_tag = TUS
+				original_tag = NAP
+				original_tag = SCY
+				original_tag = SAR
+				original_tag = AMA
+				original_tag = GEN
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.86 }
+		}
+	}
+
+	ENG_belfast_agreement = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+			    original_tag = SCO
+			    original_tag = WAL
+				original_tag = ULS
+			    original_tag = IRE
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.42 }
+		}
+	}
+
+	USA_assassination_of_gus_hall = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.35 }
+		}
+	}
+
+	GER_treaty_of_strasbourg = {
+
+		icon = generic_decision
+
+		allowed = {
+			OR = {
+			    original_tag = GER
+				original_tag = DEN
+				original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+				original_tag = IRE
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = FRA
+				original_tag = AUS
+				original_tag = BAV
+				original_tag = ITA
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.45 }
+		}
+	}
+
+	USA_1986_midterm_elections = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.76 }
+		}
+	}
+
+	USA_great_american_collapse = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.77 }
+		}
+	}
+
+	USA_union_proclamation = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			OR = {
+			    original_tag = USA
+				original_tag = NEA
+				original_tag = PCA
+				original_tag = ARI
+				original_tag = UTA
+				original_tag = LIN
+				original_tag = MWA
+				original_tag = HAW
+				original_tag = ALA
+				original_tag = TEX
+				original_tag = GRL
+				original_tag = MOT
+				original_tag = ILL
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.78 }
+		}
+	}
+
+	APC_second_american_revolution = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			OR = {
+				original_tag = NEA
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.79 }
+		}
+	}
+
+	APC_philadelphia_convention = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			OR = {
+				original_tag = NEA
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.80 }
+		}
+	}
+
+	APC_new_england_emergency = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+				original_tag = NEA
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.81 }
+		}
+	}
+
+	ENG_1989_general_election = {
+
+		icon = eng_conservatives
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.43 }
+		}
+	}
+
+	CAN_1989_election = {
+
+		icon = ndp
+
+		allowed = {
+			OR = {
+			    original_tag = CAN
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.33 }
+		}
+	}
+}
+
+nineties = {
+
+	APC_1990_constitution = {
+
+		icon = generic_decision
+
+		allowed = {
+			OR = {
+				original_tag = NEA
+				original_tag = AMC
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.82 }
+		}
+	}
+
+	ENG_steel_affair = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.46 }
+		}
+	}
+
+	ENG_1991_general_election = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.44 }
+		}
+	}
+
+	ENG_coalition_crisis = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.48 }
+		}
+	}
+
+	ENG_1993_general_election = {
+
+		icon = eng_sdp
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.55 }
+		}
+	}
+
+	ENG_treaty_of_dublin = {
+
+		icon = generic_decision
+
+		allowed = {
+			OR = {
+			    original_tag = ENG
+				original_tag = SCO
+				original_tag = WAL
+				original_tag = ULS
+				original_tag = IRE
+			}
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = { id = decision_event.56 }
+		}
+	}
+}

@@ -44,12 +44,56 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_generic_railroad.dds"			
 	}
 	SpriteType = {
+		name = "GFX_focus_USA_Rumsfeld_Impeachment"
+		texturefile = "gfx/interface/goals/USA_Rumsfeld_Impeachment.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Airforce_1"
+		texturefile = "gfx/interface/goals/USA_Airforce_1.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Fighter_Mafia"
+		texturefile = "gfx/interface/goals/USA_Fighter_Mafia.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Pan_America"
+		texturefile = "gfx/interface/goals/USA_Pan_America_2.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Behind_Throne"
+		texturefile = "gfx/interface/goals/USA_Behind_Throne.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_NPP_Constitution"
+		texturefile = "gfx/interface/goals/USA_NPP_Constitution.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Common_Sensers"
+		texturefile = "gfx/interface/goals/USA_Common_Sensers.dds"			
+	}
+	SpriteType = {
 		name = "GFX_focus_USA_Nixon"
 		texturefile = "gfx/interface/goals/USA_Nixon.dds"			
 	}
 	SpriteType = {
 		name = "GFX_focus_USA_Default"
 		texturefile = "gfx/interface/goals/USA_Default.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Missouri"
+		texturefile = "gfx/interface/goals/USA_Missouri.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Rushmore"
+		texturefile = "gfx/interface/goals/USA_Rushmore.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Cross_and_Flag"
+		texturefile = "gfx/interface/goals/USA_Cross_and_Flag.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Opposition_Lock"
+		texturefile = "gfx/interface/goals/USA_Lock_Opposition.dds"			
 	}
 	SpriteType = {
 		name = "GFX_focus_USA_closed_congress"
@@ -62,6 +106,14 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_USA_Rumsfeld"
 		texturefile = "gfx/interface/goals/USA_Rumsfeld.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Rumsfeld_2"
+		texturefile = "gfx/interface/goals/USA_Rumsfeld_2.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_NPP"
+		texturefile = "gfx/interface/goals/USA_NPP.dds"			
 	}
 	SpriteType = {
 		name = "GFX_goal_MOT_Denounce_Technology"

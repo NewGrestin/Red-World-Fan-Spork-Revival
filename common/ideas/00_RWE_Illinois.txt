@@ -74,5 +74,32 @@ ideas = {
 				trade_opinion_factor = 1.0
 			}
 		}
+
+		RWE_ILL_Philadelphia_Influence = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            picture = hol_haven_of_tolerance
+			
+			removal_cost = -1
+	
+			modifier = {
+				revolutionary_socialist_drift = 0.07
+				communist_drift = 0.05
+				autonomy_gain = -1
+			}
+
+			targeted_modifier = {
+				tag = NEA
+				trade_cost_for_target_factor = -0.25
+				trade_opinion_factor = 1.0
+			}
+		}
 	}
 }

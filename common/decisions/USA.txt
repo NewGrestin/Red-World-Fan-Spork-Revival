@@ -1,3 +1,43 @@
+USA_Foreign_Policy = {
+
+	USA_Realize_Pan_America = {
+
+		icon = GFX_decision_eng_puppet_usa
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		#has_completed_focus = USA_Ambitions_of_European_America
+		#OR = { 
+		#has_government = fascist
+		#has_government = monarchist
+		#}
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Unrecognized_Government } 
+		CAN = { 
+		all_core_state = { 
+			is_owned_by = USA
+		}
+		}
+		}
+
+		complete_effect = {
+		set_cosmetic_tag = USA_Pan_America
+
+		if = { 
+		limit = { has_idea = RWE_Pan_America }
+		swap_ideas = { remove_idea = RWE_Pan_America add_idea = RWE_Pan_America_Perfect_Union }
+		}
+		}
+	}
+}
+
 USA_Debt_Ceiling_Crisis = {
 	USA_Debt_Ceiling_Crisis_Mission = {
 		icon = GFX_decision_generic_fundraising
@@ -338,6 +378,989 @@ transfer_units_fraction= {
 
 		remove_effect = {
 		
+		}
+	}
+
+
+	USA_Admit_PR_as_a_state = {
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			factor = 80
+		}
+		
+		cost = 100
+
+		visible = {
+		owns_state = 686
+		NOT = { 686 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 686
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 120
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 686	
+		}
+	}
+
+	USA_Admit_Washington_DC_as_a_state = {
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			factor = 80
+		}
+		
+		cost = 100
+
+		visible = {
+		owns_state = 901
+		NOT = { 901 = { is_core_of = USA } }
+		}
+
+		available = {
+		901 = { is_capital = no }
+		owns_state = 901
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 120
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 901
+		}
+	}
+
+	USA_Admit_Saskatchewan_as_a_state = {
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			factor = 80
+		}
+		
+		cost = 100
+
+		visible = {
+		owns_state = 469
+		NOT = { 469 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 469
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 200
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 469
+		}
+	}
+
+	USA_Admit_Virginia_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 362
+		owns_state = 902
+		NOT = { 902 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 362
+		owns_state = 902
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 902
+		}
+	}
+
+	USA_Admit_West_Virginia_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 893
+		NOT = { 893 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 893
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 893
+		}
+	}
+
+	USA_Admit_Maryland_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 361
+		NOT = { 361 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 361
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 361
+		}
+	}
+
+	USA_Admit_Pennsylvania_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 360
+		NOT = { 360 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 360
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 360
+		}
+	}
+
+	USA_Admit_Ohio_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 261
+		NOT = { 261 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 261
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 261
+		}
+	}
+
+	USA_Admit_Michigan_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		OR = {
+		owns_state = 891
+		owns_state = 393
+		}
+		NOT = { 393 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 891
+		owns_state = 393
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 891
+		add_state_core = 393
+		}
+	}
+
+	USA_Admit_Indiana_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 396
+		NOT = { 396 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 396
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 396
+		}
+	}
+
+	USA_Admit_New_Jersey_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 359
+		NOT = { 359 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 359
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 359
+		}
+	}
+
+	USA_Admit_New_York_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 358
+		NOT = { 358 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 358
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 358
+		}
+	}
+
+	USA_Admit_Connecticut_and_Rhode_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 795
+		NOT = { 795 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 795
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 2 }	
+		add_state_core = 795
+		}
+	}
+
+	USA_Admit_Massachusetts_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 357
+		NOT = { 357 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 357
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 357
+		}
+	}
+
+	USA_Admit_Vermont_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 793
+		NOT = { 793 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 793
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 793
+		}
+	}
+
+	USA_Admit_New_Hampshire_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 794
+		NOT = { 794 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 794
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 794
+		}
+	}
+
+	USA_Admit_Maine_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 792
+		NOT = { 792 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 792
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 792
+		}
+	}
+
+	USA_Admit_Illinois_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		OR = {
+		owns_state = 395
+		owns_state = 892
+		}
+		NOT = { 892 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 892
+		owns_state = 395
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 892
+		add_state_core = 395
+		}
+	}
+
+	USA_Admit_Texas_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 375	
+		has_completed_focus = USA_Resolve_the_Texan_Question
+		NOT = { 375 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 375
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 375
+
+		if = { 
+		limit = { owns_state = 894 }
+		add_state_core = 894 
+		}
+		}
+	}
+
+	USA_Admit_New_Mexico_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		OR = {
+		owns_state = 899
+		owns_state = 376
+		}
+		NOT = { 376 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 899
+		owns_state = 376
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 376
+		add_state_core = 899
+		}
+	}
+
+	USA_Admit_Arizona_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		OR = {
+		owns_state = 895
+		owns_state = 377
+		}
+		NOT = { 377 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 895
+		owns_state = 377
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 377
+		add_state_core = 895
+		}
+	}
+
+	USA_Admit_Nevada_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		OR = {
+		owns_state = 379
+		owns_state = 897
+		owns_state = 889
+		}
+		NOT = { 379 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 897
+		owns_state = 889
+		owns_state = 379
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 897
+		add_state_core = 889
+		add_state_core = 379
+		}
+	}
+
+	USA_Admit_Utah_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 380
+		NOT = { 380 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 380
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 380
+		}
+	}
+
+	USA_Admit_Idaho_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 387
+		NOT = { 387 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 387
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 387
+		}
+	}
+
+	USA_Admit_Washington_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		OR = {
+		owns_state = 386
+		owns_state = 970
+		}
+		NOT = { 970 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 386
+		owns_state = 970
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 386
+		add_state_core = 970
+		}
+	}
+
+	USA_Admit_Oregon_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		OR = {
+		owns_state = 890
+		owns_state = 971
+		owns_state = 385
+		}
+		NOT = { 385 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 890
+		owns_state = 971
+		owns_state = 385
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 890
+		add_state_core = 971
+		add_state_core = 385
+		}
+	}
+
+	USA_Admit_Hawaii_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 629	
+		NOT = { 629 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 629
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 629
+		}
+	}
+
+	USA_Admit_Alaska_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		OR = {
+		owns_state = 463
+		owns_state = 1014
+		owns_state = 1013
+		}
+		NOT = { 463 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 463
+		owns_state = 1014
+		owns_state = 1013
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 463
+		add_state_core = 1014
+		add_state_core = 1013
 		}
 	}
 }

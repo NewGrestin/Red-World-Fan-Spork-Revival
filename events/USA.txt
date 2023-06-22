@@ -2,7 +2,7 @@ add_namespace = us_republic
 add_namespace = us_republic_news
 
 ########################
-###DEBT CEILING CRISI###
+###NEWS###
 ########################
 #Rumsfeld forces Congress to disband
 news_event = {
@@ -34,8 +34,37 @@ news_event = {
 	}
 }
 
+#Republic seizes Missouri
+news_event = {
+	id = us_republic_news.3
+	title = us_republic_news.3.t
+	desc = us_republic_news.3.d
+	picture = RWE_USA_Illinois_Seizure
+	
+	is_triggered_only = yes
+
+	option = {
+		name = us_republic_news.3.a
+
+	}
+}
+
+#Illinois-America War
+news_event = {
+	id = us_republic_news.4
+	title = us_republic_news.4.t
+	desc = us_republic_news.4.d
+	picture = RWE_USA_Illinois_War
+	
+	is_triggered_only = yes
+
+	option = {
+		name = us_republic_news.4.a
+
+	}
+}
 ########################
-###DEBT CEILING CRISI###
+###DEBT CEILING CRISIS###
 ########################
 #The Situation in Congress
 country_event = {
@@ -197,7 +226,9 @@ country_event = {
 	}
 }
 
-#Foreign Policy
+########################
+###FOREIGN POLICY###
+########################
 #Texan Question - diplomacy or hostility
 country_event = {
 	id = us_republic.101
@@ -541,7 +572,268 @@ country_event = {
 	}	
 }
 
-#Normal Politics
+#OPEC countries sanction for Texan invasion
+country_event = {
+	id = us_republic.208
+	title = us_republic.208.t
+	desc = us_republic.208.d
+	picture = USA_OPEC
+	
+	fire_only_once = yes
+
+	trigger = { 
+	tag = USA
+	has_war_with = TEX
+	}
+
+	option = { #
+		name = us_republic.208.a
+		add_ideas = { RWE_OPEC_sanctions_big }
+
+		if = { 
+		limit = { has_completed_focus = USA_sanction_proof_economy }
+		add_ideas = { RWE_OPEC_sanctions_small }
+		}
+	}	
+}
+
+#Violation of Illinois Sovereignty - Missouri Referendum
+country_event = {
+	id = us_republic.209
+	title = us_republic.209.t
+	desc = us_republic.209.d
+	picture = USA_Bridge
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = us_republic.209.a
+		transfer_state = 373
+		add_named_threat = {
+    		threat = 7
+    		name = "Violation of Illinois Sovereignty" 
+		}
+	}
+}
+
+#Violation of Illinois Sovereignty - Missouri Referendum - Illinois reacts
+country_event = {
+	id = us_republic.210
+	title = us_republic.210.t
+	desc = us_republic.210.d
+	picture = USA_Bridge
+	
+	is_triggered_only = yes
+
+	option = { #We cannot act against such might
+		name = us_republic.210.a
+		add_stability = -0.1
+		hidden_effect = {
+		news_event = { id = us_republic_news.3 days = 1 }
+		country_event = { id = us_republic.211 days = 5 }
+		}
+	}
+
+	option = { #Illinois stands against tyranny
+		name = us_republic.210.b
+		add_war_support = 0.1
+		declare_war_on = {
+    		target = USA
+    		type = annex_everything
+		}
+		hidden_effect = {
+		news_event = { id = us_republic_news.4 days = 1 }
+		}
+	}	
+}
+
+#Illinois looks for a guarantee
+country_event = {
+	id = us_republic.211
+	title = us_republic.211.t
+	desc = us_republic.211.d
+	picture = USA_Bridge
+	
+	is_triggered_only = yes
+
+	option = { #Approach the APC
+		name = us_republic.211.a
+		trigger = { NEA = { exists = yes is_subject = no has_war = no } }
+		NEA = {
+		country_event = { id = us_republic.212 days = 1 }
+		}
+	}
+
+	option = { #Approach GRL
+		name = us_republic.211.b
+		trigger = { GRL = { exists = yes is_subject = no has_war = no } }
+		GRL = {
+		news_event = { id = us_republic.21x days = 1 }
+		}
+	}
+
+	option = { #Approach GRL
+		name = us_republic.211.c
+		trigger = { MWA = { exists = yes is_subject = no has_war = no } }
+		MWA = {
+		news_event = { id = us_republic.21x days = 1 }
+		}
+	}	
+}
+
+#Illinois looks for a guarantee - NEA
+country_event = {
+	id = us_republic.212
+	title = us_republic.212.t
+	desc = us_republic.212.d
+	picture = USA_Bridge
+	
+	is_triggered_only = yes
+
+	option = { #Sure
+		name = us_republic.212.a
+		give_guarantee = ILL
+		USA = {
+		country_event = { id = us_republic.213 days = 1 }
+		}
+	}
+
+	option = { #Make them a subject
+		name = us_republic.211.b
+		ILL = {
+		country_event = { id = us_republic.214 days = 1 }
+		}		
+	}	
+}
+
+#Illinois looks for a guarantee - NEA gave it
+country_event = {
+	id = us_republic.213
+	title = us_republic.213.t
+	desc = us_republic.213.d
+	picture = USA_Bridge
+	
+	is_triggered_only = yes
+
+	option = { #Sure
+		name = us_republic.213.a
+		ILL = { add_popularity = { ideology = revolutionary_socialist popularity = 0.1 } }
+	}	
+}
+
+#NEA wants us as puppet
+country_event = {
+	id = us_republic.214
+	title = us_republic.214.t
+	desc = us_republic.214.d
+	picture = USA_Bridge
+	
+	is_triggered_only = yes
+
+	option = { #We can only accept
+		name = us_republic.214.a
+		NEA = {
+		puppet = {
+    		target = ILL
+    		end_wars = no
+		}
+		}
+		set_cosmetic_tag = ILL_puppet 
+		USA = {
+		country_event = { id = us_republic.216 days = 1 }
+		}
+		remove_ideas = { RWE_ILL_Midwest_Influence }
+		add_ideas = { RWE_ILL_Philadelphia_Influence }
+	}	
+
+	option = { #NO
+		name = us_republic.214.b
+		NEA = {
+		country_event = { id = us_republic.215 days = 1 }
+		}
+	}	
+}
+
+#NEA wants us as puppet - Illinois said no
+country_event = {
+	id = us_republic.215
+	title = us_republic.215.t
+	desc = us_republic.215.d
+	picture = USA_Bridge
+	
+	is_triggered_only = yes
+
+	option = { #We can only accept
+		name = us_republic.215.a
+
+	}		
+}
+
+#NEA wants us as puppet - Illinois said yes - for Republic
+country_event = {
+	id = us_republic.216
+	title = us_republic.216.t
+	desc = us_republic.216.d
+	picture = USA_Bridge
+	
+	is_triggered_only = yes
+
+	option = { #We can only accept
+		name = us_republic.216.a
+
+	}		
+}
+
+#Meddle in Commonwealth Politics - Preferred Candidate
+country_event = {
+	id = us_republic.300
+	title = us_republic.300.t
+	desc = us_republic.300.d
+	picture = USA_Bridge
+	
+	is_triggered_only = yes
+
+	option = { #Support Bernie
+		name = us_republic.300.a
+		NEA = { add_popularity = { ideology = moderate_socialist popularity = 0.05 } set_country_flag = NEA_USA_Meddle_Bernie_flag }
+
+	}	
+
+	option = { #Support Bill Gates
+		name = us_republic.300.b
+		NEA = { add_popularity = { ideology = revolutionary_socialist popularity = 0.05 } set_country_flag = NEA_USA_Meddle_Gates_flag }
+
+	}
+
+	option = { #
+		name = us_republic.300.c
+		add_political_power = 100
+	}	
+}
+
+#Anti-Bolshevik Pact
+country_event = {
+	id = us_republic.305
+	title = us_republic.305.t
+	desc = us_republic.305.d
+	picture = USA_Bridge
+	
+	is_triggered_only = yes
+
+	option = { #Yes
+		name = us_republic.305.a
+		add_ideas = { RWE_Anti_Bolshevism_Pact }
+	}	
+
+	option = { #No
+		name = us_republic.305.b
+		
+	}	
+}
+
+########################
+###POLITICS###
+########################
 #Rumsfeld relaxes the Two Term Rule
 country_event = {
 	id = us_republic.600
@@ -570,9 +862,159 @@ country_event = {
 		name = us_republic.601.a
 		add_popularity = { ideology = nationalist popularity = -0.05 } 
 		retire_ideology_leader = nationalist
+		hidden_effect = { 
 		retire_ideology_leader = national_conservative
 		set_politics = { ruling_party = national_conservative } 
 		add_ideas = { usa_mitch_mcconnell }
+		}
+	}	
+}
+
+#Oklahoma Panhandle supports NPP
+country_event = {
+	id = us_republic.602
+	title = us_republic.602.t
+	desc = us_republic.602.d
+	picture = USA_NPP
+	
+	fire_only_once = yes
+
+	trigger = { 
+	tag = USA
+	owns_state = 374
+	date > 2010.6.20
+	NOT = { has_government = fascist }
+	}
+	
+	option = {
+		name = us_republic.602.a
+		add_popularity = { ideology = fascist popularity = 0.01 } 
+	}	
+}
+
+#Freedom Fries 
+country_event = {
+	id = us_republic.603
+	title = us_republic.603.t
+	desc = us_republic.603.d
+	picture = generic_fries
+	
+	fire_only_once = yes
+
+	trigger = { 
+	tag = USA
+	date > 2011.7.20
+	has_completed_focus = USA_Neo-Americana
+	OR = {
+	NOT = { has_government = communist }
+	NOT = { has_government = revolutionary_socialist }
+	NOT = { has_government = moderate_socialist }
+	}
+	}
+	
+	option = {
+		name = us_republic.603.a
+		add_political_power = 1
+	}	
+}
+
+#The Stars and Stripes are back
+country_event = {
+	id = us_republic.604
+	title = us_republic.604.t
+	desc = us_republic.604.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.604.a
+		set_country_flag = USA_OLD_FLAG_CF
+		set_cosmetic_tag = USA_12
+	}	
+}
+
+#Attempt on Duke's live
+country_event = {
+	id = us_republic.605
+	title = us_republic.605.t
+	desc = us_republic.605.d
+	picture = USA_NPP
+	
+	fire_only_once = yes
+
+	trigger = { 
+	tag = USA
+	date > 2010.10.18
+	has_war = no
+	NOT = { has_government = fascist }
+	}
+	
+	option = { #the bullet doesn't hit
+		name = us_republic.605.a
+		add_stability = -0.01
+		add_popularity = { ideology = fascist popularity = 0.01 }
+	}
+
+	option = { #the bullet hits its mark
+		name = us_republic.605.b
+		add_stability = -0.03
+		add_popularity = { ideology = fascist popularity = 0.03 }
+		random_list = { 
+		50 = { 	
+		USA_david_duke = { add_country_leader_trait = injured }
+		country_event = { id = us_republic.606 days = 2 }
+		}
+		25 = { 
+		USA_david_duke = { add_country_leader_trait = handicapped }
+		country_event = { id = us_republic.606 days = 2 }
+		}
+		25 = { 
+		kill_ideology_leader = fascist
+		}
+		}
+	}	
+}
+
+#Iron Duke
+country_event = {
+	id = us_republic.606
+	title = us_republic.606.t
+	desc = us_republic.606.d
+	picture = USA_NPP
+	
+	is_triggered_only = yes
+	
+	option = { #what a crazed person
+		name = us_republic.606.a
+		add_popularity = { ideology = fascist popularity = 0.08 }
+	}
+
+	option = { #Hail the Iron Duke
+		name = us_republic.606.b
+		add_popularity = { ideology = fascist popularity = 0.08 }
+		USA_david_duke = { add_country_leader_trait = iron_duke }
+	}	
+}
+
+#New flag - Duke? 
+country_event = {
+	id = us_republic.607
+	title = us_republic.607.t
+	desc = us_republic.607.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = { #New flag
+		name = us_republic.607.a
+		set_country_flag = USA_OLD_FLAG_CF
+		set_cosmetic_tag = USA_12
+	}
+
+	option = { #Keep the old flag
+		name = us_republic.607.b
+
 	}	
 }
 

@@ -6,6 +6,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "RWE_USA_Illinois_Seizure"
+		texturefile = "gfx/event_pictures/news_event/USA_Illinois_seizure.dds"
+	}
+
+	spriteType = {
+		name = "RWE_USA_Illinois_War"
+		texturefile = "gfx/event_pictures/news_event/USA_Illinois_war.dds"
+	}
+
+	spriteType = {
 		name = "RWE_USA_Congress"
 		texturefile = "gfx/event_pictures/news_event/USA_Congress.dds"
 	}

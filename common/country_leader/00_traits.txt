@@ -1,5 +1,44 @@
 leader_traits = {
 
+	the_restorer = {
+		random = no
+		conscription_factor = 0.05
+		war_support_weekly = 0.01
+		political_power_factor = 0.2
+		monarchist_drift = 0.08
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	iron_duke = {
+		random = no
+		fascist_drift = 0.02
+		war_support_factor = 0.05
+		party_popularity_stability_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	injured = {
+		random = no
+		political_power_factor = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	handicapped = {
+		random = no
+		political_power_factor = -0.3
+		stability_factor = -0.05
+		war_support_factor = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	powerful_president = {
 		random = no
 		political_power_factor = 0.15

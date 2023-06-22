@@ -1,7 +1,43 @@
 spriteTypes = {	
 	SpriteType = {
+		name = "GFX_idea_USA_Lacking_Recognition"
+		texturefile = "gfx/interface/ideas/USA_Lacking_Recognition.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_OPEC"
+		texturefile = "gfx/interface/ideas/OPEC.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_OPEC_Sanctions"
+		texturefile = "gfx/interface/ideas/OPEC_sanctions.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Pan_America"
+		texturefile = "gfx/interface/ideas/USA_Pan_America.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_no_USA"
+		texturefile = "gfx/interface/ideas/no_USA.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Army"
+		texturefile = "gfx/interface/ideas/USA_Army.dds"			
+	}
+	SpriteType = {
 		name = "GFX_idea_USA_hostile_congress"
 		texturefile = "gfx/interface/ideas/hostile_congress.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Patriotism"
+		texturefile = "gfx/interface/ideas/USA_Patriotism.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Patriotism_2"
+		texturefile = "gfx/interface/ideas/USA_Patriotism_2.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Failure"
+		texturefile = "gfx/interface/ideas/USA_Failure.dds"			
 	}
 	SpriteType = {
 		name = "GFX_idea_EST_exploit_the_banks"

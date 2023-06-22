@@ -1,6 +1,16 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "USA_OPEC"
+		texturefile = "gfx/event_pictures/report_event/USA_OPEC.dds"
+	}
+
+	spriteType = {
+		name = "USA_NPP"
+		texturefile = "gfx/event_pictures/report_event/USA_NPP.dds"
+	}
+
+	spriteType = {
 		name = "USA_Its_Rover"
 		texturefile = "gfx/event_pictures/report_event/USA_Its_Rover.dds"
 	}
@@ -8,6 +18,11 @@ spriteTypes = {
 	spriteType = {
 		name = "USA_Bridge"
 		texturefile = "gfx/event_pictures/report_event/USA_Bridge.dds"
+	}
+
+	spriteType = {
+		name = "generic_fries"
+		texturefile = "gfx/event_pictures/report_event/generic_fries.dds"
 	}
 
 	spriteType = {
