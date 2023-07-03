@@ -1,0 +1,57 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+
+defined_text = {
+	name = GetEvilAxisSpeechPic
+	text = {
+		trigger = {
+		NOT = {
+		OR = { 
+		has_country_leader = { name = USA_jeb_bush ruling_only = yes }
+		has_country_leader = { character = USA_Paul_Wolfowitz ruling_only = yes }
+		has_country_leader = { character = USA_benjamin_netanyahu ruling_only = yes }
+		has_country_leader = { character = USA_MTG ruling_only = yes }
+		}
+		}
+		}
+		localization_key = Flag
+	}
+	text = {
+		trigger = {
+		has_country_leader = { name = USA_jeb_bush ruling_only = yes }
+		}
+		localization_key = Jeb_Axis_of_Evil_Speech
+	}
+	text = {
+		trigger = {
+		has_country_leader = { character = USA_Paul_Wolfowitz ruling_only = yes }
+		}
+		localization_key = Wolf_Axis_of_Evil_Speech
+	}
+	text = {
+		trigger = {
+		has_country_leader = { character = USA_benjamin_netanyahu ruling_only = yes }
+		}
+		localization_key = Benjamin_Axis_of_Evil_Speech
+	}
+	text = {
+		trigger = {
+		has_country_leader = { character = USA_MTG ruling_only = yes }
+		}
+		localization_key = MTG_Axis_of_Evil_Speech
+	}
+	text = {
+		trigger = {
+		has_country_leader = { character = USA_dan_crenshaw ruling_only = yes }
+		}
+		localization_key = Dan_Axis_of_Evil_Speech
+	}
+}

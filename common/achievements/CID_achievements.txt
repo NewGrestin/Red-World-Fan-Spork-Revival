@@ -1,0 +1,33 @@
+# possible - filters out achivements on game start so we dont have to check everything all the 
+#time
+## happened - checks if achivement happened
+#
+unique_id = rweff_achievement_2477i36
+
+###########################
+## 1 VERY EASY ACHIEVEMENTS
+#############################
+
+Pirate_Prince = {
+
+	possible = {
+		has_start_date < 2010.01.03
+		game_rules_allow_achievements = yes
+	}
+	
+	happened = {
+		always = no 
+	}
+}
+
+Africa_Unite = {
+
+	possible = {
+		has_start_date < 2010.01.03
+		game_rules_allow_achievements = yes
+	}
+	
+	happened = {
+		always = no 
+	}
+}

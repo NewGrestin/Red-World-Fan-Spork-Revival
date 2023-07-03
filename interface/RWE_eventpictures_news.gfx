@@ -6,6 +6,41 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "RWE_USA_Flag"
+		texturefile = "gfx/event_pictures/news_event/USA_Flag.dds"
+	}
+
+	spriteType = {
+		name = "RWE_USA_Puerto_Rico_Plan"
+		texturefile = "gfx/event_pictures/news_event/USA_Puerto_Rico_Plan.dds"
+	}
+
+	spriteType = {
+		name = "RWE_USA_Jeb_Axis_of_Evil_Speech"
+		texturefile = "gfx/event_pictures/news_event/USA_Jeb_Axis_of_Evil_Speech.dds"
+	}
+
+	spriteType = {
+		name = "RWE_USA_Wolf_Axis_of_Evil_Speech"
+		texturefile = "gfx/event_pictures/news_event/USA_Wolf_Axis_of_Evil_Speech.dds"
+	}
+
+	spriteType = {
+		name = "RWE_USA_Benjamin_Axis_of_Evil_Speech"
+		texturefile = "gfx/event_pictures/news_event/USA_Benjamin_Axis_of_Evil_Speech.dds"
+	}
+
+	spriteType = {
+		name = "RWE_USA_MTG_Axis_of_Evil_Speech"
+		texturefile = "gfx/event_pictures/news_event/USA_MTG_Axis_of_Evil_Speech.dds"
+	}
+
+	spriteType = {
+		name = "RWE_USA_Dan_Axis_of_Evil_Speech"
+		texturefile = "gfx/event_pictures/news_event/USA_Dan_Axis_of_Evil_Speech.dds"
+	}
+
+	spriteType = {
 		name = "RWE_USA_Illinois_Seizure"
 		texturefile = "gfx/event_pictures/news_event/USA_Illinois_seizure.dds"
 	}

@@ -44,6 +44,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_generic_railroad.dds"			
 	}
 	SpriteType = {
+		name = "GFX_focus_USA_Fuhrer"
+		texturefile = "gfx/interface/goals/USA_Fuhrer.dds"			
+	}
+	SpriteType = {
 		name = "GFX_focus_USA_Rumsfeld_Impeachment"
 		texturefile = "gfx/interface/goals/USA_Rumsfeld_Impeachment.dds"			
 	}
@@ -54,6 +58,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_USA_Fighter_Mafia"
 		texturefile = "gfx/interface/goals/USA_Fighter_Mafia.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_War_PCA"
+		texturefile = "gfx/interface/goals/USA_war_PCA.dds"			
 	}
 	SpriteType = {
 		name = "GFX_focus_USA_Pan_America"

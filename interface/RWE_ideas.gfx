@@ -1,11 +1,55 @@
 spriteTypes = {	
 	SpriteType = {
+		name = "GFX_idea_generic_market"
+		texturefile = "gfx/interface/ideas/generic_market.dds"			
+	}
+	SpriteType = {
 		name = "GFX_idea_USA_Lacking_Recognition"
 		texturefile = "gfx/interface/ideas/USA_Lacking_Recognition.dds"			
 	}
 	SpriteType = {
 		name = "GFX_idea_OPEC"
 		texturefile = "gfx/interface/ideas/OPEC.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Paul_I"
+		texturefile = "gfx/interface/ideas/USA_Paul_I.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Robert_I"
+		texturefile = "gfx/interface/ideas/USA_Robert_I.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Reza_Pahlavi"
+		texturefile = "gfx/interface/ideas/USA_Reza_Pahlavi.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Mengesha"
+		texturefile = "gfx/interface/ideas/USA_Mengesha.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Doug_Hamilton"
+		texturefile = "gfx/interface/ideas/USA_Doug_Hamilton_I.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Shannon_LaNier"
+		texturefile = "gfx/interface/ideas/USA_Shannon_LaNier.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Sam_Houston_IV"
+		texturefile = "gfx/interface/ideas/USA_Sam_Houston_IV.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Karl_Friedrich"
+		texturefile = "gfx/interface/ideas/USA_Karl_Friedrich.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Napoleon"
+		texturefile = "gfx/interface/ideas/USA_Napoleon.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_Philip"
+		texturefile = "gfx/interface/ideas/USA_Philip.dds"			
 	}
 	SpriteType = {
 		name = "GFX_idea_OPEC_Sanctions"

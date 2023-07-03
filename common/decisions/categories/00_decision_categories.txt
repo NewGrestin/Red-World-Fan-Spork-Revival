@@ -1,5 +1,10 @@
 american_unification = {
     icon = generic_independence
+
+    NOT = {
+    tag = USA
+    }
+
 }
 arab_civil_war = {
     icon = generic_independence

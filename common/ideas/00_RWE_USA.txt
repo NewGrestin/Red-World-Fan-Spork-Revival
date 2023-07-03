@@ -6,6 +6,476 @@ ideas = {
 
 	country = {
 
+		RWE_USA_Paul_I = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Paul_I
+			
+			removal_cost = -1
+
+			modifier = {
+			stability_factor = 0.1
+			}
+		}
+
+		RWE_USA_Robert_Lee_V = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Robert_I
+			
+			removal_cost = -1
+
+			modifier = {
+			stability_factor = 0.05
+			political_power_factor = 0.05
+			}
+		}
+
+		RWE_USA_Doug_I = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Doug_Hamilton
+			
+			removal_cost = -1
+
+			modifier = {
+			stability_factor = 0.02
+			war_support_factor = 0.02
+			consumer_goods_factor = -0.02
+			political_power_cost = 0.1
+			}
+		}
+
+		RWE_USA_LaNier_I = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Shannon_LaNier
+			
+			removal_cost = -1
+
+			modifier = {
+			stability_factor = -0.05
+			economy_cost_factor = -0.25
+			trade_laws_cost_factor = -0.25
+			mobilization_laws_cost_factor = -0.25
+			}
+		}
+
+		RWE_USA_Sam_IV = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Sam_Houston_IV
+			
+			removal_cost = -1
+
+			modifier = {
+			war_support_factor = 0.05
+			army_morale_factor = 0.03
+			political_power_cost = 0.05
+			}
+		}
+
+		RWE_USA_Philip_I = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Philip
+			
+			removal_cost = -1
+
+			modifier = {
+			stability_factor = 0.02
+			monarchist_drift = 0.01
+			}
+
+			targeted_modifier = { 
+				tag = BEL
+				attack_bonus_against = 0.05 
+			}
+		}
+
+		RWE_USA_Napoleon_I = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Napoleon
+			
+			removal_cost = -1
+
+			modifier = {
+			war_support_factor = 0.05
+			consumer_goods_factor = 0.02
+			}
+
+			targeted_modifier = { 
+				tag = FRA
+				attack_bonus_against = 0.05 
+			}
+		}
+
+		RWE_USA_Georg_Friedrich = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Karl_Friedrich
+			
+			removal_cost = -1
+
+			modifier = {
+			consumer_goods_factor = -0.05
+			special_forces_attack_factor = 0.03
+			acclimatization_cold_climate_gain_factor = 0.05
+			}
+		}
+
+		RWE_USA_Reza_Pahlavi = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Reza_Pahlavi
+			
+			removal_cost = -1
+
+			modifier = {
+			stability_factor = -0.05
+			monarchist_drift = 0.05
+			}
+		}
+
+		RWE_USA_Mengesha = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Mengesha
+			
+			removal_cost = -1
+
+			modifier = {
+			stability_factor = -0.08
+			monarchist_drift = 0.02
+			political_power_factor = 0.1
+			}
+
+			targeted_modifier = { 
+				tag = ETH
+				attack_bonus_against = 0.05 
+			}
+		}
+
+		##################
+
+		RWE_USA_Laissez_Faire = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = generic_market
+			
+			removal_cost = -1
+
+			modifier = {
+			production_speed_buildings_factor = 0.05
+			trade_opinion_factor = 0.2
+			}
+		}
+
+		RWE_USA_Laissez_Faire_2 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = generic_market
+			
+			removal_cost = -1
+
+			modifier = {
+			production_speed_buildings_factor = 0.15
+			consumer_goods_factor = -0.05
+			trade_opinion_factor = 0.2
+			}
+		}
+
+		RWE_USA_McCarthy_Plan = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_shield
+			
+			removal_cost = -1
+
+			modifier = {
+			production_factory_efficiency_gain_factor = 0.05
+			industrial_capacity_factory = 0.05
+			}
+		}
+
+		RWE_USA_Accepting_the_Fall = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Failure
+			
+			removal_cost = -1
+
+			modifier = {
+			opinion_gain_monthly_factor = 0.15
+			stability_factor = 0.05
+			fascist_drift = -0.03
+			nationalist_drift = -0.02
+			#enemy_justify_war_goal_time = 0.2
+			}
+		}
+
+		RWE_USA_Accepting_the_Fall_2 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Failure
+			
+			removal_cost = -1
+
+			modifier = {
+			opinion_gain_monthly_factor = 0.25
+			stability_factor = 0.2
+			army_core_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			fascist_drift = -0.03
+			nationalist_drift = -0.02
+			}
+		}
+
+		RWE_USA_Accepting_the_Fall_3 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Failure
+			
+			removal_cost = -1
+
+			modifier = {
+			opinion_gain_monthly_factor = 0.25
+			stability_factor = 0.4
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+			conscription_factor = 0.05
+			fascist_drift = -0.03
+			nationalist_drift = -0.02
+			}
+		}
+
+		RWE_USA_Accepting_the_Fall_4 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Failure
+			
+			removal_cost = -1
+
+			modifier = {
+			opinion_gain_monthly_factor = 0.25
+			stability_factor = 0.25
+			army_core_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			fascist_drift = -0.03
+			nationalist_drift = -0.02
+			communist_drift = -0.03
+			revolutionary_socialist_drift = -0.02
+			}
+
+			targeted_modifier = { 
+				tag = NEA
+				attack_bonus_against = 0.05 
+			}	
+		}
+
+		RWE_USA_Constitutionalism = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = generic_king_handled
+			
+			removal_cost = -1
+
+			modifier = {
+			monarchist_drift = -0.05
+			stability_weekly = 0.02
+			political_power_factor = 0.2
+			}
+		}
+
+		RWE_USA_In_Defense_of_Patriotism = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_shield
+			
+			removal_cost = -1
+
+			modifier = {
+			send_volunteer_size = 1
+			air_volunteer_cap = 100
+			offensive_war_stability_factor = 0.05
+			}
+		}
+
+		RWE_USA_Unificationist_Rebels = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = POL_the_peasants_strike
+			
+			removal_cost = -1
+
+			modifier = {
+			stability_weekly = -0.01
+			political_power_factor = -0.15
+			conscription_factor = -0.05
+			}
+		}
+
 		RWE_USA_Restoring_the_Union = {
 			
 			
@@ -37,14 +507,76 @@ ideas = {
 			}
 
 			targeted_modifier = { 
-				tag = TEX
+				tag = MWA
+				attack_bonus_against = 0.05 
+			}
+		}
+
+		RWE_USA_Rushmore_Declaration = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = USA_Failure
+			
+			removal_cost = -1
+
+			targeted_modifier = { 
+				tag = MOT
+				attack_bonus_against = 0.05 
+			}	
+
+			targeted_modifier = { 
+				tag = UTA
 				attack_bonus_against = 0.05 
 			}
 
 			targeted_modifier = { 
-				tag = MWA
+				tag = ARI
 				attack_bonus_against = 0.05 
 			}
+
+			targeted_modifier = { 
+				tag = LIN
+				attack_bonus_against = 0.05 
+			}
+
+			targeted_modifier = { 
+				tag = CSD
+				attack_bonus_against = 0.05 
+			}
+
+			targeted_modifier = { 
+				tag = PCA
+				attack_bonus_against = 0.1
+			}
+		}
+
+		RWE_USA_Surpise_against_Illinois = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = generic_usa_conflict
+			
+			removal_cost = -1
+
+			targeted_modifier = { 
+				tag = ILL
+				attack_bonus_against = 0.1
+			}	
 		}
 
 		RWE_OPEC_sanctions_big = {
@@ -384,30 +916,6 @@ ideas = {
 			}
 		}
 
-		RWE_USA_extreme_rural_poverty = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-            		picture = OKL_Rural_Poverty
-			
-			removal_cost = -1
-	
-			modifier = {
-			production_speed_buildings_factor = -0.4
-			production_factory_max_efficiency_factor = -0.25
-			global_building_slots_factor = -0.25
-			industry_repair_factor = -0.5
-			conscription_factor = 0.1
-			}
-		}
-
 		RWE_USA_Anti_Soviet_Laws = {
 			
 			
@@ -569,6 +1077,173 @@ ideas = {
 			modifier = {
 			production_speed_buildings_factor = 0.25
 			global_building_slots = 1
+			}
+		}
+
+		#RURAL POVERTY
+
+		RWE_USA_extreme_rural_poverty = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = OKL_Rural_Poverty
+			
+			removal_cost = -1
+	
+			modifier = {
+			production_speed_buildings_factor = -0.4
+			production_factory_max_efficiency_factor = -0.25
+			global_building_slots_factor = -0.25
+			industry_repair_factor = -0.5
+			conscription_factor = 0.1
+			}
+		}
+
+		RWE_USA_extreme_rural_poverty_1 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = OKL_Rural_Poverty
+			
+			removal_cost = -1
+	
+			modifier = {
+			production_speed_buildings_factor = -0.35
+			production_factory_max_efficiency_factor = -0.2
+			global_building_slots_factor = -0.2
+			industry_repair_factor = -0.4
+			conscription_factor = 0.08
+			}
+		}
+
+		RWE_USA_extreme_rural_poverty_2 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = OKL_Rural_Poverty
+			
+			removal_cost = -1
+	
+			modifier = {
+			production_speed_buildings_factor = -0.3
+			production_factory_max_efficiency_factor = -0.15
+			global_building_slots_factor = -0.15
+			industry_repair_factor = -0.3
+			conscription_factor = 0.06
+			}
+		}
+
+		RWE_USA_extreme_rural_poverty_3 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = OKL_Rural_Poverty
+			
+			removal_cost = -1
+	
+			modifier = {
+			production_speed_buildings_factor = -0.25
+			production_factory_max_efficiency_factor = -0.1
+			global_building_slots_factor = -0.1
+			industry_repair_factor = -0.2
+			conscription_factor = 0.04
+			}
+		}
+
+		RWE_USA_extreme_rural_poverty_4 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = OKL_Rural_Poverty
+			
+			removal_cost = -1
+	
+			modifier = {
+			production_speed_buildings_factor = -0.2
+			production_factory_max_efficiency_factor = -0.05
+			global_building_slots_factor = -0.05
+			industry_repair_factor = -0.1
+			conscription_factor = 0.02
+			production_speed_industrial_complex_factor = 0.03
+			}
+		}
+
+		RWE_USA_extreme_rural_poverty_5 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = OKL_Rural_Poverty
+			
+			removal_cost = -1
+	
+			modifier = {
+			production_speed_buildings_factor = -0.1
+			production_speed_industrial_complex_factor = 0.05
+			production_speed_arms_factory_factor = 0.03
+			}
+		}
+
+		RWE_USA_extreme_rural_poverty_6 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = OKL_Rural_Poverty
+			
+			removal_cost = -1
+	
+			modifier = {
+			production_factory_max_efficiency_factor = 0.05
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_arms_factory_factor = 0.1
 			}
 		}
 	}

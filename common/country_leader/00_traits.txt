@@ -1,5 +1,57 @@
 leader_traits = {
 
+	former_vp = {
+		random = no
+		political_power_factor = 0.1
+		stability_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	emperor_of_africa = {
+		random = no
+		compliance_gain = 0.15
+		compliance_growth = 0.1
+		conscription_factor = 0.05
+		army_morale_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	conquering_lion_of_the_tribe_of_judah = {
+		random = no
+		war_support_factor = 0.2
+		weekly_manpower = 100
+		grant_medal_cost_factor = -0.5
+		ai_focus_aggressive_factor = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	elect_of_god = {
+		random = no
+		political_power_factor = 0.1
+		defensive_war_stability_factor = 0.8
+		offensive_war_stability_factor = -0.2
+		ai_focus_peaceful_factor = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	lacking_a_king = {
+		random = no
+		stability_factor = -0.2
+		stability_weekly = -0.01	
+		political_power_cost = 0.5
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	the_restorer = {
 		random = no
 		conscription_factor = 0.05

@@ -1,4 +1,9 @@
 characters={
+
+	#############################
+		 #  NPP
+	#############################
+
 	USA_david_duke={
 		name="David Duke"
 		portraits={
@@ -13,7 +18,9 @@ characters={
 		}
 	}
 
-	#########
+	#############################
+		#MONARCHIST
+	#############################
 
 	USA_paul_i={
 		name="Paul I"
@@ -28,11 +35,12 @@ characters={
 			id=-1
 		}
 	}
+
 	USA_monarchist_convention={
 		name="Council on the First Citizen Elect"
 		portraits={
 			civilian={
-				large="gfx/leaders/USA/Portrait_USA_Monarchist_Convention.dds"
+				large="gfx/leaders/USA/Portrait_USA_No_Monarch.dds"
 			}
 		}
 		country_leader={
@@ -41,6 +49,7 @@ characters={
 			id=-1
 		}
 	}
+
 	USA_Jean_Christophe_Napoleon ={
 		name="Jean-Christophe I"
 		portraits={
@@ -54,6 +63,7 @@ characters={
 			id=-1
 		}
 	}
+
 	USA_Philip_of_Belgium ={
 		name="Philip I"
 		portraits={
@@ -67,11 +77,54 @@ characters={
 			id=-1
 		}
 	}
+
 	USA_Robert_Lee ={
 		name="Robert I"
 		portraits={
 			civilian={
 				large="gfx/leaders/USA/Portrait_USA_Robert_Lee.dds"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+
+	USA_Shannon_LaNier ={
+		name="Shannon I" 
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Shannon_LaNier.dds"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+
+	USA_Sam_Houston ={
+		name="Sam IV" 
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Sam_Houston_IV.dds"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+
+	USA_Douglas_Hamilton ={
+		name="Douglas I" 
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Douglas_Hamilton.dds"
 			}
 		}
 		country_leader={
@@ -94,7 +147,37 @@ characters={
 		}
 	}
 	
-	#########
+	USA_Reza_Pahlavi ={
+		name="Reza I"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Reza_Pahlavi.dds"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	
+	USA_Mengesha ={
+		name="Mengesha I"
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_Mengesha.dds"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+
+	#############################
+		#LIBERAL
+	#############################
 
 	USA_robert_bentley={
 		name="Robert Bentley"
@@ -109,6 +192,12 @@ characters={
 			id=-1
 		}
 	}
+
+
+	#############################
+		#COMMON SENSE
+	#############################
+
 	USA_joe_biden={
 		name="Joe Biden"
 		portraits={
@@ -122,6 +211,12 @@ characters={
 			id=-1
 		}
 	}
+
+
+	#############################
+		#REFORM PARTY
+	#############################
+
 	USA_amelia_b_robinson ={
 		name="Amelia B. Robinson"
 		portraits={
@@ -135,6 +230,11 @@ characters={
 			id=-1
 		}
 	}
+
+
+	#############################
+		#JUSTICE
+	#############################
 	USA_elizabeth_warren={
 		name="Elizabeth Warren"
 		portraits={
@@ -148,6 +248,10 @@ characters={
 			id=-1
 		}
 	}
+
+	#############################
+		#USA
+	#############################
 	USA_greg_pason={
 		name="Greg Pason"
 		portraits={
@@ -161,6 +265,10 @@ characters={
 			id=-1
 		}
 	}
+
+	#############################
+		#REV SOC
+	#############################
 	USA_heather_booth={
 		name="Heather Booth"
 		portraits={
@@ -174,6 +282,10 @@ characters={
 			id=-1
 		}
 	}
+
+	#############################
+		#COMMUNIST 
+	#############################
 	USA_john_bachtell={
 		name="John Bachtell"
 		portraits={
@@ -187,6 +299,10 @@ characters={
 			id=-1
 		}
 	}
+
+	#############################
+		#REPUBLICANS
+	#############################
 	USA_donald_rumsfeld={
 		name="Donald Rumsfeld"
 		portraits={
@@ -408,7 +524,30 @@ characters={
 			expire = "1.1.1.1"
 			ideology = american_nationalist
 		}
+		country_leader={
+			desc="POLITICS_BENJAMIN_NITAI_DESC"
+			ideology=american_conservative
+			expire="1.1.1.1"
+			id=-1
+		}
 	}
+
+	USA_george_bush_sr ={
+		name="George Bush Sr."
+		portraits={
+			civilian={
+				large="gfx/leaders/USA/Portrait_USA_George_Bush_Sr..dds"
+			}
+		}
+		country_leader={
+			ideology=american_nationalist
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+
+	############################
+
 	USA_barack_obama={
 		name="Barack Obama"
 		portraits={
@@ -421,6 +560,7 @@ characters={
 			ideology = centrist_ideology
 		}
 	}
+
 	USA_steve_bannon={
 		name="Steve Bannon"
 		portraits={
@@ -433,6 +573,7 @@ characters={
 			ideology = fascist_ideology
 		}
 	}
+
 	USA_mike_huckabee={
 		name="Mike Huckabee"
 		portraits={
@@ -445,6 +586,7 @@ characters={
 			ideology = american_conservative
 		}
 	}
+
 	USA_bobby_jindal={
 		name="Bobby Jindal"
 		portraits={

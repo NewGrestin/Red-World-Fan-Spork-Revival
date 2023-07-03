@@ -9,6 +9,22 @@ USA_Pan_America = {
 }
  
 
+USA_REPUBLIC = {
+    color = rgb { 90 170 115 }
+    color_ui = rgb { 90 170 115 }
+}
+
+USA_ATLANTIC = {
+    color = rgb { 0 24 64 }
+    color_ui = rgb { 0 24 64 }
+}
+
+PAN_AFRICA = {
+    color = rgb { 253 230 66 }
+    color_ui = rgb { 253 230 66 }
+}
+ 
+
 USA_fascist_1 = {
     color = rgb { 82 107 124 }
     color_ui = rgb { 82 107 124 }

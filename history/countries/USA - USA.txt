@@ -399,6 +399,20 @@ recruit_character = USA_frank_ancona
 recruit_character = USA_carly_fiorina
 recruit_character = usa_william_mcraven
 
+recruit_character = USA_monarchist_convention
+recruit_character = USA_Jean_Christophe_Napoleon 
+recruit_character = USA_Philip_of_Belgium 
+recruit_character = USA_Robert_Lee 
+recruit_character = USA_Shannon_LaNier 
+recruit_character = USA_Sam_Houston 
+recruit_character = USA_Douglas_Hamilton 
+recruit_character = USA_Georg_Friedrich 
+recruit_character = USA_Reza_Pahlavi 
+recruit_character = USA_Mengesha 
+
+recruit_character = USA_george_bush_sr 
+
+
 if = {
 	limit = {
 		has_dlc = "No Step Back"

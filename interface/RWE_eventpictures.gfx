@@ -1,6 +1,76 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "generic_military"
+		texturefile = "gfx/event_pictures/report_event/generic_military.dds"
+	}
+
+	spriteType = {
+		name = "generic_skyscrapers"
+		texturefile = "gfx/event_pictures/report_event/generic_skyscrapers.dds"
+	}
+
+	spriteType = {
+		name = "USA_Dry_Paramilitary"
+		texturefile = "gfx/event_pictures/report_event/USA_Dry_Paramilitary.dds"
+	}
+
+	spriteType = {
+		name = "USA_Rastafarian"
+		texturefile = "gfx/event_pictures/report_event/USA_Rastafarian.dds"
+	}
+
+	spriteType = {
+		name = "USA_Federal_Reserve"
+		texturefile = "gfx/event_pictures/report_event/USA_Federal_Reserve.dds"
+	}
+
+	spriteType = {
+		name = "USA_Congress"
+		texturefile = "gfx/event_pictures/report_event/USA_Congress.dds"
+	}
+
+	spriteType = {
+		name = "USA_Texas"
+		texturefile = "gfx/event_pictures/report_event/USA_Texas.dds"
+	}
+
+	spriteType = {
+		name = "USA_NEA"
+		texturefile = "gfx/event_pictures/report_event/USA_NEA.dds"
+	}
+
+	spriteType = {
+		name = "USA_Military"
+		texturefile = "gfx/event_pictures/report_event/USA_Military.dds"
+	}
+
+	spriteType = {
+		name = "USA_Military_II"
+		texturefile = "gfx/event_pictures/report_event/USA_Military_II.dds"
+	}
+
+	spriteType = {
+		name = "USA_Rockies"
+		texturefile = "gfx/event_pictures/report_event/USA_Rockies.dds"
+	}
+
+	spriteType = {
+		name = "USA_Rumsfeld"
+		texturefile = "gfx/event_pictures/report_event/USA_Rumsfeld.dds"
+	}
+
+	spriteType = {
+		name = "USA_Rumsfeld_TV"
+		texturefile = "gfx/event_pictures/report_event/USA_Rumsfeld_TV.dds"
+	}
+
+	spriteType = {
+		name = "USA_Lobby"
+		texturefile = "gfx/event_pictures/report_event/USA_Lobby.dds"
+	}
+
+	spriteType = {
 		name = "USA_OPEC"
 		texturefile = "gfx/event_pictures/report_event/USA_OPEC.dds"
 	}
@@ -18,6 +88,31 @@ spriteTypes = {
 	spriteType = {
 		name = "USA_Bridge"
 		texturefile = "gfx/event_pictures/report_event/USA_Bridge.dds"
+	}
+
+	spriteType = {
+		name = "USA_RNC"
+		texturefile = "gfx/event_pictures/report_event/USA_RNC.dds"
+	}
+
+	spriteType = {
+		name = "USA_MTG"
+		texturefile = "gfx/event_pictures/report_event/USA_MTG.dds"
+	}
+
+	spriteType = {
+		name = "USA_Flag"
+		texturefile = "gfx/event_pictures/report_event/USA_Flag.dds"
+	}
+
+	spriteType = {
+		name = "USA_Warren"
+		texturefile = "gfx/event_pictures/report_event/USA_Warren.dds"
+	}
+
+	spriteType = {
+		name = "USA_George_Bush_Sr"
+		texturefile = "gfx/event_pictures/report_event/USA_George_Bush_Sr.dds"
 	}
 
 	spriteType = {

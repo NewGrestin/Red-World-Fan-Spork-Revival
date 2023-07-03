@@ -1,4 +1,831 @@
+
+USA_Elections = {
+
+	USA_2010_Election_Mission = {
+		icon = GFX_decision_SWI_no_elected_president
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 100
+
+		available = {
+		always = no
+		}
+
+		activation = {
+			country_exists = USA
+		}
+
+		is_good = yes
+
+		days_mission_timeout = 309
+
+		fire_only_once = yes
+
+		timeout_effect = {			
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_2012_Senate_Mission = {
+		icon = GFX_decision_SOV_place_hq
+
+		allowed = {
+			tag = USA
+		}
+
+		available = {
+		always = no
+		}
+
+		priority = 100
+
+		activation = {
+			country_exists = USA
+			date > 2011.12.31
+		}
+
+		is_good = yes
+
+		days_mission_timeout = 200
+
+		fire_only_once = yes
+
+		timeout_effect = {			
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_2014_Election_Mission = {
+		icon = GFX_decision_SWI_no_elected_president
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 100
+
+		available = {
+		always = no
+		}
+
+		activation = {
+			country_exists = USA
+			date > 2013.12.31
+		}
+
+		is_good = yes
+
+		days_mission_timeout = 309
+
+		fire_only_once = yes
+
+		timeout_effect = {			
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_Sway_George_Bush_Srs_Pick = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 92
+
+		visible = {
+		has_active_mission = USA_2010_Election_George_Bush_Mission	
+		}
+
+		available = {
+		has_active_mission = USA_2010_Election_George_Bush_Mission
+		OR = {
+		has_government = nationalist
+		has_government = national_conservative
+		}
+		}
+
+		cost = 75
+
+		fire_only_once = yes
+
+		complete_effect = {
+		set_country_flag = USA_Sway_George_Bush_Srs_Pick_desc_flag		
+		USA_george_bush_sr = { country_event = { id = us_republic.610 days = 0 } } 
+		hidden_effect =  {
+		country_event = { id = us_republic.610 days = 0 }
+		}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_Cement_the_Nationalist_Wing = {
+		icon = GFX_decision_generic_political_rally
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 94
+
+		visible = {
+		has_active_mission = USA_2010_Election_George_Bush_Mission	
+		}
+
+		available = {
+		has_active_mission = USA_2010_Election_George_Bush_Mission
+		nationalist > var:party_popularity@national_conservative 
+		OR = {
+		has_government = nationalist
+		has_government = national_conservative
+		}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {			
+		add_popularity = { ideology = nationalist popularity = 0.05 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_Cement_the_Moderate_Wing = {
+		icon = GFX_decision_gre_investment_decisions
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 94
+
+		visible = {
+		has_active_mission = USA_2010_Election_George_Bush_Mission	
+		}
+
+		available = {
+		has_active_mission = USA_2010_Election_George_Bush_Mission
+		national_conservative > var:party_popularity@nationalist
+		OR = {
+		has_government = nationalist
+		has_government = national_conservative
+		}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {			
+		add_popularity = { ideology = national_conservative popularity = 0.05 }		
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_Rally_around_the_Flag = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 91
+
+		visible = {
+		has_war = yes
+		OR = {
+		has_active_mission = USA_2010_Election_Mission 
+		has_active_mission = USA_2012_Senate_Mission 
+		has_active_mission = USA_2014_Election_Mission 
+		}
+		}
+
+		available = {
+		has_war_support > 0.5
+		surrender_progress < 0.31
+		}
+
+		cost = 50
+
+		days_remove = 100
+	
+		modifier = { 
+		mobilization_speed = 0.1
+		war_support_factor = 0.05
+		political_power_cost = 0.15
+		}
+
+		complete_effect = {	
+		add_stability = -0.05		
+		add_popularity = { ideology = var:current_party_ideology_group popularity = 0.15 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_Kick_out_the_Freedom_Caucus = {
+		icon = GFX_decision_SWI_dismiss_council
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 93
+
+		visible = {
+		OR = {
+		has_active_mission = USA_2010_Election_Mission 
+		has_active_mission = USA_2012_Senate_Mission 
+		has_active_mission = USA_2014_Election_Mission 
+		}
+		}
+
+		available = {
+		fascist < 0.2
+		OR = {
+		centrist > 0.4
+		liberal > 0.4
+		new_democrat > 0.4		
+		}
+		OR = {
+		has_government = national_conservative
+		has_government = nationalist
+		}
+		}
+
+		cost = 75
+
+		days_remove = 100
+	
+		modifier = { 
+		national_conservative_drift = 0.1
+		}
+
+		complete_effect = {	
+		country_event = { id = us_republic.611 days = 1 }	
+		add_popularity = { ideology = nationalist popularity = -0.04 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_Distance_from_Rumsfeld = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 93
+
+		visible = {
+		#has_completed_focus = USA_rumsfeld_beaten
+		OR = {
+		has_active_mission = USA_2010_Election_Mission 
+		has_active_mission = USA_2012_Senate_Mission 
+		has_active_mission = USA_2014_Election_Mission 
+		}
+		}
+
+		available = {
+		has_completed_focus = USA_rumsfeld_beaten
+		OR = {
+		has_government = national_conservative
+		has_government = nationalist
+		}
+		}
+
+		cost = 100
+
+		complete_effect = {	
+		country_event = { id = us_republic.614 days = 1 }
+		add_popularity = { ideology = national_conservative popularity = var:party_popularity@nationalist }	
+		add_popularity = { ideology = national_conservative popularity = -0.05 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_Canvas_for_the_NPP = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 90
+
+		visible = {
+		OR = {
+		has_active_mission = USA_2010_Election_Mission 
+		has_active_mission = USA_2012_Senate_Mission 
+		has_active_mission = USA_2014_Election_Mission 
+		}		
+		}
+
+		available = {
+		fascist < 0.6	
+		hidden_trigger = {
+		NOT = { has_country_flag = IS_CANVASSING_FLAG }
+		}
+		}
+
+		cost = 25
+
+		days_remove = 30
+
+		modifier = {			
+		fascist_drift = 0.05
+		}
+
+		complete_effect = {			
+		set_country_flag = IS_CANVASSING_FLAG
+		}
+
+		remove_effect = {			
+		add_popularity = { ideology = fascist popularity = 0.01 }
+		clr_country_flag = IS_CANVASSING_FLAG
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_Canvas_for_the_GOP_Nats = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 90
+
+		visible = {
+		OR = {
+		has_active_mission = USA_2010_Election_Mission 
+		has_active_mission = USA_2012_Senate_Mission 
+		has_active_mission = USA_2014_Election_Mission 
+		}		
+		}
+
+		available = {
+		nationalist < 0.6
+		hidden_trigger = {
+		NOT = { has_country_flag = IS_CANVASSING_FLAG }
+		}	
+		}
+
+		cost = 25
+
+		days_remove = 30
+
+		modifier = {			
+		nationalist_drift = 0.05
+		}
+
+		complete_effect = {			
+		set_country_flag = IS_CANVASSING_FLAG
+		}
+
+		remove_effect = {
+		clr_country_flag = IS_CANVASSING_FLAG			
+		add_popularity = { ideology = nationalist popularity = 0.01 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_Canvas_for_the_GOP_Cons = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 90
+
+		visible = {
+		OR = {
+		has_active_mission = USA_2010_Election_Mission 
+		has_active_mission = USA_2012_Senate_Mission 
+		has_active_mission = USA_2014_Election_Mission 
+		}		
+		}
+
+		available = {
+		national_conservative < 0.6	
+		hidden_trigger = {
+		NOT = { has_country_flag = IS_CANVASSING_FLAG }
+		}
+		}
+
+		cost = 25
+
+		days_remove = 30
+
+		modifier = {			
+		national_conservative_drift = 0.05
+		}
+
+		complete_effect = {			
+		set_country_flag = IS_CANVASSING_FLAG
+		}
+
+		remove_effect = {	
+		clr_country_flag = IS_CANVASSING_FLAG		
+		add_popularity = { ideology = national_conservative popularity = 0.01 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_Canvas_for_the_CSP = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 90
+
+		visible = {
+		OR = {
+		has_active_mission = USA_2010_Election_Mission 
+		has_active_mission = USA_2012_Senate_Mission 
+		has_active_mission = USA_2014_Election_Mission 
+		}		
+		}
+
+		available = {
+		centrist < 0.6	
+		hidden_trigger = {
+		NOT = { has_country_flag = IS_CANVASSING_FLAG }
+		}
+		}
+
+		cost = 25
+
+		days_remove = 30
+
+		modifier = {			
+		centrist_drift = 0.05
+		}
+
+		complete_effect = {			
+		set_country_flag = IS_CANVASSING_FLAG
+		}
+
+		remove_effect = {
+		clr_country_flag = IS_CANVASSING_FLAG			
+		add_popularity = { ideology = centrist popularity = 0.01 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_Canvas_for_the_JUSTICE = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 90
+
+		visible = {
+		OR = {
+		has_active_mission = USA_2010_Election_Mission 
+		has_active_mission = USA_2012_Senate_Mission 
+		has_active_mission = USA_2014_Election_Mission 
+		}		
+		}
+
+		available = {
+		new_democrat < 0.6	
+		hidden_trigger = {
+		NOT = { has_country_flag = IS_CANVASSING_FLAG }
+		}
+		}
+
+		cost = 25
+
+		days_remove = 30
+
+		modifier = {			
+		new_democrat_drift = 0.05
+		}
+
+		complete_effect = {			
+		set_country_flag = IS_CANVASSING_FLAG
+		}
+
+		remove_effect = {
+		clr_country_flag = IS_CANVASSING_FLAG			
+		add_popularity = { ideology = new_democrat popularity = 0.01 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_2010_Election_George_Bush_Mission = {
+		icon = GFX_decision_SWI_elect_confederation_president
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 89
+
+		available = {
+		hidden_trigger = {
+		has_country_flag = USA_Sway_George_Bush_Srs_Pick_desc_flag	
+		}
+		}
+
+		activation = {
+			country_exists = USA
+			has_active_mission = USA_2010_Election_Mission
+		}
+
+		is_good = no
+
+		days_mission_timeout = 55
+
+		fire_only_once = yes
+
+		complete_effect = {			
+		add_political_power = 50
+		}
+
+		timeout_effect = {			
+		country_event = { id = us_republic.613 days = 0 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_2010_RNC_Candidates_Mission = {
+		icon = GFX_decision_SWI_no_elected_president
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 88
+
+		available = {
+		date > 2010.1.10
+		}
+
+		selectable_mission = yes
+
+		activation = {
+			country_exists = USA
+			has_active_mission = USA_2010_Election_Mission
+		}
+
+		is_good = no
+
+		days_mission_timeout = 200
+
+		fire_only_once = yes
+
+		complete_effect = {			
+		country_event = { id = us_republic.612 days = 0 }
+		}
+
+		timeout_effect = {			
+		country_event = { id = us_republic.612 days = 0 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+
+USA_Economy = {
+
+	USA_debug = {
+
+		icon = GFX_decision_unknown
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 0
+
+		visible = {
+
+		}
+
+		available = {
+
+		}
+
+		complete_effect = {
+
+		}
+	}
+
+	USA_Exalt_Sacrifice_in_Movies = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 75
+
+		visible = {
+
+		}
+
+		days_remove = 100
+
+		available = {
+		OR = {
+		has_war = yes
+		has_war_support < 0.5
+		}
+		}
+
+		modifier = {
+		weekly_casualties_war_support = 0.02
+		weekly_manpower = 200
+		mobilization_speed = 0.25
+		stability_weekly = -0.005
+		}
+
+		remove_effect = {
+		add_war_support = 0.05
+		}
+	}
+
+	USA_Exalt_Resistance_Fighters = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+			add = 80
+			has_war = yes
+			}
+		}
+		
+		cost = 75
+
+		visible = {
+
+		}
+
+		days_remove = 100
+
+		available = {
+		OR = {
+		has_war = yes 
+		any_state = { 
+			is_core_of = USA
+			NOT = { is_controlled_by = USA }
+		}
+		}
+		}
+
+		modifier = {
+		resistance_decay_on_our_occupied_states = -0.5
+		resistance_damage_to_garrison_on_our_occupied_states = 0.5
+		compliance_growth = -0.05
+		}
+
+		remove_effect = {
+		add_war_support = 0.05
+		}
+	}
+
+	USA_Censor_Critical_Movies = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+			add = 80
+			has_war = yes
+			}
+		}
+		
+		cost = 75
+
+		visible = {
+
+		}
+
+		days_remove = 100
+
+		available = {
+		has_stability < 0.5		
+		}
+
+		modifier = {
+		stability_weekly = 0.01
+		compliance_growth = 0.03
+		political_power_factor = -0.05
+		}
+
+		remove_effect = {
+		add_popularity = { ideology = var:current_party_ideology_group popularity = 0.03 }
+		}
+	}
+}
+
 USA_Foreign_Policy = {
+
+	USA_Unite_the_East_Coast = {
+
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 150
+
+		priority = 100
+
+		visible = {
+		#has_completed_focus = USA_The_Atlantic_Republic
+		}
+
+		available = {
+		has_war = no
+		owns_state = 366
+		owns_state = 365
+		owns_state = 362
+		owns_state = 363
+		owns_state = 364
+		owns_state = 901
+		owns_state = 359
+		owns_state = 358
+		owns_state = 361
+		owns_state = 357
+		owns_state = 795
+		owns_state = 792
+		}
+
+		complete_effect = {
+		add_stability = 0.1
+		set_cosmetic_tag = USA_ATLANTIC
+		every_state = { 
+			limit = { is_core_of = NEA }	
+		add_core_of = USA
+		}
+		}
+	}
 
 	USA_Realize_Pan_America = {
 
@@ -8,7 +835,9 @@ USA_Foreign_Policy = {
 			factor = 100
 		}
 		
-		cost = 50
+		priority = 100
+
+		cost = 150
 
 		visible = {
 		#has_completed_focus = USA_Ambitions_of_European_America
@@ -34,6 +863,365 @@ USA_Foreign_Policy = {
 		limit = { has_idea = RWE_Pan_America }
 		swap_ideas = { remove_idea = RWE_Pan_America add_idea = RWE_Pan_America_Perfect_Union }
 		}
+		}
+	}
+
+	USA_Realize_Pan_Africa = {
+
+		icon = GFX_decision_generic_orginization_of_african_unity
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		priority = 100
+
+		cost = 150
+
+		visible = {
+		has_completed_focus = USA_Pan_Africanism
+		has_government = monarchist
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Unrecognized_Government } 
+		any_state = { 
+		is_on_continent = africa
+		is_owned_by = USA
+		}
+		has_country_leader = {
+    		name = "Mengesha I"
+    		ruling_only = yes
+		}
+		NOT = { 
+		has_completed_focus = USA_Venerate_the_Confederacy
+		}
+		}
+
+		complete_effect = {
+		set_cosmetic_tag = PAN_AFRICA
+
+		add_trait = {
+			character = USA_Mengesha 
+			ideology = monarchism
+			trait = emperor_of_africa
+		}		
+		}
+	}
+
+	USA_Lobby_for_Recognition_dec = {
+
+		icon = GFX_decision_SWI_no_elected_president
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes 
+
+		target_root_trigger = {
+		#has_completed_focus = USA_Lobby_for_Recognition
+		}
+		
+		cost = 25
+
+		priority = 2
+
+		targets_dynamic = yes
+
+		targets = { ENG MEX CAN BRA SWE RAJ SAF UAR YUG PRC AST JAP SAU }
+
+		target_trigger = { 
+		exists = yes
+		}
+
+		available = { 
+		FROM = { 
+		is_subject = no 
+		has_capitulated = no 
+		NOT = { has_war_with = USA }
+		}
+		hidden_trigger = {
+		NOT = { has_country_flag = USA_busy_with_lobby_flag }
+		}
+		}
+
+		visible = {
+		#has_completed_focus = USA_Lobby_for_Recognition
+		NOT = { has_country_flag = USA_RECOGNIZED }
+		}
+
+		available = {
+		
+		}
+
+		war_with_target_on_remove = yes
+
+		days_remove = 10
+
+		modifier = {
+		political_power_cost = 0.2
+		}
+
+		complete_effect = {
+		set_country_flag = USA_busy_with_lobby_flag 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_busy_with_lobby_flag 
+		FROM = { country_event = { id = us_republic.405 days = 1 } }
+		}
+	}
+
+	USA_Cement_our_Recognized_Claim = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		priority = 1
+
+		cost = 0
+
+		fire_only_once = yes
+
+		visible = {
+		#has_completed_focus = USA_Lobby_for_Recognition
+		}
+
+		available = {
+		custom_trigger_tooltip = {
+    			tooltip = usa_full_recognition_tt
+			check_variable = { USA_recognition_var > 0.99 } 
+		}
+		}
+
+		days_remove = 25
+
+		complete_effect = {
+		set_country_flag = USA_busy_with_lobby_flag 
+		}
+
+		remove_effect = {
+		set_country_flag = USA_RECOGNIZED
+		remove_ideas = { RWE_USA_Unrecognized_Government } 	
+
+		}
+	}
+
+	USA_Crush_Illinois = {
+
+		icon = GFX_decision_hol_draw_up_staff_plans
+
+		ai_will_do = {
+			factor = 60
+			modifier = {
+        			add = 60
+				ILL = { NOT = { is_subject_of = NEA is_guaranteed_by = NEA } }
+			}
+			modifier = {
+        			add = -20
+				ILL = { is_subject_of = NEA is_guaranteed_by = NEA } 
+			}
+		}
+		
+		cost = 0
+
+		priority = 10
+
+		visible = {
+		has_completed_focus = USA_Seize_Missouri
+		NOT = { has_war_with = ILL }
+		ILL = { exists = yes }
+		}
+
+		available = {
+		ILL = { exists = yes is_owner_neighbor_of = USA NOT = { has_war_with = USA } }
+		}
+
+		days_remove = 30
+
+		war_with_on_remove = ILL
+
+		remove_effect = {
+            	declare_war_on = {
+                target = ILL
+                type = annex_everything
+            	}
+
+		add_timed_idea = { idea = RWE_USA_Surpise_against_Illinois  days = 50 }	
+		}
+	}
+
+	USA_Approach_Monarchist_Commonwealth = {
+
+		icon = GFX_decision_eng_ally_imperialist_coup
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 150
+
+		priority = 90
+
+		visible = {
+		has_government = monarchist
+		AMC = { exists = yes } 
+		}
+
+		available = {
+		AMC = { has_government = monarchist is_subject = no has_war = no is_government_in_exile = no }
+		AMC = { 
+		has_opinion = {
+    		target = USA
+    		value > 74
+		}
+		}
+		NOT = { has_war_with = AMC }
+		}
+
+		complete_effect = {
+		AMC = { country_event = { id = us_republic.400 days = 1 } }
+		}
+	}
+
+	USA_Increase_Patriot_Resistance_in_Kansas = {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		fire_only_once = yes
+
+		state_target = yes 
+
+		targets = { 383 }
+
+		on_map_mode = map_only
+
+		visible = {
+		#has_completed_focus = USA_Midwestern_Panic
+		}
+
+		days_remove = 90
+
+		available = {
+		MWA = { exists = yes owns_state = 383 } 
+		NOT = { has_war_with = MWA }
+		is_owner_neighbor_of = MWA
+		}
+
+		remove_effect = {
+		MWA = { add_timed_idea = { idea = RWE_USA_Unificationist_Rebels days = 120 } }
+		}
+	}
+
+	USA_Increase_Patriot_Resistance_in_Missouri = {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		state_target = yes 
+
+		fire_only_once = yes
+
+		targets = { 373 }
+
+		on_map_mode = map_only
+
+		visible = {
+		#has_completed_focus = USA_Midwestern_Panic
+		}
+
+		available = {
+		ILL = { exists = yes owns_state = 373 } 
+		NOT = { has_war_with = ILL }
+		is_owner_neighbor_of = ILL
+		}
+
+		days_remove = 90
+
+		remove_effect = {
+		ILL = { add_timed_idea = { idea = RWE_USA_Unificationist_Rebels days = 120 } }
+		}
+	}
+
+	USA_Pressure_Rocky_Statelet = {
+
+		icon = GFX_decision_eng_trade_unions_demand
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes 
+
+		target_root_trigger = {
+		has_completed_focus = USA_The_Rushmore_Declaration
+		}
+		
+		priority = 3
+
+		cost = 50
+
+		targets_dynamic = yes
+
+		targets = { MOT LIN UTA ARI CSD }
+
+		target_trigger = { 
+		exists = yes
+		}
+
+		available = { 
+		FROM = { 
+		is_subject = no 
+		has_capitulated = no 
+		NOT = { has_war_with = USA }
+		}
+		USA = {
+		OR = {
+		is_neighbor_of = FROM
+		any_subject_country = { 
+		is_neighbor_of = FROM
+		}
+		}
+		}
+		hidden_trigger = {
+		NOT = { has_country_flag = USA_busy_with_pressure_flag }
+		}
+		}
+
+		visible = {
+		#has_completed_focus = USA_The_Rushmore_Declaration
+		}
+
+		available = {
+		
+		}
+
+		war_with_target_on_remove = yes
+
+		days_remove = 20
+
+		complete_effect = {
+		set_country_flag = USA_busy_with_pressure_flag 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_busy_with_pressure_flag 
+		FROM = { country_event = { id = us_republic.401 days = 1 } }
 		}
 	}
 }
@@ -329,59 +1517,6 @@ transfer_units_fraction= {
 		}
 	}
 
-	USA_Pressure_Denver = {
-
-		icon = GFX_decision_generic_tank
-
-		ai_will_do = {
-			factor = 100
-		}
-		
-		cost = 75
-
-		visible = {
-		has_completed_focus = USA_Form_the_Union
-		}
-
-		available = {
-		is_subject = no 
-		is_owner_neighbor_of = MWA	 
-		}
-
-		days_remove = 10
-
-		remove_effect = {
-		
-		}
-	}
-
-	USA_Pressure_Saint_Louis = {
-
-		icon = GFX_decision_generic_tank
-
-		ai_will_do = {
-			factor = 100
-		}
-		
-		cost = 75
-
-		visible = {
-		has_completed_focus = USA_Form_the_Union
-		}
-
-		available = {
-		is_subject = no 
-		is_owner_neighbor_of = ILL
-		}
-
-		days_remove = 10
-
-		remove_effect = {
-		
-		}
-	}
-
-
 	USA_Admit_PR_as_a_state = {
 
 		icon = GFX_decision_generic_nationalism
@@ -504,7 +1639,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -537,7 +1672,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -570,7 +1705,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -603,7 +1738,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -636,7 +1771,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -673,7 +1808,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -707,7 +1842,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -717,6 +1852,290 @@ transfer_units_fraction= {
 		clr_country_flag = USA_currently_integrating_tt 
 		add_to_variable = { USA_state_count_var = 1 }	
 		add_state_core = 396
+		}
+	}
+
+	USA_Admit_Wisconsin_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 394
+		NOT = { 394 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 394
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 10
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 394
+		}
+	}
+
+	USA_Admit_Iowa_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 392
+		NOT = { 392 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 392
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 10
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 392
+		}
+	}
+
+	USA_Admit_Minnesota_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 391
+		NOT = { 391 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 391
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 10
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 391
+		}
+	}
+
+	USA_Admit_North_Dakota_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		OR = {
+		owns_state = 389
+		owns_state = 1018
+		}
+		NOT = { 389 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 389
+		owns_state = 1018
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 10
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 389
+		add_state_core = 1018
+		}
+	}
+
+	USA_Admit_South_Dakota_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		OR = {
+		owns_state = 390
+		owns_state = 898
+		}
+		NOT = { 390 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 390
+		owns_state = 898
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 10
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 390
+		add_state_core = 898
+		}
+	}
+
+	USA_Admit_Montana_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		OR = {
+		owns_state = 388
+		owns_state = 1016
+		}
+		NOT = { 388 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 388
+		owns_state = 1016
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 10
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 388
+		add_state_core = 1016
+		}
+	}
+
+	USA_Admit_Wyoming_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		OR = {
+		owns_state = 381
+		owns_state = 1017 
+		}
+		NOT = { 381 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 381
+		owns_state = 1017 
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 10
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 381
+		add_state_core = 1017 
+		}
+	}
+
+	USA_Admit_Colorado_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 382
+		NOT = { 382 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 382
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 10
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 382
 		}
 	}
 
@@ -740,7 +2159,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -773,7 +2192,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -806,7 +2225,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -839,7 +2258,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -872,7 +2291,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -905,7 +2324,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -938,7 +2357,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -975,7 +2394,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -986,6 +2405,210 @@ transfer_units_fraction= {
 		add_to_variable = { USA_state_count_var = 1 }	
 		add_state_core = 892
 		add_state_core = 395
+		}
+	}
+
+	USA_Admit_Missouri_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 373
+		NOT = { 373 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 373
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 10
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 373
+		}
+	}
+
+	######################################
+	# PCA STATES
+	######################################
+
+	USA_Admit_GRL_States_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 150
+
+    		targets = { GRL }
+
+		target_non_existing = yes	
+		
+		visible = {
+		OR = {
+		owns_state = 394
+		owns_state = 391
+		owns_state = 392
+		}
+		NOT = { 394 = { is_core_of = USA } }
+		NOT = { 391 = { is_core_of = USA } }
+		NOT = { 392 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 394
+		owns_state = 391
+		owns_state = 392
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 3 }	
+		add_state_core = 391
+		add_state_core = 392
+		add_state_core = 394
+		}
+	}
+
+	USA_Admit_MWA_States_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 200
+
+    		targets = { MWA }
+
+		target_non_existing = yes	
+		
+		visible = {
+		OR = {
+		owns_state = 383 
+		owns_state = 384
+		owns_state = 382
+		owns_state = 390
+		owns_state = 898
+		}
+		NOT = { 390 = { is_core_of = USA } }
+		NOT = { 382 = { is_core_of = USA } }
+		NOT = { 384 = { is_core_of = USA } }
+		NOT = { 383 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 383 
+		owns_state = 384
+		owns_state = 382
+		owns_state = 390
+		owns_state = 898 
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 40
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 4 }	
+		add_state_core = 382 
+		add_state_core = 383 
+		add_state_core = 384
+		add_state_core = 390
+		add_state_core = 898
+		}
+	}
+
+	USA_Admit_Kansas_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 383 
+		NOT = { 383 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 383 
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 10
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 383 
+		}
+	}
+
+	USA_Admit_Nebraska_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		owns_state = 384
+		NOT = { 384 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 384
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 10
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 384
 		}
 	}
 
@@ -1010,7 +2633,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -1052,7 +2675,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -1090,7 +2713,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -1130,7 +2753,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -1156,16 +2779,20 @@ transfer_units_fraction= {
 		cost = 50
 
 		visible = {
+		OR = {
 		owns_state = 380
+		owns_state = 896
+		}
 		NOT = { 380 = { is_core_of = USA } }
 		}
 
 		available = {
 		owns_state = 380
+		owns_state = 896
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -1175,6 +2802,7 @@ transfer_units_fraction= {
 		clr_country_flag = USA_currently_integrating_tt 
 		add_to_variable = { USA_state_count_var = 1 }	
 		add_state_core = 380
+		add_state_core = 896
 		}
 	}
 
@@ -1186,7 +2814,7 @@ transfer_units_fraction= {
 			factor = 100
 		}
 		
-		cost = 50
+		cost = 30
 
 		visible = {
 		owns_state = 387
@@ -1198,7 +2826,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -1208,6 +2836,69 @@ transfer_units_fraction= {
 		clr_country_flag = USA_currently_integrating_tt 
 		add_to_variable = { USA_state_count_var = 1 }	
 		add_state_core = 387
+		}
+	}
+
+	######################################
+	# PCA STATES
+	######################################
+
+	USA_Admit_All_PCA_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+
+    		targets = { PCA }
+
+		target_non_existing = yes	
+		
+		cost = 150
+
+		visible = {
+		OR = { 
+		owns_state = 378
+		owns_state = 1015
+		owns_state = 386
+		owns_state = 970
+		owns_state = 890
+		owns_state = 971
+		owns_state = 385
+		}
+		NOT = { 378 = { is_core_of = USA } }
+		NOT = { 970 = { is_core_of = USA } }
+		NOT = { 385 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 386
+		owns_state = 970
+		owns_state = 378
+		owns_state = 1015
+		owns_state = 890
+		owns_state = 971
+		owns_state = 385
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 3 }	
+		add_state_core = 386
+		add_state_core = 970
+		add_state_core = 890
+		add_state_core = 971
+		add_state_core = 385
+		add_state_core = 378
+		add_state_core = 1015
 		}
 	}
 
@@ -1235,7 +2926,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -1275,7 +2966,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -1289,6 +2980,48 @@ transfer_units_fraction= {
 		add_state_core = 385
 		}
 	}
+
+	USA_Admit_California_as_a_state = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cost = 50
+
+		visible = {
+		OR = { 
+		owns_state = 378
+		owns_state = 1015
+		}
+		NOT = { 378 = { is_core_of = USA } }
+		}
+
+		available = {
+		owns_state = 378
+		owns_state = 1015
+		NOT = { has_country_flag = USA_currently_integrating_tt }
+		}
+
+		days_remove = 10
+
+		complete_effect = {
+		set_country_flag = USA_currently_integrating_tt 
+		}
+
+		remove_effect = {
+		clr_country_flag = USA_currently_integrating_tt 
+		add_to_variable = { USA_state_count_var = 1 }	
+		add_state_core = 378
+		add_state_core = 1015
+		}
+	}
+
+	######################################
+	# PACIFIC STATES
+	######################################
 
 	USA_Admit_Hawaii_as_a_state = {
 
@@ -1310,7 +3043,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 
@@ -1349,7 +3082,7 @@ transfer_units_fraction= {
 		NOT = { has_country_flag = USA_currently_integrating_tt }
 		}
 
-		days_remove = 60
+		days_remove = 10
 
 		complete_effect = {
 		set_country_flag = USA_currently_integrating_tt 

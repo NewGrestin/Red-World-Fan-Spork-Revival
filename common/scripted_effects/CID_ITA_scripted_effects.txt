@@ -1,0 +1,46 @@
+#Important to put HIGHEST first
+USA_poverty_level_down = {
+	# level 5 not relevant. Cannot go above.
+	if = {
+		limit = { has_idea = RWE_USA_extreme_rural_poverty_5 }
+		swap_ideas = {
+			remove_idea = RWE_USA_extreme_rural_poverty_5 
+			add_idea = RWE_USA_extreme_rural_poverty_6 
+		}
+	}
+	else_if = {
+		limit = { has_idea = RWE_USA_extreme_rural_poverty_4 }
+		swap_ideas = {
+			remove_idea = RWE_USA_extreme_rural_poverty_4 
+			add_idea = RWE_USA_extreme_rural_poverty_5 
+		}
+	}
+	else_if = {
+		limit = { has_idea = RWE_USA_extreme_rural_poverty_3 }
+		swap_ideas = {
+			remove_idea = RWE_USA_extreme_rural_poverty_3 
+			add_idea = RWE_USA_extreme_rural_poverty_4 
+		}
+	}
+	else_if = {
+		limit = { has_idea = RWE_USA_extreme_rural_poverty_2 }
+		swap_ideas = {
+			remove_idea = RWE_USA_extreme_rural_poverty_2 
+			add_idea = RWE_USA_extreme_rural_poverty_3 
+		}
+	}
+	else_if = {
+		limit = { has_idea = RWE_USA_extreme_rural_poverty_1 }
+		swap_ideas = {
+			remove_idea = RWE_USA_extreme_rural_poverty_1 
+			add_idea = RWE_USA_extreme_rural_poverty_2 
+		}
+	}
+	else_if = {
+		limit = { has_idea = RWE_USA_extreme_rural_poverty }
+		swap_ideas = {
+			remove_idea = RWE_USA_extreme_rural_poverty 
+			add_idea = RWE_USA_extreme_rural_poverty_1 
+		}
+	}
+}

@@ -10,8 +10,25 @@
 
 opinion_modifiers = {
 
+	did_recognize_us = { 
+		value = 10
+	}
+
+	didnt_recognize_us = { 
+		value = -10
+		months = 24
+	}
+
 	cheat_opinion_modifier_good = {
 		value = 200
+	}
+
+	axis_of_evil_speech = { 
+		value = -75
+	}
+
+	axis_of_evil_member = { 
+		value = -75
 	}
 
 	retracted_recognition = { 

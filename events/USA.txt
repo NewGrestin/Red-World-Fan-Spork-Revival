@@ -63,6 +63,80 @@ news_event = {
 
 	}
 }
+
+#Axis of Evil Speech
+news_event = {
+	id = us_republic_news.5
+	title = us_republic_news.5.t
+	desc = us_republic_news.5.d
+	picture = RWE_USA_[?ROOT.GetEvilAxisSpeechPic]
+	
+	is_triggered_only = yes
+
+	option = {
+		name = us_republic_news.5.a
+		trigger = {
+			has_government = communist
+			NOT = { original_tag = USA }
+		}
+	}
+
+	option = {
+		name = us_republic_news.5.b
+		trigger = {
+			NOT = { has_government = communist }
+			NOT = { original_tag = USA }
+		}
+	}
+
+	option = {
+		name = us_republic_news.5.c
+		trigger = {
+			original_tag = USA 
+		}
+
+		every_country = {
+		limit = { 
+		OR = { 
+		tag = SOV
+		tag = GER
+		tag = FRA
+		AND = { 
+		tag = ITA
+		has_government = communist
+		}
+		tag = PRK
+		AND = { 
+		tag = IRQ
+		NOT = {
+		OR = { has_government = national_conservative has_government = liberal has_government = centrist has_government = new_democrat }
+		}
+		}
+		} 
+		}
+		reverse_add_opinion_modifier = {
+    		target = USA
+    		modifier = axis_of_evil_member 
+		}
+		}
+	}
+}
+
+#Puerto Rico Plan
+news_event = {
+	id = us_republic_news.6
+	title = us_republic_news.6.t
+	desc = us_republic_news.6.d
+	picture = RWE_USA_Puerto_Rico_Plan
+	
+	is_triggered_only = yes
+
+	option = {
+		name = us_republic_news.6.a
+
+	}
+}
+
 ########################
 ###DEBT CEILING CRISIS###
 ########################
@@ -71,7 +145,7 @@ country_event = {
 	id = us_republic.1
 	title = us_republic.1.t
 	desc = us_republic.1.d
-	picture = us_female_troop_saluting
+	picture = USA_Congress
 	
 	fire_only_once = yes
 	
@@ -91,13 +165,14 @@ country_event = {
 	id = us_republic.2
 	title = us_republic.2.t
 	desc = us_republic.2.d
-	picture = us_female_troop_saluting
+	picture = USA_Rumsfeld_TV
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = us_republic.2.a
 		add_stability = -0.05
+		add_popularity = { ideology = nationalist popularity = -0.03 } 
 	}
 }
 
@@ -107,7 +182,7 @@ country_event = {
 	id = us_republic.3
 	title = us_republic.3.t
 	desc = us_republic.3.d
-	picture = us_female_troop_saluting
+	picture = USA_Military_II
 	
 	is_triggered_only = yes
 	
@@ -122,7 +197,7 @@ country_event = {
 	id = us_republic.4
 	title = us_republic.4.t
 	desc = us_republic.4.d
-	picture = us_female_troop_saluting
+	picture = generic_military
 	
 	is_triggered_only = yes
 	
@@ -216,7 +291,7 @@ country_event = {
 	id = us_republic.99
 	title = us_republic.99.t
 	desc = us_republic.99.d
-	picture = us_female_troop_saluting
+	picture = USA_Federal_Reserve
 	
 	is_triggered_only = yes
 	
@@ -234,7 +309,7 @@ country_event = {
 	id = us_republic.101
 	title = us_republic.101.t
 	desc = us_republic.101.d
-	picture = us_female_troop_saluting
+	picture = USA_Texas
 	
 	is_triggered_only = yes
 	
@@ -254,7 +329,7 @@ country_event = {
 	id = us_republic.102
 	title = us_republic.102.t
 	desc = us_republic.102.d
-	picture = us_female_troop_saluting
+	picture = USA_Dry_Paramilitary
 	
 	is_triggered_only = yes
 	
@@ -547,7 +622,7 @@ country_event = {
 	id = us_republic.207
 	title = us_republic.207.t
 	desc = us_republic.207.d
-	picture = USA_Bridge
+	picture = USA_Military_II
 	
 	fire_only_once = yes
 
@@ -602,7 +677,7 @@ country_event = {
 	id = us_republic.209
 	title = us_republic.209.t
 	desc = us_republic.209.d
-	picture = USA_Bridge
+	picture = USA_Military
 	
 	is_triggered_only = yes
 
@@ -711,7 +786,7 @@ country_event = {
 	id = us_republic.213
 	title = us_republic.213.t
 	desc = us_republic.213.d
-	picture = USA_Bridge
+	picture = USA_NEA
 	
 	is_triggered_only = yes
 
@@ -789,7 +864,7 @@ country_event = {
 	id = us_republic.300
 	title = us_republic.300.t
 	desc = us_republic.300.d
-	picture = USA_Bridge
+	picture = USA_NEA
 	
 	is_triggered_only = yes
 
@@ -831,6 +906,226 @@ country_event = {
 	}	
 }
 
+#US approaches us for unification
+country_event = {
+	id = us_republic.400
+	title = us_republic.400.t
+	desc = us_republic.400.d
+	picture = USA_Bridge
+	
+	is_triggered_only = yes
+
+	option = { #Yes
+		name = us_republic.400.a
+	    	ai_chance = {
+		    base = 100
+		}
+		USA = { 
+		annex_country = {
+    		target = AMC 
+    		transfer_troops = yes
+		}
+		}
+	}	
+
+	option = { #No
+		name = us_republic.400.b
+	    	ai_chance = {
+		    base = 0
+		}	
+			
+	}	
+}
+
+#Pressuring Rocky Statelets
+country_event = {
+	id = us_republic.401
+	title = us_republic.401.t
+	desc = us_republic.401.d
+	picture = USA_Rockies
+	
+	is_triggered_only = yes
+
+	option = { #Yes
+		name = us_republic.401.a
+	    	ai_chance = {
+		    base = 60
+		}
+		USA = { 
+		set_autonomy = {
+    		target = ROOT
+   		autonomy_state = autonomy_union_states_member
+    		end_wars = no
+    		end_civil_wars = yes
+		}
+		}
+	}	
+
+	option = { #No
+		name = us_republic.401.b
+	    	ai_chance = {
+		    base = 20
+		}	
+		USA = { country_event = { id = 	us_republic.402 days = 1 } }
+	}	
+}
+
+#Pressuring Rocky Statelets - they said no
+country_event = {
+	id = us_republic.402
+	title = us_republic.402.t
+	desc = us_republic.402.d
+	picture = USA_Rockies
+	
+	is_triggered_only = yes	
+
+	option = { #No
+		name = us_republic.402.a
+	    	USA = {
+		create_wargoal = {
+    		type = annex_everything
+    		target = FROM
+		}
+		}
+	}	
+}
+
+#USA lobbies us for recognition
+country_event = {
+	id = us_republic.405
+	title = us_republic.405.t
+	desc = us_republic.405.d
+	picture = USA_Lobby
+	
+	is_triggered_only = yes	
+
+	option = { #We give them tacit support
+		name = us_republic.405.a
+		USA = { 
+		country_event = { id = us_republic.407 days = 1 }
+		}
+	}
+
+	option = { #We give them full support
+		name = us_republic.405.b
+		USA = { 
+		country_event = { id = us_republic.408 days = 1 }
+		}
+	}
+
+	option = { #We aren't going to recognize them
+		name = us_republic.405.c
+		USA = { 
+		country_event = { id = us_republic.406 days = 1 }
+		}
+	}	
+}
+
+#USA lobbies us for recognition - They don't support us
+country_event = {
+	id = us_republic.406
+	title = us_republic.406.t
+	desc = us_republic.406.d
+	picture = USA_Lobby
+	
+	is_triggered_only = yes	
+
+	option = { #We give them tacit support
+		name = us_republic.406.a
+		add_political_power = 5
+		add_opinion_modifier = {
+    		target = FROM
+   		modifier = didnt_recognize_us
+		}
+	}	
+}
+
+#USA lobbies us for recognition - They tacitly support
+country_event = {
+	id = us_republic.407
+	title = us_republic.407.t
+	desc = us_republic.407.d
+	picture = USA_Lobby
+	
+	is_triggered_only = yes	
+
+	option = { #We accept their support
+		name = us_republic.407.a
+		add_opinion_modifier = {
+    		target = FROM
+   		modifier = did_recognize_us
+		}
+		set_temp_variable = { USA_temp_recognition_change = 0.05 }
+		custom_effect_tooltip = USA_tt_legitimacy_change
+		add_to_variable = { USA_recognition_var = USA_temp_recognition_change }
+		
+	}	
+
+	option = { #We accept their support
+		name = us_republic.407.b
+		add_political_power = -25
+		FROM = { country_event = { id = us_republic.409 days = 1 } }
+	}	
+}
+
+#USA lobbies us for recognition - They fully support
+country_event = {
+	id = us_republic.408
+	title = us_republic.408.t
+	desc = us_republic.408.d
+	picture = USA_Lobby
+	
+	is_triggered_only = yes	
+
+	option = { #We accept their support
+		name = us_republic.408.a
+		add_opinion_modifier = {
+    		target = FROM
+   		modifier = did_recognize_us
+		}
+		set_temp_variable = { USA_temp_recognition_change = 0.15 }
+		custom_effect_tooltip = USA_tt_legitimacy_change
+		add_to_variable = { USA_recognition_var = USA_temp_recognition_change }		
+	}		
+}
+
+#USA lobbies us for recognition - They push on
+country_event = {
+	id = us_republic.409
+	title = us_republic.409.t
+	desc = us_republic.409.d
+	picture = USA_Lobby
+	
+	is_triggered_only = yes	
+
+	option = { #We shall fully support them
+		name = us_republic.409.a
+		USA = { country_event = { id = us_republic.408 days = 1 } }
+	}
+
+	option = { #We shall fully support them - NOT
+		name = us_republic.409.b
+		USA = { country_event = { id = us_republic.410 days = 1 } }
+	}		
+}
+
+#USA lobbies us for recognition - NO
+country_event = {
+	id = us_republic.410 
+	title = us_republic.410.t
+	desc = us_republic.410.d
+	picture = USA_Lobby
+	
+	is_triggered_only = yes	
+
+	option = { #We shall fully support them
+		name = us_republic.410.a
+		set_temp_variable = { USA_temp_recognition_change = 0.05 }
+		custom_effect_tooltip = USA_tt_legitimacy_change
+		add_to_variable = { USA_recognition_var = USA_temp_recognition_change }
+	}
+	
+}
 ########################
 ###POLITICS###
 ########################
@@ -839,7 +1134,7 @@ country_event = {
 	id = us_republic.600
 	title = us_republic.600.t
 	desc = us_republic.600.d
-	picture = us_female_troop_saluting
+	picture = USA_Rumsfeld
 	
 	is_triggered_only = yes
 	
@@ -1018,12 +1313,242 @@ country_event = {
 	}	
 }
 
+#Historical Revisionism removed from school books
+country_event = {
+	id = us_republic.608
+	title = us_republic.608.t
+	desc = us_republic.608.d
+	picture = texas_state
+	
+	is_triggered_only = yes
+	
+	option = { #New flag
+		name = us_republic.608.a
+		add_war_support = -0.05
+	}	
+}
+
+#GOP Nationalists discredited
+country_event = {
+	id = us_republic.609
+	title = us_republic.609.t
+	desc = us_republic.609.d
+	picture = USA_Flag
+	
+	fire_only_once = yes
+
+	trigger = { 
+	tag = USA
+	has_completed_focus = USA_rumsfeld_beaten
+	}
+
+	mean_time_to_happen = { months = 2 }
+	
+	option = { #New flag
+		name = us_republic.609.a
+		add_popularity = { ideology = nationalist popularity = -0.06 }
+		add_popularity = { ideology = national_conservative popularity = 0.03 }
+
+	}	
+}
+
+#Swaying George Bush Sr. 
+country_event = {
+	id = us_republic.610
+	title = us_republic.610.t
+	desc = us_republic.610.d
+	picture = USA_George_Bush_Sr
+
+	is_triggered_only = yes
+	
+	option = { #Pick Robert Gates
+		name = us_republic.610.a
+		add_popularity = { ideology = nationalist popularity = 0.05 }
+		USA_Robert_Gates = { set_character_flag = BUSH_SR_PICK }
+	}	
+	
+	option = { #Stay out of the election
+		name = us_republic.610.b
+		add_popularity = { ideology = national_conservative popularity = 0.05 }
+	}	
+
+	option = { #A powerful message to the voter
+		name = us_republic.610.c
+		add_popularity = { ideology = national_conservative popularity = 0.04 }
+		add_popularity = { ideology = nationalist popularity = 0.04 }
+	}	
+}
+
+#Freedom Caucus kicked out
+country_event = {
+	id = us_republic.611
+	title = us_republic.611.t
+	desc = us_republic.611.d
+	picture = USA_MTG
+
+	is_triggered_only = yes
+	
+	option = { #Remove these politicians
+		name = us_republic.611.a
+		add_political_power = -20
+		add_stability = -0.03
+		add_popularity = { ideology = fascist popularity = 0.03 }
+		add_popularity = { ideology = nationalist popularity = -0.05 }
+		add_popularity = { ideology = national_conservative popularity = 0.03 }
+		
+		remove_country_leader_role = {
+    		character = USA_MTG 
+    		ideology = american_nationalist
+		}
+		
+		remove_country_leader_role = {
+    		character = USA_MTG 
+    		ideology = american_conservative
+		}
+	
+		remove_country_leader_role = {
+    		character = USA_dan_crenshaw 
+    		ideology = american_nationalist
+		}
+	
+		remove_country_leader_role = {
+    		character = USA_dan_crenshaw 
+    		ideology = american_conservative
+		}
+	}
+	
+	option = { #Allow them to stay
+		name = us_republic.611.b
+		add_political_power = 50
+		add_stability = 0.05
+		add_popularity = { ideology = nationalist popularity = 0.02 }
+		add_popularity = { ideology = national_conservative popularity = -0.01 }
+	}		
+}
+
+#Republican Party Candidates picked - 2010
+country_event = {
+	id = us_republic.612
+	title = us_republic.612.t
+	desc = us_republic.612.d
+	picture = USA_RNC
+
+	is_triggered_only = yes
+	
+	option = { #Rumsfeld will run again!
+		name = us_republic.612.a
+		trigger = { 
+		has_completed_focus = USA_Relax_XXII
+		}
+		set_country_flag = USA_RUMSFELD_GOP_2010
+	}
+	
+	option = { #Bennie Netanyahu
+		name = us_republic.612.b
+		set_country_flag = USA_NETANYAHU_GOP_2010
+	}	
+
+	option = { #Jeb Bush
+		name = us_republic.612.c
+		trigger = { 
+		NOT = { USA_Robert_Gates = { has_character_flag = BUSH_SR_PICK } }
+		}
+		set_country_flag = USA_J_BUSH_GOP_2010
+	}	
+
+	option = { #Rick Sanctorum
+		name = us_republic.612.e
+		trigger = { 
+		NOT = { has_completed_focus = USA_Relax_XXII }
+		has_completed_focus = USA_A_Day_That_Will_Live_In_Infamy
+		}
+		set_country_flag = USA_SANTORUM_GOP_2010
+	}
+
+	option = { #Thomas Ridge
+		name = us_republic.612.f
+		trigger = { 
+		has_completed_focus = USA_start_impeachment_procedure
+		has_completed_focus = USA_rumsfeld_beaten
+		}
+		set_country_flag = USA_RIDGE_GOP_2010
+		hidden_effect = { 
+		USA_Thomas_Ridge = { add_country_leader_trait = former_vp }
+		}
+	}
+
+	option = { #Robert Gates
+		name = us_republic.612.g
+		trigger = { 
+		USA_Robert_Gates = { has_character_flag = { flag = BUSH_SR_PICK } }
+		}
+		set_country_flag = USA_GATES_GOP_2010
+	}
+}
+
+#George Bush Sr. supports Jeb Bush
+country_event = {
+	id = us_republic.613
+	title = us_republic.613.t
+	desc = us_republic.613.d
+	picture = USA_George_Bush_Sr
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = us_republic.613.a
+		add_popularity = { ideology = national_conservative popularity = 0.09 }
+	}
+
+}
+
+#GOP kicks Rumsfeld out
+country_event = {
+	id = us_republic.614
+	title = us_republic.614.t
+	desc = us_republic.614.d
+	picture = USA_Its_Rover
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = us_republic.614.a
+		
+	}
+
+}
+
+#JUSTICE maintains Warren as candidate
+country_event = {
+	id = us_republic.615
+	title = us_republic.615.t
+	desc = us_republic.615.d
+	picture = USA_Warren
+	
+	fire_only_once = yes
+
+	trigger = { 
+	tag = USA
+	date > 2010.7.10
+	}
+
+	mean_time_to_happen = { days = 2 }
+	
+	option = { #New flag
+		name = us_republic.615.a
+		add_popularity = { ideology = new_democrat popularity = 0.02 }
+	}	
+}
+
+########################
+###BUSINESS PLOT###
+########################
 #Business Plot
 country_event = {
 	id = us_republic.700
 	title = us_republic.700.t
 	desc = us_republic.700.d
-	picture = USA_Its_Rover
+	picture = generic_military
 	
 	is_triggered_only = yes
 	
@@ -1060,5 +1585,342 @@ country_event = {
 		id=-1
 		ideology = fiscal_conservative 
 		}
+	}	
+}
+
+########################
+###MONARCHY###
+########################
+#Paul I of House Washington 
+country_event = {
+	id = us_republic.900
+	title = us_republic.900.t
+	desc = us_republic.900.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.900.a
+		add_ideas = { RWE_USA_Paul_I }
+	}	
+
+	option = {
+		name = us_republic.900.b
+		hidden_effect = { 
+		country_event = { id = us_republic.901 days = 40 }
+		}
+	}	
+}
+
+#Lee V of House Washington 
+country_event = {
+	id = us_republic.901
+	title = us_republic.901.t
+	desc = us_republic.901.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.901.a
+		add_ideas = { RWE_USA_Robert_Lee_V }
+	}	
+
+	option = {
+		name = us_republic.901.b
+		hidden_effect = { 
+		country_event = { id = us_republic.902 days = 50 }
+		}
+	}	
+}
+
+#Doug I of House Hamilton
+country_event = {
+	id = us_republic.902
+	title = us_republic.902.t
+	desc = us_republic.902.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.902.a
+		add_ideas = { RWE_USA_Doug_I }
+	}	
+
+	option = {
+		name = us_republic.902.b
+		hidden_effect = { 
+		country_event = { id = us_republic.903 days = 50 }
+		}
+	}	
+}
+
+#LaNier I of House Jefferson
+country_event = {
+	id = us_republic.903
+	title = us_republic.903.t
+	desc = us_republic.903.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.903.a
+		add_ideas = { RWE_USA_LaNier_I }
+	}	
+
+	option = {
+		name = us_republic.903.b
+		hidden_effect = { 
+		country_event = { id = us_republic.904 days = 50 }
+		}
+	}	
+}
+
+#Sam IV of House Houston
+country_event = {
+	id = us_republic.904
+	title = us_republic.904.t
+	desc = us_republic.904.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.904.a
+		add_ideas = { RWE_USA_Sam_IV }
+	}	
+
+	option = {
+		name = us_republic.904.b
+		hidden_effect = { 
+		if = { 
+		limit = { NOT = { BEL = { has_government = monarchism } } }
+		country_event = { id = us_republic.905 days = 50 }
+		}
+		else_if = { 
+		limit = { NOT = { FRA = { has_government = monarchism } } }
+		country_event = { id = us_republic.906 days = 50 }
+		}
+		else_if = { 
+		limit = { NOT = { GER = { has_government = monarchism } } }
+		country_event = { id = us_republic.907 days = 50 }
+		}
+		else_if = { 
+		limit = { NOT = { PER = { has_government = monarchism } } }
+		country_event = { id = us_republic.908 days = 50 }
+		}
+		else_if = { 
+		limit = { NOT = { ETH = { has_government = monarchism } } }
+		country_event = { id = us_republic.909 days = 50 }
+		}
+		else = { 
+		country_event = { id = us_republic.910 days = 50 }
+		}
+		}
+	}	
+}
+
+#Philip of Belgium
+country_event = {
+	id = us_republic.905
+	title = us_republic.905.t
+	desc = us_republic.905.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.905.a
+		add_ideas = { RWE_USA_Philip_I }
+	}	
+
+	option = {
+		name = us_republic.905.b
+		hidden_effect = { 
+		if = { 
+		limit = { NOT = { FRA = { has_government = monarchism } } }
+		country_event = { id = us_republic.906 days = 50 }
+		}
+		else_if = { 
+		limit = { NOT = { GER = { has_government = monarchism } } }
+		country_event = { id = us_republic.907 days = 50 }
+		}
+		else_if = { 
+		limit = { NOT = { PER = { has_government = monarchism } } }
+		country_event = { id = us_republic.908 days = 50 }
+		}
+		else_if = { 
+		limit = { NOT = { ETH = { has_government = monarchism } } }
+		country_event = { id = us_republic.909 days = 50 }
+		}
+		else = { 
+		country_event = { id = us_republic.910 days = 50 }
+		}
+		}
+	}	
+}
+
+#Napoleon of FRANCE
+country_event = {
+	id = us_republic.906
+	title = us_republic.906.t
+	desc = us_republic.906.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.906.a
+		add_ideas = { RWE_USA_Napoleon_I }
+	}	
+
+	option = {
+		name = us_republic.906.b
+		hidden_effect = { 
+		if = { 
+		limit = { NOT = { GER = { has_government = monarchism } } }
+		country_event = { id = us_republic.907 days = 50 }
+		}
+		else_if = { 
+		limit = { NOT = { PER = { has_government = monarchism } } }
+		country_event = { id = us_republic.908 days = 50 }
+		}
+		else_if = { 
+		limit = { NOT = { ETH = { has_government = monarchism } } }
+		country_event = { id = us_republic.909 days = 50 }
+		}
+		else = { 
+		country_event = { id = us_republic.910 days = 50 }
+		}
+		}
+	}	
+}
+
+#Georg Friedrich of Hohenzollern
+country_event = {
+	id = us_republic.907
+	title = us_republic.907.t
+	desc = us_republic.907.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.907.a
+		add_ideas = { RWE_USA_Georg_Friedrich }
+	}	
+
+	option = {
+		name = us_republic.907.b
+		hidden_effect = { 
+		if = { 
+		limit = { NOT = { PER = { has_government = monarchism } } }
+		country_event = { id = us_republic.908 days = 50 }
+		}
+		else_if = { 
+		limit = { NOT = { ETH = { has_government = monarchism } } }
+		country_event = { id = us_republic.909 days = 50 }
+		}
+		else = { 
+		country_event = { id = us_republic.910 days = 50 }
+		}
+		}
+	}	
+}
+
+#Reza Pahlavi 
+country_event = {
+	id = us_republic.908
+	title = us_republic.908.t
+	desc = us_republic.908.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.908.a
+		add_ideas = { RWE_USA_Reza_Pahlavi }
+	}	
+
+	option = {
+		name = us_republic.908.b
+		hidden_effect = { 
+		if = { 
+		limit = { NOT = { ETH = { has_government = monarchism } } }
+		country_event = { id = us_republic.909 days = 50 }
+		}
+		else = { 
+		country_event = { id = us_republic.910 days = 50 }
+		}
+		}
+	}	
+}
+
+#Mengesha I
+country_event = {
+	id = us_republic.909
+	title = us_republic.909.t
+	desc = us_republic.909.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.909.a
+		add_ideas = { RWE_USA_Mengesha }
+	}	
+
+	option = {
+		name = us_republic.909.b
+		hidden_effect = { 
+		country_event = { id = us_republic.910 days = 50 }
+		}
+	}	
+}
+
+
+#Unification with Jamaica
+country_event = {
+	id = us_republic.915
+	title = us_republic.915.t
+	desc = us_republic.915.d
+	picture = USA_Rastafarian
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.915.a
+		USA = {
+		annex_country = {
+    		target = JAM
+    		transfer_troops = yes
+		}
+		}
+		689 = { add_core_of = USA }
+	}	
+
+	option = {
+		name = us_republic.915.b
+		689 = { add_claim_by = USA }
+	}	
+}
+
+###################################################################################
+
+#Testevenyt
+country_event = {
+	id = us_republic.2000
+	title = us_republic.2000.t
+	desc = us_republic.2000.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.2000.a
+		promote_character = USA_jeb_bush
 	}	
 }

@@ -197,8 +197,8 @@ PJB = {
 }
 
 AFG = {
-	color = rgb { 170 218 218 }
-	color_ui = rgb { 115 115 115 }
+	color = rgb { 163 71 71 }
+	color_ui = rgb { 163 71 71 }
 }
 
 ALA = {
@@ -312,8 +312,8 @@ CAM = {
 }
 
 CAN = {
-	color = rgb { 175 37 10 }
-	color_ui = rgb { 115 115 115 }
+	color = rgb { 0 80 137 }
+	color_ui = rgb { 0 80 137 }
 }
 
 COG = {
@@ -502,8 +502,8 @@ IRE = {
 }
 
 IRQ = {
-	color = rgb { 202 145 102 }
-	color_ui = rgb { 115 115 115 }
+	color = rgb { 150 123 105 }
+	color_ui = rgb { 150 123 105 }
 }
 
 IVO = {

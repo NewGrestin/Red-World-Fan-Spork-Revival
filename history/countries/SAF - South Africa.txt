@@ -173,3 +173,187 @@ create_country_leader = {
 	picture = "Portrait_SAF_Winnie_Madikizela.dds"
 	ideology = african_socialist
 }
+
+USA = {
+send_embargo = SAF
+}
+
+NEA = {
+send_embargo = SAF
+}
+
+PCA = {
+send_embargo = SAF
+}
+
+TEX = {
+send_embargo = SAF
+}
+
+GUY = {
+send_embargo = SAF
+}
+
+ALA = {
+send_embargo = SAF
+}
+
+CAN = {
+send_embargo = SAF
+}
+
+BLZ = {
+send_embargo = SAF
+}
+
+JAM = {
+send_embargo = SAF
+}
+
+BHM = {
+send_embargo = SAF
+}
+
+ANT = {
+send_embargo = SAF
+}
+
+STL = {
+send_embargo = SAF
+}
+
+BRB = {
+send_embargo = SAF
+}
+
+STV = {
+send_embargo = SAF
+}
+
+GND = {
+send_embargo = SAF
+}
+
+TAT = {
+send_embargo = SAF
+}
+
+ENG = {
+send_embargo = SAF
+}
+
+ULS = {
+send_embargo = SAF
+}
+
+GRE = {
+send_embargo = SAF
+}
+
+SIE = {
+send_embargo = SAF
+}
+
+GAM = {
+send_embargo = SAF
+}
+
+NGR = {
+send_embargo = SAF
+}
+
+GHA = {
+send_embargo = SAF
+}
+
+UGA = {
+send_embargo = SAF
+}
+
+KEN = {
+send_embargo = SAF
+}
+
+TNZ = {
+send_embargo = SAF
+}
+
+ZAM = {
+send_embargo = SAF
+}
+
+MLW = {
+send_embargo = SAF
+}
+
+ZIM = {
+send_embargo = SAF
+}
+
+MAU = {
+send_embargo = SAF
+}
+
+SEY = {
+send_embargo = SAF
+}
+
+MLD = {
+send_embargo = SAF
+}
+
+RAJ = {
+send_embargo = SAF
+}
+
+BNG = {
+send_embargo = SAF
+}
+
+MAY = {
+send_embargo = SAF
+}
+
+SIG = {
+send_embargo = SAF
+}
+
+AST = {
+send_embargo = SAF
+}
+
+TUV = {
+send_embargo = SAF
+}
+
+FIJ = {
+send_embargo = SAF
+}
+
+SOL = {
+send_embargo = SAF
+}
+
+PAP = {
+send_embargo = SAF
+}
+
+BOT = {
+send_embargo = SAF
+}
+
+SMO = {
+send_embargo = SAF
+}
+
+MAR = {
+send_embargo = SAF
+}
+
+HAW = {
+send_embargo = SAF
+}
+
+GRL = {
+send_embargo = SAF
+}
