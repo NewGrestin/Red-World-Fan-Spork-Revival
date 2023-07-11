@@ -1,5 +1,10 @@
 #reload countrycolors
 
+KNS = {
+	color = rgb { 83 124 105 }
+	color_ui = rgb { 83 124 105 }
+}
+
 ATL = {
 	color = rgb { 0 74 127 }
 	color_ui = rgb { 0 74 127 }

@@ -1,5 +1,13 @@
 spriteTypes = {	
 	SpriteType = {
+		name = "GFX_idea_Honda"
+		texturefile = "gfx/interface/ideas/Honda.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_Chevron"
+		texturefile = "gfx/interface/ideas/Chevron.dds"			
+	}
+	SpriteType = {
 		name = "GFX_idea_generic_market"
 		texturefile = "gfx/interface/ideas/generic_market.dds"			
 	}
@@ -10,6 +18,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_OPEC"
 		texturefile = "gfx/interface/ideas/OPEC.dds"			
+	}
+	SpriteType = {
+		name = "GFX_idea_Anti_Gay_Military_Policy"
+		texturefile = "gfx/interface/ideas/RWE_USA_Anti_Gay_Military_Policy.dds"			
 	}
 	SpriteType = {
 		name = "GFX_idea_USA_Paul_I"

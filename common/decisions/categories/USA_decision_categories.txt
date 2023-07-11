@@ -4,6 +4,7 @@ USA_Elections = {
 
 	visible = { 
 	tag = USA
+	NOT = { has_country_flag = USA_NO_ELECTION }
 	}
 
 	priority = 300

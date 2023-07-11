@@ -1,6 +1,161 @@
 characters={
 
 	#############################
+		 #  RANDOMS
+	#############################
+	USA_ivan_castro ={
+		name="Iván Castro"
+		portraits={
+			army={
+				small="gfx/interface/ideas/USA_Ivan_Castro.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_Ivan_Castro.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	USA_marta_carcana ={
+		name="Marta Carcana"
+		portraits={
+			army={
+				small="gfx/interface/ideas/USA_Marta_Carcana.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_Marta_Carcana.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	USA_kelly_meggs ={
+		name="Kelly Meggs"
+		portraits={
+			army={
+				small="gfx/interface/ideas/USA_Kelly_Meggs.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_Kelly_Meggs.dds"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	USA_Brandon_Russell ={
+		name="Brandon Russell"
+		portraits={
+			army={
+				small="gfx/interface/ideas/USA_Brandon_Russell.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_Brandon_Russell.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	KNS_Kris_Kobach ={
+		name="Kris Kobach"
+		portraits={
+			civilian={
+				large="gfx/leaders/MWA/Portrait_MWA_Kris_Kobach.dds"
+			}
+		}
+		country_leader={
+			ideology=american_nationalist 
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+
+	KNS_David_Toland ={
+		name="David Toland"
+		portraits={
+			civilian={
+				large="gfx/leaders/MWA/Portrait_MWA_David_Toland.dds"
+			}
+		}
+		country_leader={
+			ideology=old_american_democrats 
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+
+	KNS_Jerry_Moran ={
+		name="Jerry Moran"
+		portraits={
+			civilian={
+				large="gfx/leaders/MWA/Portrait_MWA_Jerry_Moran.dds"
+			}
+		}
+		country_leader={
+			ideology=american_conservative 
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+
+	KNS_Mike_Padilla ={
+		name="Mike Padilla"
+		portraits={
+			civilian={
+				large="gfx/leaders/MWA/Portrait_MWA_Mike_Padilla.dds"
+			}
+		}
+		country_leader={
+			ideology=centrist_ideology 
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+
+	KNS_Decentralized_Leadership ={
+		name="Decentralized Leadership"
+		portraits={
+			civilian={
+				large="gfx/leaders/MWA/KNS_Decentralized_Leadership.dds"
+			}
+		}
+		country_leader={
+			ideology=fascist_ideology 
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	#############################
 		 #  NPP
 	#############################
 

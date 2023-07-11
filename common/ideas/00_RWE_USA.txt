@@ -239,6 +239,101 @@ ideas = {
 
 		##################
 
+		RWE_USA_Native_Young_Officers = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = tur_kemalist_officers
+			
+			removal_cost = -1
+
+			modifier = {
+			grant_medal_cost_factor = -0.5
+			military_leader_cost_factor = -0.5
+			army_leader_start_level = 1
+			army_leader_start_logistics_level = 1
+			}
+		}
+
+		RWE_USA_Improvised_Navy = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = eng_preparing_the_second_front
+			
+			removal_cost = -1
+
+			modifier = {
+			naval_invasion_capacity = 15
+			naval_invasion_penalty = -0.2
+			}
+
+			equipment_bonus = {
+				convoy_1 = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+		}
+
+		RWE_USA_Cash_Crop_Cash = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = ETH_coffee_exports
+			
+			removal_cost = -1
+
+			modifier = {
+			production_speed_buildings_factor = 0.2
+			industrial_factory_donations = 1
+			}
+		}
+
+		RWE_USA_Anti_Gay_Military_Policy = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            		picture = Anti_Gay_Military_Policy
+			
+			removal_cost = -1
+
+			modifier = {
+			conscription_factor = -0.06
+			military_leader_cost_factor = 0.15
+			navy_leader_cost_factor = 0.3
+			naval_morale_factor = -0.03
+			}
+		}
+
 		RWE_USA_Laissez_Faire = {
 			
 			
@@ -890,7 +985,8 @@ ideas = {
 	
 			modifier = {
 			war_support_factor = 0.05
-			compliance_gain = 0.1
+			minimum_training_level = -0.1
+			drift_defence_factor = 0.5
 			}
 		}
 
@@ -912,7 +1008,8 @@ ideas = {
 			modifier = {
 			war_support_factor = 0.1
 			surrender_limit = 0.1		
-			compliance_gain = 0.15
+			minimum_training_level = -0.15
+			drift_defence_factor = 0.5
 			}
 		}
 

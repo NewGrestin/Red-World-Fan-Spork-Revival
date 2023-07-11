@@ -289,11 +289,11 @@ give_guarantee = TEX
 
 add_ideas = {
 	RWE_USA_extreme_rural_poverty 
-	RWE_Shadow_Oligarchy 
 	RWE_USA_Anti_Soviet_Laws
 	RWE_USA_hostile_congress 
 	RWE_USA_Unrecognized_Government 
-	RWE_Military_Forces_Burden 
+	RWE_Military_Forces_Burden
+	#RWE_USA_Anti_Gay_Military_Policy  
 	idea_america_neutrality
 
 	usa_thomas_ridge

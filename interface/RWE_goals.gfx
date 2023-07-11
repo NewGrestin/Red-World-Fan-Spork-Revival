@@ -1,5 +1,23 @@
 spriteTypes = {	
 	SpriteType = {
+		name = "GFX_focus_USA_NATO_in_Mid_East"
+		texturefile = "gfx/interface/goals/USA_NATO_in_Mid_East.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_Shake"
+		texturefile = "gfx/interface/goals/USA_Shake.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_JUSTICE"
+		texturefile = "gfx/interface/goals/USA_JUSTICE.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_TUR_Shake"
+		texturefile = "gfx/interface/goals/TUR_Shake.dds"			
+	}
+
+
+	SpriteType = {
 		name = "GFX_focus_usa_build_the_pentagon"
 		texturefile = "gfx/interface/goals/focus_usa_build_the_pentagon.dds"			
 	}
@@ -78,6 +96,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_USA_Common_Sensers"
 		texturefile = "gfx/interface/goals/USA_Common_Sensers.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_GOP"
+		texturefile = "gfx/interface/goals/USA_GOP.dds"			
 	}
 	SpriteType = {
 		name = "GFX_focus_USA_Nixon"

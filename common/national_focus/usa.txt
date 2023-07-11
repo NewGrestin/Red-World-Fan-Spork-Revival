@@ -8,10 +8,10 @@ focus_tree = {
 		}
 	}
 	
-	shared_focus = USA_the_default_crisis
+	#shared_focus = USA_the_default_crisis
 	shared_focus = USA_true_republican_economy
-	shared_focus = USA_A_Day_That_Will_Live_In_Infamy
-	#shared_focus = USA_rumsfeld_beaten
+	#shared_focus = USA_A_Day_That_Will_Live_In_Infamy
+	shared_focus = USA_rumsfeld_beaten
 	shared_focus = USA_Resolve_the_Texan_Question
 	shared_focus = USA_Militarize_the_Northern_Border
 	shared_focus = USA_Rival_Government
@@ -19,36 +19,33 @@ focus_tree = {
 	#shared_focus = USA_The_Business_Plot
 	shared_focus = USA_Republic_Air_Force
 	shared_focus = USA_Form_the_Union
-	#shared_focus = USA_Puerto_Rico_Plan_2
+	shared_focus = USA_Puerto_Rico_Plan_2
+	shared_focus = USA_Reforming_Ministry_of_FA
+	shared_focus = USA_Republic_Armed_Forces
 
 	continuous_focus_position = { x = 50 y = 1100 }
 	default = no
 }
 
-
 	######################################
-	#	PUERTO RICO	 	     #
+	#	GLOBAL POLICY	 	     #
 	######################################
 
 	shared_focus = {
-		id = USA_Puerto_Rico_Plan_2
-		icon = GFX_goal_generic_coastal_navy
-		cost = 2
+		id = USA_Reforming_Ministry_of_FA
+		icon = fortify_city
+		cost = 3
 		ai_will_do = {
 			base = 100
 		}
-		x = 5
-		y = 0
+		x = 54
+		y = 4
 
 		available = {
-		has_war_with = NEA 
-		surrender_progress > 0.5
-		NOT = { controls_state = 365 }
-		owns_state = 686		
 		}
-
+	
 		allow_branch = { 
-		#has_completed_focus = USA_Puerto_Rico_Plan
+		always = yes
 		}
 
 		bypass = { 
@@ -60,494 +57,280 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		effect_tooltip = {
-		add_war_support = -0.05
-		add_stability = -0.05
-		white_peace = NEA
-		every_state = { 
-			limit = { NOT = { is_core_of = PUE } is_owned_by = USA }
-			transfer_state_to = NEA
+		
 		}
-		set_capital = { state = 686 }
-		}
-		}
-
 	}
 
 	shared_focus = {
-		id = USA_Fortify_San_Juan
-		icon = GFX_focus_generic_coastal_fort
-		cost = 2
-		ai_will_do = {
-			base = 100
-		}
-		x = 5
-		y = 1
-
-		available = {
-	
-		}
-
-		prerequisite = { 
-		focus = USA_Puerto_Rico_Plan_2
-		}
-
-		bypass = { 
-
-		}
-
-		select_effect = {
-
-		}
-
-		completion_reward = {
-
-		}
-
-	}
-
-	shared_focus = {
-		id = USA_Size_Up_the_Dockyards
-		icon = GFX_focus_generic_refit_civilian_ships
-		cost = 2
-		ai_will_do = {
-			base = 100
-		}
-		x = 7
-		y = 1
-
-		available = {
-	
-		}
-
-		prerequisite = { 
-		focus = USA_Puerto_Rico_Plan_2
-		}
-
-		select_effect = {
-
-		}
-
-		completion_reward = {
-
-		}
-
-	}
-
-	shared_focus = {
-		id = USA_Use_Civilian_Vessels
-		icon = GFX_goal_generic_transports
-		cost = 2
-		ai_will_do = {
-			base = 100
-		}
-		x = 7
-		y = 3
-
-		available = {
-	
-		}
-
-		prerequisite = { 
-		focus = USA_Size_Up_the_Dockyards
-		}
-
-		prerequisite = { 
-		focus = USA_Military_Steps_In
-		focus = USA_Integrate_the_Old_Parties
-		}
-
-		select_effect = {
-
-		}
-
-		completion_reward = {
-
-		}
-
-	}
-
-	shared_focus = {
-		id = USA_Adress_Food_Security
-		icon = GFX_goal_bananas
-		cost = 2
-		ai_will_do = {
-			base = 100
-		}
-		x = 3
-		y = 1
-
-		available = {
-	
-		}
-
-		prerequisite = { 
-		focus = USA_Puerto_Rico_Plan_2
-		}
-
-		bypass = { 
-
-		}
-
-		select_effect = {
-
-		}
-
-		completion_reward = {
-
-		}
-
-	}
-
-	shared_focus = {
-		id = USA_Cash_Crop_Cash
-		icon = GFX_focus_generic_coffee
-		cost = 2
-		ai_will_do = {
-			base = 100
-		}
-		x = 3
-		y = 3
-
-		available = {
-	
-		}
-
-		prerequisite = { 
-		focus = USA_Adress_Food_Security
-		}
-
-		prerequisite = { 
-		focus = USA_Military_Steps_In
-		focus = USA_Integrate_the_Old_Parties
-		}
-
-		select_effect = {
-
-		}
-
-		completion_reward = {
-
-		}
-
-	}
-
-	shared_focus = {
-		id = USA_Integrate_the_Old_Parties
-		icon = GFX_goal_generic_parliament2
-		cost = 2
-		ai_will_do = {
-			base = 100
-		}
-		x = 6
-		y = 2
-
-		available = {
-	
-		}
-
-		prerequisite = { 
-		focus = USA_Puerto_Rico_Plan_2
-		}
-
-		mutually_exclusive = { 
-		focus = USA_Military_Steps_In
-		}
-
-		select_effect = {
-
-		}
-
-		completion_reward = {
-
-		}
-
-	}
-
-	shared_focus = {
-		id = USA_Military_Steps_In
-		icon = GFX_focus_generic_military_dictatorship
-		cost = 2
-		ai_will_do = {
-			base = 100
-		}
-		x = 4
-		y = 2
-
-		available = {
-	
-		}
-
-		prerequisite = { 
-		focus = USA_Puerto_Rico_Plan_2
-		}
-
-		mutually_exclusive = { 
-		focus = USA_Integrate_the_Old_Parties
-		}
-
-		select_effect = {
-
-		}
-
-		completion_reward = {
-
-		}
-
-	}
-
-	shared_focus = {
-		id = USA_The_National_Reunification
-		icon = GFX_focus_spa_the_war_of_vengeance
-		cost = 2
-		ai_will_do = {
-			base = 100
-		}
-		x = 3
-		y = 4
-
-		available = {
-	
-		}
-
-		prerequisite = { 
-		focus = USA_Cash_Crop_Cash
-		}
-
-		prerequisite = { 
-		focus = USA_Promote_Local_Officers
-		}
-
-		prerequisite = { 
-		focus = USA_Use_Civilian_Vessels
-		}
-
-		mutually_exclusive = { 
-		focus = USA_Declare_Puerto_Rican_Independence
-		}
-
-		select_effect = {
-
-		}
-
-		completion_reward = {
-
-		}
-
-	}
-
-	shared_focus = {
-		id = USA_Declare_Puerto_Rican_Independence
-		icon = GFX_goal_CUB_regional_diplomacy
-		cost = 2
-		ai_will_do = {
-			base = 100
-		}
-		x = 7
-		y = 4
-
-		available = {
-	
-		}
-
-		prerequisite = { 
-		focus = USA_Cash_Crop_Cash
-		}
-
-		prerequisite = { 
-		focus = USA_Promote_Local_Officers
-		}
-
-		prerequisite = { 
-		focus = USA_Use_Civilian_Vessels
-		}
-
-		mutually_exclusive = { 
-		focus = USA_The_National_Reunification
-		}
-
-		select_effect = {
-
-		}
-
-		completion_reward = {
-
-		}
-
-	}
-
-	shared_focus = {
-		id = USA_Promote_Local_Officers
-		icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er
-		cost = 2
-		ai_will_do = {
-			base = 100
-		}
-		x = 5
-		y = 3
-
-		available = {
-	
-		}
-
-		prerequisite = { 
-		focus = USA_Military_Steps_In
-		focus = USA_Integrate_the_Old_Parties
-		}
-
-		prerequisite = { 
-		focus = USA_Fortify_San_Juan
-		}
-
-		select_effect = {
-
-		}
-
-		completion_reward = {
-
-		}
-
-	}
-
-	######################################
-	#	AIR FORCE	 	     #
-	######################################
-
-	shared_focus = {
-		id = USA_Republic_Air_Force
-		icon = GFX_focus_USA_Airforce_1
+		id = USA_Legacy_of_NATO
+		icon = democratic_league
 		cost = 3
 		ai_will_do = {
 			base = 100
 		}
-		x = 37
-		y = 0
-
-		available = {
-		NOT = { has_idea = RWE_USA_Default }
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = USA_Solve_ARAF_Rigidity
-		icon = GFX_focus_USA_Airforce_1
-		cost = 3
-		ai_will_do = {
-			base = 100
-		}
-		x = 35
-		y = 1
+		x = 50
+		y = 5
 
 		prerequisite = {
-		focus = USA_Republic_Air_Force
-		}
-
-		available = {
-		NOT = { has_idea = RWE_USA_Default }
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = USA_Adopt_the_SSPARS
-		icon = GFX_goal_generic_radar_instillation
-		cost = 3
-		ai_will_do = {
-			base = 100
-		}
-		x = 36
-		y = 2
-
-		prerequisite = {
-		focus = USA_Republic_Air_Force
-		}
-
-		available = {
-		NOT = { has_idea = RWE_USA_Default }
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = USA_Expand_Airbases
-		icon = GFX_goal_generic_airbase
-		cost = 3
-		ai_will_do = {
-			base = 100
-		}
-		x = 35
-		y = 3
-
-		prerequisite = {
-		focus = USA_Adopt_the_SSPARS
-		}
-
-		available = {
-		NOT = { has_idea = RWE_USA_Default }
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = USA_Spirit_of_Boyd_and_Christie
-		icon = GFX_focus_USA_Fighter_Mafia
-		cost = 3
-		ai_will_do = {
-			base = 100
-		}
-		x = 41
-		y = 1
-
-		prerequisite = {
-		focus = USA_Republic_Air_Force
+		focus = USA_Reforming_Ministry_of_FA
 		}
 
 		mutually_exclusive = {
-		focus = USA_Spirit_of_LeMay
+		focus = USA_New_World_Order
+		focus = USA_Hemispheric_Defense
 		}
 
 		available = {
-		NOT = { has_idea = RWE_USA_Default }
+
+		}
+	
+		allow_branch = { 
+		always = yes
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
 		}
 
 		completion_reward = {
-
+		
 		}
 	}
 
 	shared_focus = {
-		id = USA_Spirit_of_LeMay
-		icon = GFX_focus_USA_Airforce_1
+		id = USA_New_World_Order
+		icon = GFX_focus_ger_strike_at_the_source
 		cost = 3
 		ai_will_do = {
 			base = 100
 		}
-		x = 38
-		y = 1
+		x = 53
+		y = 5
 
 		prerequisite = {
-		focus = USA_Republic_Air_Force
+		focus = USA_Reforming_Ministry_of_FA
 		}
 
 		mutually_exclusive = {
-		focus = USA_Spirit_of_Boyd_and_Christie
+		focus = USA_Legacy_of_NATO
+		focus = USA_Hemispheric_Defense
 		}
 
 		available = {
-		NOT = { has_idea = RWE_USA_Default }
+		NOT = { is_in_faction_with = CAN }
+		}
+	
+		allow_branch = { 
+		always = yes
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		
+		}
+	}
+
+	shared_focus = {
+		id = USA_Hemispheric_Defense
+		icon = GFX_focus_generic_league_of_nations
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 56
+		y = 5
+
+		prerequisite = {
+		focus = USA_Reforming_Ministry_of_FA
+		}
+
+		mutually_exclusive = {
+		focus = USA_Legacy_of_NATO
+		focus = USA_New_World_Order 
+		}
+
+		available = {
+		NOT = { is_in_faction_with = CAN }
+		}
+	
+		allow_branch = { 
+		always = yes
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		
+		}
+	}
+
+	shared_focus = {
+		id = USA_Forment_a_Blue_Tide
+		icon = GFX_focus_generic_league_of_nations
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 56
+		y = 7
+
+		prerequisite = {
+		focus = USA_Hemispheric_Defense
+		}
+
+		mutually_exclusive = {
+		focus = USA_Operation_Condor_2
+		}
+
+		available = {
+
+		}
+	
+		allow_branch = { 
+		always = yes
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		
+		}
+	}
+
+	shared_focus = {
+		id = USA_Reform_the_RIO_Pact
+		icon = GFX_focus_generic_league_of_nations
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 57
+		y = 6
+
+		prerequisite = {
+		focus = USA_Hemispheric_Defense
+		focus = USA_New_World_Order 
+		}
+
+		available = {
+		is_in_faction = no
+		}
+	
+		allow_branch = { 
+		always = yes
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		
+		}
+	}
+
+	shared_focus = {
+		id = USA_The_Unthinkable_made_Thinkable
+		icon = GFX_focus_attack_soviet
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 53
+		y = 8
+
+		prerequisite = {
+		focus = USA_New_World_Order 
+		}
+
+		available = {
+		has_army_manpower = {
+		size > 1000000
+		}
+		SOV = {
+		exists = yes
+		NOT = { has_war_with = USA }
+		any_neighbor_country = { 
+		OR = {
+		is_in_faction_with = USA
+		is_subject_of = USA
+		tag = USA
+		}
+		}
+		}
+		}
+
+		bypass = { 
+		OR = { 
+		has_war_with = SOV
+		SOV = { is_subject_of = USA }
+		SOV = { exists = no }
+		}
+		}
+
+		will_lead_to_war_with = SOV
+
+		completion_reward = {
+		create_wargoal = {
+    		type = topple_government
+    		target = SOV
+		}
+		}
+	}
+
+	shared_focus = {
+		id = USA_Southern_Soft_Underbelly
+		icon = GFX_focus_generic_black_sea_focus
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 52
+		y = 10
+
+		prerequisite = {
+		focus = USA_The_Unthinkable_made_Thinkable
+		}
+
+		prerequisite = {
+		focus = USA_Arm_the_Iraqis
+		focus = USA_Respond_to_Persia
+		focus = USA_Reapproach_Turkey
+		}
+
+		available = {
+
+		}
+
+		bypass = { 
+
 		}
 
 		completion_reward = {
@@ -556,26 +339,420 @@ focus_tree = {
 	}
 
 	shared_focus = {
-		id = USA_Missile_Defense_Agency
-		icon = GFX_focus_rocketry
+		id = USA_Move_against_the_UAR
+		icon = GFX_focus_SOV_military_purge
 		cost = 3
 		ai_will_do = {
 			base = 100
 		}
-		x = 37
-		y = 3
+		x = 49
+		y = 10
 
 		prerequisite = {
-		focus = USA_Spirit_of_LeMay
-		focus = USA_Adopt_the_SSPARS
+		focus = USA_Respond_to_Persia
+		focus = USA_Reapproach_Turkey
 		}
 
-		available = {
-		NOT = { has_idea = RWE_USA_Default }
+		available = { 
+		NOT = { 
+		446 = { is_owned_by = USA } 
+		}
+		}
+
+		bypass = { 
+
 		}
 
 		completion_reward = {
 
+		every_other_country = { 
+		limit = { OR = { owns_state = 446 owns_state = 813 } }
+		ROOT = {
+		create_wargoal = {
+    		type = topple_government
+    		target = PREV
+		}
+		}
+		}
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Operation_Condor_2
+		icon = GFX_focus_generic_league_of_nations
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 54
+		y = 7
+
+		prerequisite = {
+		focus = USA_Hemispheric_Defense
+		focus = USA_New_World_Order 
+		}
+
+		mutually_exclusive = {
+		focus = USA_Forment_a_Blue_Tide
+		}
+
+		available = {
+		is_in_faction = no
+		}
+	
+		allow_branch = { 
+		always = yes
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		
+		}
+	}
+
+	shared_focus = {
+		id = USA_World_Police_Returns
+		icon = democratic_league
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 46
+		y = 7
+
+		prerequisite = {
+		focus = USA_Legacy_of_NATO
+		}
+
+		prerequisite = {
+		focus = USA_Rival_Government
+		}
+
+		available = {
+
+		}
+	
+		allow_branch = { 
+		always = yes
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		
+		}
+	}
+
+	shared_focus = {
+		id = USA_Integrate_the_Gulf_Pact
+		icon = GFX_focus_USA_NATO_in_Mid_East
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 47
+		y = 6
+
+		prerequisite = {
+		focus = USA_Legacy_of_NATO
+		}
+
+		mutually_exclusive = {
+		focus = USA_Liberation_of_Arabia
+		}
+
+		available = {
+		is_faction_leader = yes
+		SAU = { 
+		exists = yes
+		is_faction_leader = yes
+		NOT = {
+		OR = { 
+		has_government = communist
+		has_government = revolutionary_socialist
+		has_government = fascist
+		has_government = national_bolshevik
+		}
+		}
+		}
+		}
+	
+		allow_branch = { 
+		always = yes
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		
+		}
+	}
+
+	shared_focus = {
+		id = USA_Liberation_of_Arabia
+		icon = GFX_focus_ETH_an_arabic_base
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 49
+		y = 6
+
+		prerequisite = {
+		focus = USA_Legacy_of_NATO
+		focus = USA_New_World_Order
+		}
+
+		mutually_exclusive = {
+		focus = USA_Integrate_the_Gulf_Pact
+		}
+
+		available = {
+		SAU = {
+		exists = yes
+		NOT = { has_war_with = USA is_in_faction_with = USA is_subject_of = USA }
+		}
+		}
+	
+		will_lead_to_war_with = SAU
+
+		completion_reward = {
+		
+		}
+	}
+
+	shared_focus = {
+		id = USA_Operation_Desert_Storm
+		icon = GFX_focus_ETH_an_arabic_base
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 52
+		y = 6
+
+		prerequisite = {
+		focus = USA_Legacy_of_NATO
+		focus = USA_New_World_Order
+		}
+
+		available = {
+		IRQ = {
+		exists = yes
+		NOT = { has_war_with = USA is_in_faction_with = USA is_subject_of = USA }
+		}
+		}
+	
+		bypass = { 
+		IRQ = { is_subject_of = USA }
+		}
+
+		will_lead_to_war_with = IRQ
+
+		completion_reward = {
+		
+		}
+	}
+
+	shared_focus = {
+		id = USA_Arm_the_Iraqis
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 52
+		y = 7
+
+		prerequisite = {
+		focus = USA_Operation_Desert_Storm
+		}
+
+		available = {
+		IRQ = { is_subject_of = USA }
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		
+		}
+	}
+
+	shared_focus = {
+		id = USA_Reformation_of_the_Treaty
+		icon = GFX_goal_new_treaty
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 50
+		y = 7
+
+		prerequisite = {
+		focus = USA_Legacy_of_NATO
+		}
+
+		available = {
+
+		}
+	
+		cancelable = no
+
+		select_effect = {
+		country_event = { id = us_republic.1000 days = 0 }
+		}
+
+		bypass = { 
+
+		}
+
+		completion_reward = {
+		create_faction = "CATO"
+
+		every_country = { 		
+		limit = { OR = { tag = CAN is_in_faction_with = CAN } }
+		USA = { add_to_faction = PREV }
+		}
+		every_country = { 
+		limit = { has_country_flag = UPCOMING_NATO_MEMBER NOT = { is_subject = yes is_in_faction = yes } }
+		USA = { add_to_faction = PREV }
+		}
+		}
+	}
+
+	shared_focus = {
+		id = USA_Respond_to_Persia
+		icon = GFX_focus_generic_attack_iran
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 51
+		y = 9
+
+		prerequisite = {
+		focus = USA_Operation_Desert_Storm
+		}
+
+		prerequisite = {
+		focus = USA_Reformation_of_the_Treaty
+		}
+
+		available = {
+
+		}
+	
+		allow_branch = { 
+		always = yes
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		
+		}
+	}
+
+	shared_focus = {
+		id = USA_Reapproach_Turkey
+		icon = GFX_focus_generic_befriend_turkey
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 49
+		y = 9
+
+		prerequisite = {
+		focus = USA_Integrate_the_Gulf_Pact
+		}
+
+		prerequisite = {
+		focus = USA_Reformation_of_the_Treaty
+		}
+
+		available = {
+
+		}
+	
+		allow_branch = { 
+		always = yes
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		
+		}
+	}
+
+	shared_focus = {
+		id = USA_NATO_Research_Collective
+		icon = GFX_focus_research2
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 50
+		y = 8
+
+		prerequisite = {
+		focus = USA_Reformation_of_the_Treaty
+		}
+
+		available = {
+
+		}
+	
+		allow_branch = { 
+		always = yes
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		
 		}
 	}
 
@@ -593,8 +770,6 @@ focus_tree = {
 		x = 36
 		y = 6
 
-		cancelable = no
-
 		available = {
 		NOT = { has_idea = RWE_USA_Default }
 		has_war = no 
@@ -605,6 +780,8 @@ focus_tree = {
 		bypass = { 
 		TEX = { OR = { exists = no is_subject = yes } }
 		}
+
+		cancelable = no
 
 		select_effect = {
 		country_event = { id = us_republic.101 days = 0 }
@@ -820,6 +997,7 @@ focus_tree = {
 		set_capital = { state = 686 }
 		hidden_effect = { 
 		news_event = { id = us_republic_news.6 days = 1 }
+		country_event = { id = us_republic.1101 days = 10 }
 		mark_focus_tree_layout_dirty = yes
 		complete_national_focus = USA_Puerto_Rico_Plan_2
 		}
@@ -868,12 +1046,6 @@ focus_tree = {
 			}
 		set_rule = { 
 		can_force_government = yes
-		}
-		activate_decision = USA_Pressure_Denver 
-
-		if = { 
-		limit = { NOT = { has_completed_focus = USA_Antagonize_Saint_Louis } }
-		activate_decision = USA_Pressure_Saint_Louis 
 		}
 		}
 	}
@@ -1100,7 +1272,10 @@ focus_tree = {
 		y = 10
 
 		available = {
-
+		NOT = { has_idea = RWE_USA_Default }
+		is_owner_neighbor_of = MWA 
+		MWA = { has_idea = RWE_USA_Unificationist_Rebels }	
+		MWA = { exists = yes NOT = { has_war_with = USA } }
 		}
 	
 		prerequisite = {
@@ -1251,7 +1426,10 @@ focus_tree = {
 		y = 11
 
 		available = {
-
+		owns_state = 382
+		owns_state = 390
+		owns_state = 383
+		MWA = { exists = no }
 		}
 	
 		prerequisite = {
@@ -1703,37 +1881,6 @@ focus_tree = {
 		}
 		x = 46
 		y = 9
-
-		available = {
-
-		}
-	
-		prerequisite = {
-		focus = USA_Confederation_of_International_States
-		}
-
-		bypass = { 
-
-		}
-
-		select_effect = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = USA_Allow_Observer_States
-		icon = GFX_focus_generic_secret_service_agency
-		cost = 10
-		ai_will_do = {
-			base = 100
-		}
-		x = 47
-		y = 10
 
 		available = {
 
@@ -2260,6 +2407,11 @@ focus_tree = {
 		every_state = { 
 			limit = { OR = { state = 894 state = 376 } }
 			add_claim_by = USA
+		}
+
+		if = { 
+		limit = { TEX = { is_subject_of = USA } }
+		TEX = { add_ideas = { RWE_TEX_Remember_the_Alamo } }
 		}
 		}
 
@@ -3525,7 +3677,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_When_the_President_does_It
 		icon = GFX_focus_USA_Nixon
-		cost = 3
+		cost = 2
 		ai_will_do = {
 			base = 100
 		}
@@ -3541,7 +3693,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+		unlock_decision_tooltip = USA_Rig_the_Election 
 		}
 
 	}
@@ -3733,6 +3885,30 @@ focus_tree = {
 	}
 
 	shared_focus = {
+		id = USA_When_the_President_does_It_2
+		icon = GFX_focus_USA_Nixon
+		cost = 2
+		ai_will_do = {
+			base = 100
+		}
+		x = 27
+		y = 8
+
+		available = {
+
+		}
+
+		prerequisite = { 
+		focus = USA_rumsfeld_beaten
+		}
+
+		completion_reward = {
+		unlock_decision_tooltip = USA_Rig_the_Election 
+		}
+
+	}
+
+	shared_focus = {
 		id = USA_2010_election
 		icon = focus_2010_election
 		cost = 3
@@ -3775,7 +3951,7 @@ focus_tree = {
 		}
 
 		allow_branch = { 
-		has_government = fascist
+		#has_government = fascist
 		}
 
 		prerequisite = { 
@@ -5259,7 +5435,7 @@ focus_tree = {
 
 	shared_focus = {
 		id = USA_Republicans_Prevail
-		icon = GFX_focus_ETH_the_heir_of_solomon
+		icon = GFX_focus_USA_GOP
 		cost = 1
 		ai_will_do = {
 			base = 100
@@ -6163,7 +6339,7 @@ focus_tree = {
 
 	shared_focus = {
 		id = USA_JUSTICE_Prevail
-		icon = GFX_focus_ETH_the_heir_of_solomon
+		icon = GFX_focus_USA_JUSTICE
 		cost = 3
 		ai_will_do = {
 			base = 100
@@ -6208,7 +6384,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		add_popularity = { ideology = nationalist popularity = -0.05 }
+		add_popularity = { ideology = nationalist popularity = -0.1 }
+		add_popularity = { ideology = national_conservative popularity = -0.05 }
 		add_popularity = { ideology = centrist popularity = 0.02 }
 		add_popularity = { ideology = new_democrat popularity = 0.02 }
 		add_stability = -0.2
@@ -6223,33 +6400,13 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 		}
-		x = 2
+		x = 4
 		y = 1
 		available = {
 		has_idea = RWE_USA_Default
 		}
 		prerequisite = { 
 		focus = USA_the_default_crisis
-		}
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = USA_branching_focus
-		icon = GFX_goal_unknown
-		cost = 3
-		ai_will_do = {
-			base = 100
-		}
-		x = 2
-		y = 2
-		available = {
-		always = no
-		}
-		prerequisite = { 
-		focus = USA_devalue_the_dollar
 		}
 		completion_reward = {
 
@@ -6264,7 +6421,7 @@ focus_tree = {
 			base = 100
 		}
 		x = 5
-		y = 1
+		y = 2
 		available = {
 		has_idea = RWE_USA_Default
 		}
@@ -6274,13 +6431,11 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-		focus = USA_the_default_crisis
+		focus = USA_devalue_the_dollar
 		}
 
 		completion_reward = {
-		set_temp_variable = { USA_temp_Oligarchic_Influence = 0.05 }
-		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
-		custom_effect_tooltip = USA_tt_oligarch_influence_change
+
 		}
 	}
 
@@ -6291,8 +6446,8 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 		}
-		x = 7
-		y = 1
+		x = 3
+		y = 2
 		available = {
 		has_idea = RWE_USA_Default
 		}
@@ -6302,13 +6457,11 @@ focus_tree = {
 		}
 
 		prerequisite = { 
-		focus = USA_the_default_crisis
+		focus = USA_devalue_the_dollar
 		}
 
 		completion_reward = {
-		set_temp_variable = { USA_temp_Oligarchic_Influence = -0.05 }
-		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
-		custom_effect_tooltip = USA_tt_oligarch_influence_change
+
 		}
 	}
 
@@ -6319,8 +6472,8 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 		}
-		x = 6
-		y = 2
+		x = 4
+		y = 3
 		available = {
 		NOT = { has_idea = RWE_USA_hostile_congress }
 		has_idea = RWE_USA_Default
@@ -6346,8 +6499,8 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 		}
-		x = 4
-		y = 2
+		x = 2
+		y = 3
 		available = {
 		NOT = { has_idea = RWE_USA_hostile_congress }
 		has_idea = RWE_USA_Default
@@ -6362,6 +6515,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+		add_popularity = { ideology = nationalist popularity = -0.05 }
 
 		}
 	}
@@ -6373,8 +6527,8 @@ focus_tree = {
 		ai_will_do = {
 			base = 100
 		}
-		x = 8
-		y = 2
+		x = 6
+		y = 3
 		available = {
 		NOT = { has_idea = RWE_USA_hostile_congress }
 		has_idea = RWE_USA_Default
@@ -6389,6 +6543,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+		add_popularity = { ideology = national_conservative popularity = -0.05 }
 		add_timed_idea = { idea = RWE_USA_increased_taxation days = 365 }
 		}
 	}
@@ -6817,7 +6972,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_preserve_the_manufacturing_base
 		icon = GFX_goal_workers_for_business
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -6845,7 +7000,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_lure_in_foreign_car_companies
 		icon = GFX_goal_bmw_car
-		cost = 3
+		cost = 7
 		ai_will_do = {
 			base = 100
 		}
@@ -6861,7 +7016,19 @@ focus_tree = {
 
 
 		completion_reward = {
-		USA_poverty_level_down = yes
+	random_owned_state = {
+		limit = { is_core_of = USA }
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+    	type = industrial_complex
+    	level = 1
+    	instant_build = yes
+	}
+	}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = mitsubishi_USA 
+
+			show_ideas_tooltip = Honda_USA 
 		}
 
 	}
@@ -6869,7 +7036,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_fight_against_off_shoring
 		icon = GFX_goal_generic_takeover_industries
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -6884,11 +7051,17 @@ focus_tree = {
 		}
 
 
-		completion_reward = {		
+		completion_reward = {	
+		add_tech_bonus = {
+    		bonus = 0.5
+    		uses = 1
+    		category = industry
+		}
+	
 		USA_poverty_level_down = yes
-		set_temp_variable = { USA_temp_Oligarchic_Influence = -0.1 }
-		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
-		custom_effect_tooltip = USA_tt_oligarch_influence_change
+		#set_temp_variable = { USA_temp_Oligarchic_Influence = -0.1 }
+		#add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		#custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 
 	}
@@ -6896,7 +7069,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_protect_heavy_industry
 		icon = GFX_goal_factory_complex 
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -6916,6 +7089,7 @@ focus_tree = {
 
 		completion_reward = {
 	random_owned_state = {
+		limit = { is_core_of = USA }
 	add_extra_state_shared_building_slots = 2
 	add_building_construction = {
     	type = industrial_complex
@@ -6924,6 +7098,7 @@ focus_tree = {
 	}
 	}
 	random_owned_state = {
+		limit = { is_core_of = USA }
 	add_extra_state_shared_building_slots = 1
 	add_building_construction = {
     	type = arms_factory
@@ -6938,7 +7113,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_Alabama_Steel
 		icon = steel
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -6974,13 +7149,17 @@ focus_tree = {
 	shared_focus = {
 		id = USA_Mississippi_Delta_Plans
 		icon = GFX_goal_construction
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
 		x = 21
 		y = 5
 		available = {
+		owns_state = 371
+		owns_state = 370
+		owns_state = 372 
+		owns_state = 367 
 		NOT = { has_idea = RWE_USA_Default }
 		}
 
@@ -6989,6 +7168,38 @@ focus_tree = {
 		}
 
 		completion_reward = {
+	371 = {
+	add_extra_state_shared_building_slots = 2
+	add_building_construction = {
+    	type = industrial_complex
+    	level = 1
+    	instant_build = yes
+	}
+	}
+	372 = {
+	add_extra_state_shared_building_slots = 2
+	add_building_construction = {
+    	type = industrial_complex
+    	level = 1
+    	instant_build = yes
+	}
+	}
+	370 = {
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+    	type = arms_factory
+    	level = 1
+    	instant_build = yes
+	}
+	}
+	367 = {
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+    	type = arms_factory
+    	level = 1
+    	instant_build = yes
+	}
+	}
 		USA_poverty_level_down = yes
 		}
 
@@ -6997,7 +7208,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_support_chemicals
 		icon = GFX_goal_chemical_industry
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -7012,9 +7223,22 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		set_temp_variable = { USA_temp_Oligarchic_Influence = 0.05 }
-		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
-		custom_effect_tooltip = USA_tt_oligarch_influence_change
+
+		add_tech_bonus = {
+    		bonus = 0.5
+    		uses = 2
+    		category = synth_resources
+		}
+		random_owned_state = {
+		limit = { is_core_of = USA }
+		add_resource = {
+    		type = rubber
+    		amount = 12
+		}
+		}
+		#set_temp_variable = { USA_temp_Oligarchic_Influence = 0.05 }
+		#add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		#custom_effect_tooltip = USA_tt_oligarch_influence_change
 		}
 
 	}
@@ -7022,7 +7246,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_maintain_coal_communities
 		icon = GFX_goal_coal_mining
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -7030,6 +7254,7 @@ focus_tree = {
 		y = 3
 		available = {
 		NOT = { has_idea = RWE_USA_Default }
+		owns_state = 369
 		}
 
 		prerequisite = { 
@@ -7038,7 +7263,15 @@ focus_tree = {
 
 
 		completion_reward = {
-
+	add_stability = 0.03
+	369 = {
+	add_extra_state_shared_building_slots = 3
+	add_building_construction = {
+    	type = industrial_complex
+    	level = 1
+    	instant_build = yes
+	}
+	}
 		}
 
 	}
@@ -7046,7 +7279,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_promote_Duke_university
 		icon = GFX_goal_university
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -7075,7 +7308,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_support_community_colleges
 		icon = GFX_goal_Generic_Brain_Force_Plus
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -7104,7 +7337,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_move_towards_service
 		icon = GFX_goal_conspiracy
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -7132,7 +7365,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_research_triangle_park
 		icon = tech_sharing
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -7157,7 +7390,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_promote_cinema_in_georgia
 		icon = GFX_goal_generic_cinema
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -7184,7 +7417,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_Finance_Public_Schooling
 		icon = GFX_Focus_Improve_Literacy
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -7207,7 +7440,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_Revitalize_the_Healthcare_Sector
 		icon = GFX_goal_MD_hospital
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -7231,7 +7464,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_Vaccination_Campaign
 		icon = GFX_goal_ENG_Highland_Research_Towns
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -7250,7 +7483,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		USA_poverty_level_down = yes
+
 		}
 
 	}
@@ -7258,7 +7491,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_Pharmaceutical_Renaissance
 		icon = GFX_goal_Generic_Research
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -7281,7 +7514,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_Construct_Suburbia
 		icon = GFX_goal_generic_build_housing
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -7296,6 +7529,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
+	random_owned_state = {
+		limit = { is_core_of = USA }
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+    	type = industrial_complex
+    	level = 1
+    	instant_build = yes
+	}
+	}
 		USA_poverty_level_down = yes
 		}
 
@@ -7304,7 +7546,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_Dixie_Own_Ivy_League
 		icon = GFX_goal_PAN_Create_the_Universidad_de_Panama
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			base = 100
 		}
@@ -7323,9 +7565,60 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		set_temp_variable = { USA_temp_Oligarchic_Influence = 0.05 }
-		add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
-		custom_effect_tooltip = USA_tt_oligarch_influence_change
+		#set_temp_variable = { USA_temp_Oligarchic_Influence = 0.05 }
+		#add_to_variable = { USA_Oligarchic_Influence = USA_temp_Oligarchic_Influence }
+		#custom_effect_tooltip = USA_tt_oligarch_influence_change
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Urbanization
+		icon = GFX_goal_construction_engineering
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+		x = 27
+		y = 5
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		prerequisite = { 
+		focus = USA_Dixie_Own_Ivy_League
+		focus = USA_Dulles_Technology_Corridor
+		}
+
+		completion_reward = {
+	random_owned_state = {
+		limit = { is_core_of = USA }
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+    	type = industrial_complex
+    	level = 1
+    	instant_build = yes
+	}
+	}
+	random_owned_state = {
+		limit = { is_core_of = USA }
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+    	type = industrial_complex
+    	level = 1
+    	instant_build = yes
+	}
+	}
+	random_owned_state = {
+		limit = { is_core_of = USA }
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+    	type = industrial_complex
+    	level = 1
+    	instant_build = yes
+	}
+	}
+		USA_poverty_level_down = yes
 		}
 
 	}
@@ -7333,7 +7626,7 @@ focus_tree = {
 	shared_focus = {
 		id = USA_Dulles_Technology_Corridor
 		icon = GFX_goal_generic_research3
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -7348,7 +7641,749 @@ focus_tree = {
 		}
 
 		completion_reward = {
+		add_tech_bonus = {
+    		bonus = 0.5
+    		uses = 2
+    		category = electronics
+		}
+		}
+
+	}
+
+	######################################
+	#	PUERTO RICO	 	     #
+	######################################
+
+	shared_focus = {
+		id = USA_Puerto_Rico_Plan_2
+		icon = GFX_goal_generic_coastal_navy
+		cost = 2
+		ai_will_do = {
+			base = 100
+		}
+		x = 5
+		y = 0
+
+		available = {
+		has_war_with = NEA 
+		surrender_progress > 0.5
+		NOT = { controls_state = 365 }
+		owns_state = 686		
+		}
+
+		allow_branch = { 
+		#has_completed_focus = USA_Puerto_Rico_Plan
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		effect_tooltip = {
+		add_war_support = -0.05
+		add_stability = -0.05
+		white_peace = NEA
+		every_state = { 
+			limit = { NOT = { is_core_of = PUE } is_owned_by = USA }
+			transfer_state_to = NEA
+		}
+		set_capital = { state = 686 }
+		}
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Fortify_San_Juan
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5
+		ai_will_do = {
+			base = 100
+		}
+		x = 5
+		y = 1
+
+		available = {
+		owns_state = 686
+		}
+
+		prerequisite = { 
+		focus = USA_Puerto_Rico_Plan_2
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		army_experience = 5
+		686 = {
+		add_building_construction = {
+    		type = coastal_bunker
+		province = 1440
+    		level = 5
+    		instant_build = yes
+		}
+		add_building_construction = {
+    		type = naval_base
+		province = 1440
+    		level = 2
+    		instant_build = yes
+		}
+		}
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Size_Up_the_Dockyards
+		icon = GFX_focus_generic_refit_civilian_ships
+		cost = 5
+		ai_will_do = {
+			base = 100
+		}
+		x = 7
+		y = 1
+
+		available = {
+		owns_state = 686
+		}
+
+		prerequisite = { 
+		focus = USA_Puerto_Rico_Plan_2
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		686 = {
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    		type = dockyard
+    		level = 1
+    		instant_build = yes
+		}
+		}
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Use_Civilian_Vessels
+		icon = GFX_goal_generic_transports
+		cost = 5
+		ai_will_do = {
+			base = 100
+		}
+		x = 7
+		y = 3
+
+		available = {
+	
+		}
+
+		prerequisite = { 
+		focus = USA_Size_Up_the_Dockyards
+		}
+
+		prerequisite = { 
+		focus = USA_Military_Steps_In
+		focus = USA_Integrate_the_Old_Parties
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		add_ideas = { RWE_USA_Improvised_Navy }
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Adress_Food_Security
+		icon = GFX_goal_bananas
+		cost = 5
+		ai_will_do = {
+			base = 100
+		}
+		x = 3
+		y = 1
+
+		available = {
+		owns_state = 686	
+		}
+
+		prerequisite = { 
+		focus = USA_Puerto_Rico_Plan_2
+		}
+
+		bypass = { 
+
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		686 = {
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+    		type = industrial_complex
+    		level = 1
+    		instant_build = yes
+		}
+		}
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Cash_Crop_Cash
+		icon = GFX_focus_generic_coffee
+		cost = 5
+		ai_will_do = {
+			base = 100
+		}
+		x = 3
+		y = 3
+
+		available = {
+		owns_state = 686
+		}
+
+		prerequisite = { 
+		focus = USA_Adress_Food_Security
+		}
+
+		prerequisite = { 
+		focus = USA_Military_Steps_In
+		focus = USA_Integrate_the_Old_Parties
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		686 = { add_extra_state_shared_building_slots = 2 }
+		add_ideas = { RWE_USA_Cash_Crop_Cash }
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Integrate_the_Old_Parties
+		icon = GFX_goal_generic_parliament2
+		cost = 2
+		ai_will_do = {
+			base = 100
+		}
+		x = 6
+		y = 2
+
+		bypass = {
+		has_government = revolutionary_socialist
+		}
+
+		available = {
+		
+		}
+
+		prerequisite = { 
+		focus = USA_Puerto_Rico_Plan_2
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Military_Steps_In
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
 
 		}
 
 	}
+
+	shared_focus = {
+		id = USA_Military_Steps_In
+		icon = GFX_focus_generic_military_dictatorship
+		cost = 2
+		ai_will_do = {
+			base = 100
+		}
+		x = 4
+		y = 2
+
+		bypass = {
+		has_government = revolutionary_socialist
+		}
+
+		available = {
+		has_country_flag = USA_REV_BEAT_BACK_PR
+		}
+
+		prerequisite = { 
+		focus = USA_Puerto_Rico_Plan_2
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Integrate_the_Old_Parties
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		add_stability = 0.1
+		set_politics = { ruling_party = fascist }
+		promote_character = USA_mark_a._milley
+		add_country_leader_trait = generalissimo
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_The_National_Reunification
+		icon = GFX_focus_spa_the_war_of_vengeance
+		cost = 5
+		ai_will_do = {
+			base = 100
+		}
+		x = 3
+		y = 4
+
+		available = {
+		NOT = {
+		has_government = revolutionary_socialist
+		}
+		}
+
+		prerequisite = { 
+		focus = USA_Cash_Crop_Cash
+		}
+
+		prerequisite = { 
+		focus = USA_Promote_Local_Officers
+		}
+
+		prerequisite = { 
+		focus = USA_Use_Civilian_Vessels
+		}
+
+		mutually_exclusive = { 
+		focus = USA_Declare_Puerto_Rican_Independence
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Declare_Puerto_Rican_Independence
+		icon = GFX_goal_CUB_regional_diplomacy
+		cost = 5
+		ai_will_do = {
+			base = 100
+		}
+		x = 7
+		y = 4
+
+		available = {
+	
+		}
+
+		prerequisite = { 
+		focus = USA_Cash_Crop_Cash
+		}
+
+		prerequisite = { 
+		focus = USA_Promote_Local_Officers
+		}
+
+		prerequisite = { 
+		focus = USA_Use_Civilian_Vessels
+		}
+
+		mutually_exclusive = { 
+		focus = USA_The_National_Reunification
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+
+		}
+
+	}
+
+	shared_focus = {
+		id = USA_Promote_Local_Officers
+		icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er
+		cost = 5
+		ai_will_do = {
+			base = 100
+		}
+		x = 5
+		y = 3
+
+		available = {
+	
+		}
+
+		prerequisite = { 
+		focus = USA_Military_Steps_In
+		focus = USA_Integrate_the_Old_Parties
+		}
+
+		prerequisite = { 
+		focus = USA_Fortify_San_Juan
+		}
+
+		select_effect = {
+
+		}
+
+		completion_reward = {
+		recruit_character = USA_ivan_castro 
+		recruit_character = USA_marta_carcana 
+		add_ideas = { RWE_USA_Native_Young_Officers }
+		}
+
+	}
+
+	######################################
+	#	AIR FORCE	 	     #
+	######################################
+
+	shared_focus = {
+		id = USA_Republic_Air_Force
+		icon = GFX_focus_USA_Airforce_1
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 37
+		y = 0
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Solve_ARAF_Rigidity
+		icon = GFX_focus_USA_Airforce_1
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 35
+		y = 1
+
+		prerequisite = {
+		focus = USA_Republic_Air_Force
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Adopt_the_SSPARS
+		icon = GFX_goal_generic_radar_instillation
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 36
+		y = 2
+
+		prerequisite = {
+		focus = USA_Republic_Air_Force
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Expand_Airbases
+		icon = GFX_goal_generic_airbase
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 35
+		y = 3
+
+		prerequisite = {
+		focus = USA_Adopt_the_SSPARS
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Spirit_of_Boyd_and_Christie
+		icon = GFX_focus_USA_Fighter_Mafia
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 41
+		y = 1
+
+		prerequisite = {
+		focus = USA_Republic_Air_Force
+		}
+
+		mutually_exclusive = {
+		focus = USA_Spirit_of_LeMay
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Spirit_of_LeMay
+		icon = GFX_focus_USA_Airforce_1
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 38
+		y = 1
+
+		prerequisite = {
+		focus = USA_Republic_Air_Force
+		}
+
+		mutually_exclusive = {
+		focus = USA_Spirit_of_Boyd_and_Christie
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Reopen_the_ATB_Program
+		icon = GFX_focus_generic_cryptologic_bomb
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 38
+		y = 2
+
+		prerequisite = {
+		focus = USA_Spirit_of_LeMay
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Partnership_with_Northrop
+		icon = GFX_goal_industry_air
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 38
+		y = 4
+
+		prerequisite = {
+		focus = USA_Reopen_the_ATB_Program
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Improve_BMT
+		icon = GFX_focus_generic_copy_plane_designs
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 40
+		y = 2
+
+		prerequisite = {
+		focus = USA_Spirit_of_LeMay
+		focus = USA_Spirit_of_Boyd_and_Christie
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_The_Simplicity_Cycle
+		icon = GFX_focus_generic_aircraft_production
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 42
+		y = 2
+
+		prerequisite = {
+		focus = USA_Spirit_of_Boyd_and_Christie
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Dogfights_are_the_Future
+		icon = GFX_goal_generic_air_fighter2_new
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 42
+		y = 3
+
+		prerequisite = {
+		focus = USA_The_Simplicity_Cycle
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = USA_Missile_Defense_Agency
+		icon = GFX_focus_rocketry
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 37
+		y = 3
+
+		prerequisite = {
+		focus = USA_Spirit_of_LeMay
+		focus = USA_Adopt_the_SSPARS
+		}
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	######################################
+	#	REPUBLIC ARMED FORCES 	     #
+	######################################
+
+	shared_focus = {
+		id = USA_Republic_Armed_Forces
+		icon = GFX_focus_USA_Airforce_1
+		cost = 3
+		ai_will_do = {
+			base = 100
+		}
+		x = 47
+		y = 0
+
+		available = {
+		NOT = { has_idea = RWE_USA_Default }
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+}

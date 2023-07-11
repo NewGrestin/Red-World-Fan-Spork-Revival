@@ -38,6 +38,7 @@
   axis_of_evil_speech:0 "Axis of Evil Speech" 
   axis_of_evil_member:0 "Part of the Axis of Evil" 
 
+  generalissimo:0 "Generalissimo" 
   powerful_president:0 "Powerful President" 
   injured:0 "Injured" 
   handicapped:0 "Handicapped"  
@@ -55,6 +56,22 @@
 
   autonomy_union_states_member:0 "Union State Member" 
 
+ new_ideas:0 "New Ministers available.\n"
+ available_political_advisor:0 "§GAvailable§! as §YPolitical Advisor§!:\n"
+ available_chief_of_army:0 "§GAvailable§! as §YChief of Army§!:\n"
+ available_chief_of_navy:0 "§GAvailable§! as §YChief of Navy§!:\n"
+ available_chief_of_airforce:0 "§GAvailable§! as §YChief of Airforce§!:\n"
+ available_military_high_command:0 "§GAvailable§! as §YMilitary High Command§!:\n"
+ available_theorist:0 "§GAvailable§! as §YTheorist§!:\n"
+ available_designer:0 "§GAvailable§! as §YDesign Company§!:\n"
+ available_industrial_concern:0 "§GAvailable§! as §YIndustrial Concern§!:\n"
+ remove_political_advisor:0 "§RRemove§! as §YPolitical Advisor§!:\n"
+ remove_chief_of_army:0 "§RRemove§! as §YChief of Army§!:\n"
+ remove_chief_of_navy:0 "§RRemove§! as §YChief of Navy§!:\n"
+ remove_chief_of_airforce:0 "§RRemove§! as §YChief of Airforce§!:\n"
+ remove_military_high_command:0 "§RRemove§! as §YMilitary High Command§!:\n"
+ remove_theorist:0 "§RRemove§! as §YTheorist§!:\n"
+
   ##########################
   # ACHIEVEMENTS
   ##########################
@@ -68,10 +85,19 @@
   ##########################
   # IDEAS
   ##########################
+
+  RWE_USA_Cash_Crop_Cash:0 "Cash Crop Cash" 
+  RWE_USA_Cash_Crop_Cash_desc:0 "-"
+  RWE_USA_Improvised_Navy:0 "Improvised Navy"
+  RWE_USA_Improvised_Navy_desc:0 "-"
+  RWE_USA_Native_Young_Officers:0 "Puerto Rico Military Academy"
+ 
+  mitsubishi_USA:0 "Mitsubishi USA"
+  Honda_USA:0 "Honda" 
+  chevron_company:0 "Chevron Company" 
+
   RWE_USA_hostile_congress:0 "Hostile Congress"
   RWE_USA_hostile_congress_desc:0 "Since 2009, the United States government has been effectively closed due to the victory of the Common Sense Party in 2008 and the lacking strategy of House minority whip Newt Gingrich. The issue boiled over during negotiations on a new budget, as the deficit of the American Republic has reached a critical level and an impending debt-ceiling crisis looms over Rumsfeld's presidency. \n\nDiscourse between the legislative and executive branches of government have become increasingly spiteful, as Rumsfeld threatens to use his position as Commander-in-Chief and besiege Congress, while Congress threatens with impeachment. Even inside the GOP, members of the moderate caucus have become fed up with the inability of the government to compromise. The noose tightens around Rumsfeld's neck. Can he save his administration?"
-
-
   RWE_USA_extreme_rural_poverty:0 "Extreme Rural Poverty"
   RWE_USA_extreme_rural_poverty_desc:0 "In inheriting the Southern United States after the fall of the USA, the American Republic inherited the part of the country where economic disparity was perhaps most pronounced among the ex-USA states. Some of the poorest states of the old USA, such as Mississippi, Alabama and Kentucky, would align themselves with Bush's American Republic. The inequality between these rural states and the East, where the offices of power would be vested, are immense and the fall of the old US institutions hasn't helped their problems. Maintenance of basic infrastructure in sectors such as energy, communication, water and transport, has degrared far below the Republic's national average, as the Atlanta government struggles with the redistribution of its decreasing income among the states. In 2010, the percentage of individuals living in poverty has reached a staggering 32% in these rural states, which is especially pronounced in their minority communities, though not restricted to them. \n\nIn this current situation, the Republic's economy is stagnating. There's immense room to grow, but lacking funding for the poorest states leaves this room occupied with bad infrastructure, a lacking consumer base, decreasing quality of life and intense internal migration from the West to the East, as those with the chance to better their opportunity leave Alabama's swamps for Atlanta's skyscrapers and Florida's beaches."  
   RWE_USA_extreme_rural_poverty_1:0 "Extreme Rural Poverty"
@@ -87,6 +113,9 @@
   RWE_USA_extreme_rural_poverty_6:0 "Growing Southern Economy"
   RWE_USA_extreme_rural_poverty_6_desc:0 "-"  
 
+  RWE_USA_Anti_Gay_Military_Policy:0 "Anti-Gay Military Policy"
+  RWE_USA_Anti_Gay_Military_Policy_desc:0 "The US Military has had a long history of antipathy towards those queer individuals seeking to enlist in any branch of the US army, perpetuating a policy of discharging serving soldiers and staff when caught and disbarring any openly queer person from even entering any military institute. Under the Reagan administration, this ban, which was previously enforced informally by the military through ideas such as \'queen for a day\' elements, was properly officialized into clearly defined regulations by the Department of Defense. This Reagan-era directive on the issue of \"gay's in the military\" is still maintained in the Republic, preventing a sizeable part of the population from enlisting and often leading to early retirements among military high command." 
+
   RWE_USA_Constitutionalism:0 "Constitutionalism"
   RWE_USA_Constitutionalism_desc:0 "Like many before us, our government can be considered a constitutional monarchy, wherein the power of the monarchy is regulated extensively by the constitution, keeping him as a powerless figure." 
   
@@ -94,6 +123,8 @@
   RWE_USA_Laissez_Faire_desc:0 "-" 
   RWE_USA_Laissez_Faire_2:0 "EGPA" 
   RWE_USA_Laissez_Faire_2_desc:0 "-" 
+  RWE_TEX_Remember_the_Alamo:0 "Unificationist Propaganda"
+  RWE_TEX_Remember_the_Alamo_desc:0 "-" 
 
   RWE_USA_Paul_I:0 "Paul I"
   RWE_USA_Paul_I_desc:0 "Paul I, first of his name, head of the house of Washington and Duke of Mount Vernon is the first ever monarch elected of [USA.GetNameWithFlag]. A direct descendant of George Washington, Paul I has the most legitimate claim in American history to the new cobalt crown, representing America's most famous bloodline and the revolutionary spirit of George Washington."
@@ -237,9 +268,8 @@
   USA_Finance_Public_Schooling:0 "No Child Left Behind"
   USA_Revitalize_the_Healthcare_Sector:0 "Revitalize Healthcare" 
   USA_Vaccination_Campaign:0 "Vaccination Campaigns"
-  USA_Pharmaceutical_Renaissance:0 "Pharmaceutical Renaissance" 
-
-  USA_branching_focus:0 "Branching Focus" 
+  USA_Pharmaceutical_Renaissance:0 "Pharmaceutical Renaissance"  
+  USA_Urbanization:0 "Reverse Urban Decay" 
 
   USA_rumsfeld_beaten:0 "The Executing Legislature"
   USA_rumsfeld_beaten_desc:0 "The Congress has brought Rumsfeld to his knees, finalizing agreements on the national debt ceiling and ending the struggle between the executive and the legislative. Rumsfeld's popularity is rather likely to not endure the coming presidential election and the GOP is already looking for the next man for the job." 
@@ -293,6 +323,7 @@
   USA_Republicans_Prevail:0 "Another Four Years GOP"
   USA_Common_Sense_Prevail:0 "Common Sense Prevails"
   USA_JUSTICE_Prevail:0 "Bearers of JUSTICE" 
+  USA_When_the_President_does_It_2:0 "When the President does it..." 
 
   USA_Resolve_the_Texan_Question:0 "Resolve the Texan Question" 
   USA_Resolve_the_Texan_Question_desc:0 "Texas has always been an integral part of the old United States and the South, fueling the entire continental USA with its oil. The Lone Star has been mutilated by Mexico, its independence a communist plot to weaken the American people. Reunification with our brothers in the Lone Star State remains the question of Republic foreign policy." 
@@ -370,8 +401,11 @@
   USA_Institutionalize_Neopatrimonialism:0 "Institutionalize Neopatrimonialism" 
 
   USA_Big_Tent:0 "The Big Tent doesn't Discriminate"
+  USA_Big_Tent_desc:0 "Despite the allegations of the opposition, the NPP should not apologize for its history. It is history that makes us who we are and the NPP is and always has been a big tent. A party of the entire right-wing spectrum, we shall not discriminate against those who seek to join the tent, even those that do discriminate." 
   USA_Solving_our_Dirty_Hands:0 "Washing our Dirty Hands"
+  USA_Solving_our_Dirty_Hands_desc:0 "The NPP has a loaded history that became apparant during the election campaign. Connections to the KKK, allegations of white supremacy and even ties to old Neo-Nazis is simply not tasteful for the average American. For the survival of the party in this crooked democracy, we should wash our hands and show how clean we will be for the next election." 
   USA_Invite_Fringe_Movements:0 "Invite Fringe Movements"
+  USA_Invite_Fringe_Movements_desc:0 "As we have always been a party of the American fringe, our current position in government shouldn't change that fact. We can allow all of those that seek to join our cause, even among the wackier elements of American political society. From national socialists and classical libertarians to monarchists and theocrats, we aren't going to make exceptions now." 
   USA_Strenghten_the_Paramilitary:0 "Maintain the Minutemen"
   USA_Wrapped_in_the_Flag_Carrying_the_Cross:0 "Wrapped in the Flag, Carrying the Cross"
   USA_Opposition_with_a_Government:0 "Loud, Proud and in Control"
@@ -380,22 +414,39 @@
   USA_Against_Godless_Communism:0 "Against Godless Communism" 
   USA_Ban_Red_Immigrants:0 "Soviet Espionage Travel Ban" 
   USA_Hamiltonian_Monarchism:0 "Hamiltonian Monarchism" 
+  USA_Hamiltonian_Monarchism_desc:0 "Alexander Hamilton once proposed a monarchist-like system for the American colonies after their independence. His idea wasn't adopted, but it sets precedent for a kingdom in the former United States, following a uniquely American way of monarchy that doesn't bow down to European feudalism and domination, instead respecting the liberty of America." 
   USA_Support_Nativist_Sentiment:0 "Support Nativist Sentiment" 
+  USA_Support_Nativist_Sentiment_desc:0 "Nativism is based on the belief that certain lands belond to certain people, called the \'natives\' and that those natives take priority over all that share the land. These natives are, of course, not the indigenious of the Americas, but those that established modern America with their Revolution. White (Anglo-Saxon) Protestants are, to the NPP, America's natives." 
   USA_Fuhrerprinzip:0 "Führerprinzip"
+  USA_Fuhrerprinzip_desc:0 "Despite the movement towards decentralization and a rightful fear of the feds, the NPP is not the feds of yesterday and can be trusted to be the vanguard of America's nationalist movement. Following in the footsteps of other great leaders who aren't named during election campaigns, we shall rule America and bring it its deserved future." 
   USA_State_Rights:0 "Protect State Rights"
+  USA_State_Rights_desc:0 "As part of the more libertarian wing of the NPP, those that seek to establish state rights are in good company with the party's conspiracy crowd and neo-confederate fringes. It is in this context that we shall enshrine the rights of the state in the American constitution, shifting away from the civil rights-era centralisation policy." 
   USA_Secure_the_Intelligence_Apparatus:0 "Secure the Intelligence Apparatus"
+  USA_Secure_the_Intelligence_Apparatus_desc:0 "The FBI, CIA and NSA are enemies of the NPP, filled to the brim with Marxists, progressives and Rumsfeld-loyalists. Their loyalty has to be secured before we can go further, as we all know that presidents that do not fit their bill will find themselves with a bullet or two in their back." 
   USA_Adopt_Neo_Americana:0 "Transform Neo-Americana"
+  USA_Adopt_Neo_Americana_desc:0 "While a concept introduced by the GOP of Rumsfeld and Bush, Neo-Americana is a perfectly reasonable addition to the ideology of the NPP, as it reinforces the need for reunification of the old United States. Applie pie and baseball is upon which we build our new state and government. Who cares about rights when they have a good old hot dog!" 
   USA_Hijack_Rumsfelds_Legacy:0 "Hijack the GOP's Legacy"
+  USA_Hijack_Rumsfelds_Legacy_desc:0 "The legacy of the GOP is in the Republic on of existential gratitude. The GOP made the modern country and we cannot erase that legacy. Instead, we shall remind the people what the NPP stands for and how it is connected to that legacy. We cannot erase the achievements of Rumsfeld and George Bush Sr., but we can utilize them for our own ends." 
   USA_Against_Soviet_Globalism:0 "Against Soviet Globalism"
+  USA_Against_Soviet_Globalism_desc:0 "Like the GOP, we have no kind words for the Soviet Union. A bastion of Marx, a subverter of nationhood and a proponent of mental slavery, the USSR and its globalist agenda will not be tolerated in the America of today!"
   USA_Christian_Nation:0 "America, A Christian Nation"
+  USA_Christian_Nation_desc:0 "Christian nationalism remains an important element of all American forms of nationalism. Few are truly secular and even fewer are succesful while secular. Our alliance with the Christian right should be maintained through the approval of Christian nationhood in the American constitution." 
   USA_Ambitions_of_European_America:0 "Pan-Americanism"
+  USA_Ambitions_of_European_America_desc:0 "From Sea to Shining Sea, the old Continental USA stretched. However, with the fall of the Union, new ideas emerged among the radical fringes. The concept of pan-Americanism is one of those, proposing the unification of \'European America\', which mainly consists of the English and French-speaking parts of the continents."
   USA_Populist_Media_Machine:0 "Party-Approved Media Empire"
+  USA_Populist_Media_Machine_desc:0 "Mass media has always played an important role in modern democracy. It empowered parties to spread their messages through ways that weren't controlled by an elite with an agenda. Today, the NPP remains in a similair position. To counter the mainstream media and its zionist agenda, we must establish our very own media machine."
   USA_Constitutional_Nationalism:0 "Constitutional Patriotism"
+  USA_Constitutional_Nationalism_desc:0 "The constitution is the holiest of relics to American patriotism and has been defiled again and again by the government. The amendments should not be followed, for they are corruptions of the old wisdom of the Founding Fathers. To be a patriot is thus to be a constitutionalist and respect all its original facets."
   USA_Attack_Cultural_Marxism:0 "Remove Marx from Academia"
+  USA_Attack_Cultural_Marxism_desc:0 "Since the conspiracy set up by the Frankfurt School, Cultural Marxism has been infecting American academia since the Cold War. Cultural Marxism won the fight and dismantled the \'Empire\', but the war is not yet over. By setting up anonymous lines for students and faculty members, we can flush out the Marxism from America's academic sphere."
   USA_Criticize_the_Culture_War:0 "Defenders against the Culture War"
+  USA_Criticize_the_Culture_War_desc:0 "The Culture War and its progressive proponents are a blight upon America, seeking to transform quintessential Americana into globalist junk. We cannot accept this. The NPP shall pick up the mantle of defender of all that is American and right against the plague that is the Culture War."
   USA_The_Muppet_King:0 "The Muppet on the Throne"
+  USA_The_Muppet_King_desc:0 "With the election of the First Citizen of the American Kingdom, a new political figure has emerged on the scene. However, the politics of America hasn't bended around them for a good reason. The NPP remains the most important part of the equation and the king, despite his pomp, will not be of any political significance."
   USA_American_Absolutism:0 "Atlantic Absolutism"
+  USA_American_Absolutism_desc:0 "Despite the political conspiracy against his majesty, America has been able to turned against the traitors. From today on forward, the democratic style of governance will be replaced with formal absolutism of a properly American variant. Democracy is an aesthetic, not a governance style, and Atlantic Absolutism will take that to heart."
   USA_Chained_to_the_Constitution:0 "Maintain Constitutionalism"
+  USA_Chained_to_the_Constitution_desc:0 "Despite resistance from the First Citizen, the democratic style of government has been able to overpower and chain him to the constitution. The threat of an absolutist regime has been vanquished. From today on forward, America remains a constitutional democracy with a puppet king on its throne." 
   USA_New_Civil_Traditions:0 "Introduce King's Day" 
   USA_Reclaim_the_Belgian_Throne:0 "Reclaim Philip's Birthright" 
   USA_Napoleonic_Restoration:0 "Avenge Waterloo" 
@@ -447,6 +498,11 @@
   USA_Adopt_the_SSPARS:0 "Improve EW Systems" 
   USA_Missile_Defense_Agency:0 "Form the Missile Defense Agency" 
   USA_Expand_Airbases:0 "Improve our ARAF Bases" 
+  USA_Dogfights_are_the_Future:0 "Dogfighting is the Future"
+  USA_The_Simplicity_Cycle:0 "The Simplicity Cycle"
+  USA_Improve_BMT:0 "Improve Basic Military Training"
+  USA_Reopen_the_ATB_Program:0 "Reopen the ATB Program"
+  USA_Partnership_with_Northrop:0 "Partnership with Northrop Grumman"
 
   USA_Puerto_Rico_Plan_2:0 "Puerto Rico Plan"
   USA_Size_Up_the_Dockyards:0 "Militarize the Seaports"
@@ -459,6 +515,26 @@
   USA_The_National_Reunification:0 "The National Reunification Mission"
   USA_Declare_Puerto_Rican_Independence:0 "Declare Puerto Rican Independence" 
   USA_Promote_Local_Officers:0 "Promote Local Deputies" 
+  
+  USA_Reforming_Ministry_of_FA:0 "Reforming the Foreign Affairs Ministry"
+  USA_New_World_Order:0 "Reaffirm American Hegemony" 
+  USA_Legacy_of_NATO:0 "Legacy of NATO" 
+  USA_Liberation_of_Arabia:0 "Liberate the Arab Peninsula"
+  USA_Integrate_the_Gulf_Pact:0 "Coordinate with the Gulf Pact"
+  USA_Reapproach_Turkey:0 "Reapproach our Turkish Ally"
+  USA_World_Police_Returns:0 "American World Police" 
+  USA_Hemispheric_Defense:0 "The Hemispheric Defense Initiative" 
+  USA_Operation_Desert_Storm:0 "Operation Desert Fox" 
+  USA_Reformation_of_the_Treaty:0 "Prepare the Ottawa Treaty" 
+  USA_Operation_Condor_2:0 "Another Operation Condor"
+  USA_Reform_the_RIO_Pact:0 "Reform the Rio Pact"
+  USA_Forment_a_Blue_Tide:0 "Forment a Blue Tide" 
+  USA_NATO_Research_Collective:0 "Standardized CATO Research"
+  USA_Respond_to_Persia:0 "Consider our Iranian Strategy" 
+  USA_The_Unthinkable_made_Thinkable:0 "The Unthinkable made Thinkable" 
+  USA_Arm_the_Iraqis:0 "Rebuild the Iraqi Army" 
+  USA_Move_against_the_UAR:0 "Secure Access to the Suez"
+  USA_Southern_Soft_Underbelly:0 "The South's Soft Underbelly" 
 
   ##########################
   # DECISIONS
@@ -628,7 +704,16 @@
   USA_Cement_the_Nationalist_Wing_desc:0 "-" 
   USA_Distance_from_Rumsfeld:0 "Distance ourselves from Rumsfeld"
   USA_Distance_from_Rumsfeld_desc:0 "Rumsfeld and his nationalist wing have screwed up big time. America has turned against the GOP for the brazen tyranny put on display by the glorified defense secretary without a drop of charisma. Humbled by the opposition in Congress, we now face the dilemma of either staying with Rumsfeld and the bagage he brings with him or distance the party from his and the nationalists, reinventing ourselves in a new light." 
-  USA_2010_RNC_Candidates_Mission:0 "Republican National Convention" 
+  USA_2010_RNC_Candidates_Mission:0 "§RRepublican§! National Convention" 
+  USA_2010_RNC_Candidates_Mission_desc:0 "2010 is proving to be an important election to the GOP, as the events of the previous administration have been controversial and the opposition has flexed its political capital against the Republican party multiple times. Especially Common Sense, which has become a favourite among the voters, is a serious threat to the continued governance of the GOP. A presidential candidate can make or break an election, so we can only hope for the best person for the job."
+  USA_Rig_the_Election:0 "Tamper with the Ballots" 
+  USA_Rig_the_Election_desc:0 "With the current situation so heavily against us, we have little choice but to do the unthinkable: violate our democracy and tamper with the ballot. We cannot allow the opposition in power, so drastic measures need to be taken. But it is all in the name of democracy!" 
+  USA_2010_CS_Candidates_Mission:0 "§OCommon Sense§! National Convention"
+  USA_2010_CS_Candidates_Mission_desc:0 "As the Republican Party has stumbled its way through another four years, the people of the Republic have come to appreciate the more stable and grounded figures of the Common Sense Party. We have proven ourselves as a formidable opposition in Congress and a popular, moderate alternative to the GOP, which has skewed too far to the right for the normal voter. The normalcy of Common Sense is our strongest selling point to a population which has become tired of Republican shenanigans." 
+  USA_Promise_no_NPP_GOP_Coalition:0 "Promise no NPP-GOP Coalition" 
+  USA_Promise_no_NPP_GOP_Coalition_desc:0 "With the selection of a nationalist presidential candidate, the possibility of a coalition with the NPP has become a sore point inside the party. Especially for the moderate conservatives, the possibility of a coalition with the loudmouths and fascists of the NPP has no pragmatic merit and only threatens the GOP. For the nationalist wing, however, the NPP is a tolerable partner in a hostile congress. Still, we perhaps shouldn't threaten to sink our entire party for a coalition with some wingnuts."
+  USA_2010_NPP_Candidates_Mission:0 "§LNew Populists§! National Convention"
+  USA_2010_NPP_Candidates_Mission_desc:0 "As part of the opposition in Congress, the NPP has been able to coast of their strong voice and loud personality as a party during the Republican administration of Rumsfeld. Its roster of candidates reflect the party's personality, with a selection of loud, brash and controversial candidates fighting for the position of presidential candidate." 
 
   USA_2010_Election_George_Bush_Mission:0 "George Bush Sr. is considering his choice..." 
   USA_2010_Election_George_Bush_Mission_desc:0 "Despite his advanced age, former president George Bush Sr. still holds an impresssive sway over the Republic's public and the Republican party, being one of the most influential politicians of the 20th century and preserving the old United States in the currently remaining territory. His choice seems to currently favour his running family member, Jeb Bush, but the old patriarch can be swayed to see the possibilities in other choices." 
@@ -669,6 +754,12 @@
   USA_MAGNOLIA_FP_TT:0 "\n§RThis will close of a large part of the unification focus tree, as we renounce our claim to the continental USA and focus on growing our beautiful Southern Republic!§!" 
   USA_if_cherish_our_small_republic_tt:0 "If you finish the focus \'§YCherish our Small Republic§!\' before this focus, you improve the \'§YNew Republican Identity§!\' spirit (§RThis bonus currently isn't applicable to you as you lack the necessary conditions§! £trigger_no ): \n\n" 
   USA_movie_decisions_tt:0 "§YUnlock§! decisions to use and support movies for §Gbenefits§! to [USA.GetNameWithFlag]. Random \'§Ycinema events§!\' will also happen from time to time."
+  USA_not_kicked_out_or_distanced:0 "\nThe §RGOP§! won't split on the presidential candidate if you selected either the \'§YKick out the Freedom Caucus§!\' or the \'§YDistance ourselves from Rumsfeld§!\' decisions.\n\n" 
+  USA_elected_a_moderate_candidate:0 "\nIf you elected a §gNationalist§! candidate without selecting the decision \'§YPromise no NPP-GOP Coalition§!\', the §2Moderate wing§! will support the §OCommon Sense§! candidate.\n\n"
+  GOP_CONS_CEMENTED:0 "Has cemented the §2Moderate Wing§!"
+  GOP_NATS_CEMENTED:0 "Has cemented the §gNationalist Wing§!"
+  chose_nationalist_president_tt:0 "Elected a §gNationalist§! GOP presidential candidate"
+  chose_president_tt:0 "Elected a §RGOP§! presidential candidate"
 
   ##########################
   # EVENTS
@@ -684,6 +775,9 @@
   us_republic.4.t:0 "Republic Armed Forces support Congress" 
   us_republic.5.t:0 "Florida declares support for Congress" 
   us_republic.6.t:0 "Congress stands Defiant" 
+  us_republic.7.t:0 "Election put on Hold"
+  us_republic.7.d:0 "With the country split apart by Rumsfeld's failed attempt to disband Congress, the presidential election of 2010 has been put on hold indefintely. The people of the Republic cannot exercise their democratic right in these violent conditions, so the election has been suspended. \n\nRumsfeld has already promised that the elections will return once the violence has ended, but some seem sceptical about the intentions of the President who has split the country into two as a result of his illegal decision."
+  us_republic.7.a:0 "An unprecedented attack on American democracy" 
 
   us_republic.80.t:0 "Another American Civil War"
   us_republic.80.d:0 "The irony is quite palpable, even in the tense office of Rumsfeld and the members of his closest circle. Once more, the Southern US is the birthplace of an American civil war. At least this time it's for a less sinister purpose, even his critics can agree with that sentiment. \n\nStates have flipped to Congress in opposing Rumsfeld. At the same time, Rumsfeld knows that the rest of America watches with baited breath. The socialists in the North will probably not wait for us to clean up Congress to pick at our carcass, nor will Mexico wait for our approval as it eyes up the oil wealth of Texas. In an ideal scenario, we can stop such a crisis from happening by swiftly ending this rebellion." 
@@ -828,6 +922,26 @@
   us_republic.615.t:0 "JUSTICE keeps Warren as Candidate"
   us_republic.615.d:0 "The left-wing JUSTICE party has come forward with their choice to keep Elizabeth Warren as the presidential candidate of the party in the 2010 election. Warren has been the standing candidate of JUSTICE since 2002 and has been able to captivate the hearts and minds of the young left-wing movements across the Republic. Still, beyond the usual bubble, Warren's candidacy has fallen on rather deaf ears, which she partially blames on the Republican-favouring media machine and the hinderances of party and candidate registration for JUSTICE and similarly center-left parties."
   us_republic.615.a:0 "Nothing much changes on that front..." 
+  us_republic.616.t:0 "GOP Nationalists emigrate to NPP"
+  us_republic.616.d:0 "With the cementing of the moderate wing of the GOP over Rumsfeld's original nationalist wing of the party, the split inside the party has become too much to bear. Members of the GOP have already made the threat to cross over to the NPP and support there candidate over the Republican choice, which leaves us with our pants down. To have an entire wing of the party defect is a rarity in the Republic's short history, but the GOP seems to be on the verge."
+  us_republic.616.a:0 "The GOP can do without those rats" 
+  us_republic.616.b:0 "We cannot afford such a shake up before the election" 
+  us_republic.617.t:0 "CSNC picks Presidential Candidate"
+  us_republic.617.d:0 "As the main opposition to the Republican party in power, the Common Sense Party has the best chance of winning the presidential election against the dominant conservatives. Considered a big tent liberal party, a large selection of candidates have campaigned for the position, with a lot of them throwing the towel quite quickly. The main candidate for the CSP's pick remains party leader Joe Biden, who has proven himself a formidable opponent against Rumsfeld previously in 2006, overseeing the closest race since the establishment of the Republic. His age has been the subject of controversy inside the party, but many cannot deny his quality as a politician. \n\nOther options are [...]."
+  us_republic.617.a:0 "Joe Biden"
+  us_republic.617.b:0 "..." 
+  us_republic.618.t:0 "Moderates threaten with Defection"
+  us_republic.618.d:0 "-"
+  us_republic.618.a:0 "We have no room for RINOs"
+  us_republic.618.b:0 "This is too risky during an election year..." 
+  us_republic.619.t:0 "NPNC picks Presidential Candidate"
+  us_republic.619.d:0 "-"
+  us_republic.619.a:0 "David Duke"
+  us_republic.619.b:0 "..." 
+
+  us_republic.620.t:0 "The People have Spoken!"
+  us_republic.620.d:0 "-"
+  us_republic.620.a:0 "-" 
 
   us_republic.701.t:0 "Reconstruction of the GOP"
   us_republic.701.d:0 "Since the sudden chaos and the house arrest of the former President of the Republic, the GOP leadership and its members have been extremely quiet about the political situation developing in Atlanta. Today, however, the GOP came forward for the first time, declaring that their silence was in preperation for upcoming snap elections, as the party prepared itself with new leadership after \'recent events\'. Their new unopposed candidate for the presidential election is billionare Charles Koch, an active face in American politics since his estrangement with Charles Koch, a prominent oligarch donor in the Midwest. Koch has expressed his excitement to run for the office of President and promised a return to pre-Reagan fiscal conservatism and rationality, something that has been celebrated by the moderate wing of the party but which has alerted some, as the sudden shift in the party's ideology has come quite unnatural and without seemingly any rhyme or reason."
@@ -842,6 +956,27 @@
   us_republic.915.d:0 "-"
   us_republic.915.a:0 "We can only accept!"
   us_republic.915.b:0 "This is not the correct choice..." 
+
+  us_republic.1004.t:0 "Our Brothers across the Pacific"
+  us_republic.1004.d:0 "Australia, New Zealand and the United States have always had a strong geopolitical relationship since independence, hailing from English settler colonies and with a taste of liberty and freedom. Through pacts like SEATO and ANZUS, the US and these Pacific brothers have always kept eachother close. With our reforging of a new NATO alliance, we may be interested in reaffirming our relationship with Canberra and Wellington, even despite some ideological differences."
+  us_republic.1004.a:0 "We will invite those from the Land down Under!"
+  us_republic.1004.b:0 "They will only burden the alliance" 
+  us_republic.1005.t:0 "[USA.GetName] invites us to Ottawa Treaty signing"
+  us_republic.1005.d:0 "-"
+  us_republic.1005.a:0 "We will be there!"
+  us_republic.1005.b:0 "We aren't going to chain ourselves to America"
+  us_republic.1006.t:0 "[FROM.GetName] joins the Ottowa Treaty signing"
+  us_republic.1006.d:0 "-"
+  us_republic.1006.a:0 "Another great ally!" 
+
+  us_republic.1101.t:0 "Puerto Ricans protests shake San Juan"
+  us_republic.1101.d:0 "The sudden entry of the Republic's army, administration and leadership on the island of Puerto Rico for an indefinite stay has left the island destabilized, as Puerto Rican separatists have mobilized large parts of the population against the sudden military presence, while the established parties of the island do not show any keenness in cooperating with the mainland establishment. Cooperation has become a filthy word and political suicide. \n\nIn this situation, we must make a call. Do we bunker down and face the protest head on with our superiour military presence or do we prevent escelation and talk with the Puerto Rican establishment in the hopes of cutting a mutually beneficial deal for the island and the exiled government?"
+  us_republic.1101.a:0 "We will barricade the ways into San Juan"
+  us_republic.1101.b:0 "Contact Fortuño, we will cut him a deal he cannot refuse" 
+  us_republic.1102.t:0 "Revolutionaries Climb the Barricades"
+  us_republic.1102.d:0 "-"
+  us_republic.1102.a:0 "Give me \'Libertad\' or give me death!" 
+  us_republic.1102.b:0 "The revolutionaries are beaten back!" 
 
   #News
 
@@ -870,6 +1005,17 @@
   us_republic_news.6.t:0 "Republic evacuates to Puerto Rico"
   us_republic_news.6.d:0 "As the curtains seem to fall for the Atlanta government and the last remnants of the old United States, the Republic clings on and jumps ship, evacuating its remaining forces, government, loyalists and resources to the island of Puerto Rico. With the plan, the continental territory of the Republic has fallen under the control of the People's Commonwealth. \n\nThe evacuation to Puerto Rico leaves the Republic in a precarious situation, mimicing the Taiwan situation in the Pacific. [USA.GetLeader] still maintains the claim to the entire continental USA, despite governing from distant San Juan and lacking any ability to actually enforce that claim. Native Puerto Ricans greet the Republic with mixed feelings, as anti-communist elements of society greet them as defenders of liberty while more radical elements quietly prepare for civil disobedience. Similarly, the question of Puerto Rico as a territory remains, with those seeking state status seeing this as a golden opportunity, a sentiment shared by seperatists seeking to overthrow the last remnant of the remnants."
   us_republic_news.6.a:0 "What a pitiful chain of events..." 
+
+  us_republic_news.7.t:0 "Benjamin Nitai wins [USA.GetAdjective] Election"
+  us_republic_news.7.d:0 "Benjamin \"Ben\" Nitai has won the US Presidential Election, following in the footsteps of Donald Rumsfeld as the first Jewish President of the Republic and the former United States, which the Republic claims to be a successor to. Nitai, born to Israeli citizens that had moved to the United States in the late 40s, has always been a prominent member of the GOP, starting rather young after his service in the US Armed Forces in Vietnam. Together with members like McCain, Nitai made a name for himself as part of the \'Young Turks\' of the GOP, which sought to reinvent the party amidst its era of ideological stagnation. \n\nThe fall of the old United States left a mark on Nitai, whom has often decried its fall as the worst historical event since the destruction of the Temple. His politics, however, clash with the nationalist wing of the party, not the least due to his faith. Members of the GOP's Christian right look with worry at the election of a Jewish president of the Republic, while the NPP and its allies inside the GOP maintain extreme malice for the \'zionist\'."
+  us_republic_news.7.a:0 "Can Ben make it better?"
+  us_republic_news.7.b:0 "Quite the character..." 
+
+  us_republic_news.8.t:0 "Benjamin Nitai wins Reelection"
+  us_republic_news.8.d:0 "Despite the serious hardship of the Republic during his tenure, Benjamin Nitai has once again performed beyond expectations and crushed the opposition during the electoral campaign, comfortably winning reelection as President of the Republic. His victory is a reassuring sign to the GOP, as it has been able to maintain its majority despite the serious shift of course it experienced post-Rumsfeld and Bush. Nitai has thus shown to America that the Republicans will remain a dominant force long after he leaves office. \n\nIt remains uncertain how Nitai will continue his next four years in office and which policies he will seek to pursue. Still, it seems likely that under him, the moderate wing of the GOP will prosper even more at the expense of its loud and proud nationalist wing." 
+  us_republic_news.8.a:0 "Bibi has done it again!" 
+  us_republic_news.8.b:0 "Another four years" 
+
 
   ##########################
   # LEADERS

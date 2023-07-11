@@ -2030,4 +2030,13 @@
  BOR_nationalist_party:0 "United Sabah"
  BOR_fascist_party:0 "Greater Indonesia Party"
  BOR_monarchist_party:0 "Brunei Restorationists" 
+
+ KNS_national_bolshevik_party:0 "Falangist Party"
+ KNS_national_bolshevik_party_long:0 "Falangist Party of Kansas"
+ KNS_fascist_party:0 "Patriot Front"
+ KNS_fascist_party_long:0 "Kansas Patriot Front"
+ KNS_new_democrat_party:0 "Kansas Democrats"
+ KNS_new_democrat_party_long:0 "Progressive Democrats of Kansas State"
+ KNS_communist_party:0 "Marxist-Leninist Party"
+ KNS_communist_party_long:0 "Marxist-Leninist Communist Party of Kansas" 
   

@@ -137,6 +137,58 @@ news_event = {
 	}
 }
 
+#Benjamin Nitai wins US election
+news_event = {
+	id = us_republic_news.7
+	title = us_republic_news.7.t
+	desc = us_republic_news.7.d
+	picture = RWE_USA_Benjamin_Victory
+	
+	is_triggered_only = yes
+
+	option = {
+		name = us_republic_news.7.a
+		trigger = {
+			original_tag = USA 
+		}
+		
+	}
+
+	option = {
+		name = us_republic_news.7.b
+		trigger = {
+			NOT = { original_tag = USA }
+		}
+		
+	}
+}
+
+#Benjamin Nitai wins US 2014 election
+news_event = {
+	id = us_republic_news.8
+	title = us_republic_news.8.t
+	desc = us_republic_news.8.d
+	picture = RWE_USA_Benjamin_Victory_II
+	
+	is_triggered_only = yes
+
+	option = {
+		name = us_republic_news.8.a
+		trigger = {
+			original_tag = USA 
+		}
+		
+	}
+
+	option = {
+		name = us_republic_news.8.b
+		trigger = {
+			NOT = { original_tag = USA }
+		}
+		
+	}
+}
+
 ########################
 ###DEBT CEILING CRISIS###
 ########################
@@ -242,6 +294,22 @@ country_event = {
 	}
 }
 
+#Election put on Hold
+country_event = {
+	id = us_republic.7
+	title = us_republic.7.t
+	desc = us_republic.7.d
+	picture = us_female_troop_saluting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = us_republic.7.a
+		set_country_flag = USA_NO_ELECTION
+		add_stability = -0.05
+	}
+}
+
 #Atlanta won
 country_event = {
 	id = us_republic.70
@@ -282,7 +350,8 @@ country_event = {
 		declare_war_on = {
     		target = ATL
     		type = annex_everything
-		}		
+		}
+		country_event = { id = us_republic.7 days = 4 }		
 	}
 }
 
@@ -1537,7 +1606,169 @@ country_event = {
 	option = { #New flag
 		name = us_republic.615.a
 		add_popularity = { ideology = new_democrat popularity = 0.02 }
+		set_country_flag = USA_WARREN_JUSTICE_2010
 	}	
+}
+
+#Nationalists back NPP candidate
+country_event = {
+	id = us_republic.616
+	title = us_republic.616.t
+	desc = us_republic.616.d
+	picture = USA_Warren
+	
+	is_triggered_only = yes
+	
+	option = { #Bye then
+		name = us_republic.616.a
+		add_popularity = { ideology = nationalist popularity = -0.05 }
+		add_popularity = { ideology = fascist popularity = 0.04 }
+		add_political_power = 50
+		set_country_flag = GOP_NATS_BACK_NPP_FLAG
+	}
+	
+	option = { #We cannot afford this
+		name = us_republic.616.b
+		add_popularity = { ideology = nationalist popularity = 0.07 }
+		add_popularity = { ideology = national_conservative popularity = -0.05 }
+		add_political_power = -100
+	}	
+}
+
+#Common Sense Party National Convention
+country_event = {
+	id = us_republic.617
+	title = us_republic.617.t
+	desc = us_republic.617.d
+	picture = USA_RNC
+	
+	is_triggered_only = yes
+	
+	option = { #Joe Biden maintains his position
+		name = us_republic.617.a
+		add_popularity = { ideology = centrist popularity = 0.05 }
+		set_country_flag = USA_BIDEN_CS_2010
+	}
+	
+	option = { #Who the fuck else?
+		name = us_republic.617.b
+		
+
+	}	
+}
+
+#Moderates back centrist candidate
+country_event = {
+	id = us_republic.618
+	title = us_republic.618.t
+	desc = us_republic.618.d
+	picture = USA_Warren
+	
+	is_triggered_only = yes
+	
+	option = { #Bye then
+		name = us_republic.618.a
+		add_popularity = { ideology = national_conservative popularity = -0.05 }
+		add_popularity = { ideology = centrist popularity = 0.04 }
+		add_political_power = 50
+		set_country_flag = GOP_CONS_BACK_CS_FLAG 
+	}
+	
+	option = { #We cannot afford this
+		name = us_republic.618.b
+		add_popularity = { ideology = national_conservative popularity = 0.07 }
+		add_popularity = { ideology = nationalist popularity = -0.05 }
+		add_political_power = -100
+	}	
+}
+
+#NPP National Convention
+country_event = {
+	id = us_republic.619
+	title = us_republic.619.t
+	desc = us_republic.619.d
+	picture = USA_RNC
+	
+	is_triggered_only = yes
+	
+	option = { #David Duke
+		name = us_republic.619.a
+		add_popularity = { ideology = fascist popularity = 0.05 }
+		set_country_flag = USA_DUKE_NPP_2010
+	}
+	
+	option = { #Who the fuck else?
+		name = us_republic.619.b
+		
+
+	}	
+}
+
+#2010 Presidential Election
+country_event = {
+	id = us_republic.620
+	title = us_republic.620.t
+	desc = us_republic.620.d
+	picture = USA_Warren
+	
+	is_triggered_only = yes
+	
+	option = { #Republicans win
+		name = us_republic.620.a
+		trigger = { 
+		check_variable = { GOP_popularity_var > NPP_popularity_var }
+		check_variable = { GOP_popularity_var > CS_popularity_var }
+		check_variable = { GOP_popularity_var > JUSTICE_popularity_var }
+		}			
+		clr_country_flag = USA_BIDEN_CS_2010
+		clr_country_flag = USA_WARREN_JUSTICE_2010
+		clr_country_flag = USA_DUKE_NPP_2010
+
+		clr_country_flag = GOP_NATS_BACK_NPP_FLAG
+		clr_country_flag = GOP_CONS_BACK_CS_FLAG 
+	}	
+	
+	option = { #NPP win
+		name = us_republic.620.b
+		trigger = { 
+		check_variable = { NPP_popularity_var > GOP_popularity_var }
+		check_variable = { NPP_popularity_var > CS_popularity_var }
+		check_variable = { NPP_popularity_var > JUSTICE_popularity_var }
+		}			
+		clr_country_flag = USA_BIDEN_CS_2010
+		clr_country_flag = USA_WARREN_JUSTICE_2010
+
+		clr_country_flag = GOP_NATS_BACK_NPP_FLAG
+		clr_country_flag = GOP_CONS_BACK_CS_FLAG 		
+	}
+	
+	option = { #Common Sense win
+		name = us_republic.620.c
+		trigger = { 
+		check_variable = { CS_popularity_var > GOP_popularity_var }
+		check_variable = { CS_popularity_var > NPP_popularity_var }
+		check_variable = { CS_popularity_var > JUSTICE_popularity_var }
+		}			
+		clr_country_flag = USA_DUKE_NPP_2010
+		clr_country_flag = USA_WARREN_JUSTICE_2010
+
+		clr_country_flag = GOP_NATS_BACK_NPP_FLAG
+		clr_country_flag = GOP_CONS_BACK_CS_FLAG 
+	}	
+	
+	option = { #JUSTICE win
+		name = us_republic.620.d
+		trigger = { 
+		check_variable = { JUSTICE_popularity_var > GOP_popularity_var }
+		check_variable = { JUSTICE_popularity_var > NPP_popularity_var }
+		check_variable = { JUSTICE_popularity_var > CS_popularity_var }
+		}			
+		clr_country_flag = USA_BIDEN_CS_2010
+		clr_country_flag = USA_DUKE_NPP_2010
+		
+		clr_country_flag = GOP_NATS_BACK_NPP_FLAG
+		clr_country_flag = GOP_CONS_BACK_CS_FLAG 
+	}
 }
 
 ########################
@@ -1908,6 +2139,302 @@ country_event = {
 	}	
 }
 
+########################
+###GLOBAL POLICY###
+########################
+#Preparing the Ottawa Treaty
+country_event = {
+	id = us_republic.1000
+	title = us_republic.1000.t
+	desc = us_republic.1000.d
+	picture = USA_Rastafarian
+	
+	fire_only_once = yes
+
+	trigger = { 
+	tag = USA
+	focus_progress = {
+	focus = USA_Reformation_of_the_Treaty
+	progress > 0.05
+	}
+	}
+	
+	option = { #We agree to house the delegations
+		name = us_republic.1000.a
+		add_political_power = 20
+	}		
+}
+
+#Invite the right Europeans?
+country_event = {
+	id = us_republic.1001
+	title = us_republic.1001.t
+	desc = us_republic.1001.d
+	picture = USA_Rastafarian
+	
+	fire_only_once = yes
+
+	trigger = { 
+	tag = USA
+	focus_progress = {
+	focus = USA_Reformation_of_the_Treaty
+	progress > 0.1
+	}
+	}
+	
+	option = { #We will invite all of the right Europeans!
+		name = us_republic.1001.a
+		every_country = {
+			limit = { capital_scope = { is_on_continent = europe } NOT = { OR = { has_government = communist has_government = revolutionary_socialist has_government = national_bolshevik has_government = fascist } } }
+		country_event = { id = us_republic.1005 days = 1 }
+		}
+	}
+
+	option = { #We will only seek support from the British Isles
+		name = us_republic.1001.b
+
+	}	
+
+	option = { #Old Europe will not need us
+		name = us_republic.1001.c
+
+	}	
+}
+
+
+#Invite the right Americans?
+country_event = {
+	id = us_republic.1002
+	title = us_republic.1002.t
+	desc = us_republic.1002.d
+	picture = USA_Rastafarian
+	
+	fire_only_once = yes
+
+	trigger = { 
+	tag = USA
+	focus_progress = {
+	focus = USA_Reformation_of_the_Treaty
+	progress > 0.3
+	}
+	}
+	
+	option = { #We will invite all of the right Americans!
+		name = us_republic.1002.a
+		every_country = {
+			limit = { NOT = { OR = { tag = CAN tag = USA is_subject_of = USA is_in_faction_with = CAN } } capital_scope = { OR = { is_on_continent = north_america is_on_continent = south_america } } NOT = { OR = { has_government = communist has_government = revolutionary_socialist has_government = national_bolshevik has_government = fascist } } }
+		country_event = { id = us_republic.1005 days = 1 }
+		}
+	}
+
+	option = { #Only in North America
+		name = us_republic.1002.b
+		every_country = {
+			limit = { NOT = { OR = { tag = CAN tag = USA is_subject_of = USA is_in_faction_with = CAN } } capital_scope = { is_on_continent = north_america } NOT = { OR = { has_government = communist has_government = revolutionary_socialist has_government = national_bolshevik has_government = fascist } } }
+		country_event = { id = us_republic.1005 days = 1 }
+		}
+	}	
+
+	option = { #NATO never was meant for the Americas beyond Canada and the US
+		name = us_republic.1002.c
+
+	}	
+}
+
+#Invite the right Asians?
+country_event = {
+	id = us_republic.1003
+	title = us_republic.1003.t
+	desc = us_republic.1003.d
+	picture = USA_Rastafarian
+	
+	fire_only_once = yes
+
+	trigger = { 
+	tag = USA
+	focus_progress = {
+	focus = USA_Reformation_of_the_Treaty
+	progress > 0.6
+	}
+	}
+	
+	option = { #We will invite all of the right Asians!
+		name = us_republic.1003.a
+		every_country = {
+			limit = { capital_scope = { is_on_continent = asia } NOT = { OR = { has_government = communist has_government = revolutionary_socialist has_government = national_bolshevik has_government = fascist } } }
+		country_event = { id = us_republic.1005 days = 1 }
+		}
+	}
+
+	option = { #NATO never was meant for Asia
+		name = us_republic.1003.b
+
+	}	
+}
+
+#Invite the Australians and New Zealand?
+country_event = {
+	id = us_republic.1004
+	title = us_republic.1004.t
+	desc = us_republic.1004.d
+	picture = USA_Rastafarian
+	
+	fire_only_once = yes
+
+	trigger = { 
+	tag = USA
+	focus_progress = {
+	focus = USA_Reformation_of_the_Treaty
+	progress > 0.8
+	}
+	}
+	
+	option = { #We will invite all of the right Asians!
+		name = us_republic.1004.a
+		every_country = {
+			limit = { OR = { tag = AST tag = NZL } NOT = { OR = { has_government = communist has_government = revolutionary_socialist has_government = national_bolshevik has_government = fascist } } }
+		country_event = { id = us_republic.1005 days = 1 }
+		}
+	}
+
+	option = { #NATO never was meant for Asia
+		name = us_republic.1004.b
+
+	}	
+}
+
+#Invited to the Ottawa Treaty
+country_event = {
+	id = us_republic.1005
+	title = us_republic.1005.t
+	desc = us_republic.1005.d
+	picture = USA_Rastafarian
+	
+	is_triggered_only = yes
+	
+	option = { #We will be there
+		name = us_republic.1005.a
+		set_country_flag = UPCOMING_NATO_MEMBER
+		USA = { country_event = { id = us_republic.1006 days = 1 } }
+	}
+
+	option = { #Nah
+		name = us_republic.1005.b
+
+	}	
+}
+
+#Invited to the Ottawa Treaty - they come
+country_event = {
+	id = us_republic.1006
+	title = us_republic.1006.t
+	desc = us_republic.1006.d
+	picture = USA_Rastafarian
+	
+	is_triggered_only = yes
+	
+	option = { #We will be there
+		name = us_republic.1006.a
+	}	
+}
+
+########################
+###PUERTO RICO###
+########################
+#Instability rocks the island
+country_event = {
+	id = us_republic.1101
+	title = us_republic.1101.t
+	desc = us_republic.1101.d
+	picture = USA_Rastafarian
+	
+	is_triggered_only = yes
+
+	immediate = {
+	hidden_effect = {
+	set_party_name = { 
+	ideology = fascist
+	name = "San Juan Junta"
+	long_name = "Republic Armed Forces - Military Junta"
+	}
+	set_party_name = { 
+	ideology = revolutionary_socialist
+	name = "Frente Socialista"
+	long_name = "Frente Socialista"
+	}
+	set_party_name = { 
+	ideology = communist
+	name = "Frente Socialista"
+	long_name = "Frente Socialista"
+	}
+	set_party_name = { 
+	ideology = moderate_socialist
+	name = "MUS"
+	long_name = "Movimiento Unión Soberanista"
+	}
+	set_party_name = { 
+	ideology = new_democrat
+	name = "Partido Independentista"
+	long_name = "Partido Independentista Puertorriqueño"
+	}
+	set_party_name = { 
+	ideology = liberal
+	name = "Partido Popular"
+	long_name = "Partido Popular Democrático"
+	}
+	set_party_name = { 
+	ideology = centrist
+	name = "PNP"
+	long_name = "Partido Nuevo Progresista"
+	}
+	}
+	}
+	
+	option = { #Fortify our positions
+		name = us_republic.1101.a
+		add_political_power = -50
+		add_stability = -0.04
+		add_popularity = { ideology = nationalist popularity = 0.05 }
+		country_event = { id = us_republic.1102 days = 6 }
+	}	
+	
+	option = { #Posit a meeting with Puerto Rican representatives
+		name = us_republic.1101.b
+		add_political_power = -100
+		add_stability = 0.01
+		add_popularity = { ideology = liberal popularity = 0.05 }
+	}		
+}
+
+#Independence Militias are forming
+country_event = {
+	id = us_republic.1102
+	title = us_republic.1102.t
+	desc = us_republic.1102.d
+	picture = USA_Rastafarian
+	
+	is_triggered_only = yes
+	
+	option = { #Give us liberty or give us death!
+		name = us_republic.1102.a
+		custom_effect_tooltip = USA_PR_tt_1
+		add_stability = -0.1
+		set_politics = { ruling_party = revolutionary_socialist }
+		add_popularity = { ideology = revolutionary_socialist popularity = 0.2 }
+		add_popularity = { ideology = communist popularity = 0.07 }
+		add_popularity = { ideology = moderate_socialist popularity = 0.12 }
+		add_popularity = { ideology = new_democrat popularity = 0.02 }
+
+
+	}	
+	
+	option = { #Milley stands firm 
+		name = us_republic.1102.b
+		add_political_power = -100
+		add_popularity = { ideology = fascist popularity = 0.1 }
+		set_country_flag = USA_REV_BEAT_BACK_PR
+	}		
+}
 ###################################################################################
 
 #Testevenyt

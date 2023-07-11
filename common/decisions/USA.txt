@@ -24,8 +24,32 @@ USA_Elections = {
 
 		fire_only_once = yes
 
-		timeout_effect = {			
+		timeout_effect = {
+			if = { limit = { NOT = { OR = { has_country_flag = GOP_NATS_BACK_NPP_FLAG has_country_flag = GOP_CONS_BACK_CS_FLAG } } }
+			set_temp_variable = { GOP_popularity_var = party_popularity@nationalist }
+			add_to_temp_variable = { GOP_popularity_var = party_popularity@national_conservative }
+			set_temp_variable = { NPP_popularity_var = party_popularity@fascist }
+			set_temp_variable = { CS_popularity_var = party_popularity@centrist }
+			}
 
+			if = { limit = { has_country_flag = GOP_NATS_BACK_NPP_FLAG }
+			set_temp_variable = { NPP_popularity_var = party_popularity@nationalist }
+			set_temp_variable = { GOP_popularity_var = party_popularity@national_conservative }
+			add_to_temp_variable = { NPP_popularity_var = party_popularity@fascist }
+			set_temp_variable = { CS_popularity_var = party_popularity@centrist }
+			}
+	
+			if = { limit = { has_country_flag = GOP_CONS_BACK_CS_FLAG }
+			set_temp_variable = { GOP_popularity_var = party_popularity@nationalist }
+			set_temp_variable = { CS_popularity_var = party_popularity@national_conservative }
+			set_temp_variable = { NPP_popularity_var = party_popularity@fascist }
+			add_to_temp_variable = { CS_popularity_var = party_popularity@centrist }
+			}
+		
+			set_temp_variable = { JUSTICE_popularity_var = party_popularity@new_democrat }			
+
+			country_event = { id = us_republic.620 days = 0 }
+			
 		}
 
 		ai_will_do = {
@@ -147,12 +171,15 @@ USA_Elections = {
 		priority = 94
 
 		visible = {
-		has_active_mission = USA_2010_Election_George_Bush_Mission	
+		has_active_mission = USA_2010_Election_George_Bush_Mission
+		NOT = { has_country_flag = GOP_CONS_CEMENTED }	
 		}
 
 		available = {
+		NOT = { has_country_flag = GOP_CONS_CEMENTED }
 		has_active_mission = USA_2010_Election_George_Bush_Mission
 		nationalist > var:party_popularity@national_conservative 
+		chose_president = yes
 		OR = {
 		has_government = nationalist
 		has_government = national_conservative
@@ -164,7 +191,15 @@ USA_Elections = {
 		fire_only_once = yes
 
 		complete_effect = {			
-		add_popularity = { ideology = nationalist popularity = 0.05 }
+		add_popularity = { ideology = nationalist popularity = 0.1 }
+		set_country_flag = GOP_NATS_CEMENTED
+
+		if = { 
+		limit = { }
+		custom_effect_tooltip = USA_elected_a_moderate_candidate
+
+		country_event = { id = us_republic.618 days = 0 }
+		}
 		}
 
 		ai_will_do = {
@@ -182,12 +217,15 @@ USA_Elections = {
 		priority = 94
 
 		visible = {
-		has_active_mission = USA_2010_Election_George_Bush_Mission	
+		has_active_mission = USA_2010_Election_George_Bush_Mission
+		NOT = { has_country_flag = GOP_NATS_CEMENTED }	
 		}
 
 		available = {
+		NOT = { has_country_flag = GOP_NATS_CEMENTED }
 		has_active_mission = USA_2010_Election_George_Bush_Mission
 		national_conservative > var:party_popularity@nationalist
+		chose_president = yes
 		OR = {
 		has_government = nationalist
 		has_government = national_conservative
@@ -199,7 +237,14 @@ USA_Elections = {
 		fire_only_once = yes
 
 		complete_effect = {			
-		add_popularity = { ideology = national_conservative popularity = 0.05 }		
+		add_popularity = { ideology = national_conservative popularity = 0.1 }		
+		set_country_flag = GOP_CONS_CEMENTED
+		if = { 
+		limit = { NOT = { has_decision = USA_Kick_out_the_Freedom_Caucus } }
+		custom_effect_tooltip = USA_not_kicked_out_or_distanced
+
+		country_event = { id = us_republic.616 days = 0 }
+		}
 		}
 
 		ai_will_do = {
@@ -226,6 +271,7 @@ USA_Elections = {
 		}
 
 		available = {
+		chose_president = yes
 		has_war_support > 0.5
 		surrender_progress < 0.31
 		}
@@ -243,6 +289,43 @@ USA_Elections = {
 		complete_effect = {	
 		add_stability = -0.05		
 		add_popularity = { ideology = var:current_party_ideology_group popularity = 0.15 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_Promise_no_NPP_GOP_Coalition = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 94
+
+		visible = {
+		OR = {
+		has_active_mission = USA_2010_Election_Mission 
+		has_active_mission = USA_2012_Senate_Mission 
+		has_active_mission = USA_2014_Election_Mission 
+		}
+		}
+
+		available = {
+		chose_nationalist_president = yes
+		OR = {
+		has_government = national_conservative
+		has_government = nationalist
+		}
+		}
+
+		cost = 20
+
+		complete_effect = {	
+		add_popularity = { ideology = nationalist popularity = 0.02 }
+		add_popularity = { ideology = fascist popularity = -0.05 }
 		}
 
 		ai_will_do = {
@@ -274,6 +357,7 @@ USA_Elections = {
 		liberal > 0.4
 		new_democrat > 0.4		
 		}
+		chose_president = yes
 		OR = {
 		has_government = national_conservative
 		has_government = nationalist
@@ -324,7 +408,7 @@ USA_Elections = {
 		}
 		}
 
-		cost = 100
+		cost = 50
 
 		complete_effect = {	
 		country_event = { id = us_republic.614 days = 1 }
@@ -366,7 +450,7 @@ USA_Elections = {
 		days_remove = 30
 
 		modifier = {			
-		fascist_drift = 0.05
+		fascist_drift = 0.1
 		}
 
 		complete_effect = {			
@@ -412,7 +496,7 @@ USA_Elections = {
 		days_remove = 30
 
 		modifier = {			
-		nationalist_drift = 0.05
+		nationalist_drift = 0.1
 		}
 
 		complete_effect = {			
@@ -458,7 +542,7 @@ USA_Elections = {
 		days_remove = 30
 
 		modifier = {			
-		national_conservative_drift = 0.05
+		national_conservative_drift = 0.1
 		}
 
 		complete_effect = {			
@@ -504,7 +588,7 @@ USA_Elections = {
 		days_remove = 30
 
 		modifier = {			
-		centrist_drift = 0.05
+		centrist_drift = 0.1
 		}
 
 		complete_effect = {			
@@ -550,7 +634,7 @@ USA_Elections = {
 		days_remove = 30
 
 		modifier = {			
-		new_democrat_drift = 0.05
+		new_democrat_drift = 0.1
 		}
 
 		complete_effect = {			
@@ -564,6 +648,44 @@ USA_Elections = {
 
 		ai_will_do = {
 			factor = 100
+		}
+	}
+
+	USA_Rig_the_Election = {
+		icon = GFX_decision_SWI_expand_covert_operations
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 90
+
+		visible = {
+		OR = {
+		has_active_mission = USA_2010_Election_Mission 
+		has_active_mission = USA_2012_Senate_Mission 
+		has_active_mission = USA_2014_Election_Mission 
+		}		
+		}
+
+		available = {
+		has_completed_focus = USA_When_the_President_does_It
+		}
+
+		cost = 10
+
+		days_remove = 90
+
+		complete_effect = {			
+		
+		}
+
+		remove_effect = {
+
+		}
+
+		ai_will_do = {
+			factor = 80
 		}
 	}
 
@@ -617,6 +739,10 @@ USA_Elections = {
 
 		available = {
 		date > 2010.1.10
+		OR = {
+		has_government = nationalist
+		has_government = national_conservative
+		}
 		}
 
 		selectable_mission = yes
@@ -638,6 +764,86 @@ USA_Elections = {
 
 		timeout_effect = {			
 		country_event = { id = us_republic.612 days = 0 }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_2010_CS_Candidates_Mission = {
+		icon = GFX_decision_SWI_no_elected_president
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 87
+
+		available = {
+		date > 2010.1.10
+		has_government = centrist
+		}
+
+		selectable_mission = yes
+
+		activation = {
+			country_exists = USA
+			has_active_mission = USA_2010_Election_Mission
+		}
+
+		is_good = no
+
+		days_mission_timeout = 190
+
+		fire_only_once = yes
+
+		complete_effect = {			
+		country_event = { id = us_republic.617 days = 0 }
+		}
+
+		timeout_effect = {			
+		
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	USA_2010_NPP_Candidates_Mission = {
+		icon = GFX_decision_SWI_no_elected_president
+
+		allowed = {
+			tag = USA
+		}
+
+		priority = 87
+
+		available = {
+		date > 2010.1.10
+		has_government = fascist
+		}
+
+		selectable_mission = yes
+
+		activation = {
+			country_exists = USA
+			has_active_mission = USA_2010_Election_Mission
+		}
+
+		is_good = no
+
+		days_mission_timeout = 180
+
+		fire_only_once = yes
+
+		complete_effect = {			
+		country_event = { id = us_republic.619 days = 0 }
+		}
+
+		timeout_effect = {			
+		
 		}
 
 		ai_will_do = {
